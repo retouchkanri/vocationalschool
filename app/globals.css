@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+@theme {
+  /* ===== Brand palette (extracted from bajigaku.site) ===== */
+  --color-primary: #804f1b; /* deep saddle brown — brand core */
+  --color-primary-dark: #5c3a12;
+  --color-primary-deep: #35220a;
+  --color-accent: #f08300; /* brand orange */
+  --color-accent-dark: #d97400;
+  --color-tan: #dbbf93; /* light leather tan */
+  --color-cream: #faf6ec; /* warm section background */
+  --color-paper: #fffdf8; /* near-white warm paper */
+  --color-ink: #26190c; /* warm near-black for text */
+  --color-alert: #e60012; /* brand red for important notices */
+  --color-meadow: #eaf4e3; /* soft green from source site */
+
+  /* ===== Fonts (wired to next/font variables in app/layout.tsx) ===== */
+  --font-sans: var(--font-noto-sans), "メイリオ", "Meiryo",
+    "Hiragino Kaku Gothic Pro", sans-serif;
+  --font-mincho: var(--font-sawarabi), "Hiragino Mincho ProN", "Yu Mincho",
+    serif;
+  --font-display: var(--font-oswald), var(--font-noto-sans), sans-serif;
+
+  /* ===== Motion ===== */
+  --animate-ken-burns: ken-burns 14s ease-out both;
+  --animate-fade-in: fade-in 0.8s ease-out both;
+  --animate-fade-up: fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-float: float 5s ease-in-out infinite;
+
+  @keyframes ken-burns {
+    from {
+      transform: scale(1.12) translate(1.5%, 1%);
+    }
+    to {
+      transform: scale(1) translate(0, 0);
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(28px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+/* ===== Reusable utility classes ===== */
+
+/* Vertical Japanese text (decorative headings) */
+.writing-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+/* Thin decorative rule with a diamond center, brand style */
+.rule-diamond {
+  position: relative;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-tan) 20%,
+    var(--color-tan) 80%,
+    transparent
+  );
+}
+.rule-diamond::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: var(--color-accent);
+}
+
+/* Soft card shadow used across the site */
+.shadow-card {
+  box-shadow: 0 4px 24px -6px rgb(53 34 10 / 0.14);
+}
+.shadow-card-hover {
+  transition:
+    box-shadow 0.4s ease,
+    transform 0.4s ease;
+}
+.shadow-card-hover:hover {
+  box-shadow: 0 18px 44px -12px rgb(53 34 10 / 0.28);
+  transform: translateY(-4px);
+}
+
+/* Image zoom-on-hover frame: wrap an <Image>/<img> with .img-zoom */
+.img-zoom {
+  overflow: hidden;
+}
+.img-zoom img {
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.img-zoom:hover img {
+  transform: scale(1.06);
+}
+
+/* Accessible reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

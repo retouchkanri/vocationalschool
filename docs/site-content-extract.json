@@ -1,0 +1,2401 @@
+{
+  "summary": "Extract structured facts, headings, and image inventory from each downloaded bajigaku.site page",
+  "agentCount": 14,
+  "logs": [],
+  "result": [
+    {
+      "slug": "top",
+      "pageTitle": "馬の学校 馬事学院／東関東馬事専門学院公式サイト",
+      "purpose": "東関東馬事専門学院（馬事学院／バジガク）公式サイトのトップページで、募集案内・ニュース・メディア掲載・ブログ更新・資料請求フォームへの導線を提供する。",
+      "outline": [
+        "h1: サイトロゴ（JRA厩務員になるには【公式】馬の学校 東関東馬事専門学院／馬の専門学校 馬事学院（バジガク））",
+        "(募集案内バナー) 令和9年4月生 募集案内",
+        "(ニュースリスト)",
+        "h2: 最新メディア掲載情報",
+        "h2: Twitter",
+        "h3: 学校案内資料請求フォーム（特典5項目＋フォーム）",
+        "h2: ブログ",
+        "footer: 全ページナビ・住所・電話"
+      ],
+      "facts": [
+        "学校名：東関東馬事専門学院（馬の学校・馬の専門学校）、運営：株式会社 馬事学院（バジガク）",
+        "所在地：〒289-1213 千葉県山武市雨坪10番地",
+        "電話（ご相談・お問合せ）：050-6875-3336",
+        "令和9年4月生 募集案内：出願期間は令和8年5月1日（金）～7月24日（金）",
+        "随時選考合否：定員になり次第募集終了",
+        "選考／イベント日程：5/31（日）・6/6（土）・6/28（日）・7/11（土）",
+        "令和9年4月生支援制度：授業費30％（90万円相当）の納付免除（競走馬育成・馬術競技会運営・引退馬転用などの成果に応じた還元を想定、入学内定者対象）",
+        "在学中の取り組みにより最大70万円が戻る報酬型インターン制度",
+        "授業費分割払い：在学中の2年～最大5年間の分割払いに対応（独自の保証会社の審査で対応）、卒業後の分割払いにも対応",
+        "在学中に最大2回のJRA厩務員（JRA競馬学校厩務員課程）受験が可能、在学中・卒業生に多数の合格者を輩出",
+        "全国の乗馬クラブ・競走馬育成牧場等との連携で在学中に最大6ヶ所の現場でインターン研修が可能（働きながら学べる）",
+        "未経験の入学から最短1年6ヶ月でJRA競馬学校厩務員合格の実績。令和7年4月生は30名のみ新規募集（2024年3月10日記事）",
+        "関西研修施設「ホースレスト」が大阪府河内長野市にあり、研修・合宿などで活用（2024年3月25日記事）",
+        "千葉県八街市に広大な総合施設（JRA厩務員受験対策、競走馬育成、馬の養老牧場を兼ねる）（2024年3月25日記事）",
+        "NHK番組「目撃にっぽん」（バジガクモミジ）およびNHK番組「ジューダイ」、各種新聞でメディア掲載実績あり",
+        "系列校：東関東馬事高等学院（厩務員を目指せる高校）。高校3年次に2回JRA競馬学校を受験し高校生現役でJRA厩務員課程合格の実績（2023年3月26日記事）",
+        "ニュース：在校生のJRA競馬学校「厩務員課程」受験合格実績あり（2023年1月21日記事）",
+        "他校からの転入・転校を受け入れ（2023年1月20日記事）",
+        "災害被害等による学費滞納への馬事学院独自の救済支援制度あり（2022年12月20日記事）",
+        "2025年1月3日よりブログをアメブロ（https://ameblo.jp/shool-blog/）へ移転",
+        "資料請求フォームの必須項目：入学対象者氏名（姓・名）、生年月日、現在の学年（小3～社会人・その他）、郵便番号、住所（都道府県・市区町村・丁目番地）、電話番号（携帯可）、メールアドレス",
+        "資料請求には学校案内のほかオープンキャンパスの案内も同封",
+        "サイト説明：JRA厩務員・馬の仕事・牧場就職を目指せる馬の学校。在学中にJRA競馬学校の厩務員・騎手を輩出、生産牧場や育成牧場からの求人依頼多数",
+        "サイトメニュー：本校の優位性／学習環境（学生寮）／受講スタイル／募集要項（学費）／質問Q&A／学校ブログ／学校見学／資料請求／お問合せ"
+      ],
+      "keyMessages": [
+        "業界一体型の信頼と実績：未経験からでも実践的な授業で最短ルートで馬業界（JRA厩務員、育成・生産・観光牧場、乗馬クラブ）へ",
+        "在学中に最大2回のJRA厩務員受験が可能で圧倒的な合格実績",
+        "報酬型インターン：働きながら学び、在学中の取り組みで最大70万円が戻る",
+        "令和9年4月生には授業費30％（90万円相当）納付免除の支援制度",
+        "最大5年間の授業費分割払いで経済面も全面サポート",
+        "現場に即した実践教育（厩務・騎乗・馬の管理）と個別指導の受験対策が他校にない強み"
+      ],
+      "images": [
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/images/logo.png",
+          "role": "サイトロゴ"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_a1.jpg",
+          "role": "トップスライダー画像A1（学校風景）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_a2.jpg",
+          "role": "トップスライダー画像A2"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_a3.jpg",
+          "role": "トップスライダー画像A3"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_a4.jpg",
+          "role": "トップスライダー画像A4"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_b1.jpg",
+          "role": "トップスライダー画像B1"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_b2.jpg",
+          "role": "トップスライダー画像B2"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_b3.jpg",
+          "role": "トップスライダー画像B3"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_b4.jpg",
+          "role": "トップスライダー画像B4"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_001.jpg",
+          "role": "特集バナー1（リンク先 /6-001/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_002.jpg",
+          "role": "特集バナー2（/6-002/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_003.jpg",
+          "role": "特集バナー3（/6-003/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_004.jpg",
+          "role": "特集バナー4（/6-004/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_005.jpg",
+          "role": "特集バナー5（/6-005/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_006.jpg",
+          "role": "特集バナー6（/6-006/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/uploads/2024/03/20210726_214632-150x84.jpg",
+          "role": "記事サムネ：大阪府河内長野市の研修施設ホースレスト"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/uploads/2024/03/f655bd20238dcfddb00ee6ebf19ddbf5-150x92.jpg",
+          "role": "記事サムネ：千葉県八街市の総合施設"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/uploads/2020/10/DSC_0079-150x100.jpg",
+          "role": "記事サムネ：JRA厩務員合格実績（alt: JRA）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/uploads/2020/04/120200120_111759-150x100.jpg",
+          "role": "記事サムネ：NHK目撃にっぽん（バジガクモミジ）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/uploads/2020/01/EOeudQPU4AA9TC6-148x100.jpg",
+          "role": "記事サムネ：各種メディア掲載（新聞記事）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/uploads/2023/06/hbgv-11-150x100.jpg",
+          "role": "記事サムネ：高校生現役JRA厩務員課程合格（東関東馬事高等学院）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/toku_icon_001.png",
+          "role": "資料請求特典アイコン1"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/toku_img_001.jpg",
+          "role": "学校案内資料の写真"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/toku_icon_002.png",
+          "role": "資料請求特典アイコン2"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/toku_img_003.jpg",
+          "role": "JRA厩務員合格関連の写真"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/toku_icon_003.png",
+          "role": "資料請求特典アイコン3"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/toku_img_002.jpg",
+          "role": "インターン研修の写真"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/toku_icon_004.png",
+          "role": "資料請求特典アイコン4"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/toku_img_005.jpg",
+          "role": "支援制度（授業費免除・分割）の写真（2箇所で使用）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/toku_icon_005.png",
+          "role": "資料請求特典アイコン5"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/uploads/2025/06/o0620044213632263601-140x100.gif",
+          "role": "ブログサムネ：アメブロ移転のお知らせ"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/uploads/2024/12/IMG_8890-133x100.jpeg",
+          "role": "ブログサムネ：大晦日の過ごし方"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/uploads/2024/12/241230154434244-133x100.jpg",
+          "role": "ブログサムネ：今年はどんな年PART3"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/uploads/2024/12/241229144352761-133x100.jpg",
+          "role": "ブログサムネ：今年はどんな年PART2"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/uploads/2024/12/IMG_8829-133x100.jpeg",
+          "role": "ブログサムネ：今年はどんな年"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/uploads/2024/12/IMG_8817-133x100.jpeg",
+          "role": "ブログサムネ：引退馬の森で騎乗"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_001.jpg",
+          "role": "下部バナー：学校ブログ"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_002.jpg",
+          "role": "下部バナー：関連サイト bajigakuin.com"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_003.jpg",
+          "role": "下部バナー：学校ブログ"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_004.jpg",
+          "role": "下部バナー：体験（taiken）ページ"
+        }
+      ],
+      "links": [
+        "https://twitter.com/bajigakuin",
+        "https://www.instagram.com/bajigakuin/?hl=ja",
+        "https://www.youtube.com/user/umastable/about",
+        "https://ameblo.jp/shool-blog/",
+        "http://bajigakuin.com",
+        "http://bajigaku.com"
+      ]
+    },
+    {
+      "slug": "tokucho",
+      "pageTitle": "馬の学校 比較（バジガク 東関東馬事専門学院馬事学院の評判とは？）",
+      "purpose": "東関東馬事専門学院の「本校の優位性」ページで、馬の学校を比較検討する際の視点と本校の強み(施設規模・頭数・合格実績・就職率)を紹介する。",
+      "outline": [
+        "ページ本文(見出しタグなし): キャッチコピー「“馬の学校選び”は、とても大切… 夢実現の『確かな手段』を手に入れよう!」",
+        "本文: 学校比較の視点と本校の優位性",
+        "画像バナー群(12件のサブバナーリンク 12-001〜12-012)",
+        "誘導バナー: 学校見学(オープンキャンパス)、資料請求"
+      ],
+      "facts": [
+        "馬の学校選びは「学費」「授業内容」「就職率」など多角的に比較・検討すべきで、「何を学ぶか」「費用」「カリキュラム」「就職先」の視点が大切",
+        "本校は千葉県と大阪府に拠点を持ち、国内最大級の4つの教育施設を展開",
+        "おとなしい乗用馬から引退競走馬、馬術競技馬、現役競走馬まで約120頭の馬を学生が管理",
+        "在学中に大手育成牧場での研修・インターンを取り入れた実践型教育を実施(未経験者にも対応)",
+        "JRA競馬学校「厩務員課程」の合格実績を10年連続で達成",
+        "令和7年度には牧場や乗馬クラブへの就職率100%を記録",
+        "入学すると学生は担当馬を持てる",
+        "競走馬のセリで馬の購入も行う。学校の馬が競馬場のレースに出走。授業中に競馬中継を観戦することもある",
+        "目指せる進路: 競走馬の生産牧場・育成牧場、乗馬クラブ、観光牧場、JRA厩務員",
+        "所在地: 〒289-1213 千葉県山武市雨坪10番地",
+        "電話(ご相談・お問合せ): 050-6875-3336",
+        "運営: 株式会社 馬事学院(バジガク)",
+        "資料請求でクリアファイルを無料プレゼント中",
+        "ページ公開2019-04-04、最終更新2025-04-05"
+      ],
+      "keyMessages": [
+        "馬の学校選びは就職に直結するため、学費の高低ではなく学びと成果の中身で比較すべき",
+        "約120頭・4施設(千葉/大阪)の国内最大級の教育環境は他校を圧倒",
+        "JRA厩務員課程合格10年連続、令和7年度は牧場・乗馬クラブ就職率100%",
+        "在学中に生産から競走馬、引退馬のリトレーニングまで全てを学べる",
+        "オープンキャンパス(学校見学)に参加すれば選ばれる理由がわかる"
+      ],
+      "images": [
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/images/logo.png",
+          "role": "ヘッダーの学校ロゴ(JRA厩務員になるには【公式】馬の学校 東関東馬事専門学院/馬事学院バジガク)"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_a1.jpg",
+          "role": "トップスライダー画像(グループA 1/4)"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_a2.jpg",
+          "role": "トップスライダー画像(グループA 2/4)"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_a3.jpg",
+          "role": "トップスライダー画像(グループA 3/4)"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_a4.jpg",
+          "role": "トップスライダー画像(グループA 4/4)"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_b1.jpg",
+          "role": "トップスライダー画像(グループB 1/4)"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_b2.jpg",
+          "role": "トップスライダー画像(グループB 2/4)"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_b3.jpg",
+          "role": "トップスライダー画像(グループB 3/4)"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_b4.jpg",
+          "role": "トップスライダー画像(グループB 4/4)"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/tokucho/img_001_1.jpg",
+          "role": "メイン画像: 学校選び・オープンキャンパス案内に添えられた写真"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/tokucho/img_002_1.jpg",
+          "role": "競走馬のセリで馬の購入にも意欲"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/tokucho/img_002_2.jpg",
+          "role": "入学すると担当馬を持てる学生たち"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/tokucho/img_002_3.jpg",
+          "role": "授業中の学生たちの雰囲気"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/tokucho/img_002_4.jpg",
+          "role": "競馬場で学校の馬がレースへ"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/tokucho/img_002_5.jpg",
+          "role": "約120頭の馬たちが学生の教材"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/tokucho/img_002_6.jpg",
+          "role": "授業中に競馬中継で観戦"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_001.jpg",
+          "role": "サブバナー(リンク先 /12-001/)"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_002.jpg",
+          "role": "サブバナー(リンク先 /12-002/)"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_003.jpg",
+          "role": "サブバナー(リンク先 /12-003/)"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_004.jpg",
+          "role": "サブバナー(リンク先 /12-004/)"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_005.jpg",
+          "role": "サブバナー(リンク先 /12-005/)"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_006.jpg",
+          "role": "サブバナー(リンク先 /12-006/)"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_007.jpg",
+          "role": "サブバナー(リンク先 /12-007/)"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_008.jpg",
+          "role": "サブバナー(リンク先 /12-008/)"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_009.jpg",
+          "role": "サブバナー(リンク先 /12-009/)"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_010.jpg",
+          "role": "サブバナー(リンク先 /12-010/)"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_011.jpg",
+          "role": "サブバナー(リンク先 /12-011/)"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_012.jpg",
+          "role": "サブバナー(リンク先 /12-012/)"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/ban_2020_4.gif",
+          "role": "学校見学(体験)誘導バナー「参加すればわかります!本校が選ばれる理由」"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/ban_shiryo_1.gif",
+          "role": "資料請求バナー(クリアファイル無料プレゼント)"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_001.jpg",
+          "role": "学校ブログへのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_002.jpg",
+          "role": "馬事学院(bajigakuin.com)へのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_003.jpg",
+          "role": "学校ブログへのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_004.jpg",
+          "role": "学校見学(taiken)へのバナー"
+        }
+      ],
+      "links": [
+        "https://twitter.com/bajigakuin (公式Twitter @bajigakuin)",
+        "https://www.instagram.com/bajigakuin/",
+        "https://www.youtube.com/user/umastable (YouTubeチャンネル)",
+        "https://ameblo.jp/shool-blog/ (学校ブログ Ameblo)",
+        "http://bajigakuin.com (関連校サイト)",
+        "http://bajigaku.com (株式会社 馬事学院)"
+      ]
+    },
+    {
+      "slug": "curriculum",
+      "pageTitle": "未経験からのJRA厩務員になるには、ここの馬の専門学校が断トツ有利！その理由・・・（受講スタイル）",
+      "purpose": "東関東馬事専門学院の「受講スタイル」ページで、未経験からJRA厩務員を目指せるカリキュラム・学習の特徴を紹介する。",
+      "outline": [
+        "h1: サイトロゴ（JRA厩務員になるには【公式】馬の学校 東関東馬事専門学院／馬事学院（バジガク））",
+        "冒頭キャッチ: 未経験から1年4ヶ月でJRA厩務員課程受験合格者多数／全国の生産牧場・育成牧場・乗馬クラブ等でインターン学習も",
+        "本文: 馬の仕事の専門性と本校の学び",
+        "6項目の特徴（写真＋キャプション）",
+        "囲み: ◆『働きながら学び・学びながら働ける』（諸経費還付制度）",
+        "サブバナー12個（詳細ページ12-001〜12-012へのリンク）",
+        "フッター: 学校所在地・電話"
+      ],
+      "facts": [
+        "未経験から1年4ヶ月でJRA厩務員課程受験合格者を多数輩出",
+        "全国の生産牧場・育成牧場・乗馬クラブ等でインターン学習が可能",
+        "JRA競馬学校厩務員課程の合格者を10年連続で輩出（在学中の合格も10年連続達成）",
+        "女性厩務員も多数合格",
+        "拠点は関東（千葉県3ヶ所）と関西（大阪府1ヶ所）",
+        "馬の仕事は数百万〜数千万円のサラブレッド（馬主の財産）を預かる特殊で高い専門性が求められる職場",
+        "未経験から2年間で技術・知識を習得できるカリキュラム",
+        "一人1頭以上の担当馬を持ち、競走馬のノウハウを習得",
+        "在学中に6ヶ所の職場でインターン研修を実施",
+        "JRA厩務員筆記試験対策を実施",
+        "120頭を超える馬たちから学べる",
+        "提携牧場・乗馬クラブからの「学校運営協力金」を、研修回数等に応じて学生に諸経費として還付（在学中の見込額最大50万円程度）",
+        "ご相談・お問合せ・資料請求電話番号: 050-6875-3336",
+        "所在地: 〒289-1213 千葉県山武市雨坪10番地",
+        "運営: 株式会社 馬事学院（バジガク）",
+        "学校見学・オープンキャンパスあり（申込ページ https://bajigaku.site/taiken/）",
+        "資料請求でクリアーファイルを無料プレゼント中",
+        "ページ公開2019-04-04、最終更新2025-04-05"
+      ],
+      "keyMessages": [
+        "就職前にどれだけ豊富な実体験を積むかが成功の鍵であり、本校では失敗から学べる実体験でプロの技術・知識と考える力を養える",
+        "大手競走馬育成牧場との連携で『働きながら学び・学びながら働ける』",
+        "未経験からでも在学中にJRA厩務員合格を狙える（10年連続実績）",
+        "基礎訓練からの分かりやすい指導と夢実現への徹底サポートが評判",
+        "卒業生は業界の第一線で活躍している"
+      ],
+      "images": [
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/images/logo.png",
+          "role": "学校ロゴ"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_a1.jpg",
+          "role": "トップスライダー写真（グループa 1/4、b1〜b4のセットとランダム表示）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_a2.jpg",
+          "role": "トップスライダー写真"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_a3.jpg",
+          "role": "トップスライダー写真"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_a4.jpg",
+          "role": "トップスライダー写真"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_b1.jpg",
+          "role": "トップスライダー写真"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_b2.jpg",
+          "role": "トップスライダー写真"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_b3.jpg",
+          "role": "トップスライダー写真"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_b4.jpg",
+          "role": "トップスライダー写真"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/curriculum/img_001_1.jpg",
+          "role": "未経験・初心者からでも学びやすい様子（メイン写真）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/curriculum/img_002_1.jpg",
+          "role": "基礎訓練からのわかりやすい指導"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/curriculum/img_002_2.jpg",
+          "role": "一人1頭以上の担当馬"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/curriculum/img_002_3.jpg",
+          "role": "6ヶ所の職場でのインターン研修"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/curriculum/img_002_4.jpg",
+          "role": "JRA厩務員筆記試験対策"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/curriculum/img_002_5.jpg",
+          "role": "夢実現への徹底サポート"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/curriculum/img_002_6.jpg",
+          "role": "120頭を超える馬たち"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_001.jpg",
+          "role": "詳細ページ12-001へのバナー（sub_ban_002〜012も同様に12-002〜12-012へリンク）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/ban_2020_4.gif",
+          "role": "学校見学・体験申込バナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/ban_shiryo_1.gif",
+          "role": "資料請求バナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_001.jpg",
+          "role": "学校ブログへのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_002.jpg",
+          "role": "馬事学院本サイト(bajigakuin.com)へのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_003.jpg",
+          "role": "学校ブログへのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_004.jpg",
+          "role": "体験ページへのバナー"
+        }
+      ],
+      "links": [
+        "https://twitter.com/bajigakuin",
+        "https://www.instagram.com/bajigakuin/?hl=ja",
+        "https://www.youtube.com/user/umastable/about",
+        "https://ameblo.jp/shool-blog/",
+        "http://bajigakuin.com",
+        "http://bajigaku.com"
+      ]
+    },
+    {
+      "slug": "boshu",
+      "pageTitle": "馬の学校の学費｜JRA厩務員になるための馬の専門学校／在学中にJRA厩務員 東関東馬事専門学院（募集要項、教育ローン、学費、奨学金などのご案内ページ）",
+      "purpose": "東関東馬事専門学院の募集要項（応募条件・出願方法・学費・還付制度・分割払い）を案内するページ。",
+      "outline": [
+        "ページ冒頭: 本校への入学をお考えの皆様へ（JRA厩務員・牧場・乗馬クラブ・観光・養老牧場等）",
+        "令和9年4月生 最終募集案内（出願期間・学校見学日程）",
+        "◆応募条件",
+        "◆必要書類",
+        "◆出願方法・合格通知等",
+        "◆学費の詳細（2年間）",
+        "（※ご注意）学費案内の適用年度について",
+        "関連バナー群（12-001〜12-012）・学校見学・資料請求バナー",
+        "フッター: 学校所在地・連絡先"
+      ],
+      "facts": [
+        "対象進路: JRA厩務員・牧場・乗馬クラブ・観光・養老牧場等",
+        "令和9年4月生の最終募集案内",
+        "出願期間: 令和8年8月22日（土）〜11月18日（水）（冒頭表記）。先着順選考方式・定員次第終了",
+        "出願方法欄では出願期間が令和8年8月22日（土）〜10月28日（水）と表記（ページ内で不一致）",
+        "学校見学（オープンキャンパス）開催日: 8/23（日）・9/13（土）・11/14（土）",
+        "応募条件（年齢）: 入学時点で高校卒業以上26歳まで",
+        "中学卒業後の入学希望者は東関東馬事高等学院（bajigaku.com）へ",
+        "応募条件（体重）: 入学時点で68kg以下",
+        "応募条件（健康）: 馬の管理・騎乗に支障のない健康状態",
+        "必要書類（入学内定後に提出）: ①入校申込書 ②健康診断書 ③住民票（発行3ヶ月以内・家族構成がわかるもの）",
+        "出願はインターネットの【入学出願フォーム】（bajigaku.site/jizen/）から申込み。合格内定者のみ書類提出",
+        "原則としてオープンキャンパス参加後の出願。参加できない場合は事務局へ連絡",
+        "学費（2年間）: 入学申込金 480,000円",
+        "通常授業費 3,300,000円 → 納付授業費 2,310,000円（通常授業費の30%相当をあらかじめ免除）",
+        "在学中の還付見込額 700,000円（実質授業費 1,500,000円=231万円−70万円）",
+        "在学中にJRA競馬学校厩務員課程受験に合格した場合、合格奨励金100,000円を諸経費の還付として支給",
+        "授業費免除の根拠: 競走馬の育成・引退競走馬の乗用馬転用・馬術競技の運営サポート・馬のTV撮影/メディア制作等の授業による外部収益",
+        "還付の仕組み: 提携牧場・乗馬クラブへの研修による「学校運営協力金」を研修回数等に応じ学生に還付（在学中見込額最大50万円程度）",
+        "JRA競馬学校厩務員課程の在学中受験は、技術レベル・経験により本校が認めた場合に限り可能",
+        "授業費の分割払い可（保証会社利用・独自審査・最小12回〜最大48回、諸経費は対象外）",
+        "学費案内は令和9年4月生向け。以降の年度は都度募集要項を参照",
+        "電話番号: 050-6875-3336（馬事学院事務局）",
+        "所在地: 〒289-1213 千葉県山武市雨坪10番地",
+        "運営: 株式会社 馬事学院（バジガク）",
+        "特徴: 未経験から在学中にJRA厩務員受験合格・競走馬牧場への就職に特化したカリキュラム。現役競走馬を活用した実践訓練、引退競走馬の乗馬転用調教",
+        "資料請求でクリアーファイル無料プレゼント中"
+      ],
+      "keyMessages": [
+        "未経験から在学中にJRA厩務員受験合格を目指せる特化カリキュラム",
+        "現役競走馬での実践訓練・引退競走馬の乗馬転用調教という独自授業",
+        "独自授業が全国の牧場への就職率向上とJRA厩務員合格実績に結びついている",
+        "授業費30%事前免除+研修還付で実質授業費150万円に軽減",
+        "JRA厩務員課程合格者に奨励金10万円",
+        "分割払い（12〜48回）に対応、独自審査で相談可",
+        "先着順選考・定員次第終了なので早めの出願を推奨",
+        "出願前にオープンキャンパス参加が原則"
+      ],
+      "images": [
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/images/logo.png",
+          "role": "ヘッダーロゴ（東関東馬事専門学院／馬事学院バジガク）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_a1.jpg",
+          "role": "トップスライダー画像（学校風景 パターンA 1）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_a2.jpg",
+          "role": "トップスライダー画像（パターンA 2）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_a3.jpg",
+          "role": "トップスライダー画像（パターンA 3）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_a4.jpg",
+          "role": "トップスライダー画像（パターンA 4）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_b1.jpg",
+          "role": "トップスライダー画像（パターンB 1）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_b2.jpg",
+          "role": "トップスライダー画像（パターンB 2）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_b3.jpg",
+          "role": "トップスライダー画像（パターンB 3）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_b4.jpg",
+          "role": "トップスライダー画像（パターンB 4）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_001.jpg",
+          "role": "関連ページバナー（/12-001/へのリンク）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_002.jpg",
+          "role": "関連ページバナー（/12-002/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_003.jpg",
+          "role": "関連ページバナー（/12-003/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_004.jpg",
+          "role": "関連ページバナー（/12-004/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_005.jpg",
+          "role": "関連ページバナー（/12-005/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_006.jpg",
+          "role": "関連ページバナー（/12-006/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_007.jpg",
+          "role": "関連ページバナー（/12-007/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_008.jpg",
+          "role": "関連ページバナー（/12-008/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_009.jpg",
+          "role": "関連ページバナー（/12-009/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_010.jpg",
+          "role": "関連ページバナー（/12-010/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_011.jpg",
+          "role": "関連ページバナー（/12-011/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_012.jpg",
+          "role": "関連ページバナー（/12-012/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/ban_2020_4.gif",
+          "role": "学校見学（オープンキャンパス）案内バナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/ban_shiryo_1.gif",
+          "role": "資料請求バナー（クリアーファイル無料プレゼント）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_001.jpg",
+          "role": "学校ブログへのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_002.jpg",
+          "role": "関連サイト bajigakuin.com へのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_003.jpg",
+          "role": "学校ブログへのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_004.jpg",
+          "role": "学校見学（taiken）ページへのバナー"
+        }
+      ],
+      "links": [
+        "http://bajigaku.com/（東関東馬事高等学院・中卒者向け／運営会社）",
+        "http://bajigakuin.com（関連校サイト）",
+        "https://ameblo.jp/shool-blog/（学校ブログ Ameblo）",
+        "https://twitter.com/bajigakuin（Twitter/X）",
+        "https://www.instagram.com/bajigakuin/（Instagram）",
+        "https://www.youtube.com/user/umastable/about（YouTubeチャンネル）"
+      ]
+    },
+    {
+      "slug": "taiken",
+      "pageTitle": "馬の学校 比較／体験入学・オープンキャンパス（馬の学校 東関東馬事専門学院）",
+      "purpose": "東関東馬事専門学院（バジガク）のオープンキャンパス・学校見学の案内と参加申込フォームのページ。",
+      "outline": [
+        "p: ◆馬の学校・馬の専門学校◆ 東関東馬事専門学院 令和9年4月生募集",
+        "p: 今、もっとも大切なこと（学校選びの重要性）",
+        "p: JR東京駅（八重洲中央口）まで無料でお迎え",
+        "p: 馬社会を目指す第一歩のオープンキャンパスお申込フォーム",
+        "p: ◆本校のオープンキャンパスでは・・・！◆（6項目紹介）",
+        "p: ◆オープンキャンパス＆説明会 開催日程◆",
+        "form: 申込フォーム（mailformpro）",
+        "footer: 学校所在地・連絡先"
+      ],
+      "facts": [
+        "令和9年4月生の新規学生募集を行っている",
+        "国内には3～4校の馬の専門学校・馬の学校が存在する",
+        "入学希望者には必ず「学校見学・入学説明会」への参加を求め、在校生の様子、馬社会の求める人材像・動向、授業内容を説明する",
+        "他校検討中でも参加可能（入学の有無に関わらず情報収集に役立つ）",
+        "JR東京駅（八重洲中央口）まで無料送迎あり。お迎えは11:30集合・出発",
+        "帰りは最寄り駅のJR八街駅まで送迎（JR東京駅まで直通）",
+        "オープンキャンパス＆説明会 開催日程（令和9年度4月生対象）: 5/31（日）・6/6（土）・6/28（日）・7/11（土）から選択",
+        "説明会後に乗馬体験に参加可能（未経験者も多い）",
+        "馬のお手入れ体験・馬とのふれあいができる",
+        "在校生と話す機会がある",
+        "参加者には在校生からプレゼント（記念品）がもらえる",
+        "申込フォーム項目: 資料の有無（必須）、第一・第二希望日、氏名・フリガナ（必須）、本人の体重（kg）、生年月日（必須）、参加人数と同伴者（父親/母親/兄弟/友人/その他）、性別（必須）、本人の状況（中学生以下～社会人、必須）、郵便番号・住所（必須）、携帯連絡先（必須、本人/父/母）、メールアドレス（必須）、乗馬経験（なし～10回/10～30回/30～50回/50～100回/100～300回/300～500回/500回以上）、乗馬クラブ所属の有無、入学希望年度（令和9年4月生/令和10年4月生/令和10年以降）、東京駅お迎え希望の有無、その他自由記入",
+        "申込確認後、事務局からメールまたは電話で連絡がある",
+        "資料請求でクリアーファイルを無料プレゼント中",
+        "相談・問合せ電話番号: 050-6875-3336",
+        "所在地: 〒289-1213 千葉県山武市雨坪10番地",
+        "運営: 株式会社 馬事学院（バジガク）",
+        "ページ公開2019-04-04、最終更新2026-04-25"
+      ],
+      "keyMessages": [
+        "学校選びは在学中の充実だけでなく卒業後の進路に直結する最重要事項",
+        "入学検討者は必ず学校見学・入学説明会に参加してほしい。他校検討中でも役立つ",
+        "東京駅まで無料送迎で関西・関東から参加しやすい",
+        "オープンキャンパスでは乗馬体験・馬のお手入れ・在校生との交流ができる",
+        "参加すればわかる、本校が選ばれる理由"
+      ],
+      "images": [
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/images/logo.png",
+          "role": "ヘッダーの学校ロゴ（東関東馬事専門学院／馬事学院バジガク）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_a1.jpg",
+          "role": "トップスライダー画像（学校・馬の写真、a1〜a4）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_a2.jpg",
+          "role": "トップスライダー画像"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_a3.jpg",
+          "role": "トップスライダー画像"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_a4.jpg",
+          "role": "トップスライダー画像"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_b1.jpg",
+          "role": "トップスライダー画像（ランダム表示のBセット、b1〜b4）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_b2.jpg",
+          "role": "トップスライダー画像"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_b3.jpg",
+          "role": "トップスライダー画像"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_b4.jpg",
+          "role": "トップスライダー画像"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/taiken/img_001_1.jpg",
+          "role": "学校見学・説明会の紹介画像（冒頭本文横）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/taiken/img_002_1.jpg",
+          "role": "オープンキャンパス: 乗馬体験の様子"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/taiken/img_002_2.jpg",
+          "role": "オープンキャンパス: 馬のお手入れ体験・ふれあい"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/taiken/img_002_3.jpg",
+          "role": "オープンキャンパス: 在校生との交流"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/taiken/img_002_4.jpg",
+          "role": "オープンキャンパス: 夢実現サポートの様子"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/taiken/img_002_5.jpg",
+          "role": "オープンキャンパス: 在校生からのプレゼント（記念品）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/taiken/img_002_6.jpg",
+          "role": "オープンキャンパス: JR八街駅までの送迎"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/ban_shiryo_1.gif",
+          "role": "資料請求バナー（クリアーファイル無料プレゼント）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/ban_2020_4.gif",
+          "role": "学校見学（体験入学）誘導バナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_001.jpg",
+          "role": "学校ブログへのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_002.jpg",
+          "role": "関連サイト bajigakuin.com へのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_003.jpg",
+          "role": "学校ブログへのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_004.jpg",
+          "role": "体験入学ページへのバナー"
+        }
+      ],
+      "links": [
+        "https://twitter.com/bajigakuin",
+        "https://www.instagram.com/bajigakuin/?hl=ja",
+        "https://www.youtube.com/user/umastable/about",
+        "https://ameblo.jp/shool-blog/",
+        "http://bajigakuin.com",
+        "http://bajigaku.com"
+      ]
+    },
+    {
+      "slug": "kankyo",
+      "pageTitle": "関東・関西に国内最大級の馬の専門学校（4施設）／未経験からJRA厩務員になるための専門学校",
+      "purpose": "東関東馬事専門学院の学習環境（施設）と学生寮を紹介するページ。",
+      "outline": [
+        "見出し: 関東・関西で最大級の4つの施設 乗馬と競走馬を同時に学べる学習環境",
+        "施設写真ギャラリー（12枚）",
+        "見出し: 学生たちが過ごす学生寮 全部屋個室でプライベートの確保と一人暮らしでの安心感",
+        "寮写真ギャラリー（6枚）",
+        "関連バナー群（12件）"
+      ],
+      "facts": [
+        "関東と関西に拠点があり、計4つの施設を持つ（国内最大級と称する）",
+        "4施設で120頭以上の馬を学生が管理",
+        "馬は初心者向けのおとなしい乗用馬、馬術競技馬、引退競走馬、現役競走馬まで多様",
+        "未経験から最短1年4ヶ月でJRA競馬学校の厩務員課程合格を目指すカリキュラム",
+        "学生寮は全室個室、テレビ備え付け、Wi-Fi完備、部屋の模様替えは自由",
+        "学生寮は学校キャンパスから徒歩2分",
+        "寮には約55名の学生が居住",
+        "寮の食事は土日祝日を問わず365日提供",
+        "寮設備: 食堂、洗面所・洗濯スペース、男子風呂、管理室（荷物受け取り可）",
+        "施設: 練習運動場、1周150mの走路トラック、広い馬場、厩舎（多数）、クラブハウス（教室・事務所）、ミニパドック（放牧場）、円形の丸馬場、坂道での馬の散歩コース",
+        "就職先の目標例: 乗馬クラブ、生産牧場、育成牧場、観光牧場",
+        "提携牧場で研修可、還付制度あり（meta記述）",
+        "JRA厩務員合格者多数輩出（meta記述）",
+        "問合せ電話: 050-6875-3336",
+        "住所: 〒289-1213 千葉県山武市雨坪10番地",
+        "運営: 株式会社 馬事学院（バジガク）",
+        "学校見学受付中、資料請求でクリアファイル無料プレゼント中"
+      ],
+      "keyMessages": [
+        "関東・関西に国内最大級の4施設、120頭以上の馬で乗馬と競走馬を同時に学べる",
+        "未経験からプロを目指せる国内トップレベルの授業内容",
+        "最短1年4ヶ月でJRA厩務員課程合格を目指せる進路別カリキュラム",
+        "全室個室・365日食事付きの学生寮で安心の一人暮らし",
+        "JRA厩務員合格実績多数"
+      ],
+      "images": [
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/kankyo/img_001_1.jpg",
+          "role": "学習環境紹介のメイン写真"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/kankyo/img_002_1.jpg",
+          "role": "練習運動場の様子"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/kankyo/img_002_2.jpg",
+          "role": "1周150mの走路トラック"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/kankyo/img_002_3.jpg",
+          "role": "広い運動場（馬場）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/kankyo/img_002_4.jpg",
+          "role": "厩舎風景（馬の部屋）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/kankyo/img_002_5.jpg",
+          "role": "教室・事務所のクラブハウス"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/kankyo/img_002_6.jpg",
+          "role": "馬が快適に過ごす様子"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/kankyo/img_002_7.jpg",
+          "role": "のんびりした周辺環境"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/kankyo/img_002_8.jpg",
+          "role": "バジガクの風景の一コマ"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/kankyo/img_002_9.jpg",
+          "role": "ミニパドック（放牧場）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/kankyo/img_002_10.jpg",
+          "role": "多数ある厩舎"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/kankyo/img_002_11.jpg",
+          "role": "円形の丸馬場でのトレーニング"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/kankyo/img_002_12.jpg",
+          "role": "馬での坂道散歩"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/kankyo/img_003_1.jpg",
+          "role": "学生寮の外観・紹介写真"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/kankyo/img_003_2.jpg",
+          "role": "寮の個室内の様子"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/kankyo/img_004_1.jpg",
+          "role": "毎日用意される食事"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/kankyo/img_004_2.jpg",
+          "role": "洗面所・洗濯スペース"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/kankyo/img_004_3.jpg",
+          "role": "食堂の風景"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/kankyo/img_004_4.jpg",
+          "role": "男子風呂の様子"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/kankyo/img_004_5.jpg",
+          "role": "管理室（荷物受け取り可）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/kankyo/img_004_6.jpg",
+          "role": "寮内の掲示物"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_a1.jpg",
+          "role": "トップスライダー写真（施設・グループa 1〜4、b 1〜4 同パターン）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_001.jpg",
+          "role": "関連記事バナー（sub_ban_001〜012.jpg、リンク先 /12-001/〜/12-012/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/ban_2020_4.gif",
+          "role": "学校見学案内バナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/ban_shiryo_1.gif",
+          "role": "資料請求バナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_001.jpg",
+          "role": "学校ブログへのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_002.jpg",
+          "role": "馬事学院サイト（bajigakuin.com）へのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_003.jpg",
+          "role": "学校ブログへのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_004.jpg",
+          "role": "学校見学（taiken）へのバナー"
+        }
+      ],
+      "links": [
+        "https://www.youtube.com/user/umastable/about",
+        "https://www.instagram.com/bajigakuin/?hl=ja",
+        "https://twitter.com/bajigakuin",
+        "https://ameblo.jp/shool-blog/",
+        "http://bajigakuin.com",
+        "http://bajigaku.com"
+      ]
+    },
+    {
+      "slug": "qa",
+      "pageTitle": "質問Ｑ＆Ａ | JRA厩務員になるには【公式】馬の学校 東関東馬事専門学院／馬の専門学校 馬事学院（バジガク）",
+      "purpose": "東関東馬事専門学院への入学検討者向けに、よくある質問と回答（入学条件・男女比・就職保証・学費分割・食事・自動車免許・他校との違い）をまとめたFAQページ。",
+      "outline": [
+        "p(タイトル): 馬の学校 東関東馬事専門学院 聞いてみよう！よくある質問Ｑ＆Ａ",
+        "アコーディオンQ1: 馬に触れたことがない人でも入学できますか？",
+        "アコーディオンQ2: 入学者の男女の比率",
+        "アコーディオンQ3: 就職が決まらなかった場合",
+        "アコーディオンQ4: 学費の分割払い",
+        "アコーディオンQ5: 休日の食事",
+        "アコーディオンQ6: 自動車免許の取得",
+        "アコーディオンQ7: 他校との違い・アピールポイント",
+        "サブバナー群(12件: /12-001/〜/12-012/)",
+        "フッター: 学校名・住所・電話"
+      ],
+      "facts": [
+        "Q: 馬に触れたことがない人でも入学できますか？ / A: 可能。未経験・初心者から安心して学べるカリキュラムで、入学者の約7割はまったくの初心者。",
+        "Q: 入学者の男女比は？ / A: 年により異なるが概ね男子5割・女子5割。女性も馬の仕事・就職に結び付けられるカリキュラム。",
+        "Q: 就職が決まらなかった場合は？ / A: 基本的にほぼ全員就職内定。万一在学中に決まらない場合は追加授業費の負担なしで就職決定まで学校がサポート。",
+        "Q: 学費の分割払いは可能？ / A: 国の教育ローン（日本政策金融公庫）を活用できるほか、授業費を分割納入できる独自制度（独自審査・保証協会活用）あり。詳細は募集要項参照。",
+        "Q: 休日の食事は？ / A: 基本的に365日3食提供が前提。研修期間中などを除き土日祝日も全日食事提供（平日のみ提供の学校が多い中での特長）。",
+        "Q: 自動車免許は取得できる？ / A: 馬業界への就職にはほぼ自動車免許が必須。希望者には八街市内の八街自動車教習所を紹介。同教習所は学院の学生寮まで送迎あり。",
+        "Q: 他校との違い・アピールポイントは？ / A: 体験入学参加者から「雰囲気が良い」「先生と生徒の距離が近い」「在校生が明るい」との感想が多い。ブログが毎日更新され保護者にも安心感がある。アンケートでは他校比較目的で体験入学・学校見学に来たほぼ全員が本校に出願（合否判断があるため全員入学ではない）。",
+        "問合せ電話番号: 050-6875-3336",
+        "所在地: 〒289-1213 千葉県山武市雨坪10番地",
+        "運営: 株式会社 馬事学院（バジガク）",
+        "学校名: 馬の学校・馬の専門学校／東関東馬事専門学院",
+        "ページ公開日2019-04-04、最終更新2025-04-01",
+        "資料請求でクリアーファイル無料プレゼント中",
+        "サイト内主要ページ: 本校の優位性(/tokucho/)、学習環境・学生寮(/kankyo/)、受講スタイル(/curriculum/)、募集要項・学費(/boshu/)、学校見学(/taiken/)、お問合せ(/contact/)"
+      ],
+      "keyMessages": [
+        "未経験・初心者でも安心（入学者の約7割が初心者）",
+        "男女比ほぼ半々で女性も安心して就職を目指せる",
+        "ほぼ全員就職内定、決まるまで追加費用なしでサポート",
+        "教育ローン・独自の分割納入制度で学費支払いに柔軟対応",
+        "365日3食の食事提供（土日祝含む）",
+        "八街自動車教習所の紹介・寮まで送迎あり",
+        "体験入学参加者のほぼ全員が出願するほど高評価、雰囲気の良さと毎日更新のブログが強み"
+      ],
+      "images": [
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/images/logo.png",
+          "role": "ヘッダーの学校ロゴ"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_a1.jpg",
+          "role": "トップスライダー画像（学校風景 Aセット1、a2〜a4も同様）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_b1.jpg",
+          "role": "トップスライダー画像（Bセット1、b2〜b4も同様）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_001.jpg",
+          "role": "サブバナー1（リンク先 /12-001/、sub_ban_002〜012.jpgが /12-002/〜/12-012/ に対応）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/ban_2020_4.gif",
+          "role": "学校見学・体験入学の案内バナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/ban_shiryo_1.gif",
+          "role": "資料請求バナー（クリアーファイル無料プレゼント）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_001.jpg",
+          "role": "学校ブログへのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_002.jpg",
+          "role": "関連サイト bajigakuin.com へのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_003.jpg",
+          "role": "学校ブログへのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_004.jpg",
+          "role": "体験入学ページへのバナー"
+        }
+      ],
+      "links": [
+        "https://www.youtube.com/user/umastable/about",
+        "https://www.instagram.com/bajigakuin/?hl=ja",
+        "https://twitter.com/bajigakuin",
+        "https://ameblo.jp/shool-blog/ (学校ブログ)",
+        "http://bajigakuin.com (関連学校サイト)",
+        "http://bajigaku.com (株式会社馬事学院)"
+      ]
+    },
+    {
+      "slug": "contact",
+      "pageTitle": "お問合せ｜東関東馬事専門学院（バジガク）",
+      "purpose": "東関東馬事専門学院へのお問い合わせフォーム（メールフォームプロ）を提供するページ。",
+      "outline": [
+        "見出し: 東関東馬事専門学院へのお問合せ（top_sub_title）",
+        "お問合せフォーム（姓名・フリガナ・メール・件名・内容）",
+        "関連ページバナー群（12-001〜12-012）",
+        "学校見学・資料請求バナー",
+        "フッター（住所・電話・メニュー）"
+      ],
+      "facts": [
+        "ご相談・お問合せ電話番号: 050-6875-3336",
+        "所在地: 〒289-1213 千葉県山武市雨坪10番地",
+        "正式名称: 馬の学校・馬の専門学校／東関東馬事専門学院",
+        "運営: 株式会社 馬事学院（バジガク）",
+        "お問合せフォーム送信先: https://bajigaku.site/contact_form/mailformpro/mailformpro.cgi（メールフォームプロ使用）",
+        "フォーム項目（すべて必須）: お名前（姓・名）、フリガナ（セイ・メイ、カナチェックあり）、メールアドレス、件名、お問合せ内容（自由記述）",
+        "フォームボタン: 「確認画面へ」と「リセット」（確認画面方式）",
+        "学校見学バナー: 「参加すればわかります！本校が選ばれる理由。」",
+        "資料請求特典: クリアーファイル無料プレゼント中",
+        "ページ公開日: 2019-04-04、最終更新: 2019-07-09",
+        "サイトのナビ構成: 本校の優位性／学習環境（学生寮）／受講スタイル／募集要項（学費）／質問Q&A／学校ブログ／学校見学／資料請求／お問合せ／サイトマップ"
+      ],
+      "keyMessages": [
+        "JRA厩務員になるには—関東・関西でJRA厩務員を目指せる馬の学校（サイト全体のキャッチ）",
+        "学校見学に参加すれば本校が選ばれる理由がわかる",
+        "資料請求でクリアーファイルを無料プレゼント中"
+      ],
+      "images": [
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/images/logo.png",
+          "role": "学校ロゴ（JRA厩務員になるには【公式】馬の学校 東関東馬事専門学院／馬事学院）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_a1.jpg",
+          "role": "トップスライダー画像（学校・馬の風景、a1〜a4）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_a2.jpg",
+          "role": "トップスライダー画像"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_a3.jpg",
+          "role": "トップスライダー画像"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_a4.jpg",
+          "role": "トップスライダー画像"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_b1.jpg",
+          "role": "トップスライダー画像（ランダム表示のBセット、b1〜b4）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_b2.jpg",
+          "role": "トップスライダー画像"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_b3.jpg",
+          "role": "トップスライダー画像"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_b4.jpg",
+          "role": "トップスライダー画像"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_001.jpg",
+          "role": "関連記事バナー（リンク先 /12-001/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_002.jpg",
+          "role": "関連記事バナー（/12-002/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_003.jpg",
+          "role": "関連記事バナー（/12-003/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_004.jpg",
+          "role": "関連記事バナー（/12-004/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_005.jpg",
+          "role": "関連記事バナー（/12-005/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_006.jpg",
+          "role": "関連記事バナー（/12-006/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_007.jpg",
+          "role": "関連記事バナー（/12-007/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_008.jpg",
+          "role": "関連記事バナー（/12-008/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_009.jpg",
+          "role": "関連記事バナー（/12-009/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_010.jpg",
+          "role": "関連記事バナー（/12-010/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_011.jpg",
+          "role": "関連記事バナー（/12-011/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sub_ban_012.jpg",
+          "role": "関連記事バナー（/12-012/）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/ban_2020_4.gif",
+          "role": "学校見学（体験）案内バナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/ban_shiryo_1.gif",
+          "role": "資料請求バナー（クリアーファイルプレゼント）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_001.jpg",
+          "role": "学校ブログへのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_002.jpg",
+          "role": "関連サイト bajigakuin.com へのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_003.jpg",
+          "role": "学校ブログへのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_004.jpg",
+          "role": "学校見学ページへのバナー"
+        }
+      ],
+      "links": [
+        "https://www.youtube.com/user/umastable/about",
+        "https://www.instagram.com/bajigakuin/",
+        "https://twitter.com/bajigakuin",
+        "https://ameblo.jp/shool-blog/",
+        "http://bajigakuin.com",
+        "http://bajigaku.com"
+      ]
+    },
+    {
+      "slug": "6-001",
+      "pageTitle": "馬の学校30%学費免除／JRA競馬学校厩務員課程受験同格を目指せる馬の学校",
+      "purpose": "授業費30%（90万円）全員免除の「馬業界就職支援制度」を紹介する特色紹介ページ（6-001）。",
+      "outline": [
+        "ページ見出し: ◆ある理由から…入学者全員が対象◆ 授業費30％（全員90万円）が免除に！",
+        "セクション: 免除制度の説明（本文＋動画）",
+        "セクション: ≪見込める収入源≫（3項目）",
+        "セクション: さらに…インターンシップ報酬（最大60万円）",
+        "セクション: JRA競馬学校「厩務員課程」受験への特別処置",
+        "写真ギャラリー（12枚・キャプション付き）",
+        "囲み: ◆ここがポイント！！他校との比較",
+        "バナー: 資料請求・学校見学・関連特色ページ 6-002〜6-006",
+        "フッター: 学校名・所在地・電話"
+      ],
+      "facts": [
+        "馬業界就職支援制度により、入学者全員が授業費の30％（90万円相当）免除",
+        "メタ情報では最大189万円免除・授業費の50％免除への言及あり（就職支援による軽減）",
+        "免除原資として見込む収入源: 1) 教材として活用する競走馬の手当・獲得賞金、2) 学生が運営する馬術競技大会の運営収益、3) 引退競走馬の乗馬転用後の売却収益",
+        "在学中のインターンシップ（牧場・乗馬クラブ等での職場研修）で学生1名あたり最大60万円の報酬を得られる",
+        "結果的に他校と比較して一番低価格な学費負担を実現と主張",
+        "定員は毎年30名前後、学生一人ひとりに合わせたカリキュラムを提供",
+        "JRA厩務員志望者への特別サポートあり。入学から最短1年6ヶ月でJRA競馬学校厩務員課程の受験合格者を輩出",
+        "在学期間は2年間。授業カリキュラム濃度が高く、授業費設定は他校より高めだが免除・報酬で相殺と説明",
+        "担当馬制を採用し学生が馬を管理。6ヶ月間で競走騎乗も可能。競走馬はレース最短10日前まで学校で管理",
+        "女性のJRA厩務員も輩出",
+        "競走馬になる前の馴致授業、木馬トレーニング、現役騎手から学べる競走騎乗、担当馬のレース観戦などのカリキュラム",
+        "資料請求でクリアーファイル無料プレゼント中",
+        "学校名: 馬の学校・馬の専門学校／東関東馬事専門学院。所在地: 〒289-1213 千葉県山武市雨坪10番地。TEL: 050-6875-3336",
+        "運営: 株式会社 馬事学院（バジガク）",
+        "ページ公開2019-06-28、最終更新2024-03-30"
+      ],
+      "keyMessages": [
+        "独自の就職支援制度で入学者全員が授業費30％（90万円）免除",
+        "インターンシップ報酬（最大60万円）も合わせ、実質的に一番低価格な学費負担",
+        "教育水準は高く、在校生・卒業生の活躍は他校と比べ物にならない",
+        "JRA競馬学校厩務員課程受験への特別サポート、最短1年6ヶ月で合格者輩出",
+        "未経験からでも安心して馬業界を目指せる"
+      ],
+      "images": [
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_001/zu_001.png",
+          "role": "学費免除の仕組み説明図"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_001/zu_002.png",
+          "role": "インターンシップ報酬・学費比較の説明図"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_001/img_002_1.jpg",
+          "role": "未経験者から安心して騎乗できる様子"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_001/img_002_2.jpg",
+          "role": "担当馬制で学生たちが馬を管理"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_001/img_002_3.jpg",
+          "role": "競馬参戦・応援の様子"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_001/img_002_4.jpg",
+          "role": "現役騎手から学べる競走騎乗"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_001/img_002_5.jpg",
+          "role": "毎日たっぷりの騎乗時間"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_001/img_002_6.jpg",
+          "role": "6ヶ月間で競走騎乗もスムーズ"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_001/img_002_7.jpg",
+          "role": "レース最短10日前まで学校で馬を管理"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_001/img_002_8.jpg",
+          "role": "女性のJRA厩務員も輩出"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_001/img_002_9.jpg",
+          "role": "馬たちとのコミュニケーション"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_001/img_002_10.jpg",
+          "role": "競走馬になる前の馴致授業"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_001/img_002_11.jpg",
+          "role": "担当馬のレース観戦"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_001/img_002_12.jpg",
+          "role": "木馬でのトレーニング風景"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_001/img_003_1.jpg",
+          "role": "「ここがポイント・他校比較」囲みの写真"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_001/movie_001.mp4",
+          "role": "動画: 就職支援制度による授業費30%免除の紹介"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/ban_shiryo_1.gif",
+          "role": "資料請求バナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/ban_2020_4.gif",
+          "role": "学校見学（体験）バナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_001.jpg",
+          "role": "特色ページ6-001バナー（現在ページ）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_002.jpg",
+          "role": "特色ページ6-002へのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_003.jpg",
+          "role": "特色ページ6-003へのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_004.jpg",
+          "role": "特色ページ6-004へのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_005.jpg",
+          "role": "特色ページ6-005へのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_006.jpg",
+          "role": "特色ページ6-006へのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_001.jpg",
+          "role": "学校ブログへのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_002.jpg",
+          "role": "関連サイト bajigakuin.com へのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_003.jpg",
+          "role": "学校ブログへのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_004.jpg",
+          "role": "学校見学（体験）ページへのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/images/logo.png",
+          "role": "学校ロゴ（ヘッダー）"
+        }
+      ],
+      "links": [
+        "https://ameblo.jp/shool-blog/",
+        "http://bajigakuin.com",
+        "http://bajigaku.com",
+        "https://twitter.com/bajigakuin",
+        "https://www.instagram.com/bajigakuin/",
+        "https://www.youtube.com/user/umastable/about"
+      ]
+    },
+    {
+      "slug": "6-002",
+      "pageTitle": "馬術大会・馬術競技にどんどん参加しよう／馬事学院",
+      "purpose": "学校キャンパス内で開催する日本馬術連盟公認の馬術大会に、学生が費用負担ゼロで多数出場できるという本校の特色を紹介するページ。",
+      "outline": [
+        "トップ見出し: ◆年間１０回以上の馬術大会を開催◆／本校のキャンパスで公認の馬術大会／学生たちの負担０で馬術大会出場へ",
+        "本文: 公認馬術大会の開催と学生の無料出場について",
+        "写真ギャラリー（大会風景12枚）",
+        "◆ここがポイント！！他校との比較",
+        "資料請求バナー・学校見学バナー・特色ページ相互リンク"
+      ],
+      "facts": [
+        "年間10回以上、日本馬術連盟公認の馬術大会を本校キャンパス内で開催している",
+        "大会の競技運営・進行は学生たちが担い、これにより学生が出場できる競技種目を増やしている",
+        "通常は1走行あたり約3万円必要となるエントリー費・諸経費が、学生は自己負担なし（参加費免除）で出場できる",
+        "参加経費はすべて学校負担",
+        "騎乗者資格の取得や競技出場歴は、乗馬クラブへの就職やJRA競馬学校「厩務員課程」受験の際に技術レベルを証明する実績となる",
+        "他の馬術競技場で開催する場合は馬の輸送や宿泊で経費がかさみ参加メンバーを選考する必要があるが、キャンパス内開催なので全学生で取り組め、他校と比べ多くの競技出場経験を積める",
+        "資料請求でクリアーファイルを無料プレゼント中",
+        "学校名: 馬の学校・馬の専門学校／東関東馬事専門学院",
+        "所在地: 〒289-1213 千葉県山武市雨坪10番地",
+        "電話（ご相談・お問合せ）: 050-6875-3336",
+        "運営: 株式会社 馬事学院（バジガク）",
+        "ページ公開2019-06-29、更新2019-07-09"
+      ],
+      "keyMessages": [
+        "キャンパス内で公認馬術大会を年間10回以上開催",
+        "学生は費用負担ゼロ（通常1走行約3万円相当）で大会出場可能",
+        "豊富な競技出場実績がJRA厩務員課程受験や乗馬クラブ就職の武器になる",
+        "他校よりも数多くの馬術競技出場経験を積める"
+      ],
+      "images": [
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_002/img_001_1.jpg",
+          "role": "本文横の馬術大会の様子の写真"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_002/img_002_1.jpg",
+          "role": "馬術大会風景ギャラリー1"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_002/img_002_2.jpg",
+          "role": "馬術大会風景ギャラリー2"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_002/img_002_3.jpg",
+          "role": "馬術大会風景ギャラリー3"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_002/img_002_4.jpg",
+          "role": "馬術大会風景ギャラリー4"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_002/img_002_5.jpg",
+          "role": "馬術大会風景ギャラリー5"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_002/img_002_6.jpg",
+          "role": "馬術大会風景ギャラリー6"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_002/img_002_7.jpg",
+          "role": "馬術大会風景ギャラリー7"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_002/img_002_8.jpg",
+          "role": "馬術大会風景ギャラリー8"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_002/img_002_9.jpg",
+          "role": "馬術大会風景ギャラリー9"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_002/img_002_10.jpg",
+          "role": "馬術大会風景ギャラリー10"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_002/img_002_11.jpg",
+          "role": "馬術大会風景ギャラリー11"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_002/img_002_12.jpg",
+          "role": "馬術大会風景ギャラリー12"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_002/img_003_1.jpg",
+          "role": "「ここがポイント」コラム内の写真"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/ban_shiryo_1.gif",
+          "role": "資料請求バナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/ban_2020_4.gif",
+          "role": "学校見学（体験）案内バナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_001.jpg",
+          "role": "特色ページ6-001へのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_002.jpg",
+          "role": "特色ページ6-002（当ページ・非リンク）バナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_003.jpg",
+          "role": "特色ページ6-003へのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_004.jpg",
+          "role": "特色ページ6-004へのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_005.jpg",
+          "role": "特色ページ6-005へのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_006.jpg",
+          "role": "特色ページ6-006へのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_001.jpg",
+          "role": "学校ブログへのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_002.jpg",
+          "role": "関連サイトbajigakuin.comへのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_003.jpg",
+          "role": "学校ブログへのバナー2"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_004.jpg",
+          "role": "学校見学（体験）ページへのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/images/logo.png",
+          "role": "ヘッダーの学校ロゴ"
+        }
+      ],
+      "links": [
+        "http://bajigakuin.com",
+        "https://ameblo.jp/shool-blog/",
+        "http://bajigaku.com",
+        "https://twitter.com/bajigakuin",
+        "https://www.instagram.com/bajigakuin/",
+        "https://www.youtube.com/user/umastable"
+      ]
+    },
+    {
+      "slug": "6-003",
+      "pageTitle": "引退馬を活用し人材育成へ／バジガクの取り組み",
+      "purpose": "担当馬制度（一人1〜4頭）と引退競走馬の受け入れ・再活用による実践的人材育成の取り組みを紹介する特色詳細ページ。",
+      "outline": [
+        "ページ見出し: 一人1頭〜4頭までの担当馬制度が話題！／行き場のない引退馬たちを救う／育成馬・現役競走馬で本物を学ぶ",
+        "本文: 担当馬制度の説明（動画付き）",
+        "写真ギャラリー（9枚）",
+        "◆ここがポイント！！他校との比較",
+        "資料請求バナー・他の特色ページへのリンク"
+      ],
+      "facts": [
+        "学生一人につき担当馬1頭〜4頭を提供する担当馬制度がある",
+        "入学すると一人ひとりに担当馬が提供され、最初はおとなしい乗用馬で体調管理・飼養管理・手入れ・検温を担当",
+        "技術レベルの向上に応じて引退競走馬、デビュー前の1歳育成馬、現役競走馬も学生が担当する",
+        "担当馬の種類は乗用馬・競技馬・育成馬・現役馬・引退馬",
+        "調教師・馬主・厩舎関係者との協力関係のもと年間約60頭の引退競走馬を「生きた教材」として受け入れている",
+        "引退馬は入厩当初は競走騎乗トレーニング、その後は適性に応じて馬術大会出場・乗馬レッスン・乗馬体験レッスンなどに活用し乗用馬として再活用",
+        "本校で実施する馬術大会に多くの乗馬クラブが訪れ、馬を関東をはじめ多くの乗馬クラブへ売却している",
+        "馬の売却収益をもとに学生の授業費を50%免除している",
+        "学生を通じ引退競走馬が乗馬として第二の馬生を歩む「馬から人へ、人から馬へ」の仕組み",
+        "資料請求でクリアーファイルを無料プレゼント中",
+        "学校名: 馬の学校・馬の専門学校／東関東馬事専門学院",
+        "所在地: 〒289-1213 千葉県山武市雨坪10番地",
+        "電話（ご相談・お問合せ）: 050-6875-3336",
+        "運営: 株式会社 馬事学院（バジガク）",
+        "ページ公開日2019-06-28、更新日2019-07-08、ページ内部名称「6-003 担当馬最大4頭」"
+      ],
+      "keyMessages": [
+        "一人1〜4頭の担当馬制度により本物の実践力を養成",
+        "おとなしい乗馬だけでなく引退直後の競走馬・現役馬で「本物」の即戦力を身につける",
+        "年間約60頭の引退競走馬受け入れは引退馬支援（行き場のない馬を救う）につながる",
+        "馬の売却収益で授業費50%免除という他校にない仕組み",
+        "人材不足が深刻な馬業界への即戦力養成"
+      ],
+      "images": [
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/images/logo.png",
+          "role": "ヘッダーロゴ（東関東馬事専門学院／馬事学院バジガク）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_a1.jpg",
+          "role": "トップスライダー画像（学校風景）※a1〜a4、b1〜b4の8枚をランダム表示"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_003/movie_001.mp4",
+          "role": "動画: 引退競走馬・現役馬を使った訓練の様子"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_003/img_002_1.jpg",
+          "role": "担当馬・引退馬活用の写真ギャラリー1"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_003/img_002_2.jpg",
+          "role": "写真ギャラリー2"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_003/img_002_3.jpg",
+          "role": "写真ギャラリー3"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_003/img_002_4.jpg",
+          "role": "写真ギャラリー4"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_003/img_002_5.jpg",
+          "role": "写真ギャラリー5"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_003/img_002_6.jpg",
+          "role": "写真ギャラリー6"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_003/img_002_7.jpg",
+          "role": "写真ギャラリー7"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_003/img_002_8.jpg",
+          "role": "写真ギャラリー8"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_003/img_002_9.jpg",
+          "role": "写真ギャラリー9"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_003/img_003_1.jpg",
+          "role": "「ここがポイント」コラム内の写真"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/ban_shiryo_1.gif",
+          "role": "資料請求バナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_001.jpg",
+          "role": "特色ページ6-001へのバナー（同様にban_002〜ban_006が6-002〜6-006へリンク、ban_003は当ページのため非リンク）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/ban_2020_4.gif",
+          "role": "学校見学（体験）案内バナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_001.jpg",
+          "role": "学校ブログへのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_002.jpg",
+          "role": "関連サイト bajigakuin.com へのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_003.jpg",
+          "role": "学校ブログへのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_004.jpg",
+          "role": "学校見学（体験）ページへのバナー"
+        }
+      ],
+      "links": [
+        "https://ameblo.jp/shool-blog/",
+        "http://bajigakuin.com",
+        "http://bajigaku.com",
+        "https://twitter.com/bajigakuin",
+        "https://www.instagram.com/bajigakuin/",
+        "https://www.youtube.com/user/umastable/about"
+      ]
+    },
+    {
+      "slug": "6-004",
+      "pageTitle": "馬の学校／牧場体験インターンシップで報酬！",
+      "purpose": "在学中の牧場インターンシップ（実務訓練）で報酬を受け取れる独自制度を紹介する特色ページ（特色4）。",
+      "outline": [
+        "top_sub_box: ◆在学中にたくさんの職場を経験できる！◆ 生産・育成・乗馬クラブ・牧場など それぞれの現場で本物を学べる",
+        "top_sub_box: 東関東馬事専門学院の生徒だけに…在学中に最大80〜160万円の授業費が還付される理由！？",
+        "top_sub_box: ≫本校と牧場との絶対的な信頼関係の証",
+        "top_sub_box: 実務訓練期間中（インターンシップ期間中）約60万円〜120万円の報酬が直接受け取れます",
+        "subsub_title: ※JRA競馬学校「厩務員課程」受験への特別処置",
+        "hitocome: ◆ここがポイント！！他校との比較"
+      ],
+      "facts": [
+        "入学から6ヶ月以降、実際の現場（インターンシップ）で学ぶ機会がある",
+        "実習先は国内最大級の社台グループ（社台ファーム・追分ファーム）、関西最大級のグリーンウッドパークほか、競走馬の生産・育成のトップレベルの職場",
+        "独自制度により実習中は1ヶ月あたり約10万円の報酬を受け取れる",
+        "実務訓練期間中（インターンシップ期間中）の報酬総額は約60万円〜120万円を直接受け取れる",
+        "東関東馬事専門学院の生徒だけに、在学中に最大80〜160万円の授業費が還付される（牧場との信頼関係の証と説明）",
+        "JRA厩務員を目指す生徒に受験資格取得・受験への特別サポートを実施",
+        "入学から最短2年8ヶ月でJRA競馬学校厩務員課程の受験合格者を輩出",
+        "実習内容の例：職場実習中の競走馬騎乗、北海道・関西エリアでの実習、茨城県内の牧場での騎乗、馬のお産の経験（北海道）、2歳馬の馴致調教、引退馬牧場（メイショウドトウ）",
+        "他校との比較ポイント：①在学中に多数の牧場や乗馬クラブで実習経験、②働きながら学べるインターンシップ独自制度、③本校学生に限り実習中1ヶ月10万円の報酬",
+        "「バジガクの学生なら報酬を支払っても実習に来てほしい」という牧場側の声が多く、そのプロセスで就職先を選定するため定着率が非常に高い",
+        "所在地：〒289-1213 千葉県山武市雨坪10番地",
+        "電話（ご相談・お問合せ）：050-6875-3336",
+        "運営：株式会社 馬事学院（バジガク）",
+        "資料請求でクリアーファイルを無料プレゼント中",
+        "ページ公開日2019-06-30（更新同日）、URL: https://bajigaku.site/6-004/"
+      ],
+      "keyMessages": [
+        "在学中に生産・育成・乗馬クラブ・牧場など多数の現場で本物を学べるのは本校だけの特徴",
+        "働きながら学び・学びながら働ける独自インターンシップ制度で月約10万円の報酬",
+        "報酬・授業費還付は本校と牧場業界との絶対的な信頼関係の証",
+        "現場経験でスキル・人間関係形成・現場対応力が身につき、就職への自信とやる気につながる",
+        "JRA厩務員受験への特別サポートあり"
+      ],
+      "images": [
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_004/movie_001.mp4",
+          "role": "インターンシップ紹介動画（video要素）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_004/zu_001.png",
+          "role": "報酬・授業費還付の仕組み図"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_004/img_002_1.jpg",
+          "role": "職場実習中の競走馬騎乗"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_004/img_002_2.jpg",
+          "role": "北海道・関西エリアでの実習"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_004/img_002_3.jpg",
+          "role": "牧場での騎乗風景（茨城県内）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_004/img_002_4.jpg",
+          "role": "馬のお産の経験（北海道）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_004/img_002_5.jpg",
+          "role": "2歳馬の馴致調教"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_004/img_002_6.jpg",
+          "role": "引退馬の牧場（メイショウドトウ）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_004/img_003_1.jpg",
+          "role": "ポイント解説の添え写真"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/ban_shiryo_1.gif",
+          "role": "資料請求バナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/ban_2020_4.gif",
+          "role": "学校見学（体験）バナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_001.jpg",
+          "role": "特色ページ1へのバナー（6-001）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_002.jpg",
+          "role": "特色ページ2へのバナー（6-002）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_003.jpg",
+          "role": "特色ページ3へのバナー（6-003）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_004.jpg",
+          "role": "特色ページ4バナー（現在ページ・非リンク）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_005.jpg",
+          "role": "特色ページ5へのバナー（6-005）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_006.jpg",
+          "role": "特色ページ6へのバナー（6-006）"
+        }
+      ],
+      "links": [
+        "https://twitter.com/bajigakuin",
+        "https://www.instagram.com/bajigakuin/?hl=ja",
+        "https://www.youtube.com/user/umastable/about",
+        "https://ameblo.jp/shool-blog/",
+        "http://bajigakuin.com",
+        "http://bajigaku.com"
+      ]
+    },
+    {
+      "slug": "6-005",
+      "pageTitle": "馬の求人／牧場求人・乗馬クラブ求人や就職情報",
+      "purpose": "東関東馬事専門学院（バジガク）の就職サポート・求人保有状況と3つの就職保証を紹介する特色詳細ページ（求人情報）。",
+      "outline": [
+        "top_sub_box: ◆ほぼ全国の馬の求人がバジガクで保有◆ 馬の仕事・馬の求人情報／自分に応じて選べる利点",
+        "top_sub_box: 東関東馬事専門学院だからこそ実現可能な3つの就職保証で安心対応",
+        "come_bg_red: ◆ここがポイント！！他校との比較",
+        "バナー: 資料請求／学校見学／他の特色ページ（6-001〜6-006）へのリンク"
+      ],
+      "facts": [
+        "平成31年1月現在、全国から473ヶ所の「馬の仕事・馬の求人」を保有",
+        "卒業の6ヶ月前より、適性・技術レベル・希望に応じた「職場体験実習」を実施（1か所2週間程度）",
+        "学生と雇用者のニーズを合わせてから就職決定する方式でミスマッチを防止",
+        "卒業生の就職率および就職後の定着率が高く評判・確かな実績",
+        "就職保証1: 在学中に怪我や遅れがあっても就職内定まで最後まで確実サポート",
+        "就職保証2: 職場体験（インターンシップ）を通じて実際に職場を体験し自分に適した就職先を選べる",
+        "就職保証3: 就職後のやむを得ない退職・再就職も学校に相談可能",
+        "他校との比較: 雇用者と生徒双方のニーズを合わせて就職決定するため定着率が高く、業界からの信頼が厚い。卒業生の活躍が評判となり本校卒業生を求める声が増加し、有利な条件で就職活動が可能",
+        "業界から本校学生を求める声が急増、一人ひとりの就職カウンセリング、就職に直結する様々な講義で学習",
+        "資料請求でクリアーファイル無料プレゼント中",
+        "問合せ電話: 050-6875-3336",
+        "所在地: 〒289-1213 千葉県山武市雨坪10番地",
+        "運営: 株式会社 馬事学院（バジガク）",
+        "ページ公開日2019-06-30（更新同日）、Twitterアカウント @bajigakuin"
+      ],
+      "keyMessages": [
+        "ほぼ全国の馬の求人を保有し自分に応じて就職先を選べる",
+        "職場体験実習でミスマッチを防ぎ、就職率・定着率とも高い",
+        "3つの就職保証（内定まで確実サポート／インターンで職場選択／再就職相談）で安心",
+        "卒業生の評判により業界から求められ、有利な条件で就職活動が可能"
+      ],
+      "images": [
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_005/sono_icon_001.png",
+          "role": "就職保証その1のアイコン"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_005/sono_icon_002.png",
+          "role": "就職保証その2のアイコン"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_005/sono_icon_003.png",
+          "role": "就職保証その3のアイコン"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_005/img_002_1.jpg",
+          "role": "業界から本校学生を求める声が急増"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_005/img_002_2.jpg",
+          "role": "一人ひとりの就職カウンセリング"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_005/img_002_3.jpg",
+          "role": "個々の希望や目指す進路に応じて"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_005/img_002_4.jpg",
+          "role": "一人ひとりの技術レベルも高い"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_005/img_002_5.jpg",
+          "role": "就職に直結する様々な講義で学習"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_005/img_002_6.jpg",
+          "role": "さらなる馬業界の発展を目指して"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_005/img_003_1.jpg",
+          "role": "「ここがポイント・他校との比較」コラムの写真"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_005/movie_001.mp4",
+          "role": "就職サポート紹介動画（video要素）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/ban_shiryo_1.gif",
+          "role": "資料請求バナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/ban_2020_4.gif",
+          "role": "学校見学（体験）バナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_001.jpg",
+          "role": "特色ページ6-001へのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_002.jpg",
+          "role": "特色ページ6-002へのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_003.jpg",
+          "role": "特色ページ6-003へのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_004.jpg",
+          "role": "特色ページ6-004へのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_005.jpg",
+          "role": "特色ページ6-005（当ページ・非リンク）バナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_006.jpg",
+          "role": "特色ページ6-006へのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_001.jpg",
+          "role": "学校ブログへのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_002.jpg",
+          "role": "関連サイトbajigakuin.comへのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_003.jpg",
+          "role": "学校ブログへのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/sp_ban_004.jpg",
+          "role": "学校見学（taiken）ページへのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/images/logo.png",
+          "role": "ヘッダーの学校ロゴ"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/img_group_a1.jpg",
+          "role": "トップスライダー画像（a1〜a4/b1〜b4のランダム表示、学校風景）"
+        }
+      ],
+      "links": [
+        "http://bajigakuin.com",
+        "http://bajigaku.com",
+        "https://ameblo.jp/shool-blog/",
+        "https://www.youtube.com/user/umastable/about",
+        "https://www.instagram.com/bajigakuin/?hl=ja",
+        "https://twitter.com/bajigakuin"
+      ]
+    },
+    {
+      "slug": "6-006",
+      "pageTitle": "JRA厩務員になるには／未経験から最短でJRA厩務員を目指せる馬の専門学校（毎年JRA厩務員合格者続出！）在学中最短1年2ケ月",
+      "purpose": "東関東馬事専門学院がJRA厩務員になる方法と、本校の厩務員受験合格実績・サポート体制を紹介する特徴詳細ページ（6-006）。",
+      "outline": [
+        "top_sub: ◆未経験から在学中にJRA厩務員合格へ◆／受験者の最終合格率100％を誇る高実績／JRA厩務員になるには",
+        "top_sub: ◆JRA厩務員の主な仕事",
+        "見出し: JRA競馬学校 厩務員課程受験合格（年度別合格実績）",
+        "見出し: 本校なら…JRA競馬学校厩務員試験の受験資格が取得でき在学中に最大4回受験可能",
+        "見出し: ◆ここがポイント！！他校との比較"
+      ],
+      "facts": [
+        "ページURL: https://bajigaku.site/6-006/（公開2019-07-01、最終更新2024-06-08）",
+        "未経験から在学中にJRA競馬学校厩務員課程の受験合格を目指せる。受験者の最終合格率100％を誇る高実績と謳う",
+        "在学中最短1年2ヶ月でJRA厩務員を目指せる（ページタイトル）",
+        "厩務員受験の筆記試験科目は国語・社会・競馬一般。独自の厩務員受験対策ワークで勉強が苦手な学生も筆記試験をクリア",
+        "女性のJRA厩務員も本校から誕生している。未経験入学から2年以内にJRA厩務員になった学生も多数",
+        "JRA厩務員の主な仕事: 馬房の清掃、馬の健康管理、飼いつけ（エサの給与）、馬の手入れ、調教・運動の準備、馬のウォーミングアップ、競馬場への輸送・付添、パドックでの引き馬、優勝時の表彰式",
+        "担当馬がレースに出る場合は各競馬場に出向いて仕事をする。トレセン内の調教は主に騎手や調教助手が行い、「調教厩務員」は担当する2頭に限り調教が可能（調教師の指示のもと）",
+        "合格実績: 令和6年度(前期)12名受験／合否確認中",
+        "合格実績: 令和5年度(後期)3名受験／最終合格3名",
+        "合格実績: 令和5年度(前期)5名受験／最終合格2名",
+        "合格実績: 令和4年度(後期)6名受験6名一次通過／最終合格6名",
+        "合格実績: 令和4年度(前期)5名受験5名一次通過／最終合格4名",
+        "合格実績: 令和3年度(後期)5名受験5名一次通過／最終合格2名",
+        "合格実績: 令和2年度(後期)4名受験4名一次通過／最終合格2名",
+        "合格実績: 令和2年度(前期)4名受験4名一次通過／最終合格4名",
+        "合格実績: 令和元年度(後期)2名受験2名一次通過／最終合格1名",
+        "合格実績: 令和元年度(前期)4名受験4名一次通過／最終合格4名",
+        "合格実績: 平成30年度(後期)2名受験2名一次通過／最終合格1名",
+        "合格実績: 平成30年度(前期)4名受験4名一次通過／最終合格2名",
+        "合格実績: 平成29年度(後期)2名受験2名一次通過／最終合格2名",
+        "合格実績: 平成29年度(前期)1名受験1名一次通過／最終合格1名",
+        "卒業生・伊藤愛さんがJRA厩務員として活躍中",
+        "本校ではJRA競馬学校厩務員試験の受験資格が取得でき、在学中に最大4回まで受験可能。一般的には未経験から5年以上必要と言われる",
+        "他校との比較ポイント: ①未経験スタートから1年6ヶ月以内にJRA厩務員合格者続出 ②在学中最大4回受験可能・万全な受験対策 ③騎乗試験に向けた取組と現役競走馬を活用した実践騎乗訓練",
+        "過去3年間で11名が合格。今後5年間で30名のJRA厩務員輩出を目指す",
+        "定期的にJRA美浦トレセンへの見学を開催",
+        "資料請求でクリアーファイルを無料プレゼント中",
+        "学校所在地: 〒289-1213 千葉県山武市雨坪10番地 TEL: 050-6875-3336",
+        "運営: 株式会社 馬事学院（バジガク）"
+      ],
+      "keyMessages": [
+        "未経験から在学中にJRA厩務員合格を目指せる、受験者最終合格率100％の高実績",
+        "独自の受験対策ワークで筆記試験（国語・社会・競馬一般）を万全サポート",
+        "在学中に最大4回のJRA厩務員受験が可能（一般には未経験から5年以上必要とされる）",
+        "女性のJRA厩務員も本校から誕生、噂に惑わされず挑戦できる環境",
+        "現役競走馬を使った実践騎乗訓練で騎乗試験にも対応",
+        "毎年合格者を輩出、今後5年で30名輩出目標"
+      ],
+      "images": [
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_006/movie_001.mp4",
+          "role": "JRA厩務員紹介の動画（video要素）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_006/img_002_1.jpg",
+          "role": "卒業生・伊藤愛さん（JRA厩務員として活躍中）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_006/zu_001.png",
+          "role": "在学中最大4回受験できることを示す図解"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_006/img_003_1.jpg",
+          "role": "卒業生・仲原騎手との記念撮影"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_006/img_003_2.jpg",
+          "role": "厩務員合格の様子（特別な思い）"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_006/img_003_3.jpg",
+          "role": "JRA美浦トレセンへの見学"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_006/img_003_4.jpg",
+          "role": "現役競走馬との記念撮影"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_006/img_003_5.jpg",
+          "role": "卒業生の女性厩務員が活躍"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_006/img_003_6.jpg",
+          "role": "定期開催のトレセン見学"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/6_006/img_004_1.jpg",
+          "role": "他校との比較ポイント欄の写真"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/ban_shiryo_1.gif",
+          "role": "資料請求バナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img_cmn/ban_2020_4.gif",
+          "role": "学校見学（体験）バナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_001.jpg",
+          "role": "特徴ページ6-001へのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_002.jpg",
+          "role": "特徴ページ6-002へのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_003.jpg",
+          "role": "特徴ページ6-003へのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_004.jpg",
+          "role": "特徴ページ6-004へのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_005.jpg",
+          "role": "特徴ページ6-005へのバナー"
+        },
+        {
+          "url": "https://bajigaku.site/wp-content/themes/responsive_261/img/top/ban_006.jpg",
+          "role": "特徴ページ6-006（当ページ）のバナー（非リンク表示）"
+        }
+      ],
+      "links": [
+        "https://ameblo.jp/shool-blog/（学校ブログ）",
+        "http://bajigakuin.com（関連校サイト）",
+        "http://bajigaku.com（株式会社馬事学院）",
+        "https://www.youtube.com/user/umastable/about（YouTube）",
+        "https://www.instagram.com/bajigakuin/（Instagram）",
+        "https://twitter.com/bajigakuin（Twitter）"
+      ]
+    }
+  ],
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Extract"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "extract:top",
+      "phaseIndex": 1,
+      "phaseTitle": "Extract",
+      "agentId": "a3cf014b190f57bc3",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1784534223252,
+      "queuedAt": 1784534220199,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "馬の学校 馬事学院／東関東馬事専門学院公式サイト",
+      "promptPreview": "Read the file C:/Users/ADMINI~1/AppData/Local/Temp/claude/c--Users-Administrator-Desktop-vocationalschool/27e561dd-bd59-4a27-b792-8ab847f7073b/scratchpad/home.html — it is a saved HTML page from the website of 東関東馬事専門学院 (a horse-industry vocational school). Context hint: TOP page: news/topics list, banners, feature intro, SNS links (YouTube/Instagram/Ameblo), trial camp info, recruitment status.\n\n…",
+      "lastProgressAt": 1784534284445,
+      "tokens": 48299,
+      "toolCalls": 3,
+      "durationMs": 61193,
+      "resultPreview": "{\"pageTitle\":\"馬の学校 馬事学院／東関東馬事専門学院公式サイト\",\"purpose\":\"東関東馬事専門学院（馬事学院／バジガク）公式サイトのトップページで、募集案内・ニュース・メディア掲載・ブログ更新・資料請求フォームへの導線を提供する。\",\"outline\":[\"h1: サイトロゴ（JRA厩務員になるには【公式】馬の学校 東関東馬事専門学院／馬の専門学校 馬事学院（バジガク））\",\"(募集案内バナー) 令和9年4月生 募集案内\",\"(ニュースリスト)\",\"h2: 最新メディア掲載情報\",\"h2: Twitter\",\"h3: 学校案内資料請求フォーム（特典5項目＋フォーム）\",\"h2: ブログ\",\"footer: 全ページナビ・住所・電話\"],\"facts\":[\"学校名：東関東馬事専門学院（馬の学校・馬の専門学校）、運営：株式会社 馬事学院（バジガク）\",\"所在地：〒289-…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "extract:tokucho",
+      "phaseIndex": 1,
+      "phaseTitle": "Extract",
+      "agentId": "a26f8ebc101ec0937",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1784534222901,
+      "queuedAt": 1784534220199,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "馬の学校 比較（バジガク 東関東馬事専門学院馬事学院の評判と…",
+      "promptPreview": "Read the file C:/Users/ADMINI~1/AppData/Local/Temp/claude/c--Users-Administrator-Desktop-vocationalschool/27e561dd-bd59-4a27-b792-8ab847f7073b/scratchpad/page_tokucho.html — it is a saved HTML page from the website of 東関東馬事専門学院 (a horse-industry vocational school). Context hint: School features/advantages page.\n\nExtract ALL substantive content into the structured output. Be exhaustive with facts —…",
+      "lastProgressAt": 1784534264247,
+      "tokens": 37848,
+      "toolCalls": 2,
+      "durationMs": 41345,
+      "resultPreview": "{\"pageTitle\":\"馬の学校 比較（バジガク 東関東馬事専門学院馬事学院の評判とは？）\",\"purpose\":\"東関東馬事専門学院の「本校の優位性」ページで、馬の学校を比較検討する際の視点と本校の強み(施設規模・頭数・合格実績・就職率)を紹介する。\",\"outline\":[\"ページ本文(見出しタグなし): キャッチコピー「“馬の学校選び”は、とても大切… 夢実現の『確かな手段』を手に入れよう!」\",\"本文: 学校比較の視点と本校の優位性\",\"画像バナー群(12件のサブバナーリンク 12-001〜12-012)\",\"誘導バナー: 学校見学(オープンキャンパス)、資料請求\"],\"facts\":[\"馬の学校選びは「学費」「授業内容」「就職率」など多角的に比較・検討すべきで、「何を学ぶか」「費用」「カリキュラム」「就職先」の視点が大切\",\"本校は千葉県と大阪府に拠点を持ち、国内最大級の4つ…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "extract:curriculum",
+      "phaseIndex": 1,
+      "phaseTitle": "Extract",
+      "agentId": "a9b449373ffa137c2",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1784534223583,
+      "queuedAt": 1784534220199,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "未経験からのJRA厩務員になるには、ここの馬の専門学校が断トツ…",
+      "promptPreview": "Read the file C:/Users/ADMINI~1/AppData/Local/Temp/claude/c--Users-Administrator-Desktop-vocationalschool/27e561dd-bd59-4a27-b792-8ab847f7073b/scratchpad/page_curriculum.html — it is a saved HTML page from the website of 東関東馬事専門学院 (a horse-industry vocational school). Context hint: Curriculum and lesson content page.\n\nExtract ALL substantive content into the structured output. Be exhaustive with f…",
+      "lastProgressAt": 1784534261594,
+      "tokens": 38696,
+      "toolCalls": 2,
+      "durationMs": 38011,
+      "resultPreview": "{\"pageTitle\":\"未経験からのJRA厩務員になるには、ここの馬の専門学校が断トツ有利！その理由・・・（受講スタイル）\",\"purpose\":\"東関東馬事専門学院の「受講スタイル」ページで、未経験からJRA厩務員を目指せるカリキュラム・学習の特徴を紹介する。\",\"outline\":[\"h1: サイトロゴ（JRA厩務員になるには【公式】馬の学校 東関東馬事専門学院／馬事学院（バジガク））\",\"冒頭キャッチ: 未経験から1年4ヶ月でJRA厩務員課程受験合格者多数／全国の生産牧場・育成牧場・乗馬クラブ等でインターン学習も\",\"本文: 馬の仕事の専門性と本校の学び\",\"6項目の特徴（写真＋キャプション）\",\"囲み: ◆『働きながら学び・学びながら働ける』（諸経費還付制度）\",\"サブバナー12個（詳細ページ12-001〜12-012へのリンク）\",\"フッター: 学校所在地・電話\"],\"fac…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "extract:boshu",
+      "phaseIndex": 1,
+      "phaseTitle": "Extract",
+      "agentId": "a72d2e7a76916a50d",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1784534223528,
+      "queuedAt": 1784534220199,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "馬の学校の学費｜JRA厩務員になるための馬の専門学校／在学中に…",
+      "promptPreview": "Read the file C:/Users/ADMINI~1/AppData/Local/Temp/claude/c--Users-Administrator-Desktop-vocationalschool/27e561dd-bd59-4a27-b792-8ab847f7073b/scratchpad/page_boshu.html — it is a saved HTML page from the website of 東関東馬事専門学院 (a horse-industry vocational school). Context hint: Admission requirements, application flow, tuition/fees.\n\nExtract ALL substantive content into the structured output. Be ex…",
+      "lastProgressAt": 1784534277746,
+      "tokens": 40689,
+      "toolCalls": 2,
+      "durationMs": 54218,
+      "resultPreview": "{\"pageTitle\":\"馬の学校の学費｜JRA厩務員になるための馬の専門学校／在学中にJRA厩務員 東関東馬事専門学院（募集要項、教育ローン、学費、奨学金などのご案内ページ）\",\"purpose\":\"東関東馬事専門学院の募集要項（応募条件・出願方法・学費・還付制度・分割払い）を案内するページ。\",\"outline\":[\"ページ冒頭: 本校への入学をお考えの皆様へ（JRA厩務員・牧場・乗馬クラブ・観光・養老牧場等）\",\"令和9年4月生 最終募集案内（出願期間・学校見学日程）\",\"◆応募条件\",\"◆必要書類\",\"◆出願方法・合格通知等\",\"◆学費の詳細（2年間）\",\"（※ご注意）学費案内の適用年度について\",\"関連バナー群（12-001〜12-012）・学校見学・資料請求バナー\",\"フッター: 学校所在地・連絡先\"],\"facts\":[\"対象進路: JRA厩務員・牧場・乗馬クラブ・観光・養…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "extract:taiken",
+      "phaseIndex": 1,
+      "phaseTitle": "Extract",
+      "agentId": "a8afa40fd2422a4a1",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1784534223263,
+      "queuedAt": 1784534220199,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "馬の学校 比較／体験入学・オープンキャンパス（馬の学校 東関…",
+      "promptPreview": "Read the file C:/Users/ADMINI~1/AppData/Local/Temp/claude/c--Users-Administrator-Desktop-vocationalschool/27e561dd-bd59-4a27-b792-8ab847f7073b/scratchpad/page_taiken.html — it is a saved HTML page from the website of 東関東馬事専門学院 (a horse-industry vocational school). Context hint: Trial camp / school visit / open campus page.\n\nExtract ALL substantive content into the structured output. Be exhaustive …",
+      "lastProgressAt": 1784534261120,
+      "tokens": 42222,
+      "toolCalls": 2,
+      "durationMs": 37857,
+      "resultPreview": "{\"pageTitle\":\"馬の学校 比較／体験入学・オープンキャンパス（馬の学校 東関東馬事専門学院）\",\"purpose\":\"東関東馬事専門学院（バジガク）のオープンキャンパス・学校見学の案内と参加申込フォームのページ。\",\"outline\":[\"p: ◆馬の学校・馬の専門学校◆ 東関東馬事専門学院 令和9年4月生募集\",\"p: 今、もっとも大切なこと（学校選びの重要性）\",\"p: JR東京駅（八重洲中央口）まで無料でお迎え\",\"p: 馬社会を目指す第一歩のオープンキャンパスお申込フォーム\",\"p: ◆本校のオープンキャンパスでは・・・！◆（6項目紹介）\",\"p: ◆オープンキャンパス＆説明会 開催日程◆\",\"form: 申込フォーム（mailformpro）\",\"footer: 学校所在地・連絡先\"],\"facts\":[\"令和9年4月生の新規学生募集を行っている\",\"国内には3～4校…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "extract:kankyo",
+      "phaseIndex": 1,
+      "phaseTitle": "Extract",
+      "agentId": "a9abb1cd6058e7b2d",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1784534227807,
+      "queuedAt": 1784534220200,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "関東・関西に国内最大級の馬の専門学校（4施設）／未経験からJR…",
+      "promptPreview": "Read the file C:/Users/ADMINI~1/AppData/Local/Temp/claude/c--Users-Administrator-Desktop-vocationalschool/27e561dd-bd59-4a27-b792-8ab847f7073b/scratchpad/page_kankyo.html — it is a saved HTML page from the website of 東関東馬事専門学院 (a horse-industry vocational school). Context hint: School environment / facilities / overview page.\n\nExtract ALL substantive content into the structured output. Be exhausti…",
+      "lastProgressAt": 1784534268058,
+      "tokens": 40090,
+      "toolCalls": 2,
+      "durationMs": 40251,
+      "resultPreview": "{\"pageTitle\":\"関東・関西に国内最大級の馬の専門学校（4施設）／未経験からJRA厩務員になるための専門学校\",\"purpose\":\"東関東馬事専門学院の学習環境（施設）と学生寮を紹介するページ。\",\"outline\":[\"見出し: 関東・関西で最大級の4つの施設 乗馬と競走馬を同時に学べる学習環境\",\"施設写真ギャラリー（12枚）\",\"見出し: 学生たちが過ごす学生寮 全部屋個室でプライベートの確保と一人暮らしでの安心感\",\"寮写真ギャラリー（6枚）\",\"関連バナー群（12件）\"],\"facts\":[\"関東と関西に拠点があり、計4つの施設を持つ（国内最大級と称する）\",\"4施設で120頭以上の馬を学生が管理\",\"馬は初心者向けのおとなしい乗用馬、馬術競技馬、引退競走馬、現役競走馬まで多様\",\"未経験から最短1年4ヶ月でJRA競馬学校の厩務員課程合格を目指すカリキュラム\",\"学生…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 7,
+      "label": "extract:qa",
+      "phaseIndex": 1,
+      "phaseTitle": "Extract",
+      "agentId": "aff9169d93b48df4a",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1784534223000,
+      "queuedAt": 1784534220200,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "質問Ｑ＆Ａ | JRA厩務員になるには【公式】馬の学校 東関東馬事…",
+      "promptPreview": "Read the file C:/Users/ADMINI~1/AppData/Local/Temp/claude/c--Users-Administrator-Desktop-vocationalschool/27e561dd-bd59-4a27-b792-8ab847f7073b/scratchpad/page_qa.html — it is a saved HTML page from the website of 東関東馬事専門学院 (a horse-industry vocational school). Context hint: FAQ page with questions and answers.\n\nExtract ALL substantive content into the structured output. Be exhaustive with facts — …",
+      "lastProgressAt": 1784534264063,
+      "tokens": 38506,
+      "toolCalls": 2,
+      "durationMs": 41063,
+      "resultPreview": "{\"pageTitle\":\"質問Ｑ＆Ａ | JRA厩務員になるには【公式】馬の学校 東関東馬事専門学院／馬の専門学校 馬事学院（バジガク）\",\"purpose\":\"東関東馬事専門学院への入学検討者向けに、よくある質問と回答（入学条件・男女比・就職保証・学費分割・食事・自動車免許・他校との違い）をまとめたFAQページ。\",\"outline\":[\"p(タイトル): 馬の学校 東関東馬事専門学院 聞いてみよう！よくある質問Ｑ＆Ａ\",\"アコーディオンQ1: 馬に触れたことがない人でも入学できますか？\",\"アコーディオンQ2: 入学者の男女の比率\",\"アコーディオンQ3: 就職が決まらなかった場合\",\"アコーディオンQ4: 学費の分割払い\",\"アコーディオンQ5: 休日の食事\",\"アコーディオンQ6: 自動車免許の取得\",\"アコーディオンQ7: 他校との違い・アピールポイント\",\"サブバナー群(12…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 8,
+      "label": "extract:contact",
+      "phaseIndex": 1,
+      "phaseTitle": "Extract",
+      "agentId": "a506623696ec067ee",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1784534222989,
+      "queuedAt": 1784534220200,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "お問合せ｜東関東馬事専門学院（バジガク）",
+      "promptPreview": "Read the file C:/Users/ADMINI~1/AppData/Local/Temp/claude/c--Users-Administrator-Desktop-vocationalschool/27e561dd-bd59-4a27-b792-8ab847f7073b/scratchpad/page_contact.html — it is a saved HTML page from the website of 東関東馬事専門学院 (a horse-industry vocational school). Context hint: Contact page: address, phone, form fields.\n\nExtract ALL substantive content into the structured output. Be exhaustive wi…",
+      "lastProgressAt": 1784534253023,
+      "tokens": 35901,
+      "toolCalls": 2,
+      "durationMs": 30034,
+      "resultPreview": "{\"pageTitle\":\"お問合せ｜東関東馬事専門学院（バジガク）\",\"purpose\":\"東関東馬事専門学院へのお問い合わせフォーム（メールフォームプロ）を提供するページ。\",\"outline\":[\"見出し: 東関東馬事専門学院へのお問合せ（top_sub_title）\",\"お問合せフォーム（姓名・フリガナ・メール・件名・内容）\",\"関連ページバナー群（12-001〜12-012）\",\"学校見学・資料請求バナー\",\"フッター（住所・電話・メニュー）\"],\"facts\":[\"ご相談・お問合せ電話番号: 050-6875-3336\",\"所在地: 〒289-1213 千葉県山武市雨坪10番地\",\"正式名称: 馬の学校・馬の専門学校／東関東馬事専門学院\",\"運営: 株式会社 馬事学院（バジガク）\",\"お問合せフォーム送信先: https://bajigaku.site/contact_form…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 9,
+      "label": "extract:6-001",
+      "phaseIndex": 1,
+      "phaseTitle": "Extract",
+      "agentId": "a4e66fd6e637228b3",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1784534223947,
+      "queuedAt": 1784534220200,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "馬の学校30%学費免除／JRA競馬学校厩務員課程受験同格を目指せ…",
+      "promptPreview": "Read the file C:/Users/ADMINI~1/AppData/Local/Temp/claude/c--Users-Administrator-Desktop-vocationalschool/27e561dd-bd59-4a27-b792-8ab847f7073b/scratchpad/page_6-001.html — it is a saved HTML page from the website of 東関東馬事専門学院 (a horse-industry vocational school). Context hint: Feature detail page 1.\n\nExtract ALL substantive content into the structured output. Be exhaustive with facts — every fee a…",
+      "lastProgressAt": 1784534265034,
+      "tokens": 38905,
+      "toolCalls": 2,
+      "durationMs": 41087,
+      "resultPreview": "{\"pageTitle\":\"馬の学校30%学費免除／JRA競馬学校厩務員課程受験同格を目指せる馬の学校\",\"purpose\":\"授業費30%（90万円）全員免除の「馬業界就職支援制度」を紹介する特色紹介ページ（6-001）。\",\"outline\":[\"ページ見出し: ◆ある理由から…入学者全員が対象◆ 授業費30％（全員90万円）が免除に！\",\"セクション: 免除制度の説明（本文＋動画）\",\"セクション: ≪見込める収入源≫（3項目）\",\"セクション: さらに…インターンシップ報酬（最大60万円）\",\"セクション: JRA競馬学校「厩務員課程」受験への特別処置\",\"写真ギャラリー（12枚・キャプション付き）\",\"囲み: ◆ここがポイント！！他校との比較\",\"バナー: 資料請求・学校見学・関連特色ページ 6-002〜6-006\",\"フッター: 学校名・所在地・電話\"],\"facts\":[\"馬…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 10,
+      "label": "extract:6-002",
+      "phaseIndex": 1,
+      "phaseTitle": "Extract",
+      "agentId": "ae9918c02b6d379f2",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1784534224176,
+      "queuedAt": 1784534220200,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "馬術大会・馬術競技にどんどん参加しよう／馬事学院",
+      "promptPreview": "Read the file C:/Users/ADMINI~1/AppData/Local/Temp/claude/c--Users-Administrator-Desktop-vocationalschool/27e561dd-bd59-4a27-b792-8ab847f7073b/scratchpad/page_6-002.html — it is a saved HTML page from the website of 東関東馬事専門学院 (a horse-industry vocational school). Context hint: Feature detail page 2.\n\nExtract ALL substantive content into the structured output. Be exhaustive with facts — every fee a…",
+      "lastProgressAt": 1784534257882,
+      "tokens": 37549,
+      "toolCalls": 2,
+      "durationMs": 33706,
+      "resultPreview": "{\"pageTitle\":\"馬術大会・馬術競技にどんどん参加しよう／馬事学院\",\"purpose\":\"学校キャンパス内で開催する日本馬術連盟公認の馬術大会に、学生が費用負担ゼロで多数出場できるという本校の特色を紹介するページ。\",\"outline\":[\"トップ見出し: ◆年間１０回以上の馬術大会を開催◆／本校のキャンパスで公認の馬術大会／学生たちの負担０で馬術大会出場へ\",\"本文: 公認馬術大会の開催と学生の無料出場について\",\"写真ギャラリー（大会風景12枚）\",\"◆ここがポイント！！他校との比較\",\"資料請求バナー・学校見学バナー・特色ページ相互リンク\"],\"facts\":[\"年間10回以上、日本馬術連盟公認の馬術大会を本校キャンパス内で開催している\",\"大会の競技運営・進行は学生たちが担い、これにより学生が出場できる競技種目を増やしている\",\"通常は1走行あたり約3万円必要となるエン…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 11,
+      "label": "extract:6-003",
+      "phaseIndex": 1,
+      "phaseTitle": "Extract",
+      "agentId": "aaf573a1d1fe7e0ed",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1784534255555,
+      "queuedAt": 1784534220200,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "引退馬を活用し人材育成へ／バジガクの取り組み",
+      "promptPreview": "Read the file C:/Users/ADMINI~1/AppData/Local/Temp/claude/c--Users-Administrator-Desktop-vocationalschool/27e561dd-bd59-4a27-b792-8ab847f7073b/scratchpad/page_6-003.html — it is a saved HTML page from the website of 東関東馬事専門学院 (a horse-industry vocational school). Context hint: Feature detail page 3.\n\nExtract ALL substantive content into the structured output. Be exhaustive with facts — every fee a…",
+      "lastProgressAt": 1784534291514,
+      "tokens": 37842,
+      "toolCalls": 2,
+      "durationMs": 35959,
+      "resultPreview": "{\"pageTitle\":\"引退馬を活用し人材育成へ／バジガクの取り組み\",\"purpose\":\"担当馬制度（一人1〜4頭）と引退競走馬の受け入れ・再活用による実践的人材育成の取り組みを紹介する特色詳細ページ。\",\"outline\":[\"ページ見出し: 一人1頭〜4頭までの担当馬制度が話題！／行き場のない引退馬たちを救う／育成馬・現役競走馬で本物を学ぶ\",\"本文: 担当馬制度の説明（動画付き）\",\"写真ギャラリー（9枚）\",\"◆ここがポイント！！他校との比較\",\"資料請求バナー・他の特色ページへのリンク\"],\"facts\":[\"学生一人につき担当馬1頭〜4頭を提供する担当馬制度がある\",\"入学すると一人ひとりに担当馬が提供され、最初はおとなしい乗用馬で体調管理・飼養管理・手入れ・検温を担当\",\"技術レベルの向上に応じて引退競走馬、デビュー前の1歳育成馬、現役競走馬も学生が担当する\",\"担当…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 12,
+      "label": "extract:6-004",
+      "phaseIndex": 1,
+      "phaseTitle": "Extract",
+      "agentId": "a5834a8184bac40e3",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1784534260803,
+      "queuedAt": 1784534220200,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "馬の学校／牧場体験インターンシップで報酬！",
+      "promptPreview": "Read the file C:/Users/ADMINI~1/AppData/Local/Temp/claude/c--Users-Administrator-Desktop-vocationalschool/27e561dd-bd59-4a27-b792-8ab847f7073b/scratchpad/page_6-004.html — it is a saved HTML page from the website of 東関東馬事専門学院 (a horse-industry vocational school). Context hint: Feature detail page 4.\n\nExtract ALL substantive content into the structured output. Be exhaustive with facts — every fee a…",
+      "lastProgressAt": 1784534297267,
+      "tokens": 38133,
+      "toolCalls": 2,
+      "durationMs": 36464,
+      "resultPreview": "{\"pageTitle\":\"馬の学校／牧場体験インターンシップで報酬！\",\"purpose\":\"在学中の牧場インターンシップ（実務訓練）で報酬を受け取れる独自制度を紹介する特色ページ（特色4）。\",\"outline\":[\"top_sub_box: ◆在学中にたくさんの職場を経験できる！◆ 生産・育成・乗馬クラブ・牧場など それぞれの現場で本物を学べる\",\"top_sub_box: 東関東馬事専門学院の生徒だけに…在学中に最大80〜160万円の授業費が還付される理由！？\",\"top_sub_box: ≫本校と牧場との絶対的な信頼関係の証\",\"top_sub_box: 実務訓練期間中（インターンシップ期間中）約60万円〜120万円の報酬が直接受け取れます\",\"subsub_title: ※JRA競馬学校「厩務員課程」受験への特別処置\",\"hitocome: ◆ここがポイント！！他校との比較\"]…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 13,
+      "label": "extract:6-005",
+      "phaseIndex": 1,
+      "phaseTitle": "Extract",
+      "agentId": "a100d7cc16c51954e",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1784534263600,
+      "queuedAt": 1784534220201,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "馬の求人／牧場求人・乗馬クラブ求人や就職情報",
+      "promptPreview": "Read the file C:/Users/ADMINI~1/AppData/Local/Temp/claude/c--Users-Administrator-Desktop-vocationalschool/27e561dd-bd59-4a27-b792-8ab847f7073b/scratchpad/page_6-005.html — it is a saved HTML page from the website of 東関東馬事専門学院 (a horse-industry vocational school). Context hint: Feature detail page 5.\n\nExtract ALL substantive content into the structured output. Be exhaustive with facts — every fee a…",
+      "lastProgressAt": 1784534299301,
+      "tokens": 37822,
+      "toolCalls": 2,
+      "durationMs": 35701,
+      "resultPreview": "{\"pageTitle\":\"馬の求人／牧場求人・乗馬クラブ求人や就職情報\",\"purpose\":\"東関東馬事専門学院（バジガク）の就職サポート・求人保有状況と3つの就職保証を紹介する特色詳細ページ（求人情報）。\",\"outline\":[\"top_sub_box: ◆ほぼ全国の馬の求人がバジガクで保有◆ 馬の仕事・馬の求人情報／自分に応じて選べる利点\",\"top_sub_box: 東関東馬事専門学院だからこそ実現可能な3つの就職保証で安心対応\",\"come_bg_red: ◆ここがポイント！！他校との比較\",\"バナー: 資料請求／学校見学／他の特色ページ（6-001〜6-006）へのリンク\"],\"facts\":[\"平成31年1月現在、全国から473ヶ所の「馬の仕事・馬の求人」を保有\",\"卒業の6ヶ月前より、適性・技術レベル・希望に応じた「職場体験実習」を実施（1か所2週間程度）\",\"学生と雇…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 14,
+      "label": "extract:6-006",
+      "phaseIndex": 1,
+      "phaseTitle": "Extract",
+      "agentId": "ac03ae3b458fee76c",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1784534264808,
+      "queuedAt": 1784534220201,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "JRA厩務員になるには／未経験から最短でJRA厩務員を目指せる馬…",
+      "promptPreview": "Read the file C:/Users/ADMINI~1/AppData/Local/Temp/claude/c--Users-Administrator-Desktop-vocationalschool/27e561dd-bd59-4a27-b792-8ab847f7073b/scratchpad/page_6-006.html — it is a saved HTML page from the website of 東関東馬事専門学院 (a horse-industry vocational school). Context hint: Feature detail page 6.\n\nExtract ALL substantive content into the structured output. Be exhaustive with facts — every fee a…",
+      "lastProgressAt": 1784534304149,
+      "tokens": 39630,
+      "toolCalls": 2,
+      "durationMs": 39341,
+      "resultPreview": "{\"pageTitle\":\"JRA厩務員になるには／未経験から最短でJRA厩務員を目指せる馬の専門学校（毎年JRA厩務員合格者続出！）在学中最短1年2ケ月\",\"purpose\":\"東関東馬事専門学院がJRA厩務員になる方法と、本校の厩務員受験合格実績・サポート体制を紹介する特徴詳細ページ（6-006）。\",\"outline\":[\"top_sub: ◆未経験から在学中にJRA厩務員合格へ◆／受験者の最終合格率100％を誇る高実績／JRA厩務員になるには\",\"top_sub: ◆JRA厩務員の主な仕事\",\"見出し: JRA競馬学校 厩務員課程受験合格（年度別合格実績）\",\"見出し: 本校なら…JRA競馬学校厩務員試験の受験資格が取得でき在学中に最大4回受験可能\",\"見出し: ◆ここがポイント！！他校との比較\"],\"facts\":[\"ページURL: https://bajigaku.site/6…"
+    }
+  ],
+  "totalTokens": 552132,
+  "totalToolCalls": 29
+}

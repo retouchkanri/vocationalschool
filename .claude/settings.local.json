@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"c:/Users/Administrator/Desktop/vocationalschool/docs\" && cp \"C:/Users/ADMINI~1/AppData/Local/Temp/claude/c--Users-Administrator-Desktop-vocationalschool/27e561dd-bd59-4a27-b792-8ab847f7073b/scratchpad/manifest.txt\" \"c:/Users/Administrator/Desktop/vocationalschool/docs/image-manifest.txt\" && cp \"C:/Users/ADMINI~1/AppData/Local/Temp/claude/c--Users-Administrator-Desktop-vocationalschool/27e561dd-bd59-4a27-b792-8ab847f7073b/tasks/wq7qoqjs4.output\" \"c:/Users/Administrator/Desktop/vocationalschool/docs/site-content-extract.json\" && ls \"c:/Users/Administrator/Desktop/vocationalschool/docs\")"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\claude\\c--Users-Administrator-Desktop-vocationalschool\\27e561dd-bd59-4a27-b792-8ab847f7073b\\tasks"
+    ]
+  }
+}

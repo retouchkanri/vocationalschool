@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import HeroSlider from "@/components/HeroSlider";
 import PhotoFrame from "@/components/PhotoFrame";
+import CampusShowcase from "@/components/pages/CampusShowcase";
+import TrainingCardDeck from "@/components/pages/TrainingCardDeck";
 import SectionTitle from "@/components/SectionTitle";
 import CtaSection from "@/components/CtaSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
@@ -201,56 +203,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== 2. Training in action (documentary 70%) ===== */}
-      <section className="bg-primary-deep py-16 md:py-24">
+      {/* ===== 2. Training in action — playing-card gallery ===== */}
+      <section className="bg-white py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <SectionTitle
-            light
             eyebrow="TRAINING"
             title="現場で学ぶ、本物の実践"
-            lead="乗馬・グルーミング・厩務——静止した記録写真ではなく、動きのある瞬間が、本校の教育を物語ります。"
+            lead="乗馬・グルーミング・厩務——動きのある瞬間が、本校の教育を物語ります。カードをクリックして詳しくご覧ください。"
           />
-          <div className="grid gap-6 lg:grid-cols-12">
-            <Reveal className="lg:col-span-7">
-              <PhotoFrame
-                src={TRAINING_PHOTOS[0].src}
-                alt={TRAINING_PHOTOS[0].alt}
-                aspect="gallery"
-                grade="cinematic"
-                caption={TRAINING_PHOTOS[0].caption}
-                sizes="(min-width: 1024px) 58vw, 100vw"
-                className="shadow-card"
-              />
-            </Reveal>
-            <RevealGroup className="grid grid-cols-2 gap-4 lg:col-span-5 lg:grid-cols-1">
-              {TRAINING_PHOTOS.slice(1, 5).map((photo) => (
-                <RevealItem key={photo.src}>
-                  <PhotoFrame
-                    src={photo.src}
-                    alt={photo.alt}
-                    aspect="card"
-                    grade="documentary"
-                    caption={photo.caption}
-                    sizes="(min-width: 1024px) 25vw, 50vw"
-                    className="shadow-card"
-                  />
-                </RevealItem>
-              ))}
-            </RevealGroup>
-          </div>
-          <Reveal delay={0.15}>
-            <p className="mt-10 text-center">
-              <Link
-                href="/curriculum"
-                className="group inline-flex items-center gap-2 text-sm font-bold text-tan transition-colors hover:text-accent"
-              >
-                授業・カリキュラムを見る
-                <span className="transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
-              </Link>
-            </p>
-          </Reveal>
+          <TrainingCardDeck photos={TRAINING_PHOTOS} />
         </div>
       </section>
 
@@ -463,31 +424,7 @@ export default function Home() {
             title="広い緑と、暮らす場所"
             lead="放牧地、アリーナ、学生寮——キャンパス全体が、馬とともに学ぶ舞台です。"
           />
-          <Reveal>
-            <PhotoFrame
-              src={CAMPUS_PHOTOS[0].src}
-              alt={CAMPUS_PHOTOS[0].alt}
-              aspect="cta"
-              grade="cinematic"
-              caption={CAMPUS_PHOTOS[0].caption}
-              sizes="100vw"
-              className="shadow-card"
-            />
-          </Reveal>
-          <RevealGroup className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4">
-            {CAMPUS_PHOTOS.slice(1).map((photo) => (
-              <RevealItem key={photo.src}>
-                <PhotoFrame
-                  src={photo.src}
-                  alt={photo.alt}
-                  aspect="gallery"
-                  grade="documentary"
-                  caption={photo.caption}
-                  sizes="(min-width: 768px) 25vw, 50vw"
-                />
-              </RevealItem>
-            ))}
-          </RevealGroup>
+          <CampusShowcase photos={CAMPUS_PHOTOS} />
         </div>
       </section>
 

@@ -14,6 +14,45 @@ type HeroSliderProps = {
   className?: string;
 };
 
+function HeroSlide({
+  src,
+  alt,
+  priority,
+  animateKenBurns,
+}: {
+  src: string;
+  alt: string;
+  priority?: boolean;
+  animateKenBurns?: boolean;
+}) {
+  const frame = (
+    <div className="photo-frame photo-grade-cinematic absolute inset-0">
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        priority={priority}
+        sizes="100vw"
+        className="photo-image object-cover object-[center_35%]"
+      />
+      <div className="photo-overlay" aria-hidden />
+    </div>
+  );
+
+  if (!animateKenBurns) return frame;
+
+  return (
+    <motion.div
+      initial={{ scale: 1.14 }}
+      animate={{ scale: 1 }}
+      transition={{ duration: 10, ease: "linear" }}
+      className="absolute inset-0"
+    >
+      {frame}
+    </motion.div>
+  );
+}
+
 /** Cinematic crossfading Ken Burns slideshow for the TOP hero (21:9 feel). */
 export default function HeroSlider({
   images,
@@ -22,18 +61,51 @@ export default function HeroSlider({
   className,
 }: HeroSliderProps) {
   const [index, setIndex] = useState(0);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
     const id = setInterval(
       () => setIndex((i) => (i + 1) % images.length),
       interval * 1000,
     );
     return () => clearInterval(id);
-  }, [images.length, interval]);
+  }, [images.length, interval, mounted]);
+
+  const rootClass = `photo-vignette absolute inset-0 overflow-hidden ${className ?? ""}`;
+
+  // Static first slide on server + first client paint (matches SSR, avoids hydration mismatch).
+  if (!mounted) {
+    return (
+      <div className={rootClass}>
+        <HeroSlide
+          src={images[0]}
+          alt={alts[0] ?? ""}
+          priority
+          animateKenBurns={false}
+        />
+        <div className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 gap-2.5">
+          {images.map((_, i) => (
+            <span
+              key={i}
+              aria-hidden
+              className={`h-1 rounded-full ${
+                i === 0 ? "w-8 bg-accent" : "w-3 bg-white/40"
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div className={`photo-vignette absolute inset-0 overflow-hidden ${className ?? ""}`}>
-      <AnimatePresence>
+    <div className={rootClass}>
+      <AnimatePresence initial={false}>
         <motion.div
           key={index}
           initial={{ opacity: 0 }}
@@ -42,22 +114,12 @@ export default function HeroSlider({
           transition={{ duration: 2, ease: "easeInOut" }}
           className="absolute inset-0"
         >
-          <motion.div
-            initial={{ scale: 1.14 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: interval + 3, ease: "linear" }}
-            className="photo-frame photo-grade-cinematic absolute inset-0"
-          >
-            <Image
-              src={images[index]}
-              alt={alts[index] ?? ""}
-              fill
-              priority={index === 0}
-              sizes="100vw"
-              className="photo-image object-cover object-[center_35%]"
-            />
-            <div className="photo-overlay" aria-hidden />
-          </motion.div>
+          <HeroSlide
+            src={images[index]}
+            alt={alts[index] ?? ""}
+            priority={index === 0}
+            animateKenBurns
+          />
         </motion.div>
       </AnimatePresence>
 
@@ -65,6 +127,7 @@ export default function HeroSlider({
         {images.map((_, i) => (
           <button
             key={i}
+            type="button"
             aria-label={`スライド ${i + 1}`}
             onClick={() => setIndex(i)}
             className={`h-1 rounded-full transition-all duration-500 ${

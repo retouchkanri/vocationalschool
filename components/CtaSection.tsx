@@ -15,7 +15,7 @@ export default function CtaSection() {
             alt={CTA_PHOTO.alt}
             fill
             sizes="100vw"
-            className="photo-image object-cover object-[center_40%]"
+            className="photo-image object-cover object-center"
           />
           <div className="photo-overlay" aria-hidden />
         </div>

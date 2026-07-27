@@ -33,13 +33,13 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+        className={`fixed inset-x-0 top-0 z-50 overflow-visible transition-all duration-500 ${
           scrolled
-            ? "border-b border-ink/5 bg-paper/80 shadow-[0_1px_16px_-6px_rgb(31_45_35/0.15)] backdrop-blur-xl"
-            : "bg-gradient-to-b from-black/45 to-transparent"
+            ? "border-b border-ink/5 bg-paper/95 shadow-[0_1px_16px_-6px_rgb(31_45_35/0.15)] backdrop-blur-xl"
+            : "bg-primary-deep/55 backdrop-blur-sm"
         }`}
       >
-        <div className="mx-[5vw] flex h-16 items-center justify-between gap-4 md:h-20">
+        <div className="mx-[5vw] flex min-h-16 flex-wrap items-center justify-between gap-x-4 gap-y-2 py-2 md:min-h-20 md:py-0">
           <Link href="/" className="flex shrink-0 items-center gap-3">
             <span
               className={`relative block h-10 w-40 transition-all duration-500 md:h-12 md:w-52 ${
@@ -57,8 +57,11 @@ export default function Header() {
             </span>
           </Link>
 
-          {/* Desktop nav */}
-          <nav className="hidden items-center gap-1 xl:flex">
+          {/* Desktop nav — wraps on mid-size screens so items are not clipped */}
+          <nav
+            aria-label="メインナビゲーション"
+            className="hidden min-w-0 flex-1 flex-wrap items-center justify-end gap-x-0.5 gap-y-1 lg:flex xl:gap-x-1"
+          >
             {NAV.filter((n) => n.href !== "/").map((item) => {
               const active =
                 item.href === pathname ||
@@ -67,7 +70,7 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`group relative px-2.5 py-2 text-[13px] font-medium tracking-wide transition-colors ${
+                  className={`group relative whitespace-nowrap px-2 py-1.5 text-[11px] font-bold tracking-wide transition-colors xl:px-2.5 xl:py-2 xl:text-[13px] ${
                     scrolled
                       ? active
                         ? "text-accent"
@@ -88,12 +91,12 @@ export default function Header() {
             })}
           </nav>
 
-          {/* Mobile hamburger */}
+          {/* Mobile / tablet hamburger */}
           <button
             aria-label={open ? "メニューを閉じる" : "メニューを開く"}
             aria-expanded={open}
             onClick={() => setOpen(!open)}
-            className={`relative z-50 flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-full transition-colors xl:hidden ${
+            className={`relative z-50 flex h-11 w-11 shrink-0 flex-col items-center justify-center gap-1.5 rounded-full transition-colors lg:hidden ${
               open ? "bg-primary" : scrolled ? "bg-primary" : "bg-black/30"
             }`}
           >
@@ -124,7 +127,7 @@ export default function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 flex flex-col overflow-y-auto bg-primary-deep/97 px-6 pt-24 pb-10 backdrop-blur-sm xl:hidden"
+            className="fixed inset-0 z-40 flex flex-col overflow-y-auto bg-primary-deep/97 px-6 pt-24 pb-10 backdrop-blur-sm lg:hidden"
           >
             <nav className="mx-auto flex w-full max-w-sm flex-col">
               {NAV.map((item, i) => (

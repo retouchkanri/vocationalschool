@@ -163,6 +163,6 @@ export const GALLERY_PHOTOS: CuratedPhoto[] = [
 ];
 
 export const CTA_PHOTO = {
-  src: "/images/theme/img_cmn_img_group_b2.jpg",
-  alt: "夕暮れのキャンパスと馬",
+  src: "/images/theme/img_cmn_img_group_a2.jpg",
+  alt: "広い放牧地を走る馬たちとキャンパスの風景",
 } as const;

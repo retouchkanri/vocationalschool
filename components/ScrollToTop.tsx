@@ -44,7 +44,7 @@ export default function ScrollToTop() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 12 }}
           transition={{ duration: 0.25 }}
-          className="fixed bottom-5 right-4 z-[60] flex h-12 w-12 flex-col items-center justify-center rounded-full border border-ink/10 bg-paper/95 text-primary shadow-[0_10px_28px_-10px_rgb(53_34_10/0.35)] backdrop-blur-md transition-colors hover:border-accent hover:text-accent md:bottom-6 md:right-6"
+          className="fixed bottom-5 right-4 z-[60] flex h-12 w-12 flex-col items-center justify-center rounded-full border border-ink/10 bg-paper/95 text-primary shadow-[0_10px_28px_-10px_rgb(31_45_35/0.35)] backdrop-blur-md transition-colors hover:border-accent hover:text-accent md:bottom-6 md:right-6"
         >
           <svg
             aria-hidden

@@ -165,7 +165,7 @@ export default function AboutPage() {
               >
                 “
               </span>
-              <p className="font-mincho text-2xl leading-relaxed tracking-wide text-primary md:text-4xl md:leading-relaxed">
+              <p className="font-sans font-bold text-2xl leading-relaxed tracking-wide text-primary md:text-4xl md:leading-relaxed">
                 馬と向き合う毎日が、
                 <br />
                 プロを育てる。
@@ -185,7 +185,7 @@ export default function AboutPage() {
                   <p className="font-display text-3xl font-semibold tracking-[0.2em] text-accent/80 transition-colors duration-300 group-hover:text-accent">
                     {p.no}
                   </p>
-                  <h3 className="mt-4 font-mincho text-xl leading-snug text-ink">
+                  <h3 className="mt-4 font-sans font-bold text-xl leading-snug text-ink">
                     {p.title}
                   </h3>
                   <div className="rule-diamond mt-4 w-14" />
@@ -248,7 +248,7 @@ export default function AboutPage() {
                     >
                       <th
                         scope="row"
-                        className="w-36 whitespace-nowrap px-6 py-5 align-top font-mincho text-primary md:w-44"
+                        className="w-36 whitespace-nowrap px-6 py-5 align-top font-sans font-bold text-primary md:w-44"
                       >
                         {row.th}
                       </th>
@@ -288,7 +288,7 @@ export default function AboutPage() {
           />
 
           <Reveal>
-            <h3 className="text-center font-mincho text-xl text-ink md:text-2xl">
+            <h3 className="text-center font-sans font-bold text-xl text-ink md:text-2xl">
               馬とともに過ごすキャンパス
             </h3>
           </Reveal>
@@ -320,7 +320,7 @@ export default function AboutPage() {
               <p className="font-display text-center text-[13px] font-semibold tracking-[0.35em] text-accent">
                 DORMITORY
               </p>
-              <h3 className="mt-3 text-center font-mincho text-xl text-ink md:text-2xl">
+              <h3 className="mt-3 text-center font-sans font-bold text-xl text-ink md:text-2xl">
                 全室個室の学生寮
               </h3>
               <div className="rule-diamond mx-auto mt-5 w-20" />
@@ -466,7 +466,7 @@ export default function AboutPage() {
                   <p className="font-display text-xs font-semibold tracking-[0.3em] text-accent">
                     {org.eyebrow}
                   </p>
-                  <h3 className="mt-3 font-mincho text-xl leading-snug text-ink transition-colors duration-300 group-hover:text-primary">
+                  <h3 className="mt-3 font-sans font-bold text-xl leading-snug text-ink transition-colors duration-300 group-hover:text-primary">
                     {org.name}
                   </h3>
                   <p className="mt-3 flex-1 text-sm leading-loose text-ink/70">

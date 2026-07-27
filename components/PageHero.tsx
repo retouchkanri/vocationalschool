@@ -3,19 +3,14 @@ import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 
 type PageHeroProps = {
-  /** English eyebrow label, e.g. "CURRICULUM". */
   eyebrow: string;
-  /** Japanese page title. */
   title: string;
-  /** Optional short lead sentence shown under the title. */
   lead?: string;
-  /** Background image path (from /public). */
   image: string;
-  /** Breadcrumb label for the current page. */
   breadcrumb: string;
 };
 
-/** Sub-page hero: full-width photo, dark gradient, animated title, breadcrumb. */
+/** Sub-page hero with cinematic documentary photography treatment. */
 export default function PageHero({
   eyebrow,
   title,
@@ -26,19 +21,22 @@ export default function PageHero({
   return (
     <section
       data-hero
-      className="relative flex min-h-[320px] items-center overflow-hidden pt-16 md:min-h-[420px] md:pt-20"
+      className="relative flex min-h-[42vh] items-center overflow-hidden pt-16 md:min-h-[48vh] md:pt-20"
     >
-      <div className="absolute inset-0">
-        <Image
-          src={image}
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="animate-ken-burns object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-deep/85 via-primary-deep/60 to-primary-deep/30" />
-        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/40 to-transparent" />
+      <div className="photo-vignette absolute inset-0">
+        <div className="photo-frame photo-grade-cinematic absolute inset-0">
+          <Image
+            src={image}
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="photo-image animate-ken-burns object-cover object-[center_30%]"
+          />
+          <div className="photo-overlay" aria-hidden />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-deep/88 via-primary-deep/55 to-primary-deep/20" />
+        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-primary-deep/60 to-transparent" />
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-14 md:px-6">
@@ -46,11 +44,11 @@ export default function PageHero({
           <p className="font-display text-sm font-semibold tracking-[0.4em] text-tan">
             {eyebrow}
           </p>
-          <h1 className="mt-3 font-mincho text-3xl leading-snug tracking-wide text-white md:text-5xl">
+          <h1 className="mt-3 font-mincho text-3xl font-bold leading-snug tracking-[0.06em] text-white md:text-5xl">
             {title}
           </h1>
           {lead && (
-            <p className="mt-5 max-w-2xl text-sm leading-loose text-white/85 md:text-base">
+            <p className="mt-5 max-w-2xl text-sm font-normal leading-[1.8] text-white/85 md:text-base">
               {lead}
             </p>
           )}

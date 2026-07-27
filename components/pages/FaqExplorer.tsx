@@ -296,7 +296,7 @@ export default function FaqExplorer() {
               transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
               className="shadow-card rounded-2xl border border-tan/40 bg-white px-6 py-12 text-center md:px-10"
             >
-              <p className="font-mincho text-lg text-ink md:text-xl">
+              <p className="font-sans font-bold text-lg text-ink md:text-xl">
                 ご質問が見つかりませんでした
               </p>
               <p className="mx-auto mt-3 max-w-md text-sm leading-loose text-ink/60">

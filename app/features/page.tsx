@@ -162,7 +162,7 @@ export default function FeaturesPage() {
               </div>
             </Reveal>
             <Reveal x={24} y={0}>
-              <h3 className="font-mincho text-xl leading-relaxed text-ink md:text-2xl">
+              <h3 className="font-sans font-bold text-xl leading-relaxed text-ink md:text-2xl">
                 学費の高低ではなく、
                 <br />
                 「学びと成果の中身」で選ぶ。
@@ -213,7 +213,7 @@ export default function FeaturesPage() {
                     <span className="block font-display text-[11px] font-semibold tracking-[0.3em] text-accent">
                       {s.en}
                     </span>
-                    <span className="mt-1 block font-mincho text-xl text-ink">
+                    <span className="mt-1 block font-sans font-bold text-xl text-ink">
                       「{s.title}」
                     </span>
                     <span className="mt-1 block text-xs text-ink/60">
@@ -281,7 +281,7 @@ export default function FeaturesPage() {
                       {p.tag}
                     </span>
                   </div>
-                  <h3 className="mt-4 font-mincho text-xl text-ink md:text-[22px]">
+                  <h3 className="mt-4 font-sans font-bold text-xl text-ink md:text-[22px]">
                     {p.title}
                   </h3>
                   <div className="mt-3 h-px w-12 bg-tan/60 transition-all duration-300 group-hover:w-20 group-hover:bg-accent" />
@@ -331,7 +331,7 @@ export default function FeaturesPage() {
                     <p className="font-display text-[11px] font-semibold tracking-[0.3em] text-accent">
                       {c.tag}
                     </p>
-                    <h3 className="mt-2 font-mincho text-lg leading-snug text-ink md:text-xl">
+                    <h3 className="mt-2 font-sans font-bold text-lg leading-snug text-ink md:text-xl">
                       {c.title}
                     </h3>
                     <p className="mt-3 text-sm leading-loose text-ink/75">
@@ -348,7 +348,7 @@ export default function FeaturesPage() {
               <p className="font-display text-[11px] font-semibold tracking-[0.3em] text-accent">
                 PAID INTERNSHIP
               </p>
-              <p className="mt-2 font-mincho text-lg leading-relaxed text-ink md:text-xl">
+              <p className="mt-2 font-sans font-bold text-lg leading-relaxed text-ink md:text-xl">
                 「働きながら学び、学びながら働ける」——
                 在学中の取り組みにより
                 <span className="mx-1 font-display text-2xl font-semibold text-accent md:text-3xl">
@@ -389,7 +389,7 @@ export default function FeaturesPage() {
                     <p className="font-display text-[11px] font-semibold tracking-[0.3em] text-accent">
                       {c.en}
                     </p>
-                    <h3 className="mt-2 font-mincho text-lg leading-snug text-ink">
+                    <h3 className="mt-2 font-sans font-bold text-lg leading-snug text-ink">
                       {c.title}
                     </h3>
                     <p className="mt-3 text-sm leading-loose text-ink/75">
@@ -418,7 +418,7 @@ export default function FeaturesPage() {
                 <p className="font-display text-[12px] font-semibold tracking-[0.35em] text-tan">
                   JRA ACHIEVEMENT
                 </p>
-                <h3 className="mt-4 font-mincho text-2xl leading-snug text-white md:text-3xl">
+                <h3 className="mt-4 font-sans font-bold text-2xl leading-snug text-white md:text-3xl">
                   JRA競馬学校「厩務員課程」
                   <br className="sm:hidden" />
                   <span className="text-accent">10年連続</span>合格。

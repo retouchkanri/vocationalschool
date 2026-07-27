@@ -171,7 +171,7 @@ export default function JraPage() {
 
           <div className="grid items-center gap-10 md:grid-cols-2 md:gap-14">
             <Reveal x={-24} y={0}>
-              <h3 className="font-mincho text-2xl leading-snug text-ink md:text-3xl">
+              <h3 className="font-sans font-bold text-2xl leading-snug text-ink md:text-3xl">
                 担当馬の毎日を支え、
                 <br />
                 レースの舞台裏に立つ仕事。
@@ -222,7 +222,7 @@ export default function JraPage() {
                 <p className="font-display text-xs font-semibold tracking-[0.3em] text-ink/50">
                   GENERAL ROUTE
                 </p>
-                <p className="mt-3 font-mincho text-lg text-ink/80">
+                <p className="mt-3 font-sans font-bold text-lg text-ink/80">
                   一般的なルート
                 </p>
                 <p className="mt-4 font-display text-4xl font-semibold text-ink/70 md:text-5xl">
@@ -244,7 +244,7 @@ export default function JraPage() {
                 <p className="font-display text-xs font-semibold tracking-[0.3em] text-tan">
                   BAJIGAKU ROUTE
                 </p>
-                <p className="mt-3 font-mincho text-lg text-white/90">
+                <p className="mt-3 font-sans font-bold text-lg text-white/90">
                   本校での挑戦
                 </p>
                 <p className="mt-4 font-display text-4xl font-semibold text-white md:text-5xl">
@@ -305,7 +305,7 @@ export default function JraPage() {
                         REASON
                       </span>
                     </div>
-                    <h3 className="mt-4 font-mincho text-2xl leading-snug text-ink md:text-[28px]">
+                    <h3 className="mt-4 font-sans font-bold text-2xl leading-snug text-ink md:text-[28px]">
                       {feature.title}
                     </h3>
                     <div className="rule-diamond mt-5 w-20" />
@@ -368,7 +368,7 @@ export default function JraPage() {
                         )}
                       </div>
                       <h3
-                        className={`mt-2 font-mincho text-xl md:text-2xl ${
+                        className={`mt-2 font-sans font-bold text-xl md:text-2xl ${
                           highlight ? "text-white" : "text-ink"
                         }`}
                       >

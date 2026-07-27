@@ -33,7 +33,7 @@ export default function SectionTitle({
         {eyebrow}
       </p>
       <h2
-        className={`mt-3 font-mincho text-3xl leading-snug tracking-wide md:text-4xl ${
+        className={`mt-3 font-mincho text-3xl font-bold leading-snug tracking-[0.06em] md:text-4xl ${
           light ? "text-white" : "text-ink"
         }`}
       >
@@ -44,7 +44,7 @@ export default function SectionTitle({
       />
       {lead && (
         <p
-          className={`mx-auto mt-6 max-w-3xl text-[15px] leading-loose md:text-base ${
+          className={`mx-auto mt-6 max-w-3xl text-[15px] font-normal leading-[1.8] md:text-base ${
             light ? "text-white/80" : "text-ink/70"
           } ${centered ? "" : "mx-0"}`}
         >

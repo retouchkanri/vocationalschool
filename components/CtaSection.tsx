@@ -1,24 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
+import { CTA_PHOTO } from "@/lib/photography";
 import { SCHOOL } from "@/lib/site";
 
-/**
- * Shared bottom-of-page CTA: open campus + admission + phone.
- * Place directly above the footer on every page.
- */
+/** Shared bottom-of-page CTA with 16:9 cinematic banner photography. */
 export default function CtaSection() {
   return (
     <section className="relative overflow-hidden py-20 md:py-28">
-      <div className="absolute inset-0">
-        <Image
-          src="/images/theme/img_cmn_img_group_b2.jpg"
-          alt=""
-          fill
-          sizes="100vw"
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-primary-deep/80" />
+      <div className="photo-vignette absolute inset-0">
+        <div className="photo-frame photo-grade-cinematic absolute inset-0">
+          <Image
+            src={CTA_PHOTO.src}
+            alt={CTA_PHOTO.alt}
+            fill
+            sizes="100vw"
+            className="photo-image object-cover object-[center_40%]"
+          />
+          <div className="photo-overlay" aria-hidden />
+        </div>
+        <div className="absolute inset-0 bg-primary-deep/78" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-5xl px-4 text-center md:px-6">
@@ -26,12 +27,12 @@ export default function CtaSection() {
           <p className="font-display text-sm font-semibold tracking-[0.4em] text-tan">
             NEXT STEP
           </p>
-          <h2 className="mt-4 font-mincho text-3xl leading-snug text-white md:text-4xl">
+          <h2 className="mt-4 font-mincho text-3xl font-bold leading-snug tracking-[0.06em] text-white md:text-4xl">
             馬と生きる未来へ、
             <br className="md:hidden" />
             一歩踏み出そう。
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-loose text-white/80 md:text-base">
+          <p className="mx-auto mt-5 max-w-2xl text-sm font-normal leading-[1.8] text-white/80 md:text-base">
             まずは学校見学・オープンキャンパスで、約120頭の馬たちと本校の学びをご体感ください。
             資料請求・ご相談もお気軽にどうぞ。
           </p>

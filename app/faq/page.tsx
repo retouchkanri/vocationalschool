@@ -234,7 +234,7 @@ function ContactCardBody({
       <span className="font-display mt-5 text-xs font-semibold tracking-[0.35em] text-accent">
         {en}
       </span>
-      <span className="mt-2 font-mincho text-xl text-ink">{title}</span>
+      <span className="mt-2 font-sans font-bold text-xl text-ink">{title}</span>
       <span className="mt-4 flex-1 text-sm leading-loose text-ink/70">
         {body}
       </span>

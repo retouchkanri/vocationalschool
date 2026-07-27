@@ -47,7 +47,7 @@ export default function ContactForm() {
           <p className="font-display text-[12px] font-semibold tracking-[0.3em] text-accent">
             PHONE
           </p>
-          <h3 className="mt-2 font-mincho text-xl text-ink">お電話でのご相談</h3>
+          <h3 className="mt-2 font-sans font-bold text-xl text-ink">お電話でのご相談</h3>
           <a
             href={`tel:${SCHOOL.tel}`}
             className="mt-4 inline-block font-display text-3xl font-semibold tracking-wider text-primary transition-colors hover:text-accent"
@@ -83,7 +83,7 @@ export default function ContactForm() {
             <p className="font-display text-[12px] font-semibold tracking-[0.3em] text-accent">
               THANK YOU
             </p>
-            <h3 className="mt-3 font-mincho text-2xl text-ink">
+            <h3 className="mt-3 font-sans font-bold text-2xl text-ink">
               お問合せ内容を受け付けました
             </h3>
             <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-ink/70">

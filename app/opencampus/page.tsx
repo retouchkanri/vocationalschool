@@ -123,7 +123,7 @@ export default function OpenCampusPage() {
                     />
                   </div>
                   <div className="p-6">
-                    <h3 className="font-mincho text-lg tracking-wide text-ink">
+                    <h3 className="font-sans font-bold text-lg tracking-wide text-ink">
                       {item.title}
                     </h3>
                     <div className="mt-3 h-px w-10 bg-accent/60 transition-all duration-300 group-hover:w-16" />
@@ -183,7 +183,7 @@ export default function OpenCampusPage() {
                 {VOICES.map((v) => (
                   <li
                     key={v}
-                    className="rounded-full border border-tan/40 px-5 py-2 font-mincho text-sm tracking-wide text-white"
+                    className="rounded-full border border-tan/40 px-5 py-2 font-sans font-bold text-sm tracking-wide text-white"
                   >
                     「{v}」
                   </li>
@@ -223,7 +223,7 @@ export default function OpenCampusPage() {
                       </span>
                     </div>
                     <div className="min-w-0 flex-1 rounded-2xl bg-white p-6 shadow-card transition-shadow duration-300 hover:shadow-card-hover md:p-7">
-                      <h3 className="font-mincho text-lg tracking-wide text-ink">
+                      <h3 className="font-sans font-bold text-lg tracking-wide text-ink">
                         {step.title}
                       </h3>
                       <p className="mt-2 text-sm leading-loose text-ink/70">
@@ -284,7 +284,7 @@ export default function OpenCampusPage() {
               <p className="font-display text-[13px] font-semibold tracking-[0.35em] text-accent">
                 DORMITORY
               </p>
-              <h3 className="mt-3 font-mincho text-2xl leading-snug tracking-wide text-ink md:text-3xl">
+              <h3 className="mt-3 font-sans font-bold text-2xl leading-snug tracking-wide text-ink md:text-3xl">
                 全室個室・365日食事付きの学生寮
               </h3>
               <p className="mt-5 text-sm leading-loose text-ink/70 md:text-[15px]">
@@ -323,7 +323,7 @@ export default function OpenCampusPage() {
                   <p className="font-display text-xs font-semibold tracking-[0.3em] text-accent">
                     KANTO / CHIBA
                   </p>
-                  <h3 className="mt-2 font-mincho text-lg tracking-wide text-ink">
+                  <h3 className="mt-2 font-sans font-bold text-lg tracking-wide text-ink">
                     千葉県八街市の広大な総合施設
                   </h3>
                   <p className="mt-3 text-sm leading-loose text-ink/70">
@@ -337,7 +337,7 @@ export default function OpenCampusPage() {
                 <p className="font-display text-xs font-semibold tracking-[0.3em] text-accent">
                   KANSAI / OSAKA
                 </p>
-                <h3 className="mt-2 font-mincho text-lg tracking-wide text-ink">
+                <h3 className="mt-2 font-sans font-bold text-lg tracking-wide text-ink">
                   関西研修施設「ホースレスト」
                 </h3>
                 <p className="mt-3 text-sm leading-loose text-ink/70">
@@ -364,7 +364,7 @@ export default function OpenCampusPage() {
             {/* アクセス */}
             <Reveal>
               <div className="h-full rounded-2xl bg-white p-6 shadow-card md:p-8">
-                <h3 className="font-mincho text-xl tracking-wide text-ink">
+                <h3 className="font-sans font-bold text-xl tracking-wide text-ink">
                   アクセス
                 </h3>
                 <div className="rule-diamond mt-4 w-16" />
@@ -424,7 +424,7 @@ export default function OpenCampusPage() {
                 <p className="font-display text-[13px] font-semibold tracking-[0.35em] text-tan">
                   ENTRY
                 </p>
-                <h3 className="mt-3 font-mincho text-2xl leading-snug tracking-wide">
+                <h3 className="mt-3 font-sans font-bold text-2xl leading-snug tracking-wide">
                   まずは、お気軽に
                   <br />
                   お申込み・ご相談を。

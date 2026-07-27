@@ -161,7 +161,7 @@ export default function ComparisonPage() {
               </div>
             </Reveal>
             <Reveal x={20} y={0}>
-              <h3 className="font-mincho text-2xl leading-relaxed text-ink md:text-3xl">
+              <h3 className="font-sans font-bold text-2xl leading-relaxed text-ink md:text-3xl">
                 学費の安さだけで
                 <br />
                 選んでいませんか？
@@ -180,7 +180,7 @@ export default function ComparisonPage() {
                         <span className="font-display text-sm font-semibold tracking-wider text-accent">
                           {String(i + 1).padStart(2, "0")}
                         </span>
-                        <span className="font-mincho text-sm text-ink md:text-base">
+                        <span className="font-sans font-bold text-sm text-ink md:text-base">
                           {label}
                         </span>
                       </div>
@@ -209,19 +209,19 @@ export default function ComparisonPage() {
                     <tr className="bg-primary text-white">
                       <th
                         scope="col"
-                        className="w-[18%] px-5 py-4 font-mincho text-sm font-normal tracking-wider md:text-base"
+                        className="w-[18%] px-5 py-4 font-sans font-bold text-sm font-normal tracking-wider md:text-base"
                       >
                         比較ポイント
                       </th>
                       <th
                         scope="col"
-                        className="w-[38%] px-5 py-4 font-mincho text-sm font-normal tracking-wider md:text-base"
+                        className="w-[38%] px-5 py-4 font-sans font-bold text-sm font-normal tracking-wider md:text-base"
                       >
                         チェックすべき理由
                       </th>
                       <th
                         scope="col"
-                        className="w-[44%] px-5 py-4 font-mincho text-sm font-normal tracking-wider md:text-base"
+                        className="w-[44%] px-5 py-4 font-sans font-bold text-sm font-normal tracking-wider md:text-base"
                       >
                         本校の場合
                       </th>
@@ -235,7 +235,7 @@ export default function ComparisonPage() {
                       >
                         <th
                           scope="row"
-                          className="px-5 py-5 font-mincho text-sm font-normal leading-relaxed text-primary md:text-base"
+                          className="px-5 py-5 font-sans font-bold text-sm font-normal leading-relaxed text-primary md:text-base"
                         >
                           <span className="font-display mr-2 text-xs tracking-wider text-accent">
                             {String(i + 1).padStart(2, "0")}
@@ -335,7 +335,7 @@ export default function ComparisonPage() {
                     </span>
                   </div>
                   <div className="flex flex-1 flex-col p-6">
-                    <h3 className="font-mincho text-lg leading-snug text-ink">
+                    <h3 className="font-sans font-bold text-lg leading-snug text-ink">
                       {item.title}
                     </h3>
                     <p className="mt-3 text-[13px] leading-relaxed text-ink/70 md:text-sm">
@@ -377,7 +377,7 @@ export default function ComparisonPage() {
                     <p className="font-display text-xs font-semibold tracking-[0.3em] text-accent">
                       {item.en}
                     </p>
-                    <h3 className="mt-2 font-mincho text-lg leading-snug text-ink">
+                    <h3 className="mt-2 font-sans font-bold text-lg leading-snug text-ink">
                       {item.title}
                     </h3>
                     <p className="mt-3 flex-1 text-[13px] leading-relaxed text-ink/70 md:text-sm">

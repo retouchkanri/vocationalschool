@@ -133,7 +133,7 @@ export default function CurriculumPage() {
             </Reveal>
 
             <Reveal x={24} y={0}>
-              <h3 className="font-mincho text-2xl leading-relaxed text-ink md:text-3xl">
+              <h3 className="font-sans font-bold text-2xl leading-relaxed text-ink md:text-3xl">
                 未経験から2年間で、
                 <br />
                 現場で通用する力を。
@@ -201,7 +201,7 @@ export default function CurriculumPage() {
                     </span>
                   </div>
                   <div className="p-6">
-                    <h3 className="font-mincho text-lg leading-snug text-ink transition-colors duration-300 group-hover:text-primary md:text-xl">
+                    <h3 className="font-sans font-bold text-lg leading-snug text-ink transition-colors duration-300 group-hover:text-primary md:text-xl">
                       {lesson.title}
                     </h3>
                     <p className="mt-3 text-sm leading-loose text-ink/70">
@@ -246,7 +246,7 @@ export default function CurriculumPage() {
                       {item.period}
                     </span>
                   </div>
-                  <h3 className="mt-3 font-mincho text-xl leading-snug text-white md:text-2xl">
+                  <h3 className="mt-3 font-sans font-bold text-xl leading-snug text-white md:text-2xl">
                     {item.title}
                   </h3>
                   <p className="mt-3 max-w-3xl text-sm leading-loose text-white/75 md:text-[15px]">
@@ -287,7 +287,7 @@ export default function CurriculumPage() {
                     </span>
                   </div>
                   <div className="p-6">
-                    <h3 className="font-mincho text-lg leading-snug text-ink transition-colors duration-300 group-hover:text-primary md:text-xl">
+                    <h3 className="font-sans font-bold text-lg leading-snug text-ink transition-colors duration-300 group-hover:text-primary md:text-xl">
                       {item.title}
                     </h3>
                     <p className="mt-3 text-sm leading-loose text-ink/70">
@@ -304,7 +304,7 @@ export default function CurriculumPage() {
               <p className="font-display text-xs font-semibold tracking-[0.35em] text-accent">
                 REFUND SYSTEM
               </p>
-              <h3 className="mt-2 font-mincho text-xl leading-snug text-ink md:text-2xl">
+              <h3 className="mt-2 font-sans font-bold text-xl leading-snug text-ink md:text-2xl">
                 研修が、学費の負担軽減にもつながります。
               </h3>
               <p className="mt-3 text-sm leading-loose text-ink/70 md:text-[15px]">
@@ -374,7 +374,7 @@ export default function CurriculumPage() {
                   </div>
                   <div className="flex items-center justify-between gap-4 p-6">
                     <div>
-                      <h3 className="font-mincho text-xl leading-snug text-ink transition-colors duration-300 group-hover:text-primary md:text-2xl">
+                      <h3 className="font-sans font-bold text-xl leading-snug text-ink transition-colors duration-300 group-hover:text-primary md:text-2xl">
                         {card.title}
                       </h3>
                       <p className="mt-2 text-sm leading-loose text-ink/70">

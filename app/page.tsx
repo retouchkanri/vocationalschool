@@ -2,10 +2,19 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import HeroSlider from "@/components/HeroSlider";
+import PhotoFrame from "@/components/PhotoFrame";
 import SectionTitle from "@/components/SectionTitle";
 import CtaSection from "@/components/CtaSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import { Reveal, RevealGroup, RevealItem, RevealScale } from "@/components/Reveal";
+import {
+  CAMPUS_PHOTOS,
+  GALLERY_PHOTOS,
+  HERO_PHOTOS,
+  HORSE_PORTRAITS,
+  LIFESTYLE_PHOTOS,
+  TRAINING_PHOTOS,
+} from "@/lib/photography";
 import { SCHOOL, STATS } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -13,16 +22,7 @@ export const metadata: Metadata = {
     "馬の学校・東関東馬事専門学院（バジガク）公式サイト。千葉・大阪の4施設、約120頭の馬とともに学び、未経験からJRA厩務員・牧場就職を目指せる馬の専門学校です。",
 };
 
-const HERO_IMAGES = [
-  "/images/theme/img_cmn_img_group_a1.jpg",
-  "/images/theme/img_cmn_img_group_a2.jpg",
-  "/images/theme/img_cmn_img_group_a3.jpg",
-  "/images/theme/img_cmn_img_group_a4.jpg",
-  "/images/theme/img_cmn_img_group_b1.jpg",
-  "/images/theme/img_cmn_img_group_b2.jpg",
-  "/images/theme/img_cmn_img_group_b3.jpg",
-  "/images/theme/img_cmn_img_group_b4.jpg",
-];
+const OPENCAMPUS_DATES = ["5/31（日）", "6/6（土）", "6/28（日）", "7/11（土）"];
 
 type NewsItem = {
   date: string;
@@ -115,46 +115,36 @@ const FEATURES: FeatureCard[] = [
   },
 ];
 
-const OPENCAMPUS_DATES = ["5/31（日）", "6/6（土）", "6/28（日）", "7/11（土）"];
-
-const MARQUEE_PHOTOS = [
-  "/images/theme/img_tokucho_img_002_1.jpg",
-  "/images/theme/img_taiken_img_002_1.jpg",
-  "/images/theme/img_kankyo_img_002_1.jpg",
-  "/images/theme/img_tokucho_img_002_4.jpg",
-  "/images/theme/img_curriculum_img_002_2.jpg",
-  "/images/theme/img_taiken_img_002_2.jpg",
-  "/images/theme/img_tokucho_img_002_5.jpg",
-  "/images/theme/img_kankyo_img_002_3.jpg",
-  "/images/theme/img_curriculum_img_002_6.jpg",
-  "/images/theme/img_tokucho_img_002_2.jpg",
-];
-
 export default function Home() {
   return (
     <div>
-      {/* ===== 1. Fullscreen hero ===== */}
+      {/* ===== 1. Cinematic hero (21:9) ===== */}
       <section
         data-hero
-        className="relative flex min-h-[92vh] items-center overflow-hidden"
+        className="relative flex min-h-[88vh] items-end overflow-hidden md:min-h-[92vh] md:items-center"
       >
-        <HeroSlider images={HERO_IMAGES} />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-primary-deep/80 via-primary-deep/45 to-primary-deep/15" />
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-primary-deep/70 to-transparent" />
+        <HeroSlider
+          images={HERO_PHOTOS.map((p) => p.src)}
+          alts={HERO_PHOTOS.map((p) => p.alt)}
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-primary-deep/75 via-primary-deep/35 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-52 bg-gradient-to-t from-primary-deep/85 via-primary-deep/40 to-transparent" />
 
-        <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-28 pt-28 md:px-6 md:pt-32">
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-32 pt-28 md:px-6 md:pb-28 md:pt-32">
           <Reveal y={24}>
             <p className="font-display text-[11px] font-semibold tracking-[0.45em] text-tan md:text-sm">
-              EAST KANTO EQUINE VOCATIONAL ACADEMY
+              PREMIUM DOCUMENTARY — BAJIGAKU
             </p>
-            <h1 className="mt-5 font-mincho text-4xl leading-[1.4] tracking-wide text-white md:text-6xl md:leading-[1.35]">
-              「馬が好き」を、
+            <h1 className="mt-5 max-w-3xl font-mincho text-4xl font-bold leading-[1.35] tracking-[0.06em] text-white md:text-6xl md:leading-[1.3]">
+              ここで学びたい。
               <br />
-              一生の仕事に。
+              <span className="text-[0.92em] text-white/95">
+                馬とともに、一生の仕事へ。
+              </span>
             </h1>
-            <p className="mt-6 max-w-xl text-sm leading-loose text-white/85 md:text-base">
-              未経験からJRA厩務員・競走馬育成牧場・乗馬クラブへ。
-              約120頭の馬とともに現場で学ぶ、国内最大級の馬の専門学校です。
+            <p className="mt-6 max-w-xl text-sm font-normal leading-[1.8] text-white/85 md:text-base">
+              本物の馬、本物の仲間、本物の現場。
+              未経験からJRA厩務員・牧場・乗馬クラブへ——約120頭の馬とともに歩む、国内最大級の馬の専門学校です。
             </p>
           </Reveal>
 
@@ -211,7 +201,60 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== 2. 募集状況 notice band ===== */}
+      {/* ===== 2. Training in action (documentary 70%) ===== */}
+      <section className="bg-primary-deep py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
+          <SectionTitle
+            light
+            eyebrow="TRAINING"
+            title="現場で学ぶ、本物の実践"
+            lead="乗馬・グルーミング・厩務——静止した記録写真ではなく、動きのある瞬間が、本校の教育を物語ります。"
+          />
+          <div className="grid gap-6 lg:grid-cols-12">
+            <Reveal className="lg:col-span-7">
+              <PhotoFrame
+                src={TRAINING_PHOTOS[0].src}
+                alt={TRAINING_PHOTOS[0].alt}
+                aspect="gallery"
+                grade="cinematic"
+                caption={TRAINING_PHOTOS[0].caption}
+                sizes="(min-width: 1024px) 58vw, 100vw"
+                className="shadow-card"
+              />
+            </Reveal>
+            <RevealGroup className="grid grid-cols-2 gap-4 lg:col-span-5 lg:grid-cols-1">
+              {TRAINING_PHOTOS.slice(1, 5).map((photo) => (
+                <RevealItem key={photo.src}>
+                  <PhotoFrame
+                    src={photo.src}
+                    alt={photo.alt}
+                    aspect="card"
+                    grade="documentary"
+                    caption={photo.caption}
+                    sizes="(min-width: 1024px) 25vw, 50vw"
+                    className="shadow-card"
+                  />
+                </RevealItem>
+              ))}
+            </RevealGroup>
+          </div>
+          <Reveal delay={0.15}>
+            <p className="mt-10 text-center">
+              <Link
+                href="/curriculum"
+                className="group inline-flex items-center gap-2 text-sm font-bold text-tan transition-colors hover:text-accent"
+              >
+                授業・カリキュラムを見る
+                <span className="transition-transform duration-300 group-hover:translate-x-1">
+                  →
+                </span>
+              </Link>
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ===== 3. 募集状況 notice band ===== */}
       <section className="bg-paper py-14 md:py-20">
         <div className="mx-auto max-w-5xl px-4 md:px-6">
           <Reveal>
@@ -227,7 +270,7 @@ export default function Home() {
                       ADMISSION INFORMATION
                     </p>
                   </div>
-                  <h2 className="mt-4 font-mincho text-2xl leading-snug text-ink md:text-3xl">
+                  <h2 className="mt-4 font-mincho text-2xl font-bold leading-snug tracking-[0.06em] text-ink md:text-3xl">
                     令和9年4月生 募集案内
                   </h2>
                   <dl className="mt-5 space-y-2.5 text-sm leading-relaxed text-ink/80 md:text-[15px]">
@@ -365,20 +408,21 @@ export default function Home() {
                   href={card.href}
                   className="group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-card shadow-card-hover"
                 >
-                  <div className="img-zoom relative aspect-[4/3]">
-                    <Image
+                  <div className="shadow-card">
+                    <PhotoFrame
                       src={card.image}
                       alt={card.title}
-                      fill
+                      aspect="card"
+                      grade="documentary"
                       sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-                      className="object-cover"
+                      zoom
                     />
                   </div>
                   <div className="flex flex-1 flex-col p-6">
                     <p className="font-display text-[11px] font-semibold tracking-[0.3em] text-accent">
                       {card.eyebrow}
                     </p>
-                    <h3 className="mt-2 font-mincho text-lg leading-snug text-ink">
+                    <h3 className="mt-2 font-sans text-lg font-bold leading-snug text-ink">
                       {card.title}
                     </h3>
                     <p className="mt-3 text-sm leading-relaxed text-ink/70">
@@ -408,6 +452,94 @@ export default function Home() {
               </Link>
             </p>
           </Reveal>
+        </div>
+      </section>
+
+      {/* ===== Campus & environment ===== */}
+      <section className="bg-cream py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
+          <SectionTitle
+            eyebrow="CAMPUS"
+            title="広い緑と、暮らす場所"
+            lead="放牧地、アリーナ、学生寮——キャンパス全体が、馬とともに学ぶ舞台です。"
+          />
+          <Reveal>
+            <PhotoFrame
+              src={CAMPUS_PHOTOS[0].src}
+              alt={CAMPUS_PHOTOS[0].alt}
+              aspect="cta"
+              grade="cinematic"
+              caption={CAMPUS_PHOTOS[0].caption}
+              sizes="100vw"
+              className="shadow-card"
+            />
+          </Reveal>
+          <RevealGroup className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4">
+            {CAMPUS_PHOTOS.slice(1).map((photo) => (
+              <RevealItem key={photo.src}>
+                <PhotoFrame
+                  src={photo.src}
+                  alt={photo.alt}
+                  aspect="gallery"
+                  grade="documentary"
+                  caption={photo.caption}
+                  sizes="(min-width: 768px) 25vw, 50vw"
+                />
+              </RevealItem>
+            ))}
+          </RevealGroup>
+        </div>
+      </section>
+
+      {/* ===== Horse portraits ===== */}
+      <section className="bg-paper py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
+          <SectionTitle
+            eyebrow="HORSES"
+            title="一匹一匹が、記憶に残る"
+            lead="約120頭の馬たち。担当馬との出会いが、あなたの学びの中心になります。"
+          />
+          <RevealGroup className="grid grid-cols-2 gap-4 md:grid-cols-4">
+            {HORSE_PORTRAITS.map((photo) => (
+              <RevealItem key={photo.src}>
+                <PhotoFrame
+                  src={photo.src}
+                  alt={photo.alt}
+                  aspect="gallery"
+                  grade="portrait"
+                  caption={photo.caption}
+                  sizes="(min-width: 768px) 25vw, 50vw"
+                  className="shadow-card"
+                />
+              </RevealItem>
+            ))}
+          </RevealGroup>
+        </div>
+      </section>
+
+      {/* ===== Student lifestyle (1:1) ===== */}
+      <section className="bg-primary-deep py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
+          <SectionTitle
+            light
+            eyebrow="LIFESTYLE"
+            title="学びの先にある、毎日"
+            lead="仲間との時間、寮生活、馬の世話——入学を決めるのは、授業だけではありません。"
+          />
+          <RevealGroup className="grid grid-cols-2 gap-4 md:grid-cols-4">
+            {LIFESTYLE_PHOTOS.map((photo) => (
+              <RevealItem key={photo.src}>
+                <PhotoFrame
+                  src={photo.src}
+                  alt={photo.alt}
+                  aspect="story"
+                  grade="documentary"
+                  caption={photo.caption}
+                  sizes="(min-width: 768px) 25vw, 50vw"
+                />
+              </RevealItem>
+            ))}
+          </RevealGroup>
         </div>
       </section>
 
@@ -466,38 +598,35 @@ export default function Home() {
 
             <div>
               <RevealScale>
-                <div className="img-zoom relative aspect-[4/3] overflow-hidden rounded-2xl shadow-card">
-                  <Image
-                    src="/images/theme/img_taiken_img_001_1.jpg"
-                    alt="学校見学・入学説明会の様子"
-                    fill
-                    sizes="(min-width: 1024px) 50vw, 100vw"
-                    className="object-cover"
-                  />
-                </div>
+                <PhotoFrame
+                  src="/images/theme/img_taiken_img_001_1.jpg"
+                  alt="学校見学・入学説明会の様子"
+                  aspect="card"
+                  grade="cinematic"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="shadow-card"
+                />
               </RevealScale>
               <RevealGroup className="mt-4 grid grid-cols-2 gap-4">
                 <RevealItem>
-                  <div className="img-zoom relative aspect-[4/3] overflow-hidden rounded-2xl shadow-card">
-                    <Image
-                      src="/images/theme/img_taiken_img_002_1.jpg"
-                      alt="オープンキャンパスでの乗馬体験"
-                      fill
-                      sizes="(min-width: 1024px) 25vw, 50vw"
-                      className="object-cover"
-                    />
-                  </div>
+                  <PhotoFrame
+                    src="/images/theme/img_taiken_img_002_1.jpg"
+                    alt="オープンキャンパスでの乗馬体験"
+                    aspect="card"
+                    grade="documentary"
+                    sizes="(min-width: 1024px) 25vw, 50vw"
+                    className="shadow-card"
+                  />
                 </RevealItem>
                 <RevealItem>
-                  <div className="img-zoom relative aspect-[4/3] overflow-hidden rounded-2xl shadow-card">
-                    <Image
-                      src="/images/theme/img_taiken_img_002_2.jpg"
-                      alt="馬のお手入れ体験・ふれあい"
-                      fill
-                      sizes="(min-width: 1024px) 25vw, 50vw"
-                      className="object-cover"
-                    />
-                  </div>
+                  <PhotoFrame
+                    src="/images/theme/img_taiken_img_002_2.jpg"
+                    alt="馬のお手入れ体験・ふれあい"
+                    aspect="card"
+                    grade="documentary"
+                    sizes="(min-width: 1024px) 25vw, 50vw"
+                    className="shadow-card"
+                  />
                 </RevealItem>
               </RevealGroup>
             </div>
@@ -531,7 +660,7 @@ export default function Home() {
                     <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z" />
                   </svg>
                 </span>
-                <h3 className="mt-5 font-mincho text-xl text-ink">
+                <h3 className="mt-5 font-sans text-xl font-bold text-ink">
                   公式YouTubeチャンネル
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-ink/70">
@@ -562,7 +691,7 @@ export default function Home() {
                     <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2a3.9 3.9 0 0 1-.9 1.4 3.9 3.9 0 0 1-1.4.9c-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4a3.9 3.9 0 0 1-1.4-.9 3.9 3.9 0 0 1-.9-1.4c-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1m0 1.8c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.5.2-.8.4-1.1.7-.3.3-.5.6-.7 1.1-.1.3-.3.8-.3 1.8-.1 1.3-.1 1.6-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.5.4.8.7 1.1.3.3.6.5 1.1.7.3.1.8.3 1.8.3 1.3.1 1.6.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.5-.2.8-.4 1.1-.7.3-.3.5-.6.7-1.1.1-.3.3-.8.3-1.8.1-1.3.1-1.6.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8a2.6 2.6 0 0 0-.7-1.1 2.6 2.6 0 0 0-1.1-.7c-.3-.1-.8-.3-1.8-.3-1.3-.1-1.6-.1-4.8-.1zm0 3.1a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 8.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm6.4-8.4a1.2 1.2 0 1 1-2.3 0 1.2 1.2 0 0 1 2.3 0z" />
                   </svg>
                 </span>
-                <h3 className="mt-5 font-mincho text-xl text-ink">
+                <h3 className="mt-5 font-sans text-xl font-bold text-ink">
                   公式Instagram
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-ink/70">
@@ -609,18 +738,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== 7. Photo marquee ===== */}
+      {/* ===== Photo gallery (3:2 documentary strip) ===== */}
       <section
         className="overflow-hidden bg-cream py-14 md:py-20"
         aria-label="キャンパスフォトギャラリー"
       >
         <Reveal>
           <p className="text-center font-display text-[13px] font-semibold tracking-[0.35em] text-accent">
-            CAMPUS GALLERY
+            DOCUMENTARY GALLERY
           </p>
-          <h2 className="mt-3 text-center font-mincho text-2xl leading-snug text-ink md:text-3xl">
+          <h2 className="mt-3 text-center font-mincho text-2xl font-bold leading-snug tracking-[0.06em] text-ink md:text-3xl">
             馬たちと過ごす、バジガクの日常
           </h2>
+          <p className="mx-auto mt-4 max-w-xl text-center text-sm font-normal leading-[1.8] text-ink/65">
+            70% ドキュメンタリー · 20% ライフスタイル · 10% プレミアム——本物の学びを、写真で伝えます。
+          </p>
         </Reveal>
         <div className="mt-10">
           <div className="flex w-max animate-marquee">
@@ -630,18 +762,21 @@ export default function Home() {
                 className="flex gap-4 pr-4"
                 aria-hidden={copy === 1}
               >
-                {MARQUEE_PHOTOS.map((src) => (
+                {GALLERY_PHOTOS.map((photo) => (
                   <div
-                    key={`${copy}-${src}`}
-                    className="relative h-44 w-64 shrink-0 overflow-hidden rounded-xl md:h-56 md:w-80"
+                    key={`${copy}-${photo.src}`}
+                    className="relative h-48 w-72 shrink-0 overflow-hidden md:h-60 md:w-[22.5rem]"
                   >
-                    <Image
-                      src={src}
-                      alt=""
-                      fill
-                      sizes="320px"
-                      className="object-cover"
-                    />
+                    <div className="photo-frame photo-grade-documentary relative h-full w-full">
+                      <Image
+                        src={photo.src}
+                        alt={photo.alt}
+                        fill
+                        sizes="360px"
+                        className="photo-image object-cover"
+                      />
+                      <div className="photo-overlay" aria-hidden />
+                    </div>
                   </div>
                 ))}
               </div>

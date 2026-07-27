@@ -24,7 +24,10 @@ export default function PageHero({
   breadcrumb,
 }: PageHeroProps) {
   return (
-    <section className="relative flex min-h-[320px] items-center overflow-hidden pt-16 md:min-h-[420px] md:pt-20">
+    <section
+      data-hero
+      className="relative flex min-h-[320px] items-center overflow-hidden pt-16 md:min-h-[420px] md:pt-20"
+    >
       <div className="absolute inset-0">
         <Image
           src={image}

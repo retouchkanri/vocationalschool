@@ -35,11 +35,11 @@ export default function Header() {
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-paper/90 shadow-[0_2px_24px_-8px_rgb(53_34_10/0.25)] backdrop-blur-md"
+            ? "border-b border-ink/5 bg-paper/80 shadow-[0_1px_16px_-6px_rgb(53_34_10/0.15)] backdrop-blur-xl"
             : "bg-gradient-to-b from-black/45 to-transparent"
         }`}
       >
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 md:h-20 md:px-6">
+        <div className="mx-[5vw] flex h-16 items-center justify-between gap-4 md:h-20">
           <Link href="/" className="flex shrink-0 items-center gap-3">
             <span
               className={`relative block h-10 w-40 transition-all duration-500 md:h-12 md:w-52 ${
@@ -86,12 +86,6 @@ export default function Header() {
                 </Link>
               );
             })}
-            <a
-              href={`tel:${SCHOOL.tel}`}
-              className="ml-2 rounded-full bg-accent px-5 py-2.5 text-sm font-bold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent-dark hover:shadow-lg"
-            >
-              ご相談・お問合せ
-            </a>
           </nav>
 
           {/* Mobile hamburger */}
@@ -153,15 +147,6 @@ export default function Header() {
                   </Link>
                 </motion.div>
               ))}
-              <motion.a
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5, duration: 0.35 }}
-                href={`tel:${SCHOOL.tel}`}
-                className="mt-8 rounded-full bg-accent py-4 text-center text-base font-bold text-white shadow-lg transition-colors hover:bg-accent-dark"
-              >
-                ご相談・お問合せ {SCHOOL.tel}
-              </motion.a>
             </nav>
           </motion.div>
         )}

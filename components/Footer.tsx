@@ -35,7 +35,7 @@ export default function Footer() {
             </address>
             <p className="mt-2 text-xs text-white/50">運営：{SCHOOL.operator}</p>
 
-            <div className="mt-6 flex gap-3">
+            <div className="mt-6 flex flex-wrap gap-3">
               <a
                 href={SCHOOL.sns.youtube}
                 target="_blank"
@@ -76,6 +76,52 @@ export default function Footer() {
                 className="flex h-10 items-center rounded-full bg-white/10 px-4 text-xs font-bold tracking-wider transition-all duration-300 hover:-translate-y-1 hover:bg-accent"
               >
                 BLOG
+              </a>
+              <a
+                href={SCHOOL.related.highSchool}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="東関東馬事高等学院"
+                title="東関東馬事高等学院"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:bg-accent"
+              >
+                <svg
+                  aria-hidden
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  className="h-5 w-5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3 10.5 12 4l9 6.5M5 9.5V20h14V9.5M9 20v-5h6v5"
+                  />
+                </svg>
+              </a>
+              <a
+                href={SCHOOL.related.corporate}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="馬事学院（運営会社）"
+                title="馬事学院（運営会社）"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:bg-accent"
+              >
+                <svg
+                  aria-hidden
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  className="h-5 w-5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4 21h16M6 21V7l6-3 6 3v14M9 10h.01M15 10h.01M9 14h.01M15 14h.01M10 21v-3h4v3"
+                  />
+                </svg>
               </a>
             </div>
           </div>

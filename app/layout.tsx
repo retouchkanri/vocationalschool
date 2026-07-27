@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP, Oswald, Sawarabi_Mincho } from "next/font/google";
+import { Noto_Sans_JP, Noto_Serif_JP } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import LiveChatWidget from "@/components/LiveChatWidget";
+import ScrollToTop from "@/components/ScrollToTop";
 import { SCHOOL } from "@/lib/site";
 
 const notoSans = Noto_Sans_JP({
@@ -12,17 +14,10 @@ const notoSans = Noto_Sans_JP({
   display: "swap",
 });
 
-const sawarabi = Sawarabi_Mincho({
+const notoSerif = Noto_Serif_JP({
   subsets: ["latin"],
-  weight: "400",
-  variable: "--font-sawarabi",
-  display: "swap",
-});
-
-const oswald = Oswald({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-oswald",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-noto-serif",
   display: "swap",
 });
 
@@ -42,11 +37,13 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body
-        className={`${notoSans.variable} ${sawarabi.variable} ${oswald.variable} antialiased`}
+        className={`${notoSans.variable} ${notoSerif.variable} antialiased`}
       >
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
+        <LiveChatWidget />
+        <ScrollToTop />
       </body>
     </html>
   );

@@ -16,7 +16,7 @@ School: 東関東馬事専門学院 (horse vocational academy, Chiba). Stylish, 
 Colors: `primary` #804F1B (brand brown) / `primary-dark` / `primary-deep` (footer-dark) / `accent` #F08300 (orange, CTA + eyebrow) / `accent-dark` / `tan` #DBBF93 / `cream` #FAF6EC (alternate section bg) / `paper` #FFFDF8 (page bg) / `ink` #26190C (text) / `alert` #E60012 (important notice only) / `meadow` #EAF4E3 (soft green tint).
 Usage: `bg-cream`, `text-accent`, `border-tan/40`, etc.
 
-Fonts: `font-sans` (Noto Sans JP — body), `font-mincho` (Sawarabi Mincho — ALL display headings), `font-display` (Oswald — English eyebrow labels / big numbers, use `tracking-[0.3em]`-ish).
+Fonts: `font-sans` (Noto Sans JP — body), `font-mincho` (Noto Serif JP — ALL display headings; h1–h6 get it globally via globals.css), `font-display` (Oswald — English eyebrow labels / big numbers, use `tracking-[0.3em]`-ish).
 
 Utility classes defined in globals.css: `.rule-diamond` (decorative rule), `.shadow-card`, `.shadow-card-hover`, `.img-zoom` (wrap an Image; zooms on hover), `.writing-vertical`, `animate-ken-burns`, `animate-marquee` (duplicate content 2x inside a `flex w-max` track), `animate-float`.
 

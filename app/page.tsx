@@ -134,7 +134,10 @@ export default function Home() {
   return (
     <div>
       {/* ===== 1. Fullscreen hero ===== */}
-      <section className="relative flex min-h-[92vh] items-center overflow-hidden">
+      <section
+        data-hero
+        className="relative flex min-h-[92vh] items-center overflow-hidden"
+      >
         <HeroSlider images={HERO_IMAGES} />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-primary-deep/80 via-primary-deep/45 to-primary-deep/15" />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-primary-deep/70 to-transparent" />

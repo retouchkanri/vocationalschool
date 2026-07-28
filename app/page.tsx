@@ -219,9 +219,8 @@ export default function Home() {
       <section className="bg-paper py-14 md:py-20">
         <div className="mx-auto max-w-5xl px-4 md:px-6">
           <Reveal>
-            <div className="relative overflow-hidden rounded-2xl bg-white shadow-card">
-              <div className="absolute inset-y-0 left-0 w-1.5 bg-alert" aria-hidden />
-              <div className="flex flex-col gap-8 p-6 pl-8 md:flex-row md:items-center md:gap-10 md:p-10 md:pl-12">
+            <div className="paper-crumple">
+              <div className="flex flex-col gap-8 p-6 pl-9 md:flex-row md:items-center md:gap-10 md:p-10 md:pl-14">
                 <div className="flex-1">
                   <div className="flex flex-wrap items-center gap-3">
                     <span className="rounded-full bg-alert px-4 py-1 text-xs font-bold tracking-wider text-white">

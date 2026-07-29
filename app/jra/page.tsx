@@ -412,9 +412,9 @@ export default function JraPage() {
 
           <RevealGroup className="grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-4">
             <RevealItem className="text-center">
-              <p className="font-display text-5xl font-semibold text-white md:text-6xl">
+              <p className="font-display text-5xl font-semibold text-tan md:text-6xl">
                 <AnimatedCounter value={10} />
-                <span className="ml-1 text-xl text-tan">年連続</span>
+                <span className="ml-1 text-lg font-medium text-white/80 md:text-xl">年連続</span>
               </p>
               <p className="mt-3 text-xs leading-relaxed text-white/75 md:text-sm">
                 JRA競馬学校「厩務員課程」
@@ -423,10 +423,10 @@ export default function JraPage() {
               </p>
             </RevealItem>
             <RevealItem className="text-center">
-              <p className="font-display text-5xl font-semibold text-white md:text-6xl">
-                <span className="mr-1 text-xl text-tan">最大</span>
+              <p className="font-display text-5xl font-semibold text-tan md:text-6xl">
+                <span className="mr-1 text-lg font-medium text-white/80 md:text-xl">最大</span>
                 <AnimatedCounter value={2} />
-                <span className="ml-1 text-xl text-tan">回</span>
+                <span className="ml-1 text-lg font-medium text-white/80 md:text-xl">回</span>
               </p>
               <p className="mt-3 text-xs leading-relaxed text-white/75 md:text-sm">
                 在学中の
@@ -435,12 +435,12 @@ export default function JraPage() {
               </p>
             </RevealItem>
             <RevealItem className="text-center">
-              <p className="font-display text-5xl font-semibold text-white md:text-6xl">
-                <span className="mr-1 text-xl text-tan">最短</span>
+              <p className="font-display text-5xl font-semibold text-tan md:text-6xl">
+                <span className="mr-1 text-lg font-medium text-white/80 md:text-xl">最短</span>
                 <AnimatedCounter value={1} />
-                <span className="text-xl text-tan">年</span>
+                <span className="text-lg font-medium text-white/80 md:text-xl">年</span>
                 <AnimatedCounter value={6} />
-                <span className="text-xl text-tan">ヶ月</span>
+                <span className="text-lg font-medium text-white/80 md:text-xl">ヶ月</span>
               </p>
               <p className="mt-3 text-xs leading-relaxed text-white/75 md:text-sm">
                 未経験の入学から
@@ -449,10 +449,10 @@ export default function JraPage() {
               </p>
             </RevealItem>
             <RevealItem className="text-center">
-              <p className="font-display text-5xl font-semibold text-white md:text-6xl">
-                <span className="mr-1 text-xl text-tan">高校</span>
+              <p className="font-display text-5xl font-semibold text-tan md:text-6xl">
+                <span className="mr-1 text-lg font-medium text-white/80 md:text-xl">高校</span>
                 <AnimatedCounter value={3} />
-                <span className="ml-1 text-xl text-tan">年次</span>
+                <span className="ml-1 text-lg font-medium text-white/80 md:text-xl">年次</span>
               </p>
               <p className="mt-3 text-xs leading-relaxed text-white/75 md:text-sm">
                 系列・東関東馬事高等学院で

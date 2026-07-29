@@ -86,8 +86,9 @@ export default function TrainingCardDeck({ photos }: TrainingCardDeckProps) {
         {/*
           Base card ~2× previous size. On narrow screens the whole fan is
           scaled down so all three cards stay fully visible without overlap.
+          Mobile: 1.2× prior scale; md and up: 0.9× prior scale.
         */}
-        <div className="relative mx-auto flex h-[400px] origin-bottom scale-[0.32] items-end justify-center sm:h-[480px] sm:scale-[0.42] md:h-[560px] md:scale-[0.55] lg:h-[640px] lg:scale-[0.67] xl:h-[780px] xl:scale-100">
+        <div className="relative mx-auto flex h-[400px] origin-bottom scale-[0.384] items-end justify-center sm:h-[480px] sm:scale-[0.504] md:h-[560px] md:scale-[0.495] lg:h-[640px] lg:scale-[0.603] xl:h-[780px] xl:scale-[0.9]">
           {visible.map(({ photo, slot, index }) => {
             const isCenter = slot.key === "center";
             return (

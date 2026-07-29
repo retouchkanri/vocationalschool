@@ -257,12 +257,12 @@ export default function FeaturesPage() {
           <RevealGroup className="grid grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-4">
             {STATS.map((s) => (
               <RevealItem key={s.label} className="text-center">
-                <p className="font-display text-5xl font-semibold tracking-wide text-white md:text-6xl">
+                <p className="font-display text-5xl font-semibold tracking-wide text-tan md:text-6xl">
                   <AnimatedCounter
                     value={s.value}
                     className="tabular-nums"
                   />
-                  <span className="ml-1 text-xl text-tan md:text-2xl">
+                  <span className="ml-1 text-lg font-medium text-white/80 md:text-xl">
                     {s.suffix}
                   </span>
                 </p>

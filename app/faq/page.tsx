@@ -128,7 +128,10 @@ export default function FaqPage() {
                 className="rounded-2xl border border-white/10 bg-white/5 px-4 py-8 text-center transition-colors duration-300 hover:border-tan/40 hover:bg-white/10"
               >
                 <p className="font-display text-4xl font-semibold tracking-wider text-tan md:text-5xl">
-                  <AnimatedCounter value={stat.value} suffix={stat.suffix} />
+                  <AnimatedCounter value={stat.value} />
+                  <span className="ml-1 text-lg font-medium text-white/80 md:text-xl">
+                    {stat.suffix}
+                  </span>
                 </p>
                 {"note" in stat && stat.note ? (
                   <p className="mt-2 text-[11px] leading-relaxed text-white/55 md:text-xs">

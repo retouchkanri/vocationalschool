@@ -297,14 +297,14 @@ export default function ComparisonPage() {
                       {stat.suffix}
                     </span>
                   </p>
-                  {"note" in stat && stat.note ? (
-                    <p className="mt-2 text-[11px] leading-relaxed text-white/55 md:text-xs">
-                      {stat.note}
-                    </p>
-                  ) : null}
                   <p className="mt-4 text-xs leading-relaxed text-white/70 md:text-sm">
                     {stat.label}
                   </p>
+                  {"note" in stat && stat.note ? (
+                    <p className="mt-1 text-[11px] leading-relaxed text-white/55 md:text-xs">
+                      {stat.note}
+                    </p>
+                  ) : null}
                 </div>
               </RevealItem>
             ))}

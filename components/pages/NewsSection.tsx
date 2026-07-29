@@ -49,10 +49,16 @@ export default function NewsSection({ items, blogHref }: NewsSectionProps) {
   const [activeTab, setActiveTab] = useState<NewsCategory | "all">("all");
   const [expanded, setExpanded] = useState(false);
 
+  const sortedItems = [...items].sort(
+    (a, b) =>
+      new Date(b.date.replace(/\./g, "-")).getTime() -
+      new Date(a.date.replace(/\./g, "-")).getTime()
+  );
+
   const filtered =
     activeTab === "all"
-      ? items
-      : items.filter((item) => item.category === activeTab);
+      ? sortedItems
+      : sortedItems.filter((item) => item.category === activeTab);
 
   const hasMore = filtered.length > PREVIEW_LIMIT;
   const visible =

@@ -216,14 +216,14 @@ export default function AboutPage() {
                     {s.suffix}
                   </span>
                 </p>
-                {"note" in s && s.note ? (
-                  <p className="mt-2 text-[11px] leading-relaxed text-white/55 md:text-xs">
-                    {s.note}
-                  </p>
-                ) : null}
                 <p className="mx-auto mt-3 max-w-[12rem] text-xs leading-relaxed text-white/70 md:text-sm">
                   {s.label}
                 </p>
+                {"note" in s && s.note ? (
+                  <p className="mt-1 text-[11px] leading-relaxed text-white/55 md:text-xs">
+                    {s.note}
+                  </p>
+                ) : null}
               </RevealItem>
             ))}
           </RevealGroup>

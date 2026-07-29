@@ -5,7 +5,7 @@ type CampusShowcaseProps = {
   photos: CuratedPhoto[];
 };
 
-/** Single-row marquee that scrolls slowly left → right. */
+/** Single-row marquee that scrolls slowly right → left. */
 export default function CampusShowcase({ photos }: CampusShowcaseProps) {
   if (!photos.length) return null;
 

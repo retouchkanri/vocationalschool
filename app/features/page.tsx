@@ -266,15 +266,15 @@ export default function FeaturesPage() {
                     {s.suffix}
                   </span>
                 </p>
-                {"note" in s && s.note ? (
-                  <p className="mt-2 text-[11px] leading-relaxed text-white/55 md:text-xs">
-                    {s.note}
-                  </p>
-                ) : null}
                 <div className="mx-auto mt-4 h-px w-10 bg-accent" />
                 <p className="mt-3 text-xs leading-relaxed text-white/70 md:text-sm">
                   {s.label}
                 </p>
+                {"note" in s && s.note ? (
+                  <p className="mt-1 text-[11px] leading-relaxed text-white/55 md:text-xs">
+                    {s.note}
+                  </p>
+                ) : null}
               </RevealItem>
             ))}
           </RevealGroup>

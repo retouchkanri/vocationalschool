@@ -164,15 +164,15 @@ export default function Home() {
                     {stat.suffix}
                   </span>
                 </p>
-                {"note" in stat && stat.note ? (
-                  <p className="mt-2 text-[11px] leading-relaxed text-white/55 md:text-xs">
-                    {stat.note}
-                  </p>
-                ) : null}
                 <div className="rule-diamond mx-auto mt-5 w-16" aria-hidden />
                 <p className="mt-4 text-xs leading-relaxed text-white/75 md:text-sm">
                   {stat.label}
                 </p>
+                {"note" in stat && stat.note ? (
+                  <p className="mt-1 text-[11px] leading-relaxed text-white/55 md:text-xs">
+                    {stat.note}
+                  </p>
+                ) : null}
               </RevealItem>
             ))}
           </RevealGroup>
@@ -391,7 +391,7 @@ export default function Home() {
           </p>
         </Reveal>
         <div className="mt-10">
-          <div className="flex w-max animate-marquee">
+          <div className="flex w-max animate-marquee-reverse">
             {[0, 1].map((copy) => (
               <div
                 key={copy}

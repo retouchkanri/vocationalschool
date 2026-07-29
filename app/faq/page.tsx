@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
@@ -7,40 +7,13 @@ import CtaSection from "@/components/CtaSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
 import FaqExplorer from "@/components/pages/FaqExplorer";
-import { SCHOOL } from "@/lib/site";
+import { SCHOOL, STATS } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "よくある質問",
   description:
     "東関東馬事専門学院（バジガク）へのよくある質問Q&A。未経験からの入学、学費・分割払い、寮生活、JRA厩務員受験、学校見学など、気になることをキーワードやカテゴリですぐに検索できます。",
 };
-
-const REASSURE_STATS = [
-  {
-    prefix: "約",
-    value: 7,
-    suffix: "割",
-    label: "入学者に占める\nまったくの初心者の割合",
-  },
-  {
-    prefix: "",
-    value: 5,
-    suffix: "割",
-    label: "女子学生の割合\n（男女比はおおむね半々）",
-  },
-  {
-    prefix: "",
-    value: 365,
-    suffix: "日",
-    label: "土日祝日も含む\n1日3食の食事提供",
-  },
-  {
-    prefix: "最大",
-    value: 2,
-    suffix: "回",
-    label: "在学中のJRA競馬学校\n厩務員課程 受験チャンス",
-  },
-] as const;
 
 const CONTACT_CHANNELS = [
   {
@@ -149,18 +122,19 @@ export default function FaqPage() {
             light
           />
           <RevealGroup className="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
-            {REASSURE_STATS.map((stat) => (
+            {STATS.map((stat) => (
               <RevealItem
                 key={stat.label}
                 className="rounded-2xl border border-white/10 bg-white/5 px-4 py-8 text-center transition-colors duration-300 hover:border-tan/40 hover:bg-white/10"
               >
                 <p className="font-display text-4xl font-semibold tracking-wider text-tan md:text-5xl">
-                  <AnimatedCounter
-                    value={stat.value}
-                    prefix={stat.prefix}
-                    suffix={stat.suffix}
-                  />
+                  <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                 </p>
+                {"note" in stat && stat.note ? (
+                  <p className="mt-2 text-[11px] leading-relaxed text-white/55 md:text-xs">
+                    {stat.note}
+                  </p>
+                ) : null}
                 <p className="mt-4 whitespace-pre-line text-xs leading-relaxed text-white/75 md:text-sm">
                   {stat.label}
                 </p>
@@ -231,10 +205,10 @@ function ContactCardBody({
       <span className="flex h-16 w-16 items-center justify-center rounded-full bg-cream text-primary transition-colors duration-300 group-hover:bg-accent group-hover:text-white">
         {icon}
       </span>
-      <span className="font-display mt-5 text-xs font-semibold tracking-[0.35em] text-accent">
+      <span className="font-display mt-5 text-xs font-semibold tracking-[0.35em] text-primary">
         {en}
       </span>
-      <span className="mt-2 font-sans font-bold text-xl text-ink">{title}</span>
+      <span className="mt-2 font-mincho text-xl text-ink">{title}</span>
       <span className="mt-4 flex-1 text-sm leading-loose text-ink/70">
         {body}
       </span>

@@ -165,7 +165,7 @@ export default function LiveChatWidget() {
   }
 
   return (
-    <div className="pointer-events-none fixed bottom-5 left-4 z-[60] flex flex-col items-start gap-3 md:bottom-6 md:left-6">
+    <div className="pointer-events-none fixed bottom-16 left-4 z-[60] flex flex-col items-start gap-3 md:bottom-6 md:left-6">
       <AnimatePresence>
         {open && (
           <motion.div

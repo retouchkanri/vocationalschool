@@ -36,7 +36,7 @@ export default function Header() {
         className={`fixed inset-x-0 top-0 z-50 overflow-visible transition-all duration-500 ${
           scrolled
             ? "border-b border-ink/5 bg-paper/95 shadow-[0_1px_16px_-6px_rgb(31_45_35/0.15)] backdrop-blur-xl"
-            : "bg-primary-deep/55 backdrop-blur-sm"
+            : "bg-primary/70 backdrop-blur-sm"
         }`}
       >
         <div className="mx-[5vw] flex min-h-16 flex-wrap items-center justify-between gap-x-4 gap-y-2 py-2 md:min-h-20 md:py-0">
@@ -70,19 +70,21 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`group relative whitespace-nowrap px-2 py-1.5 text-[11px] font-bold tracking-wide transition-colors xl:px-2.5 xl:py-2 xl:text-[13px] ${
+                  className={`group relative whitespace-nowrap px-2 py-1.5 font-mincho text-[11px] font-bold tracking-wide transition-colors xl:px-2.5 xl:py-2 xl:text-[13px] ${
                     scrolled
                       ? active
-                        ? "text-accent"
-                        : "text-ink hover:text-accent"
+                        ? "text-primary"
+                        : "text-ink hover:text-primary"
                       : active
-                        ? "text-tan"
-                        : "text-white hover:text-tan"
+                        ? "text-accent"
+                        : "text-white hover:text-accent"
                   }`}
                 >
                   {item.label}
                   <span
-                    className={`absolute inset-x-2 -bottom-0.5 h-0.5 origin-left rounded bg-accent transition-transform duration-300 ${
+                    className={`absolute inset-x-2 -bottom-0.5 h-0.5 origin-left transition-transform duration-300 ${
+                      scrolled ? "bg-primary" : "bg-accent"
+                    } ${
                       active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
                     }`}
                   />

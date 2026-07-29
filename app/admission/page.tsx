@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
@@ -111,14 +111,14 @@ const SUPPORT_CARDS = [
   {
     label: "SUPPORT 01",
     image: "/images/theme/img_top_toku_img_005.jpg",
-    title: "授業費30%の納付免除",
+    title: "入学前に学費30％の免除も！",
     figure: "90万円相当",
-    text: "令和9年4月生の入学内定者を対象に、授業費の30%（90万円相当）の納付を免除する支援制度です。競走馬の育成や馬術競技会の運営サポート、引退競走馬の乗用馬転用など、授業の成果に応じた還元を想定しています。",
+    text: "令和9年4月入学生を対象に学費30％（約99万円）納付免除。さらに在学中に最大70万円返戻や、授業費分割払いに対応しています。",
   },
   {
     label: "SUPPORT 02",
     image: "/images/theme/img_top_toku_img_002.jpg",
-    title: "報酬型インターン制度",
+    title: "さらに、在学中に最大70万円戻る",
     figure: "最大70万円が戻る",
     text: "提携する牧場・乗馬クラブでの研修に取り組むことで、在学中の取り組みに応じて最大70万円が戻る制度です。働きながら学ぶ実践教育が、そのまま学費の軽減につながります。",
   },
@@ -160,11 +160,11 @@ export default function AdmissionPage() {
                 </p>
               </div>
               <div className="px-6 py-8 text-center md:py-10">
-                <p className="font-display text-[13px] font-semibold tracking-[0.35em] text-accent">
+                <p className="font-display text-[13px] font-semibold tracking-[0.35em] text-primary">
                   APPLICATION PERIOD
                 </p>
-                <p className="mt-4 font-sans font-bold text-2xl leading-snug text-alert md:text-4xl">
-                  令和8年5月1日（金）〜 7月24日（金）
+                <p className="mt-4 font-mincho text-2xl leading-snug text-alert md:text-4xl">
+                  令和8年5月1日（金）〜 10月28日（水）
                 </p>
                 <p className="mt-5 text-sm font-bold leading-relaxed text-alert md:text-base">
                   随時選考のため、定員になり次第、募集を終了します。
@@ -179,7 +179,7 @@ export default function AdmissionPage() {
           {/* 選考・イベント日程 */}
           <Reveal delay={0.1}>
             <div className="mt-8 rounded-2xl bg-white p-6 shadow-card md:p-8">
-              <h3 className="text-center font-sans font-bold text-xl text-ink md:text-2xl">
+              <h3 className="text-center font-mincho text-xl text-ink md:text-2xl">
                 選考・イベント日程
               </h3>
               <p className="mt-2 text-center text-sm leading-relaxed text-ink/60">
@@ -205,7 +205,7 @@ export default function AdmissionPage() {
           <RevealGroup className="mt-8 grid gap-6 md:grid-cols-2">
             <RevealItem className="h-full">
               <div className="h-full rounded-2xl bg-white p-6 shadow-card md:p-8">
-                <h3 className="font-sans font-bold text-xl text-ink md:text-2xl">応募条件</h3>
+                <h3 className="font-mincho text-xl text-ink md:text-2xl">応募条件</h3>
                 <ul className="mt-5 space-y-4">
                   {REQUIREMENTS.map((r) => (
                     <li key={r.label} className="flex items-start gap-4">
@@ -234,7 +234,7 @@ export default function AdmissionPage() {
             </RevealItem>
             <RevealItem className="h-full">
               <div className="h-full rounded-2xl bg-white p-6 shadow-card md:p-8">
-                <h3 className="font-sans font-bold text-xl text-ink md:text-2xl">目指せる進路</h3>
+                <h3 className="font-mincho text-xl text-ink md:text-2xl">目指せる進路</h3>
                 <p className="mt-4 text-sm leading-loose text-ink/70 md:text-[15px]">
                   JRA厩務員をはじめ、競走馬の生産・育成牧場、乗馬クラブ、観光牧場、養老牧場など、馬に関わる幅広い進路を目指せます。
                 </p>
@@ -275,10 +275,10 @@ export default function AdmissionPage() {
                   />
                   <RevealItem>
                     <div className="rounded-2xl bg-white p-6 shadow-card transition-shadow duration-300 hover:shadow-card-hover md:p-7">
-                      <p className="font-display text-sm font-semibold tracking-[0.3em] text-accent">
+                      <p className="font-display text-sm font-semibold tracking-[0.3em] text-primary">
                         STEP {step.num}
                       </p>
-                      <h3 className="mt-2 font-sans font-bold text-lg text-ink md:text-xl">
+                      <h3 className="mt-2 font-mincho text-lg text-ink md:text-xl">
                         {step.title}
                       </h3>
                       <p className="mt-3 text-sm leading-loose text-ink/70 md:text-[15px]">
@@ -435,10 +435,10 @@ export default function AdmissionPage() {
                     />
                   </div>
                   <div className="flex flex-1 flex-col p-6">
-                    <p className="font-display text-xs font-semibold tracking-[0.3em] text-accent">
+                    <p className="font-display text-xs font-semibold tracking-[0.3em] text-primary">
                       {card.label}
                     </p>
-                    <h3 className="mt-2 font-sans font-bold text-lg leading-snug text-ink md:text-xl">
+                    <h3 className="mt-2 font-mincho text-lg leading-snug text-ink md:text-xl">
                       {card.title}
                     </h3>
                     <p className="mt-2 inline-block font-display text-xl font-semibold tracking-wider text-primary">
@@ -453,7 +453,7 @@ export default function AdmissionPage() {
 
           <Reveal delay={0.2}>
             <div className="mt-10 rounded-2xl border border-primary/20 bg-white p-6 shadow-card md:p-8">
-              <h3 className="font-sans font-bold text-lg text-ink md:text-xl">そのほかのサポート</h3>
+              <h3 className="font-mincho text-lg text-ink md:text-xl">そのほかのサポート</h3>
               <ul className="mt-4 space-y-2 text-sm leading-loose text-ink/70 md:text-[15px]">
                 <li className="flex gap-2">
                   <span aria-hidden className="mt-2.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-accent" />
@@ -480,7 +480,7 @@ export default function AdmissionPage() {
           <RevealGroup className="grid gap-6 md:grid-cols-2">
             <RevealItem className="h-full">
               <div className="h-full rounded-2xl bg-white p-6 shadow-card md:p-8">
-                <h3 className="font-sans font-bold text-xl text-ink md:text-2xl">出願方法</h3>
+                <h3 className="font-mincho text-xl text-ink md:text-2xl">出願方法</h3>
                 <ul className="mt-5 space-y-4 text-sm leading-loose text-ink/70 md:text-[15px]">
                   <li className="flex gap-2">
                     <span aria-hidden className="mt-2.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-accent" />
@@ -499,7 +499,7 @@ export default function AdmissionPage() {
             </RevealItem>
             <RevealItem className="h-full">
               <div className="flex h-full flex-col rounded-2xl bg-white p-6 shadow-card md:p-8">
-                <h3 className="font-sans font-bold text-xl text-ink md:text-2xl">お問合せ先</h3>
+                <h3 className="font-mincho text-xl text-ink md:text-2xl">お問合せ先</h3>
                 <dl className="mt-5 space-y-3 text-sm leading-relaxed text-ink/80 md:text-[15px]">
                   <div className="flex gap-3">
                     <dt className="w-16 shrink-0 font-bold text-primary">学校名</dt>
@@ -533,9 +533,9 @@ export default function AdmissionPage() {
                 <div className="mt-6 flex flex-col gap-3">
                   <a
                     href={`tel:${SCHOOL.tel}`}
-                    className="group inline-flex items-center justify-center gap-3 rounded-full bg-accent px-8 py-4 text-base font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-accent-dark"
+                    className="group inline-flex items-center justify-center gap-3 rounded-full border-2 border-primary bg-white px-8 py-4 text-base font-bold text-primary transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white"
                   >
-                    資料請求・ご相談はお電話で
+                    電話で相談
                     <span className="transition-transform duration-300 group-hover:translate-x-1">
                       →
                     </span>
@@ -544,7 +544,7 @@ export default function AdmissionPage() {
                     href="/opencampus"
                     className="group inline-flex items-center justify-center gap-3 rounded-full border-2 border-primary px-8 py-4 text-base font-bold text-primary transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white"
                   >
-                    学校見学・オープンキャンパスへ
+                    見学・体験へ
                     <span className="transition-transform duration-300 group-hover:translate-x-1">
                       →
                     </span>

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
@@ -21,7 +21,7 @@ const CHECKPOINTS = [
     reason:
       "毎日どれだけ多くの馬に触れられるかが、実習量と経験の幅をそのまま決めます。乗用馬だけでなく競走馬にも接することができるかも確認したいところです。",
     answer:
-      "おとなしい乗用馬から引退競走馬・馬術競技馬・現役競走馬まで、約120頭を学生自身が管理。入学すると担当馬を持ち、日々の管理を通して学びます。",
+      "おとなしい乗用馬から引退競走馬・馬術競技馬・現役競走馬まで、約118頭を学生自身が管理。入学すると担当馬を持ち、日々の管理を通して学びます。",
   },
   {
     point: "施設規模",
@@ -42,14 +42,14 @@ const CHECKPOINTS = [
     reason:
       "JRA競馬学校「厩務員課程」を目指すなら、受験対策の中身と継続的な合格実績が指導力を測る目安になります。",
     answer:
-      "JRA競馬学校「厩務員課程」の合格実績を10年連続で達成。在学中の受験にも対応し、未経験の入学から最短1年6ヶ月で合格した実績もあります。",
+      "JRA競馬学校「厩務員課程」の合格実績を72名で達成。在学中の受験にも対応し、未経験の入学から最短1年6ヶ月で合格した実績もあります。",
   },
   {
     point: "就職率・就職先",
     reason:
       "学校選びは卒業後の進路に直結します。就職率の数字だけでなく、どんな職場へ就職しているかまで確認することが大切です。",
     answer:
-      "令和7年度には牧場や乗馬クラブへの就職率100%を記録。競走馬の生産牧場・育成牧場、乗馬クラブ、観光牧場、JRA厩務員など幅広い進路を目指せます。",
+      "令和7年度には牧場や乗馬クラブへの就職率73%を記録。競走馬の生産牧場・育成牧場、乗馬クラブ、観光牧場、JRA厩務員など幅広い進路を目指せます。",
   },
   {
     point: "学費サポート",
@@ -63,7 +63,7 @@ const CHECKPOINTS = [
     reason:
       "学びの拠点がどこにあり、研修先や寮とどうつながっているかは、2年間の生活のしやすさに関わります。",
     answer:
-      "本校は千葉県山武市が本拠地。千葉・大阪の4施設に加え、関西研修施設「ホースレスト」（大阪府河内長野市）を研修・合宿などで活用しています。",
+      "本校は千葉県山武市が本拠地。千葉・大阪の8施設に加え、関西研修施設「ホースレスト」（大阪府河内長野市）を研修・合宿などで活用しています。",
   },
 ] as const;
 
@@ -105,7 +105,7 @@ const LINKS = [
     href: "/features",
     en: "FEATURES",
     title: "本校の特徴",
-    body: "約120頭・4施設の教育環境と、実践型カリキュラムの全体像をご紹介します。",
+    body: "約118頭・8施設の教育環境と、実践型カリキュラムの全体像をご紹介します。",
     image: "/images/theme/img_tokucho_img_002_2.jpg",
     alt: "担当馬と過ごす学生たち",
   },
@@ -152,7 +152,7 @@ export default function ComparisonPage() {
                 <div className="relative aspect-[4/3]">
                   <Image
                     src="/images/theme/img_tokucho_img_002_5.jpg"
-                    alt="学生の教材となる約120頭の馬たち"
+                    alt="学生の教材となる約118頭の馬たち"
                     fill
                     sizes="(min-width: 768px) 50vw, 100vw"
                     className="object-cover"
@@ -161,7 +161,7 @@ export default function ComparisonPage() {
               </div>
             </Reveal>
             <Reveal x={20} y={0}>
-              <h3 className="font-sans font-bold text-2xl leading-relaxed text-ink md:text-3xl">
+              <h3 className="font-mincho text-2xl leading-relaxed text-ink md:text-3xl">
                 学費の安さだけで
                 <br />
                 選んでいませんか？
@@ -180,7 +180,7 @@ export default function ComparisonPage() {
                         <span className="font-display text-sm font-semibold tracking-wider text-accent">
                           {String(i + 1).padStart(2, "0")}
                         </span>
-                        <span className="font-sans font-bold text-sm text-ink md:text-base">
+                        <span className="font-mincho text-sm text-ink md:text-base">
                           {label}
                         </span>
                       </div>
@@ -209,19 +209,19 @@ export default function ComparisonPage() {
                     <tr className="bg-primary text-white">
                       <th
                         scope="col"
-                        className="w-[18%] px-5 py-4 font-sans font-bold text-sm font-normal tracking-wider md:text-base"
+                        className="w-[18%] px-5 py-4 font-mincho text-sm font-normal tracking-wider md:text-base"
                       >
                         比較ポイント
                       </th>
                       <th
                         scope="col"
-                        className="w-[38%] px-5 py-4 font-sans font-bold text-sm font-normal tracking-wider md:text-base"
+                        className="w-[38%] px-5 py-4 font-mincho text-sm font-normal tracking-wider md:text-base"
                       >
                         チェックすべき理由
                       </th>
                       <th
                         scope="col"
-                        className="w-[44%] px-5 py-4 font-sans font-bold text-sm font-normal tracking-wider md:text-base"
+                        className="w-[44%] px-5 py-4 font-mincho text-sm font-normal tracking-wider md:text-base"
                       >
                         本校の場合
                       </th>
@@ -235,7 +235,7 @@ export default function ComparisonPage() {
                       >
                         <th
                           scope="row"
-                          className="px-5 py-5 font-sans font-bold text-sm font-normal leading-relaxed text-primary md:text-base"
+                          className="px-5 py-5 font-mincho text-sm font-normal leading-relaxed text-primary md:text-base"
                         >
                           <span className="font-display mr-2 text-xs tracking-wider text-accent">
                             {String(i + 1).padStart(2, "0")}
@@ -292,14 +292,16 @@ export default function ComparisonPage() {
               <RevealItem key={stat.label}>
                 <div className="group h-full rounded-2xl border border-white/10 bg-white/5 px-4 py-8 text-center backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-tan/40 hover:bg-white/10 md:py-10">
                   <p className="font-display text-4xl font-semibold tracking-wide text-tan md:text-5xl">
-                    <AnimatedCounter
-                      value={stat.value}
-                      prefix={stat.suffix === "頭" ? "約" : ""}
-                    />
+                    <AnimatedCounter value={stat.value} />
                     <span className="ml-1 text-lg text-white/80 md:text-xl">
                       {stat.suffix}
                     </span>
                   </p>
+                  {"note" in stat && stat.note ? (
+                    <p className="mt-2 text-[11px] leading-relaxed text-white/55 md:text-xs">
+                      {stat.note}
+                    </p>
+                  ) : null}
                   <p className="mt-4 text-xs leading-relaxed text-white/70 md:text-sm">
                     {stat.label}
                   </p>
@@ -335,7 +337,7 @@ export default function ComparisonPage() {
                     </span>
                   </div>
                   <div className="flex flex-1 flex-col p-6">
-                    <h3 className="font-sans font-bold text-lg leading-snug text-ink">
+                    <h3 className="font-mincho text-lg leading-snug text-ink">
                       {item.title}
                     </h3>
                     <p className="mt-3 text-[13px] leading-relaxed text-ink/70 md:text-sm">
@@ -355,7 +357,7 @@ export default function ComparisonPage() {
           <SectionTitle
             eyebrow="CONCLUSION"
             title="比べたその先に、本校の学びがあります"
-            lead="約120頭の馬と4つの教育施設、10年連続のJRA厩務員課程合格実績、そして令和7年度就職率100%。比較していただくほどに伝わる本校の学びを、ぜひ実際にお確かめください。"
+            lead="約118頭の馬と4つの教育施設、72名のJRA厩務員課程合格実績、そして令和7年度就職率73%。比較していただくほどに伝わる本校の学びを、ぜひ実際にお確かめください。"
           />
           <RevealGroup className="grid gap-6 md:grid-cols-3">
             {LINKS.map((item) => (
@@ -374,10 +376,10 @@ export default function ComparisonPage() {
                     />
                   </div>
                   <div className="flex flex-1 flex-col p-6">
-                    <p className="font-display text-xs font-semibold tracking-[0.3em] text-accent">
+                    <p className="font-display text-xs font-semibold tracking-[0.3em] text-primary">
                       {item.en}
                     </p>
-                    <h3 className="mt-2 font-sans font-bold text-lg leading-snug text-ink">
+                    <h3 className="mt-2 font-mincho text-lg leading-snug text-ink">
                       {item.title}
                     </h3>
                     <p className="mt-3 flex-1 text-[13px] leading-relaxed text-ink/70 md:text-sm">

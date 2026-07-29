@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
@@ -11,7 +11,7 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "JRA競馬学校 厩務員受験を目指す方へ",
   description:
-    "在学中に最大2回のJRA競馬学校「厩務員課程」受験が可能。10年連続の合格実績、未経験から最短1年6ヶ月での合格実績を持つ東関東馬事専門学院が、JRA厩務員への挑戦を個別受験対策と約120頭の実践環境で支えます。",
+    "在学中に最大2回のJRA競馬学校「厩務員課程」受験が可能。72名の合格実績、未経験から最短1年6ヶ月での合格実績を持つ東関東馬事専門学院が、JRA厩務員への挑戦を個別受験対策と約118頭の実践環境で支えます。",
 };
 
 /** JRA厩務員の主な仕事（旧サイト 6-006 より）。 */
@@ -45,15 +45,15 @@ const FEATURES: Feature[] = [
   },
   {
     no: "02",
-    title: "JRA厩務員課程 10年連続合格の実績",
-    body: "本校はJRA競馬学校「厩務員課程」の合格実績を10年連続で達成しています。令和4年度後期には受験した6名全員が一次選考を通過し、そのまま6名全員が最終合格。在学中の合格者に加え、女性の合格者も多数輩出してきました。",
+    title: "JRA厩務員課程 72名合格の実績",
+    body: "本校はJRA競馬学校「厩務員課程」の合格実績を72名で達成しています。令和4年度後期には受験した6名全員が一次選考を通過し、そのまま6名全員が最終合格。在学中の合格者に加え、女性の合格者も多数輩出してきました。",
     image: "/images/theme/img_6_001_img_002_8.jpg",
     alt: "本校から誕生した女性のJRA厩務員",
   },
   {
     no: "03",
-    title: "未経験から最短1年6ヶ月で合格実績",
-    body: "入学者の約7割は、馬に触れたことのないまったくの初心者です。それでも本校では、未経験の入学から最短1年6ヶ月でJRA競馬学校厩務員課程に合格した実績があります。毎日たっぷりと確保された騎乗時間と基礎からの丁寧な指導が、経験ゼロからの最短ルートを支えます。",
+    title: "未経験から最短1年6か月 JRA競馬学校厩務員課程合格へ",
+    body: "在学中にJRA競馬学校厩務員課程を2回受験可能。平成28年以降、41名が在学中に合格し、多くの卒業生が競馬業界で活躍しています。",
     image: "/images/theme/img_6_001_img_002_5.jpg",
     alt: "毎日の騎乗訓練に励む学生",
   },
@@ -66,8 +66,8 @@ const FEATURES: Feature[] = [
   },
   {
     no: "05",
-    title: "現役競走馬を含む約120頭での実践教育",
-    body: "おとなしい乗用馬から引退競走馬、デビュー前の育成馬、そして現役競走馬まで、約120頭の馬を学生自身が管理します。入学すると担当馬を持ち、レースの最短10日前まで競走馬を学校で管理するなど、現場さながらの環境で「本物」の厩務を毎日積み重ねられます。",
+    title: "現役競走馬を含む約118頭での実践教育",
+    body: "おとなしい乗用馬から引退競走馬、デビュー前の育成馬、そして現役競走馬まで、約118頭の馬を学生自身が管理します。入学すると担当馬を持ち、レースの最短10日前まで競走馬を学校で管理するなど、現場さながらの環境で「本物」の厩務を毎日積み重ねられます。",
     image: "/images/theme/img_6_001_img_002_7.jpg",
     alt: "レース直前まで学校で管理される競走馬",
   },
@@ -117,7 +117,7 @@ const ROADMAP: Step[] = [
   {
     step: "06",
     title: "JRA競馬学校 厩務員課程",
-    body: "合格後はJRA競馬学校の厩務員課程へ。本校は10年連続で合格者を輩出しています。",
+    body: "合格後はJRA競馬学校の厩務員課程へ。本校は72名で合格者を輩出しています。",
   },
   {
     step: "07",
@@ -155,7 +155,7 @@ export default function JraPage() {
       <PageHero
         eyebrow="FOR JRA"
         title="JRA競馬学校 厩務員受験を目指す方へ"
-        lead="狭き門と言われるJRA競馬学校「厩務員課程」。本校は在学中最大2回の受験と10年連続の合格実績で、未経験からの挑戦を最短ルートで支えます。"
+        lead="在学中にJRA競馬学校厩務員課程を2回受験可能。平成28年以降、41名が在学中に合格し、多くの卒業生が競馬業界で活躍しています。"
         image="/images/theme/img_6_001_img_002_4.jpg"
         breadcrumb="JRA厩務員を目指す方へ"
       />
@@ -171,7 +171,7 @@ export default function JraPage() {
 
           <div className="grid items-center gap-10 md:grid-cols-2 md:gap-14">
             <Reveal x={-24} y={0}>
-              <h3 className="font-sans font-bold text-2xl leading-snug text-ink md:text-3xl">
+              <h3 className="font-mincho text-2xl leading-snug text-ink md:text-3xl">
                 担当馬の毎日を支え、
                 <br />
                 レースの舞台裏に立つ仕事。
@@ -222,7 +222,7 @@ export default function JraPage() {
                 <p className="font-display text-xs font-semibold tracking-[0.3em] text-ink/50">
                   GENERAL ROUTE
                 </p>
-                <p className="mt-3 font-sans font-bold text-lg text-ink/80">
+                <p className="mt-3 font-mincho text-lg text-ink/80">
                   一般的なルート
                 </p>
                 <p className="mt-4 font-display text-4xl font-semibold text-ink/70 md:text-5xl">
@@ -244,7 +244,7 @@ export default function JraPage() {
                 <p className="font-display text-xs font-semibold tracking-[0.3em] text-tan">
                   BAJIGAKU ROUTE
                 </p>
-                <p className="mt-3 font-sans font-bold text-lg text-white/90">
+                <p className="mt-3 font-mincho text-lg text-white/90">
                   本校での挑戦
                 </p>
                 <p className="mt-4 font-display text-4xl font-semibold text-white md:text-5xl">
@@ -305,7 +305,7 @@ export default function JraPage() {
                         REASON
                       </span>
                     </div>
-                    <h3 className="mt-4 font-sans font-bold text-2xl leading-snug text-ink md:text-[28px]">
+                    <h3 className="mt-4 font-mincho text-2xl leading-snug text-ink md:text-[28px]">
                       {feature.title}
                     </h3>
                     <div className="rule-diamond mt-5 w-20" />
@@ -368,7 +368,7 @@ export default function JraPage() {
                         )}
                       </div>
                       <h3
-                        className={`mt-2 font-sans font-bold text-xl md:text-2xl ${
+                        className={`mt-2 font-mincho text-xl md:text-2xl ${
                           highlight ? "text-white" : "text-ink"
                         }`}
                       >

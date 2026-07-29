@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -44,10 +44,10 @@ export default function ContactForm() {
     <div className="mt-12 grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
       <Reveal>
         <div className="rounded-2xl bg-cream px-6 py-8 md:px-8">
-          <p className="font-display text-[12px] font-semibold tracking-[0.3em] text-accent">
+          <p className="font-display text-[12px] font-semibold tracking-[0.3em] text-primary">
             PHONE
           </p>
-          <h3 className="mt-2 font-sans font-bold text-xl text-ink">お電話でのご相談</h3>
+          <h3 className="mt-2 font-mincho text-xl text-ink">お電話でのご相談</h3>
           <a
             href={`tel:${SCHOOL.tel}`}
             className="mt-4 inline-block font-display text-3xl font-semibold tracking-wider text-primary transition-colors hover:text-accent"
@@ -80,10 +80,10 @@ export default function ContactForm() {
       <Reveal delay={0.1}>
         {submitted ? (
           <div className="rounded-2xl border border-meadow bg-white px-6 py-12 text-center shadow-card md:px-10">
-            <p className="font-display text-[12px] font-semibold tracking-[0.3em] text-accent">
+            <p className="font-display text-[12px] font-semibold tracking-[0.3em] text-primary">
               THANK YOU
             </p>
-            <h3 className="mt-3 font-sans font-bold text-2xl text-ink">
+            <h3 className="mt-3 font-mincho text-2xl text-ink">
               お問合せ内容を受け付けました
             </h3>
             <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-ink/70">

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import SectionTitle from "@/components/SectionTitle";
@@ -10,7 +10,7 @@ import { SCHOOL, STATS } from "@/lib/site";
 export const metadata: Metadata = {
   title: "学校概要",
   description:
-    "東関東馬事専門学院の教育方針・学校概要・施設環境・近年のあゆみをご紹介。千葉・大阪の4施設で約120頭の馬とともに学ぶ、実践型の馬の専門学校です。",
+    "東関東馬事専門学院の教育方針・学校概要・施設環境・近年のあゆみをご紹介。千葉・大阪の8施設で約118頭の馬とともに学ぶ、実践型の馬の専門学校です。",
 };
 
 /** 教育方針の3つの柱 */
@@ -23,12 +23,12 @@ const PILLARS = [
   {
     no: "02",
     title: "馬産業への人材輩出",
-    body: "JRA厩務員をはじめ、生産牧場・育成牧場・乗馬クラブ・観光牧場など、馬業界の第一線へ人材を送り出しています。JRA競馬学校厩務員課程では10年連続の合格実績、令和7年度には牧場・乗馬クラブへの就職率100%を記録しました。",
+    body: "JRA厩務員をはじめ、生産牧場・育成牧場・乗馬クラブ・観光牧場など、馬業界の第一線へ人材を送り出しています。JRA競馬学校厩務員課程では72名の合格実績、令和7年度には牧場・乗馬クラブへの就職率73%を記録しました。",
   },
   {
     no: "03",
     title: "引退馬のセカンドキャリア支援",
-    body: "引退競走馬を乗用馬へ転用する調教を授業に取り入れ、千葉県八街市の総合施設には馬の養老牧場を併設。おとなしい乗用馬から現役競走馬まで約120頭の馬たちと向き合い、馬の一生に寄り添う教育を実践しています。",
+    body: "引退競走馬を乗用馬へ転用する調教を授業に取り入れ、千葉県八街市の総合施設には馬の養老牧場を併設。おとなしい乗用馬から現役競走馬まで約118頭の馬たちと向き合い、馬の一生に寄り添う教育を実践しています。",
   },
 ];
 
@@ -66,11 +66,11 @@ const OVERVIEW_ROWS = [
   { th: "連絡先", td: "", tel: true },
   {
     th: "拠点",
-    td: "千葉・大阪の計4施設（千葉県山武市・八街市、大阪府河内長野市の関西研修施設「ホースレスト」）",
+    td: "千葉・大阪の計8施設（千葉県山武市・八街市、大阪府河内長野市の関西研修施設「ホースレスト」）",
   },
   {
     th: "管理頭数",
-    td: "約120頭（おとなしい乗用馬から馬術競技馬・引退競走馬・現役競走馬まで）",
+    td: "約118頭（おとなしい乗用馬から馬術競技馬・引退競走馬・現役競走馬まで）",
   },
   { th: "系列校", td: "東関東馬事高等学院（厩務員を目指せる高校）" },
 ];
@@ -114,7 +114,7 @@ const HISTORY = [
     label: "令和7年",
     items: [
       "1月3日より学校ブログをアメブロへ移転。",
-      "令和7年度には牧場・乗馬クラブへの就職率100%を記録。",
+      "令和7年度には牧場・乗馬クラブへの就職率73%を記録。",
     ],
   },
 ];
@@ -143,7 +143,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="ABOUT"
         title="学校概要"
-        lead="千葉・大阪の4つの施設と約120頭の馬たち。東関東馬事専門学院の教育方針と学びの環境、これまでのあゆみをご紹介します。"
+        lead="千葉・大阪の4つの施設と約118頭の馬たち。東関東馬事専門学院の教育方針と学びの環境、これまでのあゆみをご紹介します。"
         image="/images/theme/img_kankyo_img_001_1.jpg"
         breadcrumb="学校概要"
       />
@@ -165,7 +165,7 @@ export default function AboutPage() {
               >
                 “
               </span>
-              <p className="font-sans font-bold text-2xl leading-relaxed tracking-wide text-primary md:text-4xl md:leading-relaxed">
+              <p className="font-mincho text-2xl leading-relaxed tracking-wide text-primary md:text-4xl md:leading-relaxed">
                 馬と向き合う毎日が、
                 <br />
                 プロを育てる。
@@ -185,7 +185,7 @@ export default function AboutPage() {
                   <p className="font-display text-3xl font-semibold tracking-[0.2em] text-accent/80 transition-colors duration-300 group-hover:text-accent">
                     {p.no}
                   </p>
-                  <h3 className="mt-4 font-sans font-bold text-xl leading-snug text-ink">
+                  <h3 className="mt-4 font-mincho text-xl leading-snug text-ink">
                     {p.title}
                   </h3>
                   <div className="rule-diamond mt-4 w-14" />
@@ -211,14 +211,16 @@ export default function AboutPage() {
             {STATS.map((s) => (
               <RevealItem key={s.label} className="text-center">
                 <p className="font-display text-4xl font-semibold tracking-wider text-tan md:text-5xl">
-                  <AnimatedCounter
-                    value={s.value}
-                    prefix={s.value === 120 ? "約" : ""}
-                  />
+                  <AnimatedCounter value={s.value} />
                   <span className="ml-1 text-lg text-white/80 md:text-xl">
                     {s.suffix}
                   </span>
                 </p>
+                {"note" in s && s.note ? (
+                  <p className="mt-2 text-[11px] leading-relaxed text-white/55 md:text-xs">
+                    {s.note}
+                  </p>
+                ) : null}
                 <p className="mx-auto mt-3 max-w-[12rem] text-xs leading-relaxed text-white/70 md:text-sm">
                   {s.label}
                 </p>
@@ -248,7 +250,7 @@ export default function AboutPage() {
                     >
                       <th
                         scope="row"
-                        className="w-36 whitespace-nowrap px-6 py-5 align-top font-sans font-bold text-primary md:w-44"
+                        className="w-36 whitespace-nowrap px-6 py-5 align-top font-mincho text-primary md:w-44"
                       >
                         {row.th}
                       </th>
@@ -284,11 +286,11 @@ export default function AboutPage() {
           <SectionTitle
             eyebrow="FACILITIES"
             title="施設・環境"
-            lead="関東・関西の4施設に、練習運動場や1周150mの走路トラック、広い馬場、数多くの厩舎などを備え、乗馬と競走馬を同時に学べる環境を整えています。"
+            lead="関東・関西の8施設に、練習運動場や1周150mの走路トラック、広い馬場、数多くの厩舎などを備え、乗馬と競走馬を同時に学べる環境を整えています。"
           />
 
           <Reveal>
-            <h3 className="text-center font-sans font-bold text-xl text-ink md:text-2xl">
+            <h3 className="text-center font-mincho text-xl text-ink md:text-2xl">
               馬とともに過ごすキャンパス
             </h3>
           </Reveal>
@@ -317,10 +319,10 @@ export default function AboutPage() {
           {/* 学生寮 */}
           <div className="mt-20">
             <Reveal>
-              <p className="font-display text-center text-[13px] font-semibold tracking-[0.35em] text-accent">
+              <p className="font-display text-center text-[13px] font-semibold tracking-[0.35em] text-primary">
                 DORMITORY
               </p>
-              <h3 className="mt-3 text-center font-sans font-bold text-xl text-ink md:text-2xl">
+              <h3 className="mt-3 text-center font-mincho text-xl text-ink md:text-2xl">
                 全室個室の学生寮
               </h3>
               <div className="rule-diamond mx-auto mt-5 w-20" />
@@ -463,10 +465,10 @@ export default function AboutPage() {
                   rel="noopener noreferrer"
                   className="group flex h-full flex-col rounded-2xl border border-tan/40 bg-white p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-card-hover"
                 >
-                  <p className="font-display text-xs font-semibold tracking-[0.3em] text-accent">
+                  <p className="font-display text-xs font-semibold tracking-[0.3em] text-primary">
                     {org.eyebrow}
                   </p>
-                  <h3 className="mt-3 font-sans font-bold text-xl leading-snug text-ink transition-colors duration-300 group-hover:text-primary">
+                  <h3 className="mt-3 font-mincho text-xl leading-snug text-ink transition-colors duration-300 group-hover:text-primary">
                     {org.name}
                   </h3>
                   <p className="mt-3 flex-1 text-sm leading-loose text-ink/70">

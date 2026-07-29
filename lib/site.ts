@@ -37,10 +37,20 @@ export const NAV: NavItem[] = [
   { href: "/faq", label: "よくある質問", labelEn: "Q&A" },
 ];
 
-/** Key statistics used across the site (source: bajigaku.site, 2025). */
+/** Key statistics used across the site (client-specified figures). */
 export const STATS = [
-  { value: 120, suffix: "頭", label: "学生が管理する馬の数" },
-  { value: 4, suffix: "施設", label: "千葉・大阪の教育拠点" },
-  { value: 10, suffix: "年連続", label: "JRA厩務員課程 合格実績" },
-  { value: 100, suffix: "%", label: "令和7年度 牧場・乗馬クラブ就職率" },
+  { value: 118, suffix: "頭", label: "本校で管理する馬匹の数" },
+  { value: 8, suffix: "施設", label: "本校の職場実習連携施設" },
+  {
+    value: 72,
+    suffix: "名",
+    label: "ＪＲＡ厩務員の合格者数",
+    note: "※平成２８年度以降",
+  },
+  {
+    value: 73,
+    suffix: "%",
+    label: "未経験・初心者の入学率",
+    note: "※令和3年以降実績",
+  },
 ] as const;

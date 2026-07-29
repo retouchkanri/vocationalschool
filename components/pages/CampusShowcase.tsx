@@ -1,83 +1,46 @@
-"use client";
-
-import { useMemo, useState } from "react";
 import Image from "next/image";
 import type { CuratedPhoto } from "@/lib/photography";
-import { Reveal, RevealGroup, RevealItem, RevealScale } from "@/components/Reveal";
 
 type CampusShowcaseProps = {
   photos: CuratedPhoto[];
 };
 
+/** Single-row marquee that scrolls slowly left → right. */
 export default function CampusShowcase({ photos }: CampusShowcaseProps) {
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  if (!photos.length) return null;
 
-  const selected = useMemo(
-    () => photos[selectedIndex] ?? photos[0],
-    [photos, selectedIndex],
-  );
-
-  if (!selected) return null;
+  const loop = [...photos, ...photos];
 
   return (
-    <div>
-      <RevealScale>
-        <figure className="shadow-card overflow-hidden border border-ink/8 bg-white">
-          <div className="photo-frame photo-grade-cinematic relative aspect-[16/9] w-full">
-            <Image
-              src={selected.src}
-              alt={selected.alt}
-              fill
-              priority
-              sizes="100vw"
-              className="photo-image object-cover"
-            />
-            <div className="photo-overlay" aria-hidden />
-          </div>
-          {selected.caption && (
-            <figcaption className="px-4 py-3 text-sm font-medium tracking-wide text-ink/65">
-              {selected.caption}
-            </figcaption>
-          )}
-        </figure>
-      </RevealScale>
+    <div className="group/marquee relative w-full overflow-hidden">
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-cream to-transparent md:w-16" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-cream to-transparent md:w-16" />
 
-      <RevealGroup className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-5">
-        {photos.map((photo, i) => {
-          const active = i === selectedIndex;
-          return (
-            <RevealItem key={photo.src}>
-              <button
-                type="button"
-                onClick={() => setSelectedIndex(i)}
-                aria-pressed={active}
-                aria-label={`${photo.caption ?? photo.alt}を表示`}
-                className={`group block w-full text-left transition-transform duration-300 hover:-translate-y-1 ${
-                  active ? "ring-2 ring-accent ring-offset-2 ring-offset-cream" : ""
-                }`}
-              >
-                <figure className="overflow-hidden border border-ink/8 bg-white shadow-card">
-                  <div className="photo-frame photo-grade-documentary relative aspect-[4/3] w-full">
-                    <Image
-                      src={photo.src}
-                      alt={photo.alt}
-                      fill
-                      sizes="(min-width: 768px) 20vw, 50vw"
-                      className="photo-image object-cover"
-                    />
-                    <div className="photo-overlay" aria-hidden />
-                  </div>
-                  {photo.caption && (
-                    <figcaption className="px-2.5 py-2 text-[11px] font-medium tracking-wide text-ink/60 md:text-xs">
-                      {photo.caption}
-                    </figcaption>
-                  )}
-                </figure>
-              </button>
-            </RevealItem>
-          );
-        })}
-      </RevealGroup>
+      <div className="flex w-max animate-marquee gap-4 py-1 group-hover/marquee:[animation-play-state:paused] md:gap-5">
+        {loop.map((photo, index) => (
+          <figure
+            key={`${photo.src}-${index}`}
+            className="relative h-52 w-72 shrink-0 overflow-hidden shadow-card first:ml-0 sm:h-56 sm:w-80 md:h-64 md:w-[22rem]"
+          >
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              fill
+              sizes="(min-width: 768px) 22rem, 80vw"
+              className="object-cover object-center"
+            />
+            <div
+              className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent"
+              aria-hidden
+            />
+            {photo.caption ? (
+              <figcaption className="absolute inset-x-0 bottom-0 px-4 pb-4 text-center font-mincho text-sm font-semibold tracking-wide text-white md:text-base">
+                {photo.caption}
+              </figcaption>
+            ) : null}
+          </figure>
+        ))}
+      </div>
     </div>
   );
 }

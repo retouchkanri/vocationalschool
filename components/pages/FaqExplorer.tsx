@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
@@ -296,7 +296,7 @@ export default function FaqExplorer() {
               transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
               className="shadow-card rounded-2xl border border-tan/40 bg-white px-6 py-12 text-center md:px-10"
             >
-              <p className="font-sans font-bold text-lg text-ink md:text-xl">
+              <p className="font-mincho text-lg text-ink md:text-xl">
                 ご質問が見つかりませんでした
               </p>
               <p className="mx-auto mt-3 max-w-md text-sm leading-loose text-ink/60">
@@ -306,9 +306,9 @@ export default function FaqExplorer() {
               <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <a
                   href={`tel:${SCHOOL.tel}`}
-                  className="group inline-flex items-center justify-center gap-2 rounded-full bg-accent px-7 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-accent-dark"
+                  className="group inline-flex items-center justify-center gap-2 rounded-full border-2 border-primary bg-white px-7 py-3 text-sm font-bold text-primary transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white"
                 >
-                  電話で相談する
+                  電話相談
                   <span className="font-display tracking-wider">
                     {SCHOOL.tel}
                   </span>
@@ -317,7 +317,7 @@ export default function FaqExplorer() {
                   href="/contact"
                   className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-primary px-7 py-3 text-sm font-bold text-primary transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white"
                 >
-                  資料請求・お問合せ
+                  資料請求・問合せ
                   <span aria-hidden>→</span>
                 </Link>
               </div>

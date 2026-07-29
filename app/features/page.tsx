@@ -1,25 +1,26 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import PageHero from "@/components/PageHero";
 import SectionTitle from "@/components/SectionTitle";
 import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
 import CtaSection from "@/components/CtaSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
-import { SCHOOL, STATS } from "@/lib/site";
+import HomeHero from "@/components/pages/HomeHero";
+import { STATS } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "本校の特徴",
   description:
-    "約120頭の馬と国内最大級の4つの教育施設。未経験からの入学、担当馬制度や大手育成牧場での報酬型インターン、JRA厩務員10年連続合格・就職率100%（令和7年度）まで、東関東馬事専門学院の特徴を「入口・中身・出口」の物語でご紹介します。",
+    "約118頭の馬と国内最大級の4つの教育施設。未経験からの入学、担当馬制度や大手育成牧場での報酬型インターン、JRA厩務員72名合格・就職率73%（令和7年度）まで、東関東馬事専門学院の特徴を「入口・中身・出口」の物語でご紹介します。",
 };
 
-/** 入口 — どんな学生が入学するのか */
+/** 入口 — 夢への第一歩となる4つのご提案 */
 type EntryPoint = {
   no: string;
   tag: string;
   title: string;
-  body: string;
+  body: ReactNode;
   link?: { href: string; label: string };
 };
 
@@ -27,27 +28,38 @@ const entryPoints: EntryPoint[] = [
   {
     no: "01",
     tag: "BEGINNER",
-    title: "未経験からのスタート",
-    body: "入学時に乗馬経験は問いません。おとなしい乗用馬での基礎から段階的に学べる実践型教育で、未経験の方も安心して馬の世界へ踏み出せます。未経験から在学中にJRA厩務員課程へ合格した実績もあります。",
+    title: "未経験者・初心者でも安心",
+    body: "本校では、毎年入学者の約7割が未経験者・初心者です。基礎から実践まで段階的に学べるため、馬に触れたことがない方でも安心してスタートできます。在学中にJRA競馬学校厩務員課程へ合格した学生も多数います。",
   },
   {
     no: "02",
-    tag: "NATIONWIDE",
-    title: "全国から集まる仲間",
-    body: "全部屋個室の学生寮を完備し、遠方からの入学にも対応。関東（千葉）と関西（大阪）に広がる国内最大級の4つの教育施設で、全国の仲間とともに学べます。",
+    tag: "OPEN CAMPUS",
+    title: "オープンキャンパスで未来を確認",
+    body: "学校選びは、実際に見て、感じることが大切です。「自分にもできるか」「目指したい環境があるか」を体験し、不安を自信へ変える機会としてご参加ください。",
   },
   {
     no: "03",
-    tag: "TRANSFER",
-    title: "他校からの転入・転校",
-    body: "他の馬の学校で学んでいる方の転入・転校も受け入れています。「もっと実践的に学びたい」という思いに、本校の環境がお応えします。",
+    tag: "SUPPORT",
+    title: "学費サポートも充実",
+    body: "本校では授業費の約3割免除をはじめ、インターンシップによる最大50万円の還付制度や20万円の返戻制度をご用意しています。さらに、学費分割制度も充実し、無理なく学べる環境を整えています。",
   },
   {
     no: "04",
     tag: "HIGH SCHOOL",
-    title: "高校からの進学ルート",
-    body: "中学卒業後は、系列校の東関東馬事高等学院で厩務員を目指す道もあります。高校3年次にJRA競馬学校を受験し、高校生のうちに厩務員課程へ合格した実績も生まれています。",
-    link: { href: SCHOOL.related.highSchool, label: "東関東馬事高等学院" },
+    title: "高校から馬を学ぶという選択",
+    body: (
+      <>
+        中学校卒業後から馬の世界を目指す方には、
+        <strong className="font-bold text-ink">
+          高校卒業資格を取得しながら専門教育を学べる「東関東馬事高等学院」
+        </strong>
+        もおすすめです。早くから馬と共に学び、夢への第一歩を踏み出せます。
+      </>
+    ),
+    link: {
+      href: "https://bajigaku.site/",
+      label: "東関東馬事高等学院",
+    },
   },
 ];
 
@@ -55,15 +67,15 @@ const entryPoints: EntryPoint[] = [
 const learningCards = [
   {
     tag: "FEATURE 01",
-    title: "一人ひとりに担当馬",
-    body: "入学すると一人1頭からの担当馬を持ち、体調管理・飼養管理・手入れまでを任されます。技術の向上に応じて担当は最大4頭まで広がり、責任とともに実力が育ちます。",
+    title: "担当馬制度で実践的に学べる",
+    body: "約120頭の馬たちの中から担当馬を持ち、毎日実践的に学べる環境です。乗用馬から現役競走馬まで、幅広い経験を積むことができます。",
     image: "/images/theme/img_tokucho_img_002_2.jpg",
     alt: "担当馬の世話をする学生たち",
   },
   {
     tag: "FEATURE 02",
-    title: "約120頭が「生きた教材」",
-    body: "おとなしい乗用馬から馬術競技馬、引退競走馬、現役競走馬まで約120頭を学生が管理。年間約60頭の引退競走馬を受け入れ、乗用馬への再調教まで実践で学びます。",
+    title: "本校が管理する馬、約120頭",
+    body: "約120頭の馬たちの中から担当馬を持ち、毎日実践的に学べる環境です。乗用馬から現役競走馬まで、幅広い経験を積むことができます。",
     image: "/images/theme/img_tokucho_img_002_5.jpg",
     alt: "学校で管理する多くの馬たち",
   },
@@ -132,21 +144,25 @@ const careerPaths = [
 export default function FeaturesPage() {
   return (
     <>
-      <PageHero
-        eyebrow="FEATURES"
-        title="本校の特徴"
-        lead="約120頭の馬と、国内最大級の4つの教育施設。「入口」から「出口」まで、夢の実現を確かな仕組みで支える本校の学びをご紹介します。"
-        image="/images/theme/img_tokucho_img_001_1.jpg"
-        breadcrumb="本校の特徴"
-      />
+      <HomeHero />
+      <nav
+        aria-label="パンくずリスト"
+        className="mx-auto flex max-w-7xl items-center gap-2 px-4 py-3 text-xs text-ink/60 md:px-6"
+      >
+        <Link href="/" className="transition-colors hover:text-primary">
+          ホーム
+        </Link>
+        <span aria-hidden>›</span>
+        <span className="text-primary">本校の特徴</span>
+      </nav>
 
       {/* 1. Intro — 学校選びの大切さ */}
       <section className="bg-paper py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <SectionTitle
             eyebrow="PHILOSOPHY"
-            title="学校選びが、夢への距離を決める。"
-            lead="馬の学校選びは「何を学ぶか」「費用」「カリキュラム」「就職先」といった視点から、多角的に比較・検討することが大切です。"
+            title="学校選びは、これからの人生を選ぶこと。"
+            lead="学校生活が充実していることはもちろん大切ですが、本当に重要なのは、その先の未来です。"
           />
 
           <div className="grid items-center gap-10 md:grid-cols-2 md:gap-14">
@@ -162,16 +178,16 @@ export default function FeaturesPage() {
               </div>
             </Reveal>
             <Reveal x={24} y={0}>
-              <h3 className="font-sans font-bold text-xl leading-relaxed text-ink md:text-2xl">
-                学費の高低ではなく、
+              <h3 className="font-mincho text-xl leading-relaxed text-ink md:text-2xl">
+                卒業後にどのような道へ進み、
                 <br />
-                「学びと成果の中身」で選ぶ。
+                どんな力を身につけられるのか。
               </h3>
               <p className="mt-5 text-[15px] leading-loose text-ink/75 md:text-base">
-                学校選びは、在学中の充実だけでなく卒業後の進路に直結します。だからこそ本校は、学費の額面ではなく「そこで何を学び、どんな成果につながるのか」で比較していただきたいと考えています。
+                その答えが、学校選びの価値を決めます。本校では、学費や設備だけでは測れない「学びの価値」を大切にしています。本校では、約118頭の馬とともに学ぶ環境の中で、知識・技術・人間力を育み、夢の実現へと導いています。
               </p>
               <p className="mt-4 text-[15px] leading-loose text-ink/75 md:text-base">
-                千葉県と大阪府に国内最大級の4つの教育施設を展開し、約120頭の馬を学生が管理する本校の環境は、その問いへの答えです。このページでは、本校の特徴を「入口・中身・出口」の3つの物語でご紹介します。
+                このページでは、本校ならではの魅力を、「入口」「中身」「出口」という3つの物語を通してご紹介します。ぜひ、あなた自身の未来を重ねながらご覧ください。
               </p>
             </Reveal>
           </div>
@@ -183,21 +199,21 @@ export default function FeaturesPage() {
                 no: "01",
                 en: "ENTRY",
                 title: "入口",
-                text: "どんな学生が入学するのか",
+                text: "夢への第一歩となる4つのご提案",
                 href: "#entry",
               },
               {
                 no: "02",
                 en: "LEARNING",
                 title: "中身",
-                text: "何を、どう学ぶのか",
+                text: "本物の環境で、本物を学ぶ",
                 href: "#learning",
               },
               {
                 no: "03",
                 en: "CAREER",
                 title: "出口",
-                text: "どこへ羽ばたくのか",
+                text: "安心して馬業界の第一線へ",
                 href: "#career",
               },
             ].map((s) => (
@@ -210,11 +226,11 @@ export default function FeaturesPage() {
                     {s.no}
                   </span>
                   <span className="flex-1">
-                    <span className="block font-display text-[11px] font-semibold tracking-[0.3em] text-accent">
+                    <span className="block font-display text-[11px] font-semibold tracking-[0.3em] text-primary">
                       {s.en}
                     </span>
-                    <span className="mt-1 block font-sans font-bold text-xl text-ink">
-                      「{s.title}」
+                    <span className="mt-1 block font-mincho text-[22px] text-accent">
+                      {s.title}
                     </span>
                     <span className="mt-1 block text-xs text-ink/60">
                       {s.text}
@@ -244,13 +260,17 @@ export default function FeaturesPage() {
                 <p className="font-display text-5xl font-semibold tracking-wide text-white md:text-6xl">
                   <AnimatedCounter
                     value={s.value}
-                    prefix={s.value === 120 ? "約" : ""}
                     className="tabular-nums"
                   />
                   <span className="ml-1 text-xl text-tan md:text-2xl">
                     {s.suffix}
                   </span>
                 </p>
+                {"note" in s && s.note ? (
+                  <p className="mt-2 text-[11px] leading-relaxed text-white/55 md:text-xs">
+                    {s.note}
+                  </p>
+                ) : null}
                 <div className="mx-auto mt-4 h-px w-10 bg-accent" />
                 <p className="mt-3 text-xs leading-relaxed text-white/70 md:text-sm">
                   {s.label}
@@ -267,7 +287,7 @@ export default function FeaturesPage() {
           <SectionTitle
             eyebrow="STORY 01 — ENTRY"
             title="「入口」— 未経験から、全国から。"
-            lead="馬にふれたことがなくても、遠く離れた町に住んでいても大丈夫。本校の扉は、馬の仕事を志すすべての人に開かれています。"
+            lead="入学を検討される皆様へ「夢への第一歩となる4つのご提案」"
           />
           <RevealGroup className="grid gap-5 md:grid-cols-2 md:gap-7">
             {entryPoints.map((p) => (
@@ -281,7 +301,7 @@ export default function FeaturesPage() {
                       {p.tag}
                     </span>
                   </div>
-                  <h3 className="mt-4 font-sans font-bold text-xl text-ink md:text-[22px]">
+                  <h3 className="mt-4 font-mincho text-xl text-ink md:text-[22px]">
                     {p.title}
                   </h3>
                   <div className="mt-3 h-px w-12 bg-tan/60 transition-all duration-300 group-hover:w-20 group-hover:bg-accent" />
@@ -311,8 +331,8 @@ export default function FeaturesPage() {
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <SectionTitle
             eyebrow="STORY 02 — LEARNING"
-            title="「中身」— 本物の馬で、本物を学ぶ。"
-            lead="乗用馬から現役競走馬まで約120頭。生きた教材に囲まれた実践の毎日が、未経験者を2年間でプロへと育てます。"
+            title="「中身」— 本物の環境で、本物を学ぶ。"
+            lead="乗用馬から現役競走馬まで約118頭。生きた教材に囲まれた実践の毎日が、未経験者を2年間でプロへと育てます。"
           />
           <RevealGroup className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 md:gap-7">
             {learningCards.map((c) => (
@@ -328,10 +348,10 @@ export default function FeaturesPage() {
                     />
                   </div>
                   <div className="p-6">
-                    <p className="font-display text-[11px] font-semibold tracking-[0.3em] text-accent">
+                    <p className="font-display text-[11px] font-semibold tracking-[0.3em] text-primary">
                       {c.tag}
                     </p>
-                    <h3 className="mt-2 font-sans font-bold text-lg leading-snug text-ink md:text-xl">
+                    <h3 className="mt-2 font-mincho text-lg leading-snug text-ink md:text-xl">
                       {c.title}
                     </h3>
                     <p className="mt-3 text-sm leading-loose text-ink/75">
@@ -345,10 +365,10 @@ export default function FeaturesPage() {
 
           <Reveal delay={0.15}>
             <div className="mt-12 rounded-2xl border-l-4 border-accent bg-meadow/60 p-6 md:p-8">
-              <p className="font-display text-[11px] font-semibold tracking-[0.3em] text-accent">
+              <p className="font-display text-[11px] font-semibold tracking-[0.3em] text-primary">
                 PAID INTERNSHIP
               </p>
-              <p className="mt-2 font-sans font-bold text-lg leading-relaxed text-ink md:text-xl">
+              <p className="mt-2 font-mincho text-lg leading-relaxed text-ink md:text-xl">
                 「働きながら学び、学びながら働ける」——
                 在学中の取り組みにより
                 <span className="mx-1 font-display text-2xl font-semibold text-accent md:text-3xl">
@@ -369,8 +389,8 @@ export default function FeaturesPage() {
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <SectionTitle
             eyebrow="STORY 03 — CAREER"
-            title="「出口」— 馬業界の第一線へ。"
-            lead="令和7年度は牧場・乗馬クラブへの就職率100%を記録。全国473ヶ所（平成31年1月現在）の馬の求人を保有し、一人ひとりに合った進路へ導きます。"
+            title="「出口」— 安心して馬業界の第一線へ。"
+            lead="本校では、設立から15年の中で築き上げた業界からの信頼と業界への実績。一人ひとりにあった進路へと導きます。"
           />
           <RevealGroup className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {careerPaths.map((c) => (
@@ -386,10 +406,10 @@ export default function FeaturesPage() {
                     />
                   </div>
                   <div className="p-6">
-                    <p className="font-display text-[11px] font-semibold tracking-[0.3em] text-accent">
+                    <p className="font-display text-[11px] font-semibold tracking-[0.3em] text-primary">
                       {c.en}
                     </p>
-                    <h3 className="mt-2 font-sans font-bold text-lg leading-snug text-ink">
+                    <h3 className="mt-2 font-mincho text-lg leading-snug text-ink">
                       {c.title}
                     </h3>
                     <p className="mt-3 text-sm leading-loose text-ink/75">
@@ -418,10 +438,10 @@ export default function FeaturesPage() {
                 <p className="font-display text-[12px] font-semibold tracking-[0.35em] text-tan">
                   JRA ACHIEVEMENT
                 </p>
-                <h3 className="mt-4 font-sans font-bold text-2xl leading-snug text-white md:text-3xl">
+                <h3 className="mt-4 font-mincho text-2xl leading-snug text-white md:text-3xl">
                   JRA競馬学校「厩務員課程」
                   <br className="sm:hidden" />
-                  <span className="text-accent">10年連続</span>合格。
+                  <span className="text-accent">72名</span>合格。
                 </h3>
                 <ul className="mt-6 space-y-2.5 text-sm leading-relaxed text-white/85 md:text-[15px]">
                   <li className="flex gap-3">
@@ -440,9 +460,9 @@ export default function FeaturesPage() {
                 <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                   <Link
                     href="/jra"
-                    className="group inline-flex items-center justify-center gap-3 rounded-full bg-accent px-8 py-4 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-accent-dark md:text-base"
+                    className="group inline-flex items-center justify-center gap-3 rounded-full border-2 border-primary bg-white px-8 py-4 text-sm font-bold text-primary transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white md:text-base"
                   >
-                    JRA厩務員を目指す方へ
+                    JRA厩務員へ
                     <span className="transition-transform duration-300 group-hover:translate-x-1">
                       →
                     </span>
@@ -451,7 +471,7 @@ export default function FeaturesPage() {
                     href="/admission"
                     className="group inline-flex items-center justify-center gap-3 rounded-full border-2 border-white/70 px-8 py-4 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-accent md:text-base"
                   >
-                    募集要項を見る
+                    募集要項
                     <span className="transition-transform duration-300 group-hover:translate-x-1">
                       →
                     </span>

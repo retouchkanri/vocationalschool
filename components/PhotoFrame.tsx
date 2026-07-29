@@ -7,6 +7,7 @@ const ASPECT: Record<PhotoAspect, string> = {
   story: "aspect-square",
   gallery: "aspect-[3/2]",
   cta: "aspect-[16/9]",
+  portrait: "aspect-[3/4]",
 };
 
 type PhotoGrade = "cinematic" | "documentary" | "portrait";

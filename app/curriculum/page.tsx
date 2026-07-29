@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
@@ -33,7 +33,7 @@ const LESSONS = [
   {
     image: "/images/theme/img_curriculum_img_002_4.jpg",
     title: "JRA厩務員 筆記試験対策",
-    text: "JRA競馬学校「厩務員課程」の受験に向けた筆記試験対策を実施。在学中に最大2回の受験が可能で、合格者を10年連続で輩出しています。",
+    text: "JRA競馬学校「厩務員課程」の受験に向けた筆記試験対策を実施。在学中に最大2回の受験が可能で、合格者を72名で輩出しています。",
   },
   {
     image: "/images/theme/img_curriculum_img_002_5.jpg",
@@ -42,7 +42,7 @@ const LESSONS = [
   },
   {
     image: "/images/theme/img_curriculum_img_002_6.jpg",
-    title: "120頭を超える馬たちが教材",
+    title: "118頭を超える馬たちが教材",
     text: "おとなしい乗用馬から馬術競技馬、引退競走馬、現役競走馬まで。多様な馬たちと向き合うことで、本物のノウハウを学び取ります。",
   },
 ] as const;
@@ -80,8 +80,8 @@ const INTERNSHIP = [
   {
     image: "/images/theme/img_6_003_img_002_2.jpg",
     tag: "最大6ヶ所",
-    title: "多様な現場での研修",
-    text: "全国の乗馬クラブ・競走馬育成牧場等との連携により、在学中に最大6ヶ所の現場で研修が可能。生産・育成・乗馬クラブと、それぞれの職場で本物を学べます。",
+    title: "在学中に最大6つの施設で学べる",
+    text: "提携する施設から６つの施設で現場経験を積み、学校で学んだ知識や技術を実践します。卒業後に即戦力として活躍できる力を養います。",
   },
   {
     image: "/images/theme/img_6_003_img_002_5.jpg",
@@ -103,7 +103,7 @@ export default function CurriculumPage() {
       <PageHero
         eyebrow="CURRICULUM"
         title="授業内容・カリキュラム"
-        lead="未経験を前提に、厩務・騎乗・馬の管理を実習中心で段階的に学ぶ2年間。120頭を超える馬たちと現場での研修が、あなたをプロへと育てます。"
+        lead="未経験を前提に、厩務・騎乗・馬の管理を実習中心で段階的に学ぶ2年間。118頭を超える馬たちと現場での研修が、あなたをプロへと育てます。"
         image="/images/theme/img_curriculum_img_001_1.jpg"
         breadcrumb="授業・カリキュラム"
       />
@@ -133,7 +133,7 @@ export default function CurriculumPage() {
             </Reveal>
 
             <Reveal x={24} y={0}>
-              <h3 className="font-sans font-bold text-2xl leading-relaxed text-ink md:text-3xl">
+              <h3 className="font-mincho text-2xl leading-relaxed text-ink md:text-3xl">
                 未経験から2年間で、
                 <br />
                 現場で通用する力を。
@@ -142,7 +142,7 @@ export default function CurriculumPage() {
                 本校のカリキュラムは、馬に触れたことのない方を前提に組み立てられています。厩務（馬の世話）・騎乗・馬の管理を基礎から段階的に学び、未経験から2年間で馬業界に必要な技術と知識を習得します。
               </p>
               <p className="mt-4 text-[15px] leading-loose text-ink/75 md:text-base">
-                教材となるのは、関東（千葉県3ヶ所）と関西（大阪府1ヶ所）の拠点で学生が管理する120頭を超える馬たち。一人1頭以上の担当馬を受け持ち、毎日馬と向き合う中で、競走馬のノウハウと「考える力」を養います。
+                教材となるのは、関東（千葉県3ヶ所）と関西（大阪府1ヶ所）の拠点で学生が管理する118頭を超える馬たち。一人1頭以上の担当馬を受け持ち、毎日馬と向き合う中で、競走馬のノウハウと「考える力」を養います。
               </p>
             </Reveal>
           </div>
@@ -151,7 +151,7 @@ export default function CurriculumPage() {
             {[
               { value: 7, prefix: "約", suffix: "割", label: "入学者は馬の未経験者" },
               { value: 2, prefix: "", suffix: "年間", label: "技術・知識を習得する課程" },
-              { value: 120, prefix: "", suffix: "頭超", label: "学生が管理する馬たち" },
+              { value: 118, prefix: "", suffix: "頭超", label: "学生が管理する馬たち" },
               { value: 4, prefix: "最大", suffix: "頭", label: "一人あたりの担当馬" },
             ].map((stat) => (
               <RevealItem key={stat.label}>
@@ -201,7 +201,7 @@ export default function CurriculumPage() {
                     </span>
                   </div>
                   <div className="p-6">
-                    <h3 className="font-sans font-bold text-lg leading-snug text-ink transition-colors duration-300 group-hover:text-primary md:text-xl">
+                    <h3 className="font-mincho text-lg leading-snug text-ink transition-colors duration-300 group-hover:text-primary md:text-xl">
                       {lesson.title}
                     </h3>
                     <p className="mt-3 text-sm leading-loose text-ink/70">
@@ -246,7 +246,7 @@ export default function CurriculumPage() {
                       {item.period}
                     </span>
                   </div>
-                  <h3 className="mt-3 font-sans font-bold text-xl leading-snug text-white md:text-2xl">
+                  <h3 className="mt-3 font-mincho text-xl leading-snug text-white md:text-2xl">
                     {item.title}
                   </h3>
                   <p className="mt-3 max-w-3xl text-sm leading-loose text-white/75 md:text-[15px]">
@@ -287,7 +287,7 @@ export default function CurriculumPage() {
                     </span>
                   </div>
                   <div className="p-6">
-                    <h3 className="font-sans font-bold text-lg leading-snug text-ink transition-colors duration-300 group-hover:text-primary md:text-xl">
+                    <h3 className="font-mincho text-lg leading-snug text-ink transition-colors duration-300 group-hover:text-primary md:text-xl">
                       {item.title}
                     </h3>
                     <p className="mt-3 text-sm leading-loose text-ink/70">
@@ -301,10 +301,10 @@ export default function CurriculumPage() {
 
           <Reveal className="mt-10 md:mt-14">
             <div className="rounded-2xl border border-tan/40 bg-cream p-6 md:p-8">
-              <p className="font-display text-xs font-semibold tracking-[0.35em] text-accent">
+              <p className="font-display text-xs font-semibold tracking-[0.35em] text-primary">
                 REFUND SYSTEM
               </p>
-              <h3 className="mt-2 font-sans font-bold text-xl leading-snug text-ink md:text-2xl">
+              <h3 className="mt-2 font-mincho text-xl leading-snug text-ink md:text-2xl">
                 研修が、学費の負担軽減にもつながります。
               </h3>
               <p className="mt-3 text-sm leading-loose text-ink/70 md:text-[15px]">
@@ -339,7 +339,7 @@ export default function CurriculumPage() {
                 href: "/jra",
                 eyebrow: "JRA",
                 title: "JRA厩務員を目指す方へ",
-                text: "在学中に最大2回の受験機会。JRA競馬学校「厩務員課程」合格10年連続の実績と、受験対策の詳細をご紹介します。",
+                text: "在学中に最大2回の受験機会。JRA競馬学校「厩務員課程」合格72名の実績と、受験対策の詳細をご紹介します。",
                 image: "/images/theme/img_top_toku_img_003.jpg",
                 alt: "JRA厩務員課程合格に関する写真",
               },
@@ -347,9 +347,9 @@ export default function CurriculumPage() {
                 href: "/features",
                 eyebrow: "FEATURES",
                 title: "本校の特徴",
-                text: "約120頭の馬たちと国内最大級の教育環境。担当馬制度や馬術大会など、本校が選ばれる理由をまとめました。",
+                text: "約118頭の馬たちと国内最大級の教育環境。担当馬制度や馬術大会など、本校が選ばれる理由をまとめました。",
                 image: "/images/theme/img_tokucho_img_002_5.jpg",
-                alt: "学生の教材となる約120頭の馬たち",
+                alt: "学生の教材となる約118頭の馬たち",
               },
             ].map((card) => (
               <RevealItem key={card.href}>
@@ -374,7 +374,7 @@ export default function CurriculumPage() {
                   </div>
                   <div className="flex items-center justify-between gap-4 p-6">
                     <div>
-                      <h3 className="font-sans font-bold text-xl leading-snug text-ink transition-colors duration-300 group-hover:text-primary md:text-2xl">
+                      <h3 className="font-mincho text-xl leading-snug text-ink transition-colors duration-300 group-hover:text-primary md:text-2xl">
                         {card.title}
                       </h3>
                       <p className="mt-2 text-sm leading-loose text-ink/70">

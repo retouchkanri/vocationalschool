@@ -4,7 +4,7 @@ import { NAV, SCHOOL } from "@/lib/site";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary-deep text-white">
+    <footer className="bg-primary text-white">
       <div className="mx-auto max-w-7xl px-4 py-14 md:px-6 md:py-20">
         <div className="grid gap-12 md:grid-cols-[1.2fr_1fr]">
           <div>
@@ -20,7 +20,7 @@ export default function Footer() {
             <p className="mt-6 text-sm leading-relaxed text-white/70">
               JRA厩務員・牧場就職・乗馬クラブへ。
               <br />
-              約120頭の馬とともに、未経験から馬のプロを育てる馬の専門学校。
+              約118頭の馬とともに、未経験から馬のプロを育てる馬の専門学校。
             </p>
             <address className="mt-6 text-sm not-italic leading-relaxed text-white/70">
               {SCHOOL.zip} {SCHOOL.address}

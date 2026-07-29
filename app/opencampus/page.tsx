@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
@@ -123,7 +123,7 @@ export default function OpenCampusPage() {
                     />
                   </div>
                   <div className="p-6">
-                    <h3 className="font-sans font-bold text-lg tracking-wide text-ink">
+                    <h3 className="font-mincho text-lg tracking-wide text-ink">
                       {item.title}
                     </h3>
                     <div className="mt-3 h-px w-10 bg-accent/60 transition-all duration-300 group-hover:w-16" />
@@ -183,7 +183,7 @@ export default function OpenCampusPage() {
                 {VOICES.map((v) => (
                   <li
                     key={v}
-                    className="rounded-full border border-tan/40 px-5 py-2 font-sans font-bold text-sm tracking-wide text-white"
+                    className="rounded-full border border-tan/40 px-5 py-2 font-display text-sm font-bold tracking-wide text-white"
                   >
                     「{v}」
                   </li>
@@ -223,7 +223,7 @@ export default function OpenCampusPage() {
                       </span>
                     </div>
                     <div className="min-w-0 flex-1 rounded-2xl bg-white p-6 shadow-card transition-shadow duration-300 hover:shadow-card-hover md:p-7">
-                      <h3 className="font-sans font-bold text-lg tracking-wide text-ink">
+                      <h3 className="font-mincho text-lg tracking-wide text-ink">
                         {step.title}
                       </h3>
                       <p className="mt-2 text-sm leading-loose text-ink/70">
@@ -281,10 +281,10 @@ export default function OpenCampusPage() {
               </div>
             </Reveal>
             <Reveal x={24} y={0}>
-              <p className="font-display text-[13px] font-semibold tracking-[0.35em] text-accent">
+              <p className="font-display text-[13px] font-semibold tracking-[0.35em] text-primary">
                 DORMITORY
               </p>
-              <h3 className="mt-3 font-sans font-bold text-2xl leading-snug tracking-wide text-ink md:text-3xl">
+              <h3 className="mt-3 font-mincho text-2xl leading-snug tracking-wide text-ink md:text-3xl">
                 全室個室・365日食事付きの学生寮
               </h3>
               <p className="mt-5 text-sm leading-loose text-ink/70 md:text-[15px]">
@@ -320,10 +320,10 @@ export default function OpenCampusPage() {
                   />
                 </div>
                 <div className="p-6 md:p-7">
-                  <p className="font-display text-xs font-semibold tracking-[0.3em] text-accent">
+                  <p className="font-display text-xs font-semibold tracking-[0.3em] text-primary">
                     KANTO / CHIBA
                   </p>
-                  <h3 className="mt-2 font-sans font-bold text-lg tracking-wide text-ink">
+                  <h3 className="mt-2 font-mincho text-lg tracking-wide text-ink">
                     千葉県八街市の広大な総合施設
                   </h3>
                   <p className="mt-3 text-sm leading-loose text-ink/70">
@@ -334,10 +334,10 @@ export default function OpenCampusPage() {
             </RevealItem>
             <RevealItem>
               <article className="flex h-full flex-col justify-center rounded-2xl border border-tan/40 bg-cream p-6 md:p-8">
-                <p className="font-display text-xs font-semibold tracking-[0.3em] text-accent">
+                <p className="font-display text-xs font-semibold tracking-[0.3em] text-primary">
                   KANSAI / OSAKA
                 </p>
-                <h3 className="mt-2 font-sans font-bold text-lg tracking-wide text-ink">
+                <h3 className="mt-2 font-mincho text-lg tracking-wide text-ink">
                   関西研修施設「ホースレスト」
                 </h3>
                 <p className="mt-3 text-sm leading-loose text-ink/70">
@@ -364,7 +364,7 @@ export default function OpenCampusPage() {
             {/* アクセス */}
             <Reveal>
               <div className="h-full rounded-2xl bg-white p-6 shadow-card md:p-8">
-                <h3 className="font-sans font-bold text-xl tracking-wide text-ink">
+                <h3 className="font-mincho text-xl tracking-wide text-ink">
                   アクセス
                 </h3>
                 <div className="rule-diamond mt-4 w-16" />
@@ -424,7 +424,7 @@ export default function OpenCampusPage() {
                 <p className="font-display text-[13px] font-semibold tracking-[0.35em] text-tan">
                   ENTRY
                 </p>
-                <h3 className="mt-3 font-sans font-bold text-2xl leading-snug tracking-wide">
+                <h3 className="mt-3 font-mincho text-2xl leading-snug tracking-wide">
                   まずは、お気軽に
                   <br />
                   お申込み・ご相談を。
@@ -435,7 +435,7 @@ export default function OpenCampusPage() {
                 <div className="mt-8 flex flex-col items-center gap-4">
                   <a
                     href={`tel:${SCHOOL.tel}`}
-                    className="group inline-flex w-full max-w-xs items-center justify-center gap-3 rounded-full bg-accent px-8 py-4 text-base font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-accent-dark"
+                    className="group inline-flex w-full max-w-xs items-center justify-center gap-3 rounded-full border-2 border-primary bg-white px-8 py-4 text-base font-bold text-primary transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white"
                   >
                     <span className="font-display tracking-wider">
                       {SCHOOL.tel}
@@ -448,7 +448,7 @@ export default function OpenCampusPage() {
                     href="/admission"
                     className="group inline-flex w-full max-w-xs items-center justify-center gap-3 rounded-full border-2 border-white/70 px-8 py-3.5 text-base font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-accent"
                   >
-                    募集要項を見る
+                    募集要項
                     <span className="transition-transform duration-300 group-hover:translate-x-1">
                       →
                     </span>

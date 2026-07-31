@@ -237,6 +237,6 @@ export const GALLERY_PHOTOS: CuratedPhoto[] = [
 ];
 
 export const CTA_PHOTO = {
-  src: "/images/theme/000/uma7.jpg",
-  alt: "馬と向き合い、共に歩む学生とキャンパスの風景",
+  src: "/images/theme/003/gallery-34.jpg",
+  alt: "白い柵に囲まれた放牧場と青空の下で過ごす馬たち",
 } as const;

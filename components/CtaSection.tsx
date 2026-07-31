@@ -16,20 +16,22 @@ export default function CtaSection() {
           sizes="100vw"
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-black/20" />
+        {/* Soft wash — keeps the ranch photo visible while text stays readable */}
+        <div className="absolute inset-0 bg-black/35" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-black/10" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-5xl px-4 text-center md:px-6">
         <Reveal>
-          <p className="font-display text-sm font-semibold tracking-[0.35em] text-accent">
+          <p className="font-display text-sm font-semibold tracking-[0.35em] text-accent drop-shadow">
             NEXT STEP
           </p>
-          <h2 className="mt-4 font-mincho text-3xl font-semibold leading-snug tracking-[0.04em] text-white md:text-4xl">
+          <h2 className="mt-4 font-mincho text-3xl font-semibold leading-snug tracking-[0.04em] text-white drop-shadow-md md:text-4xl">
             馬と生きる未来へ、
             <br className="md:hidden" />
             一歩踏み出そう。
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-sm font-normal leading-[1.9] text-white/85 md:text-base">
+          <p className="mx-auto mt-5 max-w-2xl text-sm font-normal leading-[1.9] text-white drop-shadow md:text-base">
             まずは学校見学・オープンキャンパスで、約118頭の馬たちと本校の学びをご体感ください。
             資料請求・ご相談もお気軽にどうぞ。
           </p>
@@ -55,7 +57,7 @@ export default function CtaSection() {
         </RevealGroup>
 
         <Reveal delay={0.25}>
-          <p className="mt-8 text-sm text-white/75">
+          <p className="mt-8 text-sm text-white drop-shadow">
             お電話でのご相談：
             <a
               href={`tel:${SCHOOL.tel}`}

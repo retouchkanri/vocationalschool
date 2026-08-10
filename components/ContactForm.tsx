@@ -32,6 +32,8 @@ type ContactFormProps = {
 export default function ContactForm({ initialSubject = "" }: ContactFormProps) {
   const [form, setForm] = useState<FormState>({ ...INITIAL, subject: initialSubject });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     if (initialSubject) {
@@ -45,9 +47,33 @@ export default function ContactForm({ initialSubject = "" }: ContactFormProps) {
       setForm((prev) => ({ ...prev, [key]: e.target.value }));
     };
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    if (submitting) return;
+    setSubmitting(true);
+    setError("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const data = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string };
+
+      if (!res.ok || !data.ok) {
+        setError(
+          data.error ?? "送信に失敗しました。お手数ですが時間をおいて再度お試しください。",
+        );
+        return;
+      }
+
+      setSubmitted(true);
+    } catch {
+      setError("通信エラーが発生しました。お手数ですが時間をおいて再度お試しください。");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -200,17 +226,28 @@ export default function ContactForm({ initialSubject = "" }: ContactFormProps) {
               />
             </label>
 
+            {error && (
+              <p className="mt-4 rounded-lg bg-alert/10 px-4 py-3 text-sm font-bold text-alert">
+                {error}
+              </p>
+            )}
+
             <div className="mt-6 flex flex-wrap gap-3">
               <button
                 type="submit"
-                className="rounded-full bg-accent px-7 py-3 text-sm font-bold text-white shadow-md transition-colors hover:bg-accent-dark"
+                disabled={submitting}
+                className="rounded-full bg-accent px-7 py-3 text-sm font-bold text-white shadow-md transition-colors hover:bg-accent-dark disabled:opacity-50"
               >
-                確認画面へ
+                {submitting ? "送信中…" : "送信する"}
               </button>
               <button
                 type="reset"
-                onClick={() => setForm(INITIAL)}
-                className="rounded-full border border-ink/20 px-7 py-3 text-sm font-bold text-ink transition-colors hover:border-accent hover:text-accent"
+                onClick={() => {
+                  setForm(INITIAL);
+                  setError("");
+                }}
+                disabled={submitting}
+                className="rounded-full border border-ink/20 px-7 py-3 text-sm font-bold text-ink transition-colors hover:border-accent hover:text-accent disabled:opacity-50"
               >
                 リセット
               </button>

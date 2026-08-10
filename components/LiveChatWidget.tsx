@@ -199,9 +199,16 @@ export default function LiveChatWidget() {
               ref={listRef}
               className="flex-1 space-y-3 overflow-y-auto px-4 py-4"
             >
-              {messages.map((m) => (
-                <div
+              {messages.map((m, i) => (
+                <motion.div
                   key={m.id}
+                  initial={{ opacity: 0, y: 10, scale: 0.97 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{
+                    duration: 0.35,
+                    delay: i === messages.length - 1 ? 0.05 : 0,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
                   className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}
                 >
                   <div
@@ -222,10 +229,17 @@ export default function LiveChatWidget() {
                       </Link>
                     )}
                   </div>
-                </div>
+                </motion.div>
               ))}
               {pending && (
-                <p className="text-xs text-ink/50">回答を作成しています…</p>
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: [0.4, 1, 0.4] }}
+                  transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
+                  className="text-xs text-ink/50"
+                >
+                  回答を作成しています…
+                </motion.p>
               )}
             </div>
 
@@ -270,31 +284,93 @@ export default function LiveChatWidget() {
         )}
       </AnimatePresence>
 
-      <button
-        type="button"
-        aria-label="AIチャットを開く"
-        aria-expanded={open}
-        aria-controls={panelId}
-        onClick={() => setOpen((v) => !v)}
-        className="pointer-events-auto group flex h-14 w-14 items-center justify-center rounded-full bg-accent text-white shadow-[0_12px_32px_-8px_rgb(240_131_0/0.55)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent-dark"
-      >
-        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20">
-          <svg
-            aria-hidden
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={1.8}
-            className="h-5 w-5"
+      <div className="pointer-events-auto relative">
+        <AnimatePresence>
+          {!open && (
+            <>
+              <motion.span
+                aria-hidden
+                className="absolute inset-0 rounded-full bg-accent/35"
+                initial={{ scale: 1, opacity: 0.55 }}
+                animate={{ scale: [1, 1.55, 1.55], opacity: [0.55, 0, 0] }}
+                transition={{
+                  duration: 2.4,
+                  repeat: Infinity,
+                  ease: "easeOut",
+                }}
+              />
+              <motion.span
+                aria-hidden
+                className="absolute inset-0 rounded-full bg-accent/25"
+                initial={{ scale: 1, opacity: 0.4 }}
+                animate={{ scale: [1, 1.85, 1.85], opacity: [0.4, 0, 0] }}
+                transition={{
+                  duration: 2.4,
+                  repeat: Infinity,
+                  ease: "easeOut",
+                  delay: 0.8,
+                }}
+              />
+            </>
+          )}
+        </AnimatePresence>
+
+        <motion.button
+          type="button"
+          aria-label="AIチャットを開く"
+          aria-expanded={open}
+          aria-controls={panelId}
+          onClick={() => setOpen((v) => !v)}
+          animate={
+            open
+              ? { y: 0, rotate: 0, scale: 1 }
+              : { y: [0, -5, 0], rotate: [0, -2, 2, 0], scale: [1, 1.04, 1] }
+          }
+          transition={
+            open
+              ? { duration: 0.3, ease: [0.22, 1, 0.36, 1] }
+              : {
+                  y: { duration: 3.2, repeat: Infinity, ease: "easeInOut" },
+                  rotate: { duration: 4.5, repeat: Infinity, ease: "easeInOut" },
+                  scale: { duration: 2.8, repeat: Infinity, ease: "easeInOut" },
+                }
+          }
+          whileHover={{ scale: 1.08, y: -2 }}
+          whileTap={{ scale: 0.94 }}
+          className="relative flex h-14 w-14 items-center justify-center rounded-full bg-accent text-white shadow-[0_12px_32px_-8px_rgb(240_131_0/0.55)] transition-colors duration-300 hover:bg-accent-dark"
+        >
+          <motion.span
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20"
+            animate={open ? { rotate: 0 } : { rotate: [0, 8, -8, 0] }}
+            transition={
+              open
+                ? { duration: 0.2 }
+                : { duration: 5, repeat: Infinity, ease: "easeInOut" }
+            }
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M8 10h8M8 14h5M21 12a9 9 0 1 1-3.2-6.9L21 3v9z"
-            />
-          </svg>
-        </span>
-      </button>
+            <motion.svg
+              aria-hidden
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={1.8}
+              className="h-5 w-5"
+              animate={open ? { scale: 1 } : { scale: [1, 1.12, 1] }}
+              transition={
+                open
+                  ? { duration: 0.2 }
+                  : { duration: 2.2, repeat: Infinity, ease: "easeInOut" }
+              }
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M8 10h8M8 14h5M21 12a9 9 0 1 1-3.2-6.9L21 3v9z"
+              />
+            </motion.svg>
+          </motion.span>
+        </motion.button>
+      </div>
     </div>
   );
 }

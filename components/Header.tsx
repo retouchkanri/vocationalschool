@@ -26,11 +26,21 @@ function EnvelopeIcon({ className }: { className?: string }) {
   );
 }
 
-function InquiryNavButton({ className }: { className?: string }) {
+function InquiryNavButton({
+  scrolled,
+  className,
+}: {
+  scrolled: boolean;
+  className?: string;
+}) {
   return (
     <Link
       href={INQUIRY.href}
-      className={`group flex shrink-0 flex-col items-center justify-center gap-1 border-l border-ink/10 bg-white px-4 text-ink transition-colors duration-300 hover:bg-cream ${className ?? ""}`}
+      className={`group flex shrink-0 flex-col items-center justify-center gap-1 border-l px-4 transition-colors duration-300 ${
+        scrolled
+          ? "border-primary-dark/20 bg-primary text-white hover:bg-primary-dark"
+          : "border-ink/10 bg-white text-ink hover:bg-cream"
+      } ${className ?? ""}`}
     >
       <EnvelopeIcon className="h-5 w-5 transition-transform duration-300 group-hover:scale-105 xl:h-6 xl:w-6" />
       <span className="whitespace-nowrap font-display text-[10px] font-bold leading-none tracking-wide xl:text-[11px]">
@@ -154,7 +164,7 @@ export default function Header() {
           </button>
           </div>
 
-          <InquiryNavButton className="hidden min-h-full lg:flex" />
+          <InquiryNavButton scrolled={scrolled} className="hidden min-h-full lg:flex" />
         </div>
       </header>
 

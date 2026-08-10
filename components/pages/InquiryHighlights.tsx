@@ -4,7 +4,15 @@ import Link from "next/link";
 import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
 import { SCHOOL } from "@/lib/site";
 
-const INQUIRY_TYPES = [
+type InquiryType = {
+  icon: string;
+  title: string;
+  description: string;
+  subject: string;
+  href?: string;
+};
+
+const INQUIRY_TYPES: InquiryType[] = [
   {
     icon: "📋",
     title: "資料請求",
@@ -34,7 +42,7 @@ const INQUIRY_TYPES = [
       "JRA厩務員、就職実績、取材・ロケのご依頼など、上記以外のお問合せもお気軽にどうぞ。",
     subject: "その他のお問合せ",
   },
-] as const;
+];
 
 type InquiryHighlightsProps = {
   onSelectSubject?: (subject: string) => void;

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import SectionTitle from "@/components/SectionTitle";
-import CtaSection from "@/components/CtaSection";
+import { getNavLabel } from "@/lib/site";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
 import { SCHOOL } from "@/lib/site";

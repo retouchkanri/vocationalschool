@@ -37,6 +37,16 @@ export const NAV: NavItem[] = [
   { href: "/faq", label: "よくある質問", labelEn: "Q&A" },
 ];
 
+export const INQUIRY = {
+  href: "/contact",
+  label: "お問い合わせ",
+  labelEn: "CONTACT",
+} as const;
+
+export function getNavLabel(href: string): string {
+  return NAV.find((item) => item.href === href)?.label ?? href;
+}
+
 /** Key statistics used across the site (client-specified figures). */
 export const STATS = [
   { value: 118, suffix: "頭", label: "本校で管理する馬匹の数" },

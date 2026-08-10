@@ -5,7 +5,40 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { NAV, SCHOOL } from "@/lib/site";
+import { INQUIRY, NAV, SCHOOL } from "@/lib/site";
+
+function EnvelopeIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      aria-hidden
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      className={className}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M3 8.5 12 14l9-5.5M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2Z"
+      />
+    </svg>
+  );
+}
+
+function InquiryNavButton({ className }: { className?: string }) {
+  return (
+    <Link
+      href={INQUIRY.href}
+      className={`group flex shrink-0 flex-col items-center justify-center gap-1 border-l border-ink/10 bg-white px-4 text-ink transition-colors duration-300 hover:bg-cream ${className ?? ""}`}
+    >
+      <EnvelopeIcon className="h-5 w-5 transition-transform duration-300 group-hover:scale-105 xl:h-6 xl:w-6" />
+      <span className="whitespace-nowrap font-display text-[10px] font-bold leading-none tracking-wide xl:text-[11px]">
+        {INQUIRY.label}
+      </span>
+    </Link>
+  );
+}
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -39,7 +72,8 @@ export default function Header() {
             : "bg-primary/70 backdrop-blur-sm"
         }`}
       >
-        <div className="mx-[5vw] flex min-h-16 flex-wrap items-center justify-between gap-x-4 gap-y-2 py-2 md:min-h-20 md:py-0">
+        <div className="flex min-h-16 items-stretch md:min-h-20">
+          <div className="mx-[5vw] flex min-w-0 flex-1 flex-wrap items-center justify-between gap-x-4 gap-y-2 py-2 md:py-0">
           <Link href="/" className="flex shrink-0 items-center gap-3">
             <span
               className={`relative block h-10 w-40 transition-all duration-500 md:h-12 md:w-52 ${
@@ -118,6 +152,9 @@ export default function Header() {
               }`}
             />
           </button>
+          </div>
+
+          <InquiryNavButton className="hidden min-h-full lg:flex" />
         </div>
       </header>
 
@@ -132,6 +169,19 @@ export default function Header() {
             className="fixed inset-0 z-40 flex flex-col overflow-y-auto bg-primary-deep/97 px-6 pt-24 pb-10 backdrop-blur-sm lg:hidden"
           >
             <nav className="mx-auto flex w-full max-w-sm flex-col">
+              <motion.div
+                initial={{ opacity: 0, y: -12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.35 }}
+              >
+                <Link
+                  href={INQUIRY.href}
+                  className="mb-6 flex items-center justify-center gap-2.5 rounded-xl border border-white/20 bg-white px-6 py-4 font-display text-sm font-bold text-ink shadow-lg"
+                >
+                  <EnvelopeIcon className="h-6 w-6" />
+                  {INQUIRY.label}
+                </Link>
+              </motion.div>
               {NAV.map((item, i) => (
                 <motion.div
                   key={item.href}

@@ -1,6 +1,6 @@
-﻿"use client";
+"use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { SCHOOL } from "@/lib/site";
@@ -25,9 +25,19 @@ const INITIAL: FormState = {
   message: "",
 };
 
-export default function ContactForm() {
-  const [form, setForm] = useState<FormState>(INITIAL);
+type ContactFormProps = {
+  initialSubject?: string;
+};
+
+export default function ContactForm({ initialSubject = "" }: ContactFormProps) {
+  const [form, setForm] = useState<FormState>({ ...INITIAL, subject: initialSubject });
   const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    if (initialSubject) {
+      setForm((prev) => ({ ...prev, subject: initialSubject }));
+    }
+  }, [initialSubject]);
 
   const onChange =
     (key: keyof FormState) =>

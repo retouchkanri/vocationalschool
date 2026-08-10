@@ -34,6 +34,7 @@
   --animate-float: float 5s ease-in-out infinite;
   --animate-scroll-down: scroll-down 1.6s ease-in-out infinite;
   --animate-arrow-flash: arrow-flash 1s ease-in-out infinite;
+  --animate-gear-spin: gear-spin 5s linear infinite;
 
   @keyframes ken-burns {
     from {
@@ -108,6 +109,14 @@
     50% {
       opacity: 1;
       transform: translateY(2px);
+    }
+  }
+  @keyframes gear-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
     }
   }
 }

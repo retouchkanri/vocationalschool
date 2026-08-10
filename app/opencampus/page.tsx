@@ -113,7 +113,7 @@ export default function OpenCampusPage() {
         eyebrow="OPEN CAMPUS"
         title="学校見学・オープンキャンパス"
         lead="学校選びは、在学中の充実だけでなく卒業後の進路にも直結する大切な一歩。まずは実際のキャンパスで、馬たちと本校の学びをご体感ください。"
-        image="/images/theme/img_taiken_img_001_1.jpg"
+        image="/images/theme/opencampus-hero.jpg"
         breadcrumb="学校見学・オープンキャンパス"
       />
 
@@ -155,29 +155,101 @@ export default function OpenCampusPage() {
       </section>
 
       {/* 開催日程（ダーク帯） */}
-      <section className="bg-primary-deep py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-4 md:px-6">
+      <section className="relative overflow-hidden bg-primary-deep py-16 md:py-24">
+        {/* Solid color backdrop + two rider silhouettes centered, in brand green */}
+        <div aria-hidden className="pointer-events-none absolute inset-0 select-none bg-primary-deep">
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(ellipse 78% 68% at 50% 48%, rgba(14, 104, 52, 0.45) 0%, transparent 72%), linear-gradient(165deg, rgba(255,255,255,0.06) 0%, transparent 45%, rgba(0,0,0,0.18) 100%)",
+            }}
+          />
+          <div
+            className="absolute inset-0 opacity-[0.18] mix-blend-soft-light"
+            style={{
+              backgroundImage:
+                "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
+            }}
+          />
+          {/* Soft outer glow */}
+          <div
+            className="absolute left-1/2 top-[6%] h-[90%] w-[92%] max-w-[820px] -translate-x-1/2"
+            style={{
+              backgroundColor: "rgba(255,255,255,0.1)",
+              WebkitMaskImage:
+                "url(/images/theme/horse-jump-silhouette.png)",
+              maskImage: "url(/images/theme/horse-jump-silhouette.png)",
+              WebkitMaskSize: "contain",
+              maskSize: "contain",
+              WebkitMaskRepeat: "no-repeat",
+              maskRepeat: "no-repeat",
+              WebkitMaskPosition: "center",
+              maskPosition: "center",
+              filter: "blur(12px)",
+              transform: "translateX(-50%) scale(1.05)",
+            }}
+          />
+          {/* Light outline */}
+          <div
+            className="absolute left-1/2 top-[6%] h-[90%] w-[92%] max-w-[820px] -translate-x-1/2"
+            style={{
+              backgroundColor: "rgba(255,255,255,0.22)",
+              WebkitMaskImage:
+                "url(/images/theme/horse-jump-silhouette.png)",
+              maskImage: "url(/images/theme/horse-jump-silhouette.png)",
+              WebkitMaskSize: "contain",
+              maskSize: "contain",
+              WebkitMaskRepeat: "no-repeat",
+              maskRepeat: "no-repeat",
+              WebkitMaskPosition: "center",
+              maskPosition: "center",
+              transform: "translateX(-50%) scale(1.012)",
+            }}
+          />
+          {/* Silhouette fill in current primary-deep */}
+          <div
+            className="absolute left-1/2 top-[6%] h-[90%] w-[92%] max-w-[820px] -translate-x-1/2"
+            style={{
+              backgroundColor: "#024d1f",
+              WebkitMaskImage:
+                "url(/images/theme/horse-jump-silhouette.png)",
+              maskImage: "url(/images/theme/horse-jump-silhouette.png)",
+              WebkitMaskSize: "contain",
+              maskSize: "contain",
+              WebkitMaskRepeat: "no-repeat",
+              maskRepeat: "no-repeat",
+              WebkitMaskPosition: "center",
+              maskPosition: "center",
+            }}
+          />
+        </div>
+
+        <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6">
           <SectionTitle
             eyebrow="SCHEDULE"
             title="開催日程"
             lead="現在、受け中の学校見学、オープンキャンパスは、以下の日程となります。"
             light
           />
-          <RevealGroup className="mx-auto grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-3 md:gap-6">
+          <RevealGroup className="mx-auto grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-3 md:gap-6 sm:items-stretch">
             {DATES.map((d) => (
-              <RevealItem key={d.date}>
+              <RevealItem key={d.date} className="h-full">
                 <div
-                  className={`group rounded-2xl border px-4 py-8 text-center transition-all duration-300 ${
+                  className={`group flex h-full min-h-[11.5rem] flex-col items-center justify-center rounded-2xl border px-4 py-8 text-center transition-all duration-300 ${
                     d.closed
                       ? "border-white/10 bg-white/[0.03]"
                       : "border-white/15 bg-white/5 hover:-translate-y-1 hover:border-tan/60 hover:bg-white/10"
                   }`}
                 >
-                  {d.closed ? (
-                    <p className="mb-2 text-xs font-bold tracking-wider text-white/40">
-                      受付終了
-                    </p>
-                  ) : null}
+                  <p
+                    className={`mb-2 text-xs font-bold tracking-wider ${
+                      d.closed ? "text-white/40" : "invisible"
+                    }`}
+                    aria-hidden={!d.closed}
+                  >
+                    受付終了
+                  </p>
                   <p
                     className={`font-display text-4xl font-semibold tracking-wider md:text-5xl ${
                       d.closed ? "text-white/40" : "text-white"

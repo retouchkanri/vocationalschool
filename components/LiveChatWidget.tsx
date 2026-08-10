@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { SCHOOL } from "@/lib/site";
@@ -18,6 +19,12 @@ const SUGGESTIONS = [
   "オープンキャンパスについて",
   "資料請求・お問合せ方法は？",
 ];
+
+/** Chat persona — gives the AI assistant a name and a face. */
+const AGENT = {
+  name: "レタッチ事務局",
+  avatar: "/images/theme/chat-avatar-retouch.jpg",
+} as const;
 
 declare global {
   interface Window {
@@ -95,7 +102,7 @@ export default function LiveChatWidget() {
     {
       id: "welcome",
       role: "assistant",
-      text: `こんにちは。${SCHOOL.nameShort}のAIアシスタントです。入学・学費・見学・お問合せなど、サイトの内容をもとにご案内します。何でもお聞きください。`,
+      text: `こんにちは。${AGENT.name}です。入学・学費・見学・お問合せなど、サイトの内容をもとにご案内します。何でもお聞きください。`,
     },
   ]);
   const listRef = useRef<HTMLDivElement>(null);
@@ -179,17 +186,35 @@ export default function LiveChatWidget() {
             className="pointer-events-auto flex h-[min(560px,70vh)] w-[min(380px,calc(100vw-2rem))] flex-col overflow-hidden rounded-2xl border border-ink/10 bg-paper shadow-[0_18px_48px_-16px_rgb(31_45_35/0.35)]"
           >
             <div className="flex items-center justify-between bg-primary-deep px-4 py-3 text-white">
-              <div>
-                <p className="font-display text-[10px] font-semibold tracking-[0.3em] text-tan">
-                  LIVE CHAT AI
-                </p>
-                <p className="mt-0.5 text-sm font-bold">{SCHOOL.nameShort} サポート</p>
-              </div>
+              <Link
+                href="/contact"
+                className="group flex min-w-0 items-center gap-3"
+                aria-label={`${AGENT.name}のお問合せページへ`}
+                onClick={() => setOpen(false)}
+              >
+                <span className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full ring-2 ring-white/70 transition-transform duration-300 group-hover:scale-105">
+                  <Image
+                    src={AGENT.avatar}
+                    alt={AGENT.name}
+                    fill
+                    sizes="40px"
+                    className="object-cover"
+                  />
+                </span>
+                <span className="min-w-0">
+                  <p className="font-display text-[10px] font-semibold tracking-[0.3em] text-tan">
+                    LIVE CHAT AI
+                  </p>
+                  <p className="mt-0.5 truncate text-sm font-bold group-hover:underline">
+                    {AGENT.name}
+                  </p>
+                </span>
+              </Link>
               <button
                 type="button"
                 aria-label="チャットを閉じる"
                 onClick={() => setOpen(false)}
-                className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-lg leading-none transition-colors hover:bg-white/20"
+                className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/10 text-lg leading-none transition-colors hover:bg-white/20"
               >
                 ×
               </button>
@@ -209,10 +234,21 @@ export default function LiveChatWidget() {
                     delay: i === messages.length - 1 ? 0.05 : 0,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}
+                  className={`flex items-end gap-2 ${m.role === "user" ? "justify-end" : "justify-start"}`}
                 >
+                  {m.role === "assistant" && (
+                    <span className="relative h-6 w-6 shrink-0 overflow-hidden rounded-full ring-1 ring-ink/10">
+                      <Image
+                        src={AGENT.avatar}
+                        alt=""
+                        fill
+                        sizes="24px"
+                        className="object-cover"
+                      />
+                    </span>
+                  )}
                   <div
-                    className={`max-w-[90%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed ${
+                    className={`max-w-[85%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed ${
                       m.role === "user"
                         ? "rounded-br-md bg-accent text-white"
                         : "rounded-bl-md bg-cream text-ink"
@@ -232,14 +268,25 @@ export default function LiveChatWidget() {
                 </motion.div>
               ))}
               {pending && (
-                <motion.p
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: [0.4, 1, 0.4] }}
-                  transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
-                  className="text-xs text-ink/50"
-                >
-                  回答を作成しています…
-                </motion.p>
+                <div className="flex items-center gap-2">
+                  <span className="relative h-6 w-6 shrink-0 overflow-hidden rounded-full ring-1 ring-ink/10">
+                    <Image
+                      src={AGENT.avatar}
+                      alt=""
+                      fill
+                      sizes="24px"
+                      className="object-cover"
+                    />
+                  </span>
+                  <motion.p
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: [0.4, 1, 0.4] }}
+                    transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
+                    className="text-xs text-ink/50"
+                  >
+                    回答を作成しています…
+                  </motion.p>
+                </div>
               )}
             </div>
 
@@ -317,7 +364,7 @@ export default function LiveChatWidget() {
 
         <motion.button
           type="button"
-          aria-label="AIチャットを開く"
+          aria-label={`${AGENT.name}のAIチャットを開く`}
           aria-expanded={open}
           aria-controls={panelId}
           onClick={() => setOpen((v) => !v)}
@@ -337,38 +384,21 @@ export default function LiveChatWidget() {
           }
           whileHover={{ scale: 1.08, y: -2 }}
           whileTap={{ scale: 0.94 }}
-          className="relative flex h-14 w-14 items-center justify-center rounded-full bg-accent text-white shadow-[0_12px_32px_-8px_rgb(240_131_0/0.55)] transition-colors duration-300 hover:bg-accent-dark"
+          className="relative flex h-14 w-14 items-center justify-center rounded-full bg-accent text-white shadow-[0_12px_32px_-8px_rgb(240_131_0/0.55)] ring-[3px] ring-white transition-colors duration-300 hover:bg-accent-dark"
         >
-          <motion.span
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20"
-            animate={open ? { rotate: 0 } : { rotate: [0, 8, -8, 0] }}
-            transition={
-              open
-                ? { duration: 0.2 }
-                : { duration: 5, repeat: Infinity, ease: "easeInOut" }
-            }
-          >
-            <motion.svg
-              aria-hidden
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={1.8}
-              className="h-5 w-5"
-              animate={open ? { scale: 1 } : { scale: [1, 1.12, 1] }}
-              transition={
-                open
-                  ? { duration: 0.2 }
-                  : { duration: 2.2, repeat: Infinity, ease: "easeInOut" }
-              }
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M8 10h8M8 14h5M21 12a9 9 0 1 1-3.2-6.9L21 3v9z"
-              />
-            </motion.svg>
-          </motion.span>
+          <span className="relative h-full w-full overflow-hidden rounded-full">
+            <Image
+              src={AGENT.avatar}
+              alt={AGENT.name}
+              fill
+              sizes="56px"
+              className="object-cover"
+            />
+          </span>
+          <span
+            aria-hidden
+            className="absolute bottom-0.5 right-0.5 h-3.5 w-3.5 rounded-full border-2 border-white bg-primary"
+          />
         </motion.button>
       </div>
     </div>

@@ -5,7 +5,11 @@ import Footer from "@/components/Footer";
 import LiveChatWidget from "@/components/LiveChatWidget";
 import MobileFooterBar from "@/components/MobileFooterBar";
 import ScrollToTop from "@/components/ScrollToTop";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 import { SCHOOL } from "@/lib/site";
+
+/** Keep in sync with THEMES in components/ThemeSwitcher.tsx */
+const THEME_INIT_SCRIPT = `(function(){try{var t=localStorage.getItem('site-theme-color');var m={green:['#00913a','#007830','#024d1f'],navy:['#1b4f7a','#163f61','#0f2b44'],burgundy:['#8a1f34','#6f1929','#4a0f1b'],brown:['#8a5a2b','#6e4620','#4a2f16'],teal:['#0f766e','#0c5d56','#083f3a']};var v=m[t];if(v){var s=document.documentElement.style;s.setProperty('--color-primary',v[0]);s.setProperty('--color-primary-dark',v[1]);s.setProperty('--color-primary-deep',v[2]);}}catch(e){}})();`;
 
 export const metadata: Metadata = {
   title: {
@@ -21,7 +25,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="ja">
+    <html lang="ja" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -33,6 +37,7 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700;900&family=Roboto:wght@400;500;600;700&display=swap"
         />
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
       </head>
       <body className="antialiased">
         <Header />
@@ -41,6 +46,7 @@ export default function RootLayout({
         <MobileFooterBar />
         <LiveChatWidget />
         <ScrollToTop />
+        <ThemeSwitcher />
       </body>
     </html>
   );

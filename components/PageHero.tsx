@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
+import AnimatedTitle from "@/components/AnimatedTitle";
 
 type PageHeroProps = {
   eyebrow: string;
@@ -10,6 +11,9 @@ type PageHeroProps = {
   breadcrumb: string;
 };
 
+const TITLE_START_DELAY = 0.15;
+const TITLE_CHAR_DELAY = 0.026;
+
 /** Sub-page hero with cinematic documentary photography treatment. */
 export default function PageHero({
   eyebrow,
@@ -18,6 +22,13 @@ export default function PageHero({
   image,
   breadcrumb,
 }: PageHeroProps) {
+  // Time for the char-by-char title reveal to finish, so the lead
+  // paragraph and breadcrumb follow once the title has mostly appeared.
+  const titleRevealSpan =
+    TITLE_START_DELAY + Array.from(title).length * TITLE_CHAR_DELAY;
+  const leadDelay = titleRevealSpan + 0.2;
+  const breadcrumbDelay = leadDelay + 0.25;
+
   return (
     <section
       data-hero
@@ -40,20 +51,26 @@ export default function PageHero({
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-14 md:px-6">
-        <Reveal y={24}>
+        <Reveal y={16} duration={0.6}>
           <p className="font-display text-sm font-semibold tracking-[0.4em] text-tan">
             {eyebrow}
           </p>
-          <h1 className="mt-3 font-mincho text-3xl font-black leading-snug tracking-[0.06em] text-white md:text-5xl">
-            {title}
-          </h1>
-          {lead && (
+        </Reveal>
+        <AnimatedTitle
+          key={title}
+          text={title}
+          delay={TITLE_START_DELAY}
+          charDelay={TITLE_CHAR_DELAY}
+          className="mt-3 font-mincho text-3xl font-black leading-snug tracking-[0.06em] text-white md:text-5xl"
+        />
+        {lead && (
+          <Reveal y={12} delay={leadDelay}>
             <p className="mt-5 max-w-2xl text-sm font-normal leading-[1.8] text-white/85 md:text-base">
               {lead}
             </p>
-          )}
-        </Reveal>
-        <Reveal delay={0.25} y={12}>
+          </Reveal>
+        )}
+        <Reveal delay={breadcrumbDelay} y={12}>
           <nav
             aria-label="パンくずリスト"
             className="mt-8 flex items-center gap-2 text-xs text-white/70"

@@ -9,6 +9,7 @@ type ContactBody = {
   firstName?: string;
   lastNameKana?: string;
   firstNameKana?: string;
+  phone?: string;
   email?: string;
   subject?: string;
   message?: string;
@@ -17,8 +18,6 @@ type ContactBody = {
 const REQUIRED_FIELDS: (keyof ContactBody)[] = [
   "lastName",
   "firstName",
-  "lastNameKana",
-  "firstNameKana",
   "email",
   "subject",
   "message",
@@ -38,6 +37,9 @@ function getTransporter() {
     port,
     secure: process.env.SMTP_SECURE === "true", // true for port 465, false for 587 (STARTTLS)
     auth: { user, pass },
+    connectionTimeout: 8000,
+    greetingTimeout: 8000,
+    socketTimeout: 10000,
   });
 }
 
@@ -58,10 +60,19 @@ export async function POST(request: Request) {
     }
   }
 
-  const { lastName, firstName, lastNameKana, firstNameKana, email, subject, message } =
-    body as Required<ContactBody>;
+  const {
+    lastName,
+    firstName,
+    lastNameKana = "",
+    firstNameKana = "",
+    phone = "",
+    email,
+    subject,
+    message,
+  } = body as Required<Pick<ContactBody, "lastName" | "firstName" | "email" | "subject" | "message">> &
+    ContactBody;
 
-  if (!EMAIL_PATTERN.test(email)) {
+  if (!EMAIL_PATTERN.test(email!)) {
     return NextResponse.json(
       { error: "メールアドレスの形式が正しくありません" },
       { status: 400 },
@@ -78,17 +89,20 @@ export async function POST(request: Request) {
   }
 
   const to = process.env.CONTACT_TO_EMAIL || process.env.SMTP_USER;
+  const nameLine = [lastName, firstName].join(" ");
+  const kanaLine = [lastNameKana, firstNameKana].filter(Boolean).join(" ");
 
   try {
     await transporter.sendMail({
       from: `"${SCHOOL.name} お問合せフォーム" <${process.env.SMTP_USER}>`,
       to,
-      replyTo: `"${lastName} ${firstName}" <${email}>`,
+      replyTo: `"${nameLine}" <${email}>`,
       subject: `【サイトお問合せ】${subject}`,
       text: [
         `${SCHOOL.name} 公式サイトのお問合せフォームより送信されました。`,
         "",
-        `お名前：${lastName} ${firstName}（${lastNameKana} ${firstNameKana}）`,
+        `お名前：${nameLine}${kanaLine ? `（${kanaLine}）` : ""}`,
+        `電話番号：${phone || "（未入力）"}`,
         `メールアドレス：${email}`,
         `件名：${subject}`,
         "",
@@ -97,7 +111,9 @@ export async function POST(request: Request) {
       ].join("\n"),
     });
   } catch (err) {
-    console.error("Failed to send contact email", err);
+    const code = (err as { code?: string })?.code;
+    const errMessage = err instanceof Error ? err.message : String(err);
+    console.error("Failed to send contact email", { code, message: errMessage });
     return NextResponse.json(
       { error: "送信に失敗しました。お手数ですが時間をおいて再度お試しください。" },
       { status: 502 },

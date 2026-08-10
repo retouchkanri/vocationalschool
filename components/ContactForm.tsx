@@ -10,6 +10,7 @@ type FormState = {
   firstName: string;
   lastNameKana: string;
   firstNameKana: string;
+  phone: string;
   email: string;
   subject: string;
   message: string;
@@ -20,10 +21,27 @@ const INITIAL: FormState = {
   firstName: "",
   lastNameKana: "",
   firstNameKana: "",
+  phone: "",
   email: "",
   subject: "",
   message: "",
 };
+
+function RequiredBadge() {
+  return (
+    <span className="ml-2 rounded bg-alert/10 px-1.5 py-0.5 text-[10px] font-bold text-alert">
+      必須
+    </span>
+  );
+}
+
+function OptionalBadge() {
+  return (
+    <span className="ml-2 rounded bg-ink/8 px-1.5 py-0.5 text-[10px] font-bold text-ink/50">
+      任意
+    </span>
+  );
+}
 
 type ContactFormProps = {
   initialSubject?: string;
@@ -148,11 +166,16 @@ export default function ContactForm({ initialSubject = "" }: ContactFormProps) {
             onSubmit={onSubmit}
             className="rounded-2xl border border-ink/8 bg-white px-6 py-8 shadow-card md:px-8"
           >
-            <p className="text-xs text-ink/55">※ すべて必須項目です</p>
+            <p className="text-xs text-ink/55">
+              ※「必須」の項目は必ずご入力ください
+            </p>
 
             <div className="mt-5 grid gap-4 sm:grid-cols-2">
               <label className="block text-sm">
-                <span className="font-bold text-ink">お名前（姓）</span>
+                <span className="font-bold text-ink">
+                  お名前（姓）
+                  <RequiredBadge />
+                </span>
                 <input
                   required
                   value={form.lastName}
@@ -161,7 +184,10 @@ export default function ContactForm({ initialSubject = "" }: ContactFormProps) {
                 />
               </label>
               <label className="block text-sm">
-                <span className="font-bold text-ink">お名前（名）</span>
+                <span className="font-bold text-ink">
+                  お名前（名）
+                  <RequiredBadge />
+                </span>
                 <input
                   required
                   value={form.firstName}
@@ -170,23 +196,27 @@ export default function ContactForm({ initialSubject = "" }: ContactFormProps) {
                 />
               </label>
               <label className="block text-sm">
-                <span className="font-bold text-ink">フリガナ（セイ）</span>
+                <span className="font-bold text-ink">
+                  フリガナ（セイ）
+                  <OptionalBadge />
+                </span>
                 <input
-                  required
                   value={form.lastNameKana}
                   onChange={onChange("lastNameKana")}
-                  pattern="[ァ-ヶー\s]+"
+                  pattern="[ァ-ヶー\s]*"
                   title="カタカナでご入力ください"
                   className="mt-1.5 w-full rounded-lg border border-ink/15 bg-paper px-3 py-2.5 outline-none ring-accent/30 focus:ring-2"
                 />
               </label>
               <label className="block text-sm">
-                <span className="font-bold text-ink">フリガナ（メイ）</span>
+                <span className="font-bold text-ink">
+                  フリガナ（メイ）
+                  <OptionalBadge />
+                </span>
                 <input
-                  required
                   value={form.firstNameKana}
                   onChange={onChange("firstNameKana")}
-                  pattern="[ァ-ヶー\s]+"
+                  pattern="[ァ-ヶー\s]*"
                   title="カタカナでご入力ください"
                   className="mt-1.5 w-full rounded-lg border border-ink/15 bg-paper px-3 py-2.5 outline-none ring-accent/30 focus:ring-2"
                 />
@@ -194,7 +224,10 @@ export default function ContactForm({ initialSubject = "" }: ContactFormProps) {
             </div>
 
             <label className="mt-4 block text-sm">
-              <span className="font-bold text-ink">メールアドレス</span>
+              <span className="font-bold text-ink">
+                メールアドレス
+                <RequiredBadge />
+              </span>
               <input
                 required
                 type="email"
@@ -205,7 +238,26 @@ export default function ContactForm({ initialSubject = "" }: ContactFormProps) {
             </label>
 
             <label className="mt-4 block text-sm">
-              <span className="font-bold text-ink">件名</span>
+              <span className="font-bold text-ink">
+                電話番号
+                <OptionalBadge />
+              </span>
+              <input
+                type="tel"
+                value={form.phone}
+                onChange={onChange("phone")}
+                pattern="[0-9\-()+ ]*"
+                title="電話番号は数字とハイフンでご入力ください"
+                placeholder="例：090-1234-5678"
+                className="mt-1.5 w-full rounded-lg border border-ink/15 bg-paper px-3 py-2.5 outline-none ring-accent/30 focus:ring-2"
+              />
+            </label>
+
+            <label className="mt-4 block text-sm">
+              <span className="font-bold text-ink">
+                件名
+                <RequiredBadge />
+              </span>
               <input
                 required
                 value={form.subject}
@@ -216,7 +268,10 @@ export default function ContactForm({ initialSubject = "" }: ContactFormProps) {
             </label>
 
             <label className="mt-4 block text-sm">
-              <span className="font-bold text-ink">お問合せ内容</span>
+              <span className="font-bold text-ink">
+                お問合せ内容
+                <RequiredBadge />
+              </span>
               <textarea
                 required
                 rows={6}

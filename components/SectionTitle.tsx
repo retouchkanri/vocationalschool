@@ -37,7 +37,7 @@ export default function SectionTitle({
         {eyebrow}
       </p>
       <h2
-        className={`mt-3 font-mincho text-[1.65rem] font-semibold leading-snug tracking-[0.04em] md:text-4xl ${
+        className={`mt-3 font-mincho text-[1.65rem] font-bold leading-snug tracking-[0.04em] md:text-4xl ${
           light ? "text-white" : "text-ink"
         }`}
       >

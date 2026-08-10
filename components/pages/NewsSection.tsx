@@ -19,9 +19,9 @@ const CATEGORY_META: Record<
   { label: string; bg: string }
 > = {
   announce: { label: "ご案内", bg: "#e68a00" },
-  facility: { label: "施設", bg: "#3d9970" },
+  facility: { label: "施設", bg: "#0a6bb4" },
   achievement: { label: "実績", bg: "#c22d64" },
-  admission: { label: "入試", bg: "#008cc2" },
+  admission: { label: "入試", bg: "#ac58bf" },
 };
 
 const TAB_ORDER: (NewsCategory | "all")[] = [

@@ -8,44 +8,62 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
 import { SCHOOL, STATS } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "学校概要",
+  title: { absolute: "株式会社 馬事学院が運営する東関東馬事専門学院" },
   description:
-    "東関東馬事専門学院の教育方針・学校概要・施設環境・近年のあゆみをご紹介。千葉・大阪の8施設で約118頭の馬とともに学ぶ、実践型の馬の専門学校です。",
+    "学費救済支援、学費の滞納にも柔軟に対応する支払いサポート。株式会社馬事学院では、馬の仕事を目指す若者の育成。千葉県山武市・八街市・大阪府河内長野市を拠点とするバジガクネットワーク。株式会社馬事学院へお問い合わせください。ロケ、取材も受付中。",
+  keywords: [
+    "バジガク",
+    "馬",
+    "教育",
+    "評判",
+    "口コミ",
+    "Retouch",
+    "リタッチ",
+    "引退馬",
+    "JRA",
+    "競馬会",
+    "社台",
+    "比較",
+    "相談",
+    "募集要項",
+    "学費",
+  ],
 };
 
 /** 教育方針の3つの柱 */
 const PILLARS = [
   {
     no: "01",
-    title: "現場で鍛える実践型教育",
-    body: "在学中から大手育成牧場での研修・インターンを取り入れ、未経験からでも現場で通用する技術と知識を育てます。入学後は学生一人ひとりが担当馬を持ち、日々の厩務と騎乗を通してプロの基礎を身につけます。",
+    title: "思いやりと感謝",
+    body: "動物を通じ、また団体生活の中で、常にお互いを助け合う気持ちを培い、相手を思いやる心、感謝の気持ちを持てる人材を育成する。",
   },
   {
     no: "02",
-    title: "馬産業への人材輩出",
-    body: "JRA厩務員をはじめ、生産牧場・育成牧場・乗馬クラブ・観光牧場など、馬業界の第一線へ人材を送り出しています。JRA競馬学校厩務員課程では72名の合格実績、令和7年度には牧場・乗馬クラブへの就職率73%を記録しました。",
+    title: "情操豊かな人間性",
+    body: "個性尊重の教育において、一人ひとりが持つ可能性、個性、特性を最大限に引き伸ばし、情操豊かな人間性を培う。",
   },
   {
     no: "03",
-    title: "引退馬のセカンドキャリア支援",
-    body: "引退競走馬を乗用馬へ転用する調教を授業に取り入れ、千葉県八街市の総合施設には馬の養老牧場を併設。おとなしい乗用馬から現役競走馬まで約118頭の馬たちと向き合い、馬の一生に寄り添う教育を実践しています。",
+    title: "有能な人材の育成",
+    body: "馬業界を目指す若人に対し、必要な馬学と豊かな技術を身につけ、国内外における馬事発展を目指す有能な人材の育成を図る。",
   },
 ];
 
-/** 施設ギャラリー（kankyo 掲載写真） */
+/** 施設ギャラリー（施設・環境フォルダの写真。キャプションは元ファイル名の日本語） */
 const CAMPUS_PHOTOS = [
-  { src: "/images/theme/img_kankyo_img_002_1.jpg", caption: "練習運動場", aspect: "aspect-[4/3]" },
-  { src: "/images/theme/img_kankyo_img_002_2.jpg", caption: "1周150mの走路トラック", aspect: "aspect-[3/4]" },
-  { src: "/images/theme/img_kankyo_img_002_3.jpg", caption: "広々とした馬場", aspect: "aspect-square" },
-  { src: "/images/theme/img_kankyo_img_002_4.jpg", caption: "厩舎（馬の部屋）", aspect: "aspect-[4/3]" },
-  { src: "/images/theme/img_kankyo_img_002_5.jpg", caption: "クラブハウス（教室・事務所）", aspect: "aspect-[3/4]" },
-  { src: "/images/theme/img_kankyo_img_002_6.jpg", caption: "快適に過ごす馬たち", aspect: "aspect-[4/3]" },
-  { src: "/images/theme/img_kankyo_img_002_7.jpg", caption: "のどかな周辺環境", aspect: "aspect-square" },
-  { src: "/images/theme/img_kankyo_img_002_8.jpg", caption: "学院の日常のひとコマ", aspect: "aspect-[4/3]" },
-  { src: "/images/theme/img_kankyo_img_002_9.jpg", caption: "ミニパドック（放牧場）", aspect: "aspect-[3/4]" },
-  { src: "/images/theme/img_kankyo_img_002_10.jpg", caption: "数多く並ぶ厩舎", aspect: "aspect-[4/3]" },
-  { src: "/images/theme/img_kankyo_img_002_11.jpg", caption: "円形の丸馬場でのトレーニング", aspect: "aspect-square" },
-  { src: "/images/theme/img_kankyo_img_002_12.jpg", caption: "坂道での馬の散歩コース", aspect: "aspect-[4/3]" },
+  { src: "/images/facilities/kosha-gaikan.jpg", caption: "校舎外観", aspect: "aspect-[4/3]" },
+  { src: "/images/facilities/baba.jpg", caption: "馬場", aspect: "aspect-[4/3]" },
+  { src: "/images/facilities/kyusha.jpg", caption: "厩舎", aspect: "aspect-[4/3]" },
+  { src: "/images/facilities/shinrindo.jpg", caption: "新林道", aspect: "aspect-[3/4]" },
+  { src: "/images/facilities/mori-shisetsu.jpg", caption: "森施設", aspect: "aspect-[3/4]" },
+  { src: "/images/facilities/taiikukan.jpg", caption: "体育館", aspect: "aspect-[4/3]" },
+  { src: "/images/facilities/training-room.jpg", caption: "トレーニングルーム", aspect: "aspect-[4/3]" },
+  { src: "/images/facilities/kyoshitsu.jpg", caption: "教室", aspect: "aspect-[4/3]" },
+  { src: "/images/facilities/kogishitsu.jpg", caption: "講義室", aspect: "aspect-[4/3]" },
+  { src: "/images/facilities/kyukeishitsu.jpg", caption: "休憩室", aspect: "aspect-[4/3]" },
+  { src: "/images/facilities/cafeteria.jpg", caption: "食堂", aspect: "aspect-[4/3]" },
+  { src: "/images/facilities/kitchen.jpg", caption: "厨房", aspect: "aspect-square" },
+  { src: "/images/facilities/mendanshitsu-sanbu.jpg", caption: "面談室／山武", aspect: "aspect-[4/3]" },
 ];
 
 /** 学生寮の設備写真 */
@@ -66,7 +84,7 @@ const OVERVIEW_ROWS = [
   { th: "連絡先", td: "", tel: true },
   {
     th: "拠点",
-    td: "千葉・大阪の計8施設（千葉県山武市・八街市、大阪府河内長野市の関西研修施設「ホースレスト」）",
+    td: "計3ヶ所（千葉県内2ヶ所・大阪府内１ヶ所）令和8年8月10日現在",
   },
   {
     th: "管理頭数",
@@ -75,47 +93,59 @@ const OVERVIEW_ROWS = [
   { th: "系列校", td: "東関東馬事高等学院（厩務員を目指せる高校）" },
 ];
 
-/** 近年のあゆみ（公式サイトのニュース・記事掲載情報より） */
+/** 学校沿革 */
 const HISTORY = [
   {
-    year: "2020",
-    label: "令和2年",
-    items: [
-      "NHK番組「目撃にっぽん」で学院の馬「バジガクモミジ」が紹介されるなど、NHK「ジューダイ」や各種新聞でのメディア掲載が続く。",
-      "在校生・卒業生のJRA競馬学校「厩務員課程」合格の実績を紹介。",
-    ],
+    date: "平成21年9月",
+    body: "東関東馬事職業訓練校（東関東馬事専門学院の前身）を設立　平成21年10月より、平成22年4月生（第一期生）の募集を開始。",
   },
   {
-    year: "2022",
-    label: "令和4年",
-    items: [
-      "災害被害等で学費の納付が難しくなった学生を支える、馬事学院独自の救済支援制度を案内（12月）。",
-    ],
+    date: "平成21年12月",
+    body: "中学卒業後に生徒を受け入れる東関東馬事高等学院を設立。（明蓬館高等学校との連携）",
   },
   {
-    year: "2023",
-    label: "令和5年",
-    items: [
-      "在校生がJRA競馬学校「厩務員課程」に合格（1月）。他校からの転入・転校の受け入れも案内。",
-      "系列校・東関東馬事高等学院で、高校3年次の受験による高校生現役でのJRA厩務員課程合格の実績（3月）。",
-    ],
+    date: "平成22年3月",
+    body: "小学生・中学生を対象とした東関東ジュニアホースクラブを設立",
   },
   {
-    year: "2024",
-    label: "令和6年",
-    items: [
-      "未経験の入学から最短1年6ヶ月でのJRA競馬学校厩務員課程合格の実績を発表（3月）。",
-      "関西研修施設「ホースレスト」（大阪府河内長野市）を研修・合宿などで活用（3月）。",
-      "千葉県八街市の広大な総合施設（JRA厩務員受験対策・競走馬育成・馬の養老牧場を兼ねる）を紹介（3月）。",
-    ],
+    date: "平成24年4月",
+    body: "東関東馬事職業訓練から、東関東馬事専門学院へ改名（授業カリキュラムを増やし1年コースより2年・3年コースを変更）",
   },
   {
-    year: "2025",
-    label: "令和7年",
-    items: [
-      "1月3日より学校ブログをアメブロへ移転。",
-      "令和7年度には牧場・乗馬クラブへの就職率73%を記録。",
-    ],
+    date: "平成26年7月",
+    body: "地方競馬全国協会　馬主登録／株式会社 馬事学院",
+  },
+  {
+    date: "平成26年12月",
+    body: "学校管理馬を競走馬として地方競馬デビューへ（各新聞・TVにてそれらが掲載されました）",
+  },
+  {
+    date: "平成27年5月",
+    body: "東京都馬主会・兵庫県馬主会・千葉県馬主会・神奈川県馬主会・石川県馬主会に加入。競走馬育成協会、日本馬術連盟・東京都馬術連盟に加入。",
+  },
+  {
+    date: "平成27年10月",
+    body: "各種、競走馬の生産牧場、育成牧場、乗馬クラブとの連携で在学中にインターンシップ制度を充実。本校に在籍する生徒たちが、在学中に最大6ヶ月間（6ケ所）のインターンシップ研修。",
+  },
+  {
+    date: "平成28年4月",
+    body: "本校での授業カリキュラムにおいて、在学中にJRA競馬学校の厩務員課程受験が可能に。平成28年度、本校の生徒がJRA厩務員課程受験合格。女性厩務員誕生！",
+  },
+  {
+    date: "平成29年10月",
+    body: "在学中に生徒3名がJRA競馬学校の厩務員課程受験。全員の3名が受験合格。本校入学から1年6ヵ月。（以降、令和8年まで、連続10年間の在学中受験合格者38名継続中。）",
+  },
+  {
+    date: "平成30年3月",
+    body: "千葉県八街市内に「引退馬の森」がオープン。引退競走馬の受け入れ施設。",
+  },
+  {
+    date: "令和2年7月",
+    body: "大阪府河内長野市に「引退馬の森ホースレスト」引退競走馬の受け入れ施設。",
+  },
+  {
+    date: "令和4年4月",
+    body: "千葉県山武市の旧：小学校施設にキャンパスを移転。",
   },
 ];
 
@@ -143,7 +173,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="ABOUT"
         title="学校概要"
-        lead="千葉・大阪の4つの施設と約118頭の馬たち。東関東馬事専門学院の教育方針と学びの環境、これまでのあゆみをご紹介します。"
+        lead="千葉・大阪の3つの施設と約118頭の馬たち。東関東馬事専門学院の教育方針と学びの環境、これまでのあゆみをご紹介します。"
         image="/images/theme/img_kankyo_img_001_1.jpg"
         breadcrumb="学校概要"
       />
@@ -154,7 +184,7 @@ export default function AboutPage() {
           <SectionTitle
             eyebrow="PHILOSOPHY"
             title="教育方針"
-            lead="馬の仕事は、馬主の大切な財産であるサラブレッドを預かる、高い専門性が求められる世界です。だからこそ本学院は、教室ではなく「現場」を学びの中心に置いています。"
+            lead="高い専門性に限らず人間性を伸ばす教育を実施し、将来の馬業界をリードする有能な人材を育成します。"
           />
 
           <Reveal>
@@ -166,14 +196,15 @@ export default function AboutPage() {
                 “
               </span>
               <p className="font-mincho text-2xl leading-relaxed tracking-wide text-primary md:text-4xl md:leading-relaxed">
-                馬と向き合う毎日が、
+                 馬と向き合う毎日が
                 <br />
-                プロを育てる。
+                プロとしての人間性を作り出す
               </p>
               <p className="mt-6 text-sm leading-loose text-ink/70 md:text-base">
-                未経験から入学する学生がほとんどでも、担当馬との日々の厩務、
-                現場での研修、そして引退馬と歩む時間のすべてが教材になります。
-                馬業界へ人材を送り出し、馬の一生を支える——それが本学院の使命です。
+                馬の仕事は、馬という命ある生き物、そして商品としての貴重な財産であるサラブレッドを預かる仕事であり、
+                高い専門性が求められる世界です。ゆえに、
+                まずはそれを任せてもらえる人間性を高め教え育てることが、
+                各生徒に対する本校の使命だと考えます。
               </p>
             </blockquote>
           </Reveal>
@@ -286,7 +317,7 @@ export default function AboutPage() {
           <SectionTitle
             eyebrow="FACILITIES"
             title="施設・環境"
-            lead="関東・関西の8施設に、練習運動場や1周150mの走路トラック、広い馬場、数多くの厩舎などを備え、乗馬と競走馬を同時に学べる環境を整えています。"
+            lead="関東・関西の３施設により、乗馬と競走馬の両角度から個々の生徒に応じてしっかり学べる体制が整っています。"
           />
 
           <Reveal>
@@ -353,18 +384,18 @@ export default function AboutPage() {
               </Reveal>
               <Reveal x={24} y={0}>
                 <p className="text-sm leading-loose text-ink/75 md:text-[15px]">
-                  キャンパスから徒歩2分の学生寮では、約55名の学生が生活しています。
+                  生徒たちは一人ひとり、プライベートを確保した個室を用意しています。
                   全室個室でテレビ備え付け・Wi-Fi完備、部屋の模様替えも自由。
                   プライベートを確保しながら、初めての一人暮らしでも安心して過ごせます。
                   食事は土日祝日を問わず365日提供され、食堂・洗面/洗濯スペース・男子風呂・
                   荷物の受け取りに対応する管理室など、暮らしを支える設備が揃っています。
                 </p>
-                <ul className="mt-6 grid grid-cols-2 gap-x-4 gap-y-2 text-sm text-ink/80">
+                <ul className="mt-6 space-y-2 text-sm text-ink/80">
                   {[
-                    "全室個室（テレビ備え付け）",
-                    "Wi-Fi完備",
-                    "キャンパスまで徒歩2分",
-                    "365日の食事提供",
+                    "全室個室。テレビ備え付け・Wi-Fi完備で、部屋の模様替えも自由",
+                    "学校キャンパスから送迎有。約50名の学生が暮らしています",
+                    "食事は、休日や長期休暇時も食事提供があります。",
+                    "食堂・洗面所・洗濯スペース・風呂・休憩室もあります。",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2">
                       <span
@@ -402,49 +433,33 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── 近年のあゆみ ─────────────────────────── */}
+      {/* ── 学校沿革 ─────────────────────────────── */}
       <section className="bg-cream py-16 md:py-24">
         <div className="mx-auto max-w-5xl px-4 md:px-6">
           <SectionTitle
             eyebrow="HISTORY"
-            title="近年のあゆみ"
-            lead="メディア掲載や合格実績、施設の拡充など、近年のトピックスを振り返ります。"
+            title="学校沿革"
+            lead="東関東馬事専門学院の歴史を振り返ります。"
           />
 
           <div className="relative mx-auto max-w-3xl">
             <RevealGroup className="border-l-2 border-tan/60 pl-8 md:pl-12">
               {HISTORY.map((entry) => (
-                <RevealItem key={entry.year} className="relative pb-12 last:pb-0">
+                <RevealItem key={entry.date} className="relative pb-12 last:pb-0">
                   <span
                     aria-hidden
                     className="absolute -left-[41px] top-1.5 size-4 rounded-full border-4 border-cream bg-accent md:-left-[57px]"
                   />
-                  <p className="flex items-baseline gap-3">
-                    <span className="font-display text-3xl font-semibold tracking-wider text-primary">
-                      {entry.year}
-                    </span>
-                    <span className="text-xs text-ink/50">{entry.label}</span>
+                  <p className="font-mincho text-lg font-semibold tracking-wide text-primary md:text-xl">
+                    {entry.date}
                   </p>
-                  <ul className="mt-3 space-y-2">
-                    {entry.items.map((item) => (
-                      <li
-                        key={item}
-                        className="text-sm leading-loose text-ink/75 md:text-[15px]"
-                      >
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+                  <p className="mt-3 text-sm leading-loose text-ink/75 md:text-[15px]">
+                    {entry.body}
+                  </p>
                 </RevealItem>
               ))}
             </RevealGroup>
           </div>
-
-          <Reveal delay={0.2}>
-            <p className="mt-10 text-center text-xs text-ink/50">
-              ※公式サイトのニュース・記事掲載情報をもとに構成しています。
-            </p>
-          </Reveal>
         </div>
       </section>
 

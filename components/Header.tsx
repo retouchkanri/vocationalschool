@@ -70,7 +70,7 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`group relative whitespace-nowrap px-2 py-1.5 font-mincho text-[11px] font-bold tracking-wide transition-colors xl:px-2.5 xl:py-2 xl:text-[13px] ${
+                  className={`group relative whitespace-nowrap px-2 py-1.5 font-display text-[11px] font-bold tracking-wide transition-colors xl:px-2.5 xl:py-2 xl:text-[13px] ${
                     scrolled
                       ? active
                         ? "text-primary"

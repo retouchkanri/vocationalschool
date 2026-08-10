@@ -8,9 +8,26 @@ import AnimatedCounter from "@/components/AnimatedCounter";
 import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "授業内容・カリキュラム",
+  title: "高校卒業後馬の世界へ／未経験から安心の馬の学校",
   description:
-    "未経験を前提に、厩務・騎乗・馬の管理を実習中心で段階的に学ぶ2年間のカリキュラム。担当馬制度、最大6ヶ所の現場インターン研修、JRA厩務員筆記試験対策まで、東関東馬事専門学院の授業内容をご紹介します。",
+    "馬の仕事を目指すためには、千葉県にあるウマの学校　東関東馬事専門学院がおススメです。卒業生の評判も高く、充実したカリキュラムが準備されています。馬の世界を目指すなら東関東馬事高等学院（株式会社馬事学院）",
+  keywords: [
+    "バジガク",
+    "馬",
+    "教育",
+    "評判",
+    "口コミ",
+    "Retouch",
+    "リタッチ",
+    "引退馬",
+    "JRA",
+    "競馬会",
+    "社台",
+    "比較",
+    "相談",
+    "募集要項",
+    "学費",
+  ],
 };
 
 /** 授業内容カード（/images/theme/img_curriculum_img_002_1..6.jpg） */

@@ -21,7 +21,7 @@ export default function MobileFooterBar() {
         <span className="text-base leading-none" aria-hidden>
           ☎
         </span>
-        <span className="font-mincho text-[10px] font-semibold tracking-wide">
+        <span className="font-display text-[10px] font-semibold tracking-wide">
           電話相談
         </span>
       </a>
@@ -32,7 +32,7 @@ export default function MobileFooterBar() {
         <span className="text-base leading-none" aria-hidden>
           ✎
         </span>
-        <span className="font-mincho text-[10px] font-semibold tracking-wide">
+        <span className="font-display text-[10px] font-semibold tracking-wide">
           資料請求
         </span>
       </Link>
@@ -43,7 +43,7 @@ export default function MobileFooterBar() {
         <span className="text-base leading-none" aria-hidden>
           ★
         </span>
-        <span className="font-mincho text-[10px] font-semibold tracking-wide">
+        <span className="font-display text-[10px] font-semibold tracking-wide">
           学校見学
         </span>
       </Link>

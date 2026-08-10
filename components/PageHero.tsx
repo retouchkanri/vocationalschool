@@ -44,7 +44,7 @@ export default function PageHero({
           <p className="font-display text-sm font-semibold tracking-[0.4em] text-tan">
             {eyebrow}
           </p>
-          <h1 className="mt-3 font-mincho text-3xl font-bold leading-snug tracking-[0.06em] text-white md:text-5xl">
+          <h1 className="mt-3 font-mincho text-3xl font-black leading-snug tracking-[0.06em] text-white md:text-5xl">
             {title}
           </h1>
           {lead && (

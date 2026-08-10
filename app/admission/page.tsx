@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import { Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
@@ -9,16 +10,32 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
 import { SCHOOL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "募集要項",
+  title: { absolute: "馬の学校　学費・募集要項・独自ローン／東関東馬事専門学院" },
   description:
-    "東関東馬事専門学院 令和9年4月生の募集要項。出願期間・選考日程、入学までの流れ、2年間の学費、授業費30%納付免除・報酬型インターン・分割払いなどの学費サポート制度をご案内します。",
+    "学費,分割,教育ローン,馬,学校のご相談は、東関東馬事専門学院へ。未経験から初心者から目指せるJRA厩務員なら。徹底した受験指導で一人ひとりの生徒をサポート。乗馬クラブや観光牧場、地方競馬の厩務員への就職を目指せる。馬の学校 比較検証「学費」募集要項等",
+  keywords: [
+    "バジガク",
+    "馬",
+    "教育",
+    "評判",
+    "口コミ",
+    "Retouch",
+    "リタッチ",
+    "引退馬",
+    "JRA",
+    "競馬会",
+    "社台",
+    "比較",
+    "相談",
+    "募集要項",
+    "学費",
+  ],
 };
 
-const EVENT_DATES = [
-  { date: "5/31", day: "日" },
-  { date: "6/6", day: "土" },
-  { date: "6/28", day: "日" },
-  { date: "7/11", day: "土" },
+const OPEN_CAMPUS_DATES = [
+  { date: "8/23", day: "日", closed: true },
+  { date: "9/19", day: "土", closed: false },
+  { date: "10/12", day: "祝・月", closed: false },
 ];
 
 const REQUIREMENTS = [
@@ -67,7 +84,7 @@ const FLOW_STEPS = [
   {
     num: "06",
     title: "入学",
-    text: "令和9年4月、いよいよ馬とともに歩む2年間がスタートします。",
+    text: "いよいよ馬とともに歩む2年間がスタートします。",
   },
 ];
 
@@ -76,6 +93,8 @@ type FeeRow = {
   amount: string;
   note: string;
   highlight?: boolean;
+  /** 直前の行からの減額を示す矢印注記（表内に挿入） */
+  arrowNote?: string;
 };
 
 const FEE_ROWS: FeeRow[] = [
@@ -88,6 +107,7 @@ const FEE_ROWS: FeeRow[] = [
     item: "通常授業費（2年間）",
     amount: "3,300,000円",
     note: "",
+    arrowNote: "30%免除 −990,000円",
   },
   {
     item: "納付授業費",
@@ -147,8 +167,8 @@ export default function AdmissionPage() {
         <div className="mx-auto max-w-5xl px-4 md:px-6">
           <SectionTitle
             eyebrow="OVERVIEW"
-            title="令和9年4月生 募集概要"
-            lead="JRA厩務員や牧場・乗馬クラブなど、馬の仕事を本気で目指す方を対象とした募集です。随時選考のため、お早めの出願をおすすめします。"
+            title="新規生徒募集案内"
+            lead="令和9年4月生・令和10年4月生。未経験からのJRA厩務員、牧場就職、乗馬クラブ、観光牧場等の馬の仕事を最短で目指せる馬の専門学校です。"
           />
 
           {/* 出願期間の重要告知 */}
@@ -163,38 +183,70 @@ export default function AdmissionPage() {
                 <p className="font-display text-[13px] font-semibold tracking-[0.35em] text-primary">
                   APPLICATION PERIOD
                 </p>
-                <p className="mt-4 font-mincho text-2xl leading-snug text-alert md:text-4xl">
-                  令和8年5月1日（金）〜 10月28日（水）
-                </p>
-                <p className="mt-5 text-sm font-bold leading-relaxed text-alert md:text-base">
-                  随時選考のため、定員になり次第、募集を終了します。
-                </p>
-                <p className="mt-2 text-xs leading-relaxed text-ink/60 md:text-sm">
-                  出願は先着順に選考します。ご検討中の方はお早めにご準備ください。
+                <div className="mt-6 space-y-6">
+                  <div>
+                    <p className="text-sm font-bold text-ink/70 md:text-base">
+                      令和9年4月生
+                    </p>
+                    <p className="mt-2 font-mincho text-xl leading-snug text-alert md:text-3xl">
+                      令和8年10月28日（水）
+                    </p>
+                  </div>
+                  <div className="mx-auto h-px w-16 bg-tan/50" />
+                  <div>
+                    <p className="text-sm font-bold text-ink/70 md:text-base">
+                      令和10年4月生
+                    </p>
+                    <p className="mt-2 font-mincho text-xl leading-snug text-alert md:text-3xl">
+                      令和9年4月1日〜令和9年7月14日（水）
+                    </p>
+                  </div>
+                </div>
+                <p className="mt-6 text-sm font-bold leading-relaxed text-alert md:text-base">
+                  ※本校では、随時選考方式のため定員を満たした時点で募集を終了と致しますので、お早めに出願手続きをお願いいたします。
                 </p>
               </div>
             </div>
           </Reveal>
 
-          {/* 選考・イベント日程 */}
+          {/* 学校見学・オープンキャンパス */}
           <Reveal delay={0.1}>
             <div className="mt-8 rounded-2xl bg-white p-6 shadow-card md:p-8">
               <h3 className="text-center font-mincho text-xl text-ink md:text-2xl">
-                選考・イベント日程
+                学校見学・オープンキャンパス
               </h3>
               <p className="mt-2 text-center text-sm leading-relaxed text-ink/60">
-                令和9年4月生を対象としたオープンキャンパス＆説明会の開催日です。ご都合のよい日をお選びください。
+                ※現在、下記日程で学校見学オープンキャンパスを受付中です
               </p>
-              <ul className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
-                {EVENT_DATES.map((d) => (
+              <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
+                {OPEN_CAMPUS_DATES.map((d) => (
                   <li
                     key={d.date}
-                    className="rounded-xl border border-tan/40 bg-cream px-3 py-4 text-center transition-transform duration-300 hover:-translate-y-1"
+                    className={`rounded-xl border px-3 py-4 text-center transition-transform duration-300 ${
+                      d.closed
+                        ? "border-ink/15 bg-cream/80"
+                        : "border-tan/40 bg-cream hover:-translate-y-1"
+                    }`}
                   >
-                    <span className="font-display text-2xl font-semibold tracking-wider text-primary md:text-3xl">
-                      {d.date}
-                    </span>
-                    <span className="ml-1 text-sm text-ink/60">（{d.day}）</span>
+                    {d.closed ? (
+                      <p className="text-xs font-bold tracking-wider text-ink/50">
+                        受付終了
+                      </p>
+                    ) : null}
+                    <p className={d.closed ? "mt-1" : ""}>
+                      <span
+                        className={`font-display text-2xl font-semibold tracking-wider md:text-3xl ${
+                          d.closed ? "text-ink/40" : "text-primary"
+                        }`}
+                      >
+                        {d.date}
+                      </span>
+                      <span
+                        className={`ml-1 text-sm ${d.closed ? "text-ink/40" : "text-ink/60"}`}
+                      >
+                        （{d.day}）
+                      </span>
+                    </p>
                   </li>
                 ))}
               </ul>
@@ -320,31 +372,49 @@ export default function AdmissionPage() {
                   </thead>
                   <tbody>
                     {FEE_ROWS.map((row) => (
-                      <tr
-                        key={row.item}
-                        className={`border-t border-tan/30 ${
-                          row.highlight ? "bg-meadow/70" : "odd:bg-cream/60"
-                        }`}
-                      >
-                        <th
-                          scope="row"
-                          className={`px-6 py-4 text-sm font-bold md:text-[15px] ${
-                            row.highlight ? "text-primary" : "text-ink"
+                      <Fragment key={row.item}>
+                        <tr
+                          className={`border-t border-tan/30 ${
+                            row.highlight ? "bg-meadow/70" : "odd:bg-cream/60"
                           }`}
                         >
-                          {row.item}
-                        </th>
-                        <td
-                          className={`px-6 py-4 text-right font-display text-base font-semibold tracking-wider md:text-lg ${
-                            row.highlight ? "text-accent" : "text-ink"
-                          }`}
-                        >
-                          {row.amount}
-                        </td>
-                        <td className="px-6 py-4 text-xs leading-relaxed text-ink/60 md:text-sm">
-                          {row.note}
-                        </td>
-                      </tr>
+                          <th
+                            scope="row"
+                            className={`px-6 py-4 text-sm font-bold md:text-[15px] ${
+                              row.highlight ? "text-primary" : "text-ink"
+                            }`}
+                          >
+                            {row.item}
+                          </th>
+                          <td
+                            className={`px-6 py-4 text-right font-display text-base font-semibold tracking-wider md:text-lg ${
+                              row.highlight ? "text-accent" : "text-ink"
+                            }`}
+                          >
+                            {row.amount}
+                          </td>
+                          <td className="px-6 py-4 text-xs leading-relaxed text-ink/60 md:text-sm">
+                            {row.note}
+                          </td>
+                        </tr>
+                        {row.arrowNote ? (
+                          <tr className="border-t border-tan/30 bg-accent/5">
+                            <td colSpan={3} className="px-6 py-2">
+                              <div className="flex items-center justify-end gap-2 text-right">
+                                <span
+                                  aria-hidden
+                                  className="font-display text-lg leading-none text-accent"
+                                >
+                                  ↓
+                                </span>
+                                <span className="font-display text-sm font-bold tracking-wide text-accent md:text-base">
+                                  {row.arrowNote}
+                                </span>
+                              </div>
+                            </td>
+                          </tr>
+                        ) : null}
+                      </Fragment>
                     ))}
                   </tbody>
                 </table>
@@ -355,19 +425,19 @@ export default function AdmissionPage() {
           <Reveal delay={0.15}>
             <ul className="mt-8 space-y-3 rounded-2xl border border-tan/40 bg-cream p-6 text-xs leading-relaxed text-ink/70 md:p-8 md:text-sm">
               <li>
-                ※在学中にJRA競馬学校厩務員課程の受験に合格した場合は、合格奨励金100,000円を諸経費の還付として支給します。
+                ※在学中にJRA競馬学校厩務員課程の受験に合格した場合は、合格奨励金100,000円を本校より諸経費の還付として支給します。
               </li>
               <li>
-                ※授業費の免除は、競走馬の育成、引退競走馬の乗用馬転用、馬術競技の運営サポート、馬のテレビ撮影・メディア制作等の授業による外部収益を原資としています。
+                ※入学対象者の授業費30％免除については、競走馬の育成、引退競走馬の乗用馬転用、馬術競技の運営サポート、馬のテレビ撮影・メディア制作等の授業による外部収益を原資としています。
               </li>
               <li>
-                ※還付は、提携牧場・乗馬クラブでの研修による「学校運営協力金」を、研修回数等に応じて学生に還付する仕組みです。
+                ※還付制度については、提携牧場・乗馬クラブでの研修等により本校が受け取る「学校運営協力金」を原資とし、各生徒の研修回数等に応じて学生に還付する仕組みを取り入れています
               </li>
               <li>
-                ※JRA競馬学校厩務員課程の在学中受験は、技術レベル・経験により本校が認めた場合に限り可能です。
+                ※本校在学中のJRA競馬学校厩務員課程の在学中受験については、技術レベル・経験により本校が認めた場合に限り可能としています。
               </li>
               <li className="font-bold text-alert">
-                ※本学費案内は令和9年4月生を対象としたものです。それ以降の年度については、各年度の募集要項を必ずご確認ください。
+                ※本学費案内は令和9年4月生・令和10年4月生を対象としたものです。それ以降の年度については、各年度の募集要項を必ずご確認ください。（変更になる場合があります）
               </li>
             </ul>
           </Reveal>

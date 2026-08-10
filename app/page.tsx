@@ -22,11 +22,26 @@ import { NEWS } from "@/lib/news";
 import { SCHOOL, STATS } from "@/lib/site";
 
 export const metadata: Metadata = {
+  title: { absolute: "未経験からJRA厩務員／東関東馬事専門学院（千葉県）" },
   description:
-    "馬の学校・東関東馬事専門学院（バジガク）公式サイト。千葉・大阪の8施設、約118頭の馬とともに学び、未経験からJRA厩務員・牧場就職を目指せる馬の専門学校です。",
+    "JRA厩務員を目指せる馬の専門学校。東関東馬事専門学院が人気の馬の学校。JRA競馬学校の厩務員課程受験合格者多数｜関西・関東で人気のJRA厩務員を目指せる学校",
+  keywords: [
+    "バジガク",
+    "馬",
+    "厩務員になるには",
+    "合格者",
+    "馬の仕事",
+    "厩務員学校",
+    "学費",
+    "比較",
+  ],
 };
 
-const OPENCAMPUS_DATES = ["5/31（日）", "6/6（土）", "6/28（日）", "7/11（土）"];
+const OPENCAMPUS_DATES = [
+  { date: "8/23（日）", closed: true },
+  { date: "9/19（土）", closed: false },
+  { date: "10/12（祝・月）", closed: false },
+];
 
 type FeatureCard = {
   no: string;
@@ -304,15 +319,24 @@ export default function Home() {
               <Reveal delay={0.15}>
                 <div className="mt-7">
                   <p className="text-xs font-bold tracking-wider text-primary">
-                    開催日程（令和9年4月生対象）
+                    現在、受け中の学校見学、オープンキャンパスは、以下の日程となります。
                   </p>
                   <ul className="mt-3 flex flex-wrap gap-2.5">
-                    {OPENCAMPUS_DATES.map((date) => (
+                    {OPENCAMPUS_DATES.map((d) => (
                       <li
-                        key={date}
-                        className="rounded-full border border-tan/70 bg-white px-4 py-1.5 font-display text-sm font-semibold tracking-wider text-primary"
+                        key={d.date}
+                        className={`rounded-full border px-4 py-1.5 font-display text-sm font-semibold tracking-wider ${
+                          d.closed
+                            ? "border-ink/20 bg-cream text-ink/40"
+                            : "border-tan/70 bg-white text-primary"
+                        }`}
                       >
-                        {date}
+                        {d.closed && (
+                          <span className="mr-1.5 text-[10px] font-bold tracking-wide">
+                            受付終了
+                          </span>
+                        )}
+                        {d.date}
                       </li>
                     ))}
                   </ul>

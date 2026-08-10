@@ -178,7 +178,7 @@ export default function TrainingCardDeck({ photos }: TrainingCardDeckProps) {
                 type="button"
                 aria-label="閉じる"
                 onClick={close}
-                className="absolute -top-12 right-0 z-20 inline-flex h-11 items-center rounded-full bg-white px-5 font-mincho text-sm font-semibold text-ink shadow-lg transition-colors hover:bg-accent md:-right-2 md:-top-2 md:h-12"
+                className="absolute -top-12 right-0 z-20 inline-flex h-11 items-center rounded-full bg-white px-5 font-display text-sm font-semibold text-ink shadow-lg transition-colors hover:bg-accent md:-right-2 md:-top-2 md:h-12"
               >
                 閉じる
               </button>

@@ -9,9 +9,26 @@ import FaqAccordion, { type FaqItem } from "@/components/FaqAccordion";
 import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "JRA競馬学校 厩務員受験を目指す方へ",
+  title: "JRA厩務員になるには？／未経験からのJRA受験へ",
   description:
-    "在学中に最大2回のJRA競馬学校「厩務員課程」受験が可能。72名の合格実績、未経験から最短1年6ヶ月での合格実績を持つ東関東馬事専門学院が、JRA厩務員への挑戦を個別受験対策と約118頭の実践環境で支えます。",
+    "未経験からのJRA競馬学校の厩務員受験。過去多数の合格者輩出のバジガク。未経験からのJRA競馬学校の厩務員課程受験合格。本気で厩務員受験を目指すなら千葉県にある東関東馬事専門学院へ",
+  keywords: [
+    "バジガク",
+    "馬",
+    "教育",
+    "評判",
+    "口コミ",
+    "Retouch",
+    "リタッチ",
+    "引退馬",
+    "JRA",
+    "競馬会",
+    "社台",
+    "比較",
+    "相談",
+    "募集要項",
+    "学費",
+  ],
 };
 
 /** JRA厩務員の主な仕事（旧サイト 6-006 より）。 */
@@ -26,6 +43,36 @@ const DUTIES = [
   "パドックでの引き馬",
   "優勝時の表彰式",
 ];
+
+/** 合格を目指す学生たちの日常（夢に向かって） */
+const STUDENT_PHOTOS = [
+  "/images/student/student-01.jpg",
+  "/images/student/student-02.jpg",
+  "/images/student/student-03.jpg",
+  "/images/student/student-04.jpg",
+  "/images/student/student-05.jpg",
+  "/images/student/student-06.jpg",
+  "/images/student/student-07.jpg",
+  "/images/student/student-08.jpg",
+  "/images/student/student-09.jpg",
+  "/images/student/student-10.jpg",
+  "/images/student/student-11.jpg",
+] as const;
+
+/** 年度別 JRA競馬学校「厩務員課程」合格実績 */
+const YEARLY_RESULTS = [
+  { year: "令和8年度", examinees: 5, passed: 2, allPassed: false, afterGraduation: 2 },
+  { year: "令和7年度", examinees: 7, passed: 5, allPassed: false, afterGraduation: 3 },
+  { year: "令和6年度", examinees: 4, passed: 2, allPassed: false, afterGraduation: 1 },
+  { year: "令和5年度", examinees: 5, passed: 5, allPassed: true, afterGraduation: 3 },
+  { year: "令和4年度", examinees: 6, passed: 6, allPassed: true, afterGraduation: 3 },
+  { year: "令和3年度", examinees: 5, passed: 2, allPassed: false, afterGraduation: 3 },
+  { year: "令和2年度", examinees: 8, passed: 6, allPassed: false, afterGraduation: 2 },
+  { year: "平成31年度", examinees: 6, passed: 5, allPassed: false, afterGraduation: 4 },
+  { year: "平成30年度", examinees: 6, passed: 3, allPassed: false, afterGraduation: 4 },
+  { year: "平成29年度", examinees: 3, passed: 3, allPassed: true, afterGraduation: 3 },
+  { year: "平成28年度", examinees: 1, passed: 1, allPassed: true, afterGraduation: 4 },
+] as const;
 
 type Feature = {
   no: string;
@@ -165,8 +212,8 @@ export default function JraPage() {
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <SectionTitle
             eyebrow="THE CHALLENGE"
-            title="JRA厩務員という仕事と、その狭き門"
-            lead="JRA厩務員は、数千万円にもなるサラブレッドをいちばん近くで支えるプロフェッショナル。その入口となるのが、JRA競馬学校「厩務員課程」の受験です。"
+            title="目指せる！JRA厩務員という仕事へ"
+            lead="JRA厩務員を目指すには、JRA競馬学校の厩務員課程受験合格が必須です。本校では、未経験から最短1年6ヶ月でJRA厩務員課程を受験し合格者を送り出しています。"
           />
 
           <div className="grid items-center gap-10 md:grid-cols-2 md:gap-14">
@@ -390,6 +437,32 @@ export default function JraPage() {
         </div>
       </section>
 
+      {/* 3.5. 夢に向かって（学生たちの日常） */}
+      <section className="bg-cream py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
+          <SectionTitle
+            eyebrow="DAILY LIFE"
+            title="夢に向かって"
+            lead="合格を目指し、日々馬と向き合う学生たちの様子です。基礎課程からインターン研修、実践騎乗訓練まで、その一枚一枚に努力の積み重ねが刻まれています。"
+          />
+          <RevealGroup className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
+            {STUDENT_PHOTOS.map((src) => (
+              <RevealItem key={src}>
+                <figure className="img-zoom relative aspect-[4/3] overflow-hidden rounded-xl shadow-card">
+                  <Image
+                    src={src}
+                    alt="夢に向かって馬と向き合う学生の様子"
+                    fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
+                    className="object-cover"
+                  />
+                </figure>
+              </RevealItem>
+            ))}
+          </RevealGroup>
+        </div>
+      </section>
+
       {/* 4. 実績バンド（ダーク） */}
       <section className="relative overflow-hidden bg-primary-deep py-16 md:py-24">
         <div className="absolute inset-0 opacity-15">
@@ -465,6 +538,72 @@ export default function JraPage() {
           <Reveal delay={0.2}>
             <p className="mx-auto mt-12 max-w-3xl text-center text-sm leading-loose text-white/70">
               系列校の東関東馬事高等学院では、高校3年次に2回のJRA競馬学校受験に挑み、高校生のうちに現役で厩務員課程へ合格した実績もあります。中学卒業から専門課程まで、一貫してJRA厩務員への道を描けるのはバジガクグループだけの強みです。
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* 4.5. 年度別 JRA厩務員課程 合格実績 */}
+      <section className="bg-paper py-16 md:py-24">
+        <div className="mx-auto max-w-5xl px-4 md:px-6">
+          <SectionTitle
+            eyebrow="RECORDS"
+            title="年度別 JRA厩務員課程 合格実績"
+            lead="平成28年度以降、在学中の受験・合格実績を年度別にご紹介します。※は本校を卒業後、牧場等に就職してから受験・合格した人数です。"
+          />
+          <Reveal>
+            <div className="overflow-hidden rounded-2xl bg-white shadow-card">
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[560px] text-left">
+                  <thead>
+                    <tr className="bg-primary text-white">
+                      <th scope="col" className="px-6 py-4 text-sm font-bold tracking-wider md:text-base">
+                        年度
+                      </th>
+                      <th scope="col" className="px-6 py-4 text-center text-sm font-bold tracking-wider md:text-base">
+                        受験者数
+                      </th>
+                      <th scope="col" className="px-6 py-4 text-center text-sm font-bold tracking-wider md:text-base">
+                        合格者数（在学中）
+                      </th>
+                      <th scope="col" className="px-6 py-4 text-center text-sm font-bold tracking-wider md:text-base">
+                        ※卒業後の合格者数
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {YEARLY_RESULTS.map((row) => (
+                      <tr key={row.year} className="border-t border-tan/30 odd:bg-cream/60">
+                        <th
+                          scope="row"
+                          className="px-6 py-4 text-sm font-bold text-ink md:text-[15px]"
+                        >
+                          {row.year}
+                        </th>
+                        <td className="px-6 py-4 text-center font-display text-base font-semibold tracking-wider text-ink md:text-lg">
+                          {row.examinees}名
+                        </td>
+                        <td className="px-6 py-4 text-center font-display text-base font-semibold tracking-wider text-accent md:text-lg">
+                          {row.passed}名
+                          {row.allPassed ? (
+                            <span className="ml-1 text-xs font-bold text-primary md:text-sm">
+                              （全員合格）
+                            </span>
+                          ) : null}
+                        </td>
+                        <td className="px-6 py-4 text-center font-display text-base font-semibold tracking-wider text-ink/70 md:text-lg">
+                          {row.afterGraduation}名
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="mt-6 text-center text-xs leading-relaxed text-ink/60 md:text-sm">
+              ※記載の卒業後の合格者数は、本校を卒業後、牧場等に就職してから受験・合格した人数です。現役合格と卒業後の合格を合わせて、把握している合格者は72名（令和8年8月現在）となります。
             </p>
           </Reveal>
         </div>

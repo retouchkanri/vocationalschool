@@ -26,7 +26,7 @@ export default function CtaSection() {
           <p className="font-display text-sm font-semibold tracking-[0.35em] text-accent drop-shadow">
             NEXT STEP
           </p>
-          <h2 className="mt-4 font-mincho text-3xl font-semibold leading-snug tracking-[0.04em] text-white drop-shadow-md md:text-4xl">
+          <h2 className="mt-4 font-mincho text-3xl font-bold leading-snug tracking-[0.04em] text-white drop-shadow-md md:text-4xl">
             馬と生きる未来へ、
             <br className="md:hidden" />
             一歩踏み出そう。
@@ -41,7 +41,7 @@ export default function CtaSection() {
           <RevealItem>
             <Link
               href="/opencampus"
-              className="inline-flex h-14 min-w-64 items-center justify-center bg-primary px-8 font-mincho text-base font-semibold text-white transition-colors duration-300 hover:bg-accent hover:text-ink"
+              className="inline-flex h-14 min-w-64 items-center justify-center bg-primary px-8 font-display text-base font-semibold text-white transition-colors duration-300 hover:bg-accent hover:text-ink"
             >
               見学・体験
             </Link>
@@ -49,7 +49,7 @@ export default function CtaSection() {
           <RevealItem>
             <Link
               href="/admission"
-              className="inline-flex h-14 min-w-64 items-center justify-center border border-white px-8 font-mincho text-base font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-ink"
+              className="inline-flex h-14 min-w-64 items-center justify-center border border-white px-8 font-display text-base font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-ink"
             >
               募集要項
             </Link>

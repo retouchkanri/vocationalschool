@@ -10,9 +10,26 @@ import FaqExplorer from "@/components/pages/FaqExplorer";
 import { SCHOOL, STATS } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "よくある質問",
+  title: "馬の学校　よくある質問｜厩務員になるには？",
   description:
-    "東関東馬事専門学院（バジガク）へのよくある質問Q&A。未経験からの入学、学費・分割払い、寮生活、JRA厩務員受験、学校見学など、気になることをキーワードやカテゴリですぐに検索できます。",
+    "乗馬未経験者の厩務員を目指すための質問コーナーです。東関東馬事専門学院の評判。合格者輩出。JRA厩務員・牧場就職・乗馬クラブへの就職サポート。馬の専門学校なら東関東馬事専門学院が評判です",
+  keywords: [
+    "バジガク",
+    "馬",
+    "教育",
+    "評判",
+    "口コミ",
+    "Retouch",
+    "リタッチ",
+    "引退馬",
+    "JRA",
+    "競馬会",
+    "社台",
+    "比較",
+    "相談",
+    "募集要項",
+    "学費",
+  ],
 };
 
 const CONTACT_CHANNELS = [

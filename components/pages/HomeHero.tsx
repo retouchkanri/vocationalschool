@@ -87,7 +87,7 @@ export default function HomeHero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-              className="font-mincho text-[clamp(0.95rem,3.8vw,2.15rem)] font-semibold leading-[1.5] tracking-[0.04em] drop-shadow"
+              className="font-mincho text-[clamp(0.95rem,3.8vw,2.15rem)] font-black leading-[1.5] tracking-[0.04em] drop-shadow"
             >
               <span className="inline-block whitespace-nowrap">
                 いつか一緒に　いつも一緒に
@@ -108,19 +108,19 @@ export default function HomeHero() {
             >
               <a
                 href={`tel:${SCHOOL.tel}`}
-                className="inline-flex h-11 min-w-[200px] items-center justify-center bg-primary px-6 font-mincho text-sm font-semibold tracking-wide text-white transition-colors duration-300 hover:bg-accent hover:text-ink md:h-14 md:min-w-[240px] md:text-base"
+                className="inline-flex h-11 min-w-[200px] items-center justify-center bg-primary px-6 font-display text-sm font-semibold tracking-wide text-white transition-colors duration-300 hover:bg-accent hover:text-ink md:h-14 md:min-w-[240px] md:text-base"
               >
                 資料請求・相談
               </a>
               <Link
                 href="/opencampus"
-                className="inline-flex h-11 min-w-[200px] items-center justify-center border border-white bg-transparent px-6 font-mincho text-sm font-semibold tracking-wide text-white transition-colors duration-300 hover:bg-white hover:text-ink md:h-14 md:min-w-[240px] md:text-base"
+                className="inline-flex h-11 min-w-[200px] items-center justify-center border border-white bg-transparent px-6 font-display text-sm font-semibold tracking-wide text-white transition-colors duration-300 hover:bg-white hover:text-ink md:h-14 md:min-w-[240px] md:text-base"
               >
                 見学申込
               </Link>
             </motion.div>
 
-            <p className="mt-3 font-mincho text-[11px] tracking-wide text-white/90 md:text-sm">
+            <p className="mt-3 font-display text-[11px] tracking-wide text-white/90 md:text-sm">
               お電話でのお問い合わせ：
               <span className="ml-1 font-semibold tracking-wider">
                 {SCHOOL.tel}

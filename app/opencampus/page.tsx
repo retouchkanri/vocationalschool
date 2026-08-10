@@ -8,9 +8,26 @@ import CtaSection from "@/components/CtaSection";
 import { SCHOOL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "学校見学・オープンキャンパス",
+  title: "JR東京駅お迎え／馬の学校 オープンキャンパス",
   description:
-    "東関東馬事専門学院の学校見学・オープンキャンパスのご案内。乗馬体験や馬とのふれあい、在校生との交流、個別相談ができます。JR東京駅までの無料送迎あり。開催日程・当日の流れ・お申込み方法をご紹介します。",
+    "関東エリアはもちろん、関西エリアから西日本エリアからの入学者も多数。JR東京駅までお迎えにあがります。馬の専門学校　東関東馬事専門学院のオープンキャンパスで乗馬体験・学校体験。募集要項、カリキュラム等はサイトをご覧ください。",
+  keywords: [
+    "バジガク",
+    "馬",
+    "教育",
+    "評判",
+    "口コミ",
+    "Retouch",
+    "リタッチ",
+    "引退馬",
+    "JRA",
+    "競馬会",
+    "社台",
+    "比較",
+    "相談",
+    "募集要項",
+    "学費",
+  ],
 };
 
 /** 見学・オープンキャンパスでできること */
@@ -47,12 +64,11 @@ const EXPERIENCES = [
   },
 ] as const;
 
-/** 開催日程（令和9年4月生対象） */
+/** 開催日程 */
 const DATES = [
-  { date: "5/31", dow: "日" },
-  { date: "6/6", dow: "土" },
-  { date: "6/28", dow: "日" },
-  { date: "7/11", dow: "土" },
+  { date: "8/23", dow: "日", closed: true },
+  { date: "9/19", dow: "土", closed: false },
+  { date: "10/12", dow: "祝・月", closed: false },
 ] as const;
 
 /** 体験入学参加者の感想（アンケートより） */
@@ -82,12 +98,12 @@ const FLOW = [
   },
 ] as const;
 
-/** 学生寮の特長（学習環境ページの事実より） */
+/** 学生寮の特長 */
 const DORM_FEATURES = [
   "全室個室。テレビ備え付け・Wi-Fi完備で、部屋の模様替えも自由",
-  "学校キャンパスから徒歩2分。約55名の学生が暮らしています",
-  "食事は土日祝日を問わず365日提供",
-  "食堂・洗面所・洗濯スペース・男子風呂・管理室（荷物受け取り可）を完備",
+  "学校キャンパスから送迎有。約50名の学生が暮らしています",
+  "食事は、休日や長期休暇時も食事提供があります。",
+  "食堂・洗面所・洗濯スペース・風呂・休憩室もあります。",
 ] as const;
 
 export default function OpenCampusPage() {
@@ -144,17 +160,34 @@ export default function OpenCampusPage() {
           <SectionTitle
             eyebrow="SCHEDULE"
             title="開催日程"
-            lead="令和9年4月生を対象としたオープンキャンパス＆説明会は、以下の日程からご都合の良い日をお選びください。"
+            lead="現在、受け中の学校見学、オープンキャンパスは、以下の日程となります。"
             light
           />
-          <RevealGroup className="mx-auto grid max-w-4xl grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
+          <RevealGroup className="mx-auto grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-3 md:gap-6">
             {DATES.map((d) => (
               <RevealItem key={d.date}>
-                <div className="group rounded-2xl border border-white/15 bg-white/5 px-4 py-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-tan/60 hover:bg-white/10">
-                  <p className="font-display text-4xl font-semibold tracking-wider text-white md:text-5xl">
+                <div
+                  className={`group rounded-2xl border px-4 py-8 text-center transition-all duration-300 ${
+                    d.closed
+                      ? "border-white/10 bg-white/[0.03]"
+                      : "border-white/15 bg-white/5 hover:-translate-y-1 hover:border-tan/60 hover:bg-white/10"
+                  }`}
+                >
+                  {d.closed ? (
+                    <p className="mb-2 text-xs font-bold tracking-wider text-white/40">
+                      受付終了
+                    </p>
+                  ) : null}
+                  <p
+                    className={`font-display text-4xl font-semibold tracking-wider md:text-5xl ${
+                      d.closed ? "text-white/40" : "text-white"
+                    }`}
+                  >
                     {d.date}
                   </p>
-                  <p className="mt-3 text-sm text-tan">{d.dow}曜日</p>
+                  <p className={`mt-3 text-sm ${d.closed ? "text-white/30" : "text-tan"}`}>
+                    {d.dow.length === 1 ? `${d.dow}曜日` : d.dow}
+                  </p>
                 </div>
               </RevealItem>
             ))}
@@ -285,10 +318,10 @@ export default function OpenCampusPage() {
                 DORMITORY
               </p>
               <h3 className="mt-3 font-mincho text-2xl leading-snug tracking-wide text-ink md:text-3xl">
-                全室個室・365日食事付きの学生寮
+                全室個室・原則、休日も食事提供あります
               </h3>
               <p className="mt-5 text-sm leading-loose text-ink/70 md:text-[15px]">
-                初めての一人暮らしでも安心して馬の学びに集中できるよう、生活面を支える学生寮を用意しています。
+                初めてのひとり暮らしも安心。馬の学びに集中できるよう、生活面も全面サポートしています。
               </p>
               <ul className="mt-6 space-y-3">
                 {DORM_FEATURES.map((f) => (

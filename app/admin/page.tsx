@@ -110,13 +110,13 @@ export default async function AdminHomePage() {
         <h2 className="font-mincho text-lg font-bold text-ink">クイックリンク</h2>
         <div className="mt-4 flex flex-wrap gap-3">
           <Link
-            href="/admin/announcements?new=1"
+            href="/admin/announcements"
             className="rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-primary-dark"
           >
             + お知らせを追加
           </Link>
           <Link
-            href="/admin/faqs?new=1"
+            href="/admin/faqs"
             className="rounded-full border border-ink/15 px-5 py-2.5 text-sm font-bold text-ink transition-colors hover:border-primary/40 hover:text-primary"
           >
             + FAQ を追加

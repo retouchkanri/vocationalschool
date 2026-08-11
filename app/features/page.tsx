@@ -6,6 +6,7 @@ import SectionTitle from "@/components/SectionTitle";
 import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
 import CtaSection from "@/components/CtaSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
+import NumbersBand from "@/components/NumbersBand";
 import HomeHero from "@/components/pages/HomeHero";
 import { STATS } from "@/lib/site";
 
@@ -264,7 +265,7 @@ export default function FeaturesPage() {
       </section>
 
       {/* 2. Stats impact band */}
-      <section className="bg-primary-deep py-16 md:py-24">
+      <NumbersBand>
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <SectionTitle
             eyebrow="BAJIGAKU IN NUMBERS"
@@ -296,14 +297,19 @@ export default function FeaturesPage() {
             ))}
           </RevealGroup>
         </div>
-      </section>
+      </NumbersBand>
 
       {/* 3. 入口 — Entry */}
       <section id="entry" className="scroll-mt-20 bg-cream py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <SectionTitle
             eyebrow="STORY 01 — ENTRY"
-            title="「入口」— 未経験から、全国から。"
+            title={
+              <>
+                <span className="font-black text-primary">「入口」</span>
+                — 未経験から、全国から。
+              </>
+            }
             lead="入学を検討される皆様へ「夢への第一歩となる4つのご提案」"
           />
           <RevealGroup className="grid gap-5 md:grid-cols-2 md:gap-7">
@@ -314,7 +320,7 @@ export default function FeaturesPage() {
                     <span className="font-display text-3xl font-semibold tracking-wider text-accent">
                       {p.no}
                     </span>
-                    <span className="font-display text-[11px] font-semibold tracking-[0.3em] text-tan">
+                    <span className="font-display text-[11px] font-semibold tracking-[0.3em] text-accent">
                       {p.tag}
                     </span>
                   </div>
@@ -348,7 +354,12 @@ export default function FeaturesPage() {
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <SectionTitle
             eyebrow="STORY 02 — LEARNING"
-            title="「中身」— 本物の環境で、本物を学ぶ。"
+            title={
+              <>
+                <span className="font-black text-primary">「中身」</span>
+                — 本物の環境で、本物を学ぶ。
+              </>
+            }
             lead="乗用馬から現役競走馬まで約118頭。生きた教材に囲まれた実践の毎日が、未経験者を2年間でプロへと育てます。"
           />
           <RevealGroup className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 md:gap-7">
@@ -380,22 +391,24 @@ export default function FeaturesPage() {
             ))}
           </RevealGroup>
 
-          <Reveal delay={0.15}>
-            <div className="mt-12 rounded-2xl border-l-4 border-accent bg-meadow/60 p-6 md:p-8">
-              <p className="font-display text-[11px] font-semibold tracking-[0.3em] text-primary">
-                PAID INTERNSHIP
-              </p>
-              <p className="mt-2 font-mincho text-lg leading-relaxed text-ink md:text-xl">
-                「働きながら学び、学びながら働ける」——
-                在学中の取り組みにより
-                <span className="mx-1 font-display text-2xl font-semibold text-accent md:text-3xl">
-                  最大70万円
-                </span>
-                が戻る報酬型インターン制度。
-              </p>
-              <p className="mt-3 text-sm leading-loose text-ink/70 md:text-[15px]">
-                提携する牧場・乗馬クラブでの研修に応じて経費が学生に還付される、本校独自の仕組みです。現場での経験がそのまま学びとなり、経済面の支えにもなります。
-              </p>
+          <Reveal delay={0.15} className="mt-14 md:mt-16">
+            <div className="paper-crumple">
+              <div className="p-8 md:p-10">
+                <p className="font-display text-[11px] font-semibold tracking-[0.3em] text-primary">
+                  PAID INTERNSHIP
+                </p>
+                <p className="mt-2 font-mincho text-lg leading-relaxed text-ink md:text-xl">
+                  「働きながら学び、学びながら働ける」——
+                  在学中の取り組みにより
+                  <span className="mx-1 font-display text-2xl font-semibold text-accent md:text-3xl">
+                    最大70万円
+                  </span>
+                  が戻る報酬型インターン制度。
+                </p>
+                <p className="mt-3 text-sm leading-loose text-ink/70 md:text-[15px]">
+                  提携する牧場・乗馬クラブでの研修に応じて経費が学生に還付される、本校独自の仕組みです。現場での経験がそのまま学びとなり、経済面の支えにもなります。
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>
@@ -406,7 +419,12 @@ export default function FeaturesPage() {
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <SectionTitle
             eyebrow="STORY 03 — CAREER"
-            title="「出口」— 安心して馬業界の第一線へ。"
+            title={
+              <>
+                <span className="font-black text-primary">「出口」</span>
+                — 安心して馬業界の第一線へ。
+              </>
+            }
             lead="本校では、設立から15年の中で築き上げた業界からの信頼と業界への実績。一人ひとりにあった進路へと導きます。"
           />
           <RevealGroup className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -440,16 +458,16 @@ export default function FeaturesPage() {
 
           {/* JRA highlight */}
           <Reveal delay={0.1}>
-            <div className="relative mt-14 overflow-hidden rounded-3xl bg-primary-deep">
+            <div className="relative mt-14 overflow-hidden rounded-3xl">
               <div className="absolute inset-0">
                 <Image
                   src="/images/theme/img_6_006_img_003_3.jpg"
                   alt=""
                   fill
                   sizes="(max-width: 768px) 100vw, 1280px"
-                  className="object-cover opacity-25"
+                  className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-deep via-primary-deep/90 to-primary-deep/60" />
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-deep/40 via-primary-deep/40 to-primary-deep/15" />
               </div>
               <div className="relative z-10 px-6 py-12 md:px-14 md:py-16">
                 <p className="font-display text-[12px] font-semibold tracking-[0.35em] text-tan">

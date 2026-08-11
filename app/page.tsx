@@ -10,6 +10,7 @@ import TrainingCardDeck from "@/components/pages/TrainingCardDeck";
 import SectionTitle from "@/components/SectionTitle";
 import CtaSection from "@/components/CtaSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
+import NumbersBand from "@/components/NumbersBand";
 import { Reveal, RevealGroup, RevealItem, RevealScale } from "@/components/Reveal";
 import {
   CAMPUS_PHOTOS,
@@ -162,7 +163,7 @@ export default function Home() {
       <NewsSection items={NEWS} blogHref={SCHOOL.sns.blog} />
 
       {/* ===== 4a. Stats band (dark) ===== */}
-      <section className="bg-primary-deep py-16 md:py-24">
+      <NumbersBand>
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <SectionTitle
             light
@@ -192,7 +193,7 @@ export default function Home() {
             ))}
           </RevealGroup>
         </div>
-      </section>
+      </NumbersBand>
 
       {/* ===== 4b. 本校の特徴 digest ===== */}
       <section className="bg-paper py-16 md:py-24">
@@ -273,8 +274,19 @@ export default function Home() {
       </section>
 
       {/* ===== Student lifestyle (1:1) ===== */}
-      <section className="bg-primary-deep py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-4 md:px-6">
+      <section className="relative overflow-hidden bg-primary-deep py-16 md:py-24">
+        <div aria-hidden className="pointer-events-none absolute inset-0">
+          <Image
+            src="/images/theme/img_kankyo_img_003_1.jpg"
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover object-[center_40%]"
+          />
+          <div className="absolute inset-0 bg-primary-deep/82" />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary-deep/45 via-transparent to-primary-deep/60" />
+        </div>
+        <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6">
           <SectionTitle
             light
             eyebrow="LIFESTYLE"
@@ -360,39 +372,53 @@ export default function Home() {
               </Reveal>
             </div>
 
-            <div>
-              <RevealScale>
-                <PhotoFrame
-                  src="/images/theme/img_taiken_img_001_1.jpg"
-                  alt="学校見学・入学説明会の様子"
-                  aspect="card"
-                  grade="cinematic"
-                  sizes="(min-width: 1024px) 50vw, 100vw"
-                  className="shadow-card"
-                />
-              </RevealScale>
-              <RevealGroup className="mt-4 grid grid-cols-2 gap-4">
-                <RevealItem>
-                  <PhotoFrame
-                    src="/images/theme/img_taiken_img_002_1.jpg"
-                    alt="オープンキャンパスでの乗馬体験"
-                    aspect="card"
-                    grade="documentary"
-                    sizes="(min-width: 1024px) 25vw, 50vw"
-                    className="shadow-card"
-                  />
-                </RevealItem>
-                <RevealItem>
-                  <PhotoFrame
-                    src="/images/theme/img_taiken_img_002_2.jpg"
-                    alt="馬のお手入れ体験・ふれあい"
-                    aspect="card"
-                    grade="documentary"
-                    sizes="(min-width: 1024px) 25vw, 50vw"
-                    className="shadow-card"
-                  />
-                </RevealItem>
-              </RevealGroup>
+            <div className="relative mx-auto w-full max-w-[28rem] pb-8 pt-2 lg:max-w-none">
+              <div className="relative min-h-[28rem] sm:min-h-[32rem] lg:min-h-[36rem]">
+                {/* Large hero print — back of the stack */}
+                <RevealScale className="absolute left-[6%] top-0 z-10 w-[86%] origin-center rotate-[5deg]">
+                  <div className="bg-white p-2.5 pb-4 shadow-[0_12px_28px_rgba(17,17,17,0.22)] ring-1 ring-ink/8 transition-transform duration-500 hover:rotate-[3deg] md:p-3 md:pb-5">
+                    <PhotoFrame
+                      src="/images/theme/001/train-05.jpg"
+                      alt="オープンキャンパスで乗馬を体験する学生"
+                      aspect="card"
+                      grade="cinematic"
+                      sizes="(min-width: 1024px) 40vw, 90vw"
+                    />
+                  </div>
+                </RevealScale>
+
+                {/* Smaller print — overlaps bottom-left of large */}
+                <Reveal
+                  delay={0.12}
+                  className="absolute left-0 top-[48%] z-20 w-[48%] origin-center rotate-[7deg] sm:top-[52%]"
+                >
+                  <div className="bg-white p-2 pb-3.5 shadow-[0_10px_24px_rgba(17,17,17,0.2)] ring-1 ring-ink/8 transition-transform duration-500 hover:rotate-[5deg] md:p-2.5 md:pb-4">
+                    <PhotoFrame
+                      src="/images/theme/001/train-02.jpg"
+                      alt="オープンキャンパスでの騎乗トレーニング"
+                      aspect="card"
+                      grade="documentary"
+                      sizes="(min-width: 1024px) 20vw, 45vw"
+                    />
+                  </div>
+                </Reveal>
+
+                {/* Smaller print — overlaps bottom-right of middle */}
+                <Reveal
+                  delay={0.22}
+                  className="absolute bottom-0 right-0 z-30 w-[48%] origin-center rotate-[6deg] sm:bottom-2"
+                >
+                  <div className="bg-white p-2 pb-3.5 shadow-[0_10px_24px_rgba(17,17,17,0.2)] ring-1 ring-ink/8 transition-transform duration-500 hover:rotate-[4deg] md:p-2.5 md:pb-4">
+                    <PhotoFrame
+                      src="/images/theme/img_taiken_img_002_3.jpg"
+                      alt="馬のお手入れ体験・ふれあい"
+                      aspect="card"
+                      grade="documentary"
+                      sizes="(min-width: 1024px) 20vw, 45vw"
+                    />
+                  </div>
+                </Reveal>
+              </div>
             </div>
           </div>
         </div>

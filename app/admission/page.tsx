@@ -159,7 +159,7 @@ export default function AdmissionPage() {
         eyebrow="ADMISSION"
         title="募集要項"
         lead="令和9年4月生の募集案内です。出願期間や選考日程、入学までの流れ、2年間の学費と学費サポート制度についてご案内します。"
-        image="/images/theme/img_cmn_img_group_a2.jpg"
+        image="/images/theme/img_cmn_img_group_b3.jpg"
         breadcrumb="募集要項"
       />
 
@@ -522,19 +522,29 @@ export default function AdmissionPage() {
             ))}
           </RevealGroup>
 
-          <Reveal delay={0.2}>
-            <div className="mt-10 rounded-2xl border border-primary/20 bg-white p-6 shadow-card md:p-8">
-              <h3 className="font-mincho text-lg text-ink md:text-xl">そのほかのサポート</h3>
-              <ul className="mt-4 space-y-2 text-sm leading-loose text-ink/70 md:text-[15px]">
-                <li className="flex gap-2">
-                  <span aria-hidden className="mt-2.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-accent" />
-                  災害被害等により学費の納付が難しくなった場合に備えた、馬事学院独自の救済支援制度があります。
-                </li>
-                <li className="flex gap-2">
-                  <span aria-hidden className="mt-2.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-accent" />
-                  国の教育ローン（日本政策金融公庫）の活用もご相談いただけます。
-                </li>
-              </ul>
+          <Reveal delay={0.2} className="mt-10 md:mt-12">
+            <div className="paper-crumple">
+              <div className="p-8 md:p-10">
+                <h3 className="font-mincho text-lg text-ink md:text-xl">
+                  そのほかのサポート
+                </h3>
+                <ul className="mt-4 space-y-2 text-sm leading-loose text-ink/70 md:text-[15px]">
+                  <li className="flex gap-2">
+                    <span
+                      aria-hidden
+                      className="mt-2.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-accent"
+                    />
+                    災害被害等により学費の納付が難しくなった場合に備えた、馬事学院独自の救済支援制度があります。
+                  </li>
+                  <li className="flex gap-2">
+                    <span
+                      aria-hidden
+                      className="mt-2.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-accent"
+                    />
+                    国の教育ローン（日本政策金融公庫）の活用もご相談いただけます。
+                  </li>
+                </ul>
+              </div>
             </div>
           </Reveal>
         </div>

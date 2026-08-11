@@ -14,7 +14,7 @@ type PageHeroProps = {
 const TITLE_START_DELAY = 0.15;
 const TITLE_CHAR_DELAY = 0.026;
 
-/** Sub-page hero with cinematic documentary photography treatment. */
+/** Sub-page hero — full-bleed photo with light text scrim only (no solid wash). */
 export default function PageHero({
   eyebrow,
   title,
@@ -34,20 +34,24 @@ export default function PageHero({
       data-hero
       className="relative flex min-h-[42vh] items-center overflow-hidden pt-16 md:min-h-[48vh] md:pt-20"
     >
-      <div className="photo-vignette absolute inset-0">
-        <div className="photo-frame photo-grade-cinematic absolute inset-0">
-          <Image
-            src={image}
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-            className="photo-image animate-ken-burns object-cover object-[center_30%]"
-          />
-          <div className="photo-overlay" aria-hidden />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-deep/88 via-primary-deep/55 to-primary-deep/20" />
-        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-primary-deep/60 to-transparent" />
+      <div className="absolute inset-0">
+        <Image
+          src={image}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="animate-ken-burns object-cover object-[center_35%]"
+        />
+        {/* Soft left/bottom scrim for type — keeps the photo clearly visible */}
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/20 to-transparent"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/30 to-transparent"
+        />
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-14 md:px-6">
@@ -65,7 +69,7 @@ export default function PageHero({
         />
         {lead && (
           <Reveal y={12} delay={leadDelay}>
-            <p className="mt-5 max-w-2xl text-sm font-normal leading-[1.8] text-white/85 md:text-base">
+            <p className="mt-5 max-w-2xl text-sm font-normal leading-[1.8] text-white/90 md:text-base">
               {lead}
             </p>
           </Reveal>
@@ -73,7 +77,7 @@ export default function PageHero({
         <Reveal delay={breadcrumbDelay} y={12}>
           <nav
             aria-label="パンくずリスト"
-            className="mt-8 flex items-center gap-2 text-xs text-white/70"
+            className="mt-8 flex items-center gap-2 text-xs text-white/80"
           >
             <Link href="/" className="transition-colors hover:text-tan">
               ホーム

@@ -7,6 +7,7 @@ import CtaSection from "@/components/CtaSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import FaqAccordion, { type FaqItem } from "@/components/FaqAccordion";
 import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
+import StudentPhotoOrbit from "@/components/pages/StudentPhotoOrbit";
 
 export const metadata: Metadata = {
   title: "JRA厩務員になるには？／未経験からのJRA受験へ",
@@ -203,7 +204,7 @@ export default function JraPage() {
         eyebrow="FOR JRA"
         title="JRA競馬学校 厩務員受験を目指す方へ"
         lead="在学中にJRA競馬学校厩務員課程を2回受験可能。平成28年以降、41名が在学中に合格し、多くの卒業生が競馬業界で活躍しています。"
-        image="/images/theme/img_6_001_img_002_4.jpg"
+        image="/images/theme/img_6_006_img_003_3.jpg"
         breadcrumb="JRA厩務員を目指す方へ"
       />
 
@@ -241,23 +242,27 @@ export default function JraPage() {
             </Reveal>
 
             <Reveal x={24} y={0}>
-              <div className="img-zoom relative aspect-[4/3] overflow-hidden rounded-2xl shadow-card">
-                <Image
-                  src="/images/theme/img_6_006_img_003_3.jpg"
-                  alt="JRA美浦トレーニングセンターの見学"
-                  fill
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
-              <div className="img-zoom relative mt-4 aspect-[16/9] overflow-hidden rounded-2xl shadow-card">
-                <Image
-                  src="/images/theme/img_6_006_img_002_1.jpg"
-                  alt="JRA厩務員として活躍する本校の卒業生"
-                  fill
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                  className="object-cover"
-                />
+              <div className="relative mx-auto w-full max-w-md pb-10 pt-2 md:max-w-none md:pb-12">
+                {/* Top photo — back of stack */}
+                <div className="img-zoom relative z-10 aspect-[4/3] w-[88%] overflow-hidden rounded-2xl shadow-card">
+                  <Image
+                    src="/images/theme/img_6_006_img_003_3.jpg"
+                    alt="JRA美浦トレーニングセンターの見学"
+                    fill
+                    sizes="(min-width: 768px) 40vw, 90vw"
+                    className="object-cover"
+                  />
+                </div>
+                {/* Bottom photo — overlaps lower-right of the top image */}
+                <div className="img-zoom absolute -bottom-1 right-0 z-20 aspect-[16/9] w-[78%] overflow-hidden rounded-2xl shadow-[0_12px_28px_rgba(17,17,17,0.22)] ring-4 ring-paper">
+                  <Image
+                    src="/images/theme/img_6_006_img_002_1.jpg"
+                    alt="JRA厩務員として活躍する本校の卒業生"
+                    fill
+                    sizes="(min-width: 768px) 35vw, 75vw"
+                    className="object-cover"
+                  />
+                </div>
               </div>
             </Reveal>
           </div>
@@ -380,6 +385,7 @@ export default function JraPage() {
             {ROADMAP.map((step, i) => {
               const highlight = step.step === "05";
               const last = i === ROADMAP.length - 1;
+              const framed = highlight || last;
               return (
                 <Reveal key={step.step} className={last ? "" : "pb-10 md:pb-12"}>
                   <div className="relative">
@@ -391,43 +397,25 @@ export default function JraPage() {
                           : "border-primary bg-white"
                       }`}
                     />
-                    <div
-                      className={
-                        highlight
-                          ? "rounded-2xl bg-primary p-6 text-white shadow-card md:p-8"
-                          : last
-                            ? "rounded-2xl bg-meadow p-6 shadow-card md:p-8"
-                            : ""
-                      }
-                    >
-                      <div className="flex flex-wrap items-center gap-3">
-                        <span
-                          className={`font-display text-sm font-semibold tracking-[0.25em] ${
-                            highlight ? "text-tan" : "text-accent"
-                          }`}
-                        >
-                          STEP {step.step}
-                        </span>
-                        {step.note && (
-                          <span className="rounded-full bg-accent px-3 py-1 text-xs font-bold text-white">
-                            {step.note}
+                    <div className={framed ? "paper-crumple" : undefined}>
+                      <div className={framed ? "p-6 md:p-8" : undefined}>
+                        <div className="flex flex-wrap items-center gap-3">
+                          <span className="font-display text-sm font-semibold tracking-[0.25em] text-accent">
+                            STEP {step.step}
                           </span>
-                        )}
+                          {step.note && (
+                            <span className="rounded-full bg-accent px-3 py-1 text-xs font-bold text-white">
+                              {step.note}
+                            </span>
+                          )}
+                        </div>
+                        <h3 className="mt-2 font-mincho text-xl text-ink md:text-2xl">
+                          {step.title}
+                        </h3>
+                        <p className="mt-3 text-sm leading-loose text-ink/70 md:text-[15px]">
+                          {step.body}
+                        </p>
                       </div>
-                      <h3
-                        className={`mt-2 font-mincho text-xl md:text-2xl ${
-                          highlight ? "text-white" : "text-ink"
-                        }`}
-                      >
-                        {step.title}
-                      </h3>
-                      <p
-                        className={`mt-3 text-sm leading-loose md:text-[15px] ${
-                          highlight ? "text-white/85" : "text-ink/70"
-                        }`}
-                      >
-                        {step.body}
-                      </p>
                     </div>
                   </div>
                 </Reveal>
@@ -445,21 +433,7 @@ export default function JraPage() {
             title="夢に向かって"
             lead="合格を目指し、日々馬と向き合う学生たちの様子です。基礎課程からインターン研修、実践騎乗訓練まで、その一枚一枚に努力の積み重ねが刻まれています。"
           />
-          <RevealGroup className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
-            {STUDENT_PHOTOS.map((src) => (
-              <RevealItem key={src}>
-                <figure className="img-zoom relative aspect-[4/3] overflow-hidden rounded-xl shadow-card">
-                  <Image
-                    src={src}
-                    alt="夢に向かって馬と向き合う学生の様子"
-                    fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
-                    className="object-cover"
-                  />
-                </figure>
-              </RevealItem>
-            ))}
-          </RevealGroup>
+          <StudentPhotoOrbit photos={STUDENT_PHOTOS} />
         </div>
       </section>
 

@@ -26,15 +26,15 @@ export type NavItem = {
 };
 
 export const NAV: NavItem[] = [
-  { href: "/", label: "ホーム", labelEn: "TOP" },
-  { href: "/features", label: "本校の特徴", labelEn: "FEATURES" },
-  { href: "/curriculum", label: "授業・カリキュラム", labelEn: "CURRICULUM" },
-  { href: "/admission", label: "募集要項", labelEn: "ADMISSION" },
-  { href: "/opencampus", label: "学校見学・オープンキャンパス", labelEn: "OPEN CAMPUS" },
-  { href: "/about", label: "学校概要", labelEn: "ABOUT" },
-  { href: "/jra", label: "JRA厩務員を目指す方へ", labelEn: "JRA" },
-  { href: "/comparison", label: "他校との比較", labelEn: "COMPARISON" },
-  { href: "/faq", label: "よくある質問", labelEn: "Q&A" },
+  { href: "/", label: "TOP", labelEn: "TOP" },
+  { href: "/features", label: "学校の特長", labelEn: "FEATURES" },
+  { href: "/curriculum", label: "学び・コース", labelEn: "CURRICULUM" },
+  { href: "/admission", label: "入学案内", labelEn: "ADMISSION" },
+  { href: "/opencampus", label: "オープンキャンパス", labelEn: "OPEN CAMPUS" },
+  { href: "/about", label: "学校案内", labelEn: "ABOUT" },
+  { href: "/jra", label: "JRA厩務員", labelEn: "JRA" },
+  { href: "/comparison", label: "選ばれる理由", labelEn: "COMPARISON" },
+  { href: "/faq", label: "FAQ", labelEn: "Q&A" },
 ];
 
 export const INQUIRY = {

@@ -6,6 +6,7 @@ import SectionTitle from "@/components/SectionTitle";
 import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
 import CtaSection from "@/components/CtaSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
+import NumbersBand from "@/components/NumbersBand";
 import { STATS } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -151,7 +152,7 @@ export default function ComparisonPage() {
         eyebrow="COMPARISON"
         title="他校との比較"
         lead="馬の学校選びで大切なのは、学費の安さだけではありません。比較のためのチェックポイントと、本校の答えをご紹介します。"
-        image="/images/theme/img_tokucho_img_001_1.jpg"
+        image="/images/theme/img_tokucho_img_002_5.jpg"
         breadcrumb="他校との比較"
       />
 
@@ -288,15 +289,7 @@ export default function ComparisonPage() {
       </section>
 
       {/* 3. 数字で見るバジガク — dark impact band */}
-      <section className="relative overflow-hidden bg-primary-deep py-16 md:py-24">
-        <div
-          aria-hidden
-          className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-accent/10 blur-3xl"
-        />
-        <div
-          aria-hidden
-          className="absolute -bottom-32 -left-24 h-80 w-80 rounded-full bg-tan/10 blur-3xl"
-        />
+      <NumbersBand>
         <div className="relative mx-auto max-w-7xl px-4 md:px-6">
           <SectionTitle
             eyebrow="BY THE NUMBERS"
@@ -327,7 +320,7 @@ export default function ComparisonPage() {
             ))}
           </RevealGroup>
         </div>
-      </section>
+      </NumbersBand>
 
       {/* 4. 選び方ガイド */}
       <section className="bg-paper py-16 md:py-24">

@@ -17,12 +17,12 @@ export default function Footer() {
                 className="object-contain object-left"
               />
             </span>
-            <p className="mt-6 text-sm leading-relaxed text-white/70">
+            <p className="mt-6 text-base leading-relaxed text-white md:text-[17px]">
               JRA厩務員・牧場就職・乗馬クラブへ。
               <br />
               約118頭の馬とともに、未経験から馬のプロを育てる馬の専門学校。
             </p>
-            <address className="mt-6 text-sm not-italic leading-relaxed text-white/70">
+            <address className="mt-6 text-base not-italic leading-relaxed text-white md:text-[17px]">
               {SCHOOL.zip} {SCHOOL.address}
               <br />
               ご相談・お問合せ：
@@ -33,7 +33,7 @@ export default function Footer() {
                 {SCHOOL.tel}
               </a>
             </address>
-            <p className="mt-2 text-xs text-white/50">運営：{SCHOOL.operator}</p>
+            <p className="mt-2 text-sm text-white md:text-base">運営：{SCHOOL.operator}</p>
 
             <div className="mt-6 flex flex-wrap gap-3">
               <a
@@ -126,14 +126,14 @@ export default function Footer() {
             </div>
           </div>
 
-          <nav className="grid grid-cols-2 content-start gap-x-6 gap-y-3">
+          <nav className="grid grid-cols-2 content-start gap-x-6 gap-y-3.5">
             {NAV.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="group flex items-center gap-2 text-sm text-white/80 transition-colors hover:text-accent"
+                className="group flex items-center gap-2 text-base text-white transition-colors hover:text-accent md:text-[17px]"
               >
-                <span className="h-px w-3 bg-tan/50 transition-all duration-300 group-hover:w-5 group-hover:bg-accent" />
+                <span className="h-px w-3 bg-tan/70 transition-all duration-300 group-hover:w-5 group-hover:bg-accent" />
                 {item.label}
               </Link>
             ))}
@@ -141,24 +141,24 @@ export default function Footer() {
               href={SCHOOL.related.highSchool}
               target="_blank"
               rel="noopener noreferrer"
-              className="group mt-4 flex items-center gap-2 text-sm text-white/60 transition-colors hover:text-accent"
+              className="group mt-4 flex items-center gap-2 text-base text-white transition-colors hover:text-accent md:text-[17px]"
             >
-              <span className="h-px w-3 bg-tan/50 transition-all duration-300 group-hover:w-5 group-hover:bg-accent" />
+              <span className="h-px w-3 bg-tan/70 transition-all duration-300 group-hover:w-5 group-hover:bg-accent" />
               東関東馬事高等学院
             </a>
             <a
               href={SCHOOL.related.corporate}
               target="_blank"
               rel="noopener noreferrer"
-              className="group mt-4 flex items-center gap-2 text-sm text-white/60 transition-colors hover:text-accent"
+              className="group mt-4 flex items-center gap-2 text-base text-white transition-colors hover:text-accent md:text-[17px]"
             >
-              <span className="h-px w-3 bg-tan/50 transition-all duration-300 group-hover:w-5 group-hover:bg-accent" />
+              <span className="h-px w-3 bg-tan/70 transition-all duration-300 group-hover:w-5 group-hover:bg-accent" />
               馬事学院（運営会社）
             </a>
           </nav>
         </div>
       </div>
-      <div className="border-t border-white/10 py-5 text-center text-xs text-white/50">
+      <div className="border-t border-white/20 py-5 text-center text-sm text-white">
         © {new Date().getFullYear()} {SCHOOL.name} All Rights Reserved.
       </div>
     </footer>

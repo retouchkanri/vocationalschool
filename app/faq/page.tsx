@@ -5,6 +5,7 @@ import PageHero from "@/components/PageHero";
 import SectionTitle from "@/components/SectionTitle";
 import CtaSection from "@/components/CtaSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
+import NumbersBand from "@/components/NumbersBand";
 import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
 import FaqExplorer from "@/components/pages/FaqExplorer";
 import { SCHOOL, STATS } from "@/lib/site";
@@ -111,7 +112,7 @@ export default function FaqPage() {
         eyebrow="Q&A"
         title="よくある質問"
         lead="未経験からの入学、学費、寮生活、JRA厩務員のことまで。気になることをすぐに検索できます。"
-        image="/images/theme/img_cmn_img_group_a1.jpg"
+        image="/images/theme/img_taiken_img_002_1.jpg"
         breadcrumb="よくある質問"
       />
 
@@ -130,7 +131,7 @@ export default function FaqPage() {
       </section>
 
       {/* 数字で見る安心（ダークバンド） */}
-      <section className="bg-primary-deep py-16 md:py-24">
+      <NumbersBand>
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <SectionTitle
             eyebrow="FACTS"
@@ -162,7 +163,7 @@ export default function FaqPage() {
             ))}
           </RevealGroup>
         </div>
-      </section>
+      </NumbersBand>
 
       {/* まだ解決しない方へ */}
       <section className="bg-cream py-16 md:py-24">

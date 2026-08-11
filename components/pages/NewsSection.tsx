@@ -97,12 +97,6 @@ export default function NewsSection({ items, blogHref }: NewsSectionProps) {
                     : "text-ink/70 hover:text-ink"
                 }`}
               >
-                {isActive ? (
-                  <span
-                    className="absolute inset-x-0 top-0 h-[3px] bg-primary"
-                    aria-hidden
-                  />
-                ) : null}
                 {label}
               </button>
             );

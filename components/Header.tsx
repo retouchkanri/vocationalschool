@@ -106,7 +106,7 @@ export default function Header() {
             aria-label="メインナビゲーション"
             className="hidden min-w-0 flex-1 flex-wrap items-center justify-end gap-x-0.5 gap-y-1 lg:flex xl:gap-x-1"
           >
-            {NAV.filter((n) => n.href !== "/").map((item) => {
+            {NAV.map((item) => {
               const active =
                 item.href === pathname ||
                 (item.href !== "/" && pathname.startsWith(item.href));
@@ -114,7 +114,7 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`group relative whitespace-nowrap px-2 py-1.5 font-display text-[11px] font-bold tracking-wide transition-colors xl:px-2.5 xl:py-2 xl:text-[13px] ${
+                  className={`group relative whitespace-nowrap px-2 py-1.5 font-display text-[13px] font-bold tracking-wide transition-colors xl:px-2.5 xl:py-2 xl:text-[15px] ${
                     scrolled
                       ? active
                         ? "text-primary"
@@ -203,7 +203,7 @@ export default function Header() {
                     href={item.href}
                     className="group flex items-baseline justify-between border-b border-white/10 py-4 text-white"
                   >
-                    <span className="text-base font-bold transition-colors group-hover:text-accent">
+                    <span className="text-lg font-bold transition-colors group-hover:text-accent">
                       {item.label}
                     </span>
                     <span className="font-display text-[11px] tracking-[0.2em] text-tan/70">

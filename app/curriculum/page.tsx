@@ -121,7 +121,7 @@ export default function CurriculumPage() {
         eyebrow="CURRICULUM"
         title="授業内容・カリキュラム"
         lead="未経験を前提に、厩務・騎乗・馬の管理を実習中心で段階的に学ぶ2年間。118頭を超える馬たちと現場での研修が、あなたをプロへと育てます。"
-        image="/images/theme/img_curriculum_img_001_1.jpg"
+        image="/images/theme/img_curriculum_img_002_1.jpg"
         breadcrumb="授業・カリキュラム"
       />
 
@@ -166,21 +166,53 @@ export default function CurriculumPage() {
 
           <RevealGroup className="mt-12 grid grid-cols-2 gap-4 md:mt-16 md:grid-cols-4 md:gap-6">
             {[
-              { value: 7, prefix: "約", suffix: "割", label: "入学者は馬の未経験者" },
-              { value: 2, prefix: "", suffix: "年間", label: "技術・知識を習得する課程" },
-              { value: 118, prefix: "", suffix: "頭超", label: "学生が管理する馬たち" },
-              { value: 4, prefix: "最大", suffix: "頭", label: "一人あたりの担当馬" },
+              {
+                value: 7,
+                prefix: "約",
+                suffix: "割",
+                label: "入学者は馬の未経験者",
+                border: "border-primary",
+                valueClass: "text-primary",
+              },
+              {
+                value: 2,
+                prefix: "",
+                suffix: "年間",
+                label: "技術・知識を習得する課程",
+                border: "border-accent",
+                valueClass: "text-accent-dark",
+              },
+              {
+                value: 118,
+                prefix: "",
+                suffix: "頭超",
+                label: "学生が管理する馬たち",
+                border: "border-[#0a6bb4]",
+                valueClass: "text-[#0a6bb4]",
+              },
+              {
+                value: 4,
+                prefix: "最大",
+                suffix: "頭",
+                label: "一人あたりの担当馬",
+                border: "border-[#8b3a4a]",
+                valueClass: "text-[#8b3a4a]",
+              },
             ].map((stat) => (
               <RevealItem key={stat.label}>
-                <div className="rounded-2xl border border-tan/40 bg-white p-5 text-center shadow-card transition-shadow duration-300 hover:shadow-card-hover md:p-6">
-                  <p className="font-display text-3xl font-semibold text-primary md:text-4xl">
+                <div
+                  className={`rounded-2xl border bg-white p-5 text-center shadow-card transition-shadow duration-300 hover:shadow-card-hover md:p-6 ${stat.border}`}
+                >
+                  <p
+                    className={`font-display text-3xl font-semibold md:text-4xl ${stat.valueClass}`}
+                  >
                     <AnimatedCounter
                       value={stat.value}
                       prefix={stat.prefix}
                       suffix={stat.suffix}
                     />
                   </p>
-                  <p className="mt-2 text-xs leading-relaxed text-ink/60 md:text-sm">
+                  <p className="mt-2 text-xs leading-relaxed text-ink/65 md:text-sm">
                     {stat.label}
                   </p>
                 </div>
@@ -317,25 +349,27 @@ export default function CurriculumPage() {
           </RevealGroup>
 
           <Reveal className="mt-10 md:mt-14">
-            <div className="rounded-2xl border border-tan/40 bg-cream p-6 md:p-8">
-              <p className="font-display text-xs font-semibold tracking-[0.35em] text-primary">
-                REFUND SYSTEM
-              </p>
-              <h3 className="mt-2 font-mincho text-xl leading-snug text-ink md:text-2xl">
-                研修が、学費の負担軽減にもつながります。
-              </h3>
-              <p className="mt-3 text-sm leading-loose text-ink/70 md:text-[15px]">
-                提携する牧場・乗馬クラブからの「学校運営協力金」を、研修回数などに応じて学生の皆さまに諸経費として還付しています（在学中の見込額は最大50万円程度）。詳しくは募集要項をご確認ください。
-              </p>
-              <Link
-                href="/admission"
-                className="group mt-5 inline-flex items-center gap-2 text-sm font-bold text-primary transition-colors hover:text-accent"
-              >
-                募集要項・学費について
-                <span className="transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
-              </Link>
+            <div className="paper-crumple">
+              <div className="p-8 md:p-10">
+                <p className="font-display text-xs font-semibold tracking-[0.35em] text-primary">
+                  REFUND SYSTEM
+                </p>
+                <h3 className="mt-2 font-mincho text-xl leading-snug text-ink md:text-2xl">
+                  研修が、学費の負担軽減にもつながります。
+                </h3>
+                <p className="mt-3 text-sm leading-loose text-ink/70 md:text-[15px]">
+                  提携する牧場・乗馬クラブからの「学校運営協力金」を、研修回数などに応じて学生の皆さまに諸経費として還付しています（在学中の見込額は最大50万円程度）。詳しくは募集要項をご確認ください。
+                </p>
+                <Link
+                  href="/admission"
+                  className="group mt-5 inline-flex items-center gap-2 text-sm font-bold text-primary transition-colors hover:text-accent"
+                >
+                  募集要項・学費について
+                  <span className="transition-transform duration-300 group-hover:translate-x-1">
+                    →
+                  </span>
+                </Link>
+              </div>
             </div>
           </Reveal>
         </div>

@@ -4,6 +4,7 @@ import PageHero from "@/components/PageHero";
 import SectionTitle from "@/components/SectionTitle";
 import CtaSection from "@/components/CtaSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
+import NumbersBand from "@/components/NumbersBand";
 import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
 import { SCHOOL, STATS } from "@/lib/site";
 
@@ -174,7 +175,7 @@ export default function AboutPage() {
         eyebrow="ABOUT"
         title="学校概要"
         lead="千葉・大阪の3つの施設と約118頭の馬たち。東関東馬事専門学院の教育方針と学びの環境、これまでのあゆみをご紹介します。"
-        image="/images/theme/img_kankyo_img_001_1.jpg"
+        image="/images/facilities/kosha-gaikan.jpg"
         breadcrumb="学校概要"
       />
 
@@ -231,7 +232,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── 数字で見るバジガク（ダーク帯） ───────────── */}
-      <section className="bg-primary-deep py-16 md:py-24">
+      <NumbersBand>
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <SectionTitle
             eyebrow="NUMBERS"
@@ -259,7 +260,7 @@ export default function AboutPage() {
             ))}
           </RevealGroup>
         </div>
-      </section>
+      </NumbersBand>
 
       {/* ── 学校概要テーブル ─────────────────────── */}
       <section className="bg-cream py-16 md:py-24">

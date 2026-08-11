@@ -8,12 +8,12 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-14 md:px-6 md:py-20">
         <div className="grid gap-12 md:grid-cols-[1.2fr_1fr]">
           <div>
-            <span className="relative block h-[3.85rem] w-[18.15rem] brightness-0 invert md:h-[4.4rem] md:w-[20.9rem]">
+            <span className="relative block h-[3.2rem] w-[20.8rem] max-w-full brightness-0 invert md:h-[4rem] md:w-[25.6rem]">
               <Image
                 src={SCHOOL.logo}
                 alt={SCHOOL.name}
                 fill
-                sizes="(min-width: 768px) 334px, 290px"
+                sizes="(min-width: 768px) 410px, 333px"
                 className="object-contain object-left"
               />
             </span>

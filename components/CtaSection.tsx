@@ -40,18 +40,18 @@ export default function CtaSection() {
         <RevealGroup className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <RevealItem>
             <Link
-              href="/opencampus"
+              href="/contact?type=document"
               className="inline-flex h-14 min-w-64 items-center justify-center bg-primary px-8 font-display text-base font-semibold text-white transition-colors duration-300 hover:bg-accent hover:text-ink"
             >
-              見学・体験
+              今すぐ資料請求
             </Link>
           </RevealItem>
           <RevealItem>
             <Link
-              href="/admission"
+              href="/opencampus"
               className="inline-flex h-14 min-w-64 items-center justify-center border border-white px-8 font-display text-base font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-ink"
             >
-              募集要項
+              学校見学申込
             </Link>
           </RevealItem>
         </RevealGroup>

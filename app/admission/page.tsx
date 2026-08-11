@@ -213,7 +213,7 @@ const SUPPORT_CARDS = [
     label: "SUPPORT 01",
     image: "/images/theme/img_top_toku_img_005.jpg",
     title: "入学前に学費30％の免除も！",
-    figure: "90万円相当",
+    figure: "授業費99万円の免除",
     text: "令和9年4月入学生を対象に学費30％（約99万円）納付免除。さらに在学中に最大70万円返戻や、授業費分割払いに対応しています。",
   },
   {
@@ -226,6 +226,7 @@ const SUPPORT_CARDS = [
   {
     label: "SUPPORT 03",
     image: "/images/theme/img_cmn_img_group_b3.jpg",
+    objectPosition: "0% 50%",
     title: "授業費の分割払い",
     figure: "在学中2年〜最大5年",
     text: "独自の保証会社の審査により、在学中の2年から最大5年間の分割払いに対応しています。卒業後の分割払いについてもご相談いただけますので、経済面の不安もお気軽にお問い合わせください。",
@@ -439,19 +440,26 @@ export default function AdmissionPage() {
               <FeeTable rows={FEE_ROWS_TOP} showHeader />
 
               {/* 金額列の真下・表のあいだにアロー（セルに重ならない） */}
-              <div
-                className="grid min-h-[7.5rem] grid-cols-[28%_26%_46%] items-center md:min-h-[9rem]"
-                aria-hidden={false}
-              >
+              <div className="grid grid-cols-[28%_26%_46%] items-center py-6 md:py-8">
                 <div />
-                <div className="relative mx-auto h-28 w-16 md:h-36 md:w-20">
-                  <Image
-                    src="/images/theme/down_arrow.png"
-                    alt="30%免除 −990,000円"
-                    fill
-                    sizes="80px"
-                    className="object-contain drop-shadow-md"
-                  />
+                <div className="mx-auto flex flex-col items-center gap-2">
+                  <span className="rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 font-display text-xs font-semibold tracking-wide text-primary md:text-sm">
+                    30%相当 −990,000円 免除
+                  </span>
+                  <svg
+                    aria-hidden
+                    viewBox="0 0 24 24"
+                    className="h-6 w-6 text-primary/50 md:h-7 md:w-7"
+                  >
+                    <path
+                      d="M12 4v14m0 0-6-6m6 6 6-6"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.75"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
                 </div>
                 <div />
               </div>
@@ -540,6 +548,7 @@ export default function AdmissionPage() {
                       fill
                       sizes="(min-width: 768px) 33vw, 100vw"
                       className="object-cover"
+                      style={{ objectPosition: card.objectPosition ?? "center" }}
                     />
                   </div>
                   <div className="flex flex-1 flex-col p-6">

@@ -122,7 +122,10 @@ export default function TrainingCardDeck({ photos }: TrainingCardDeckProps) {
                         alt={photo.alt}
                         fill
                         sizes="480px"
-                        className="object-cover object-center"
+                        className="object-cover"
+                        style={{
+                          objectPosition: photo.objectPosition ?? "center",
+                        }}
                         priority={isCenter}
                       />
                     </span>
@@ -192,7 +195,10 @@ export default function TrainingCardDeck({ photos }: TrainingCardDeckProps) {
                       alt={active.alt}
                       fill
                       sizes="(min-width: 768px) 28rem, 92vw"
-                      className="object-cover object-center"
+                      className="object-cover"
+                      style={{
+                        objectPosition: active.objectPosition ?? "center",
+                      }}
                       priority
                     />
                   </div>

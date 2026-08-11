@@ -82,11 +82,11 @@ export default function Header() {
             : "bg-primary/70 backdrop-blur-sm"
         }`}
       >
-        <div className="flex min-h-16 items-stretch md:min-h-20">
+        <div className="flex min-h-16 items-stretch md:min-h-24">
           <div className="mx-[5vw] flex min-w-0 flex-1 flex-wrap items-center justify-between gap-x-4 gap-y-2 py-2 md:py-0">
           <Link href="/" className="flex shrink-0 items-center gap-3">
             <span
-              className={`relative block h-[3.3rem] w-[14.85rem] transition-all duration-500 md:h-[3.85rem] md:w-[18.15rem] ${
+              className={`relative block h-[2.4rem] w-[15.2rem] transition-all duration-500 md:h-[3.2rem] md:w-[20.8rem] ${
                 scrolled ? "" : "brightness-0 invert"
               }`}
             >
@@ -94,7 +94,7 @@ export default function Header() {
                 src={SCHOOL.logo}
                 alt={SCHOOL.name}
                 fill
-                sizes="(min-width: 768px) 290px, 238px"
+                sizes="(min-width: 768px) 333px, 243px"
                 className="object-contain object-left"
                 priority
               />

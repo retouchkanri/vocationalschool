@@ -538,6 +538,15 @@ export default function OpenCampusPage() {
                   資料請求をいただいた方には、学校案内とあわせてオープンキャンパスのご案内も同封しています。参加日程に迷ったら、お電話でのご相談も歓迎です。
                 </p>
                 <div className="mt-8 flex flex-col items-center gap-4">
+                  <Link
+                    href="/contact?type=opencampus"
+                    className="group inline-flex w-full max-w-xs items-center justify-center gap-3 rounded-full bg-accent px-8 py-4 text-base font-bold text-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-accent-dark"
+                  >
+                    体験入学フォームへ
+                    <span className="transition-transform duration-300 group-hover:translate-x-1">
+                      →
+                    </span>
+                  </Link>
                   <a
                     href={`tel:${SCHOOL.tel}`}
                     className="group inline-flex w-full max-w-xs items-center justify-center gap-3 rounded-full border-2 border-primary bg-white px-8 py-4 text-base font-bold text-primary transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white"

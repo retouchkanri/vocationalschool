@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import LiveChatWidget from "@/components/LiveChatWidget";
-import MobileFooterBar from "@/components/MobileFooterBar";
-import ScrollToTop from "@/components/ScrollToTop";
-import ThemeSwitcher from "@/components/ThemeSwitcher";
+import SiteShell from "@/components/SiteShell";
 import { SCHOOL } from "@/lib/site";
 
 /** Keep in sync with THEMES in components/ThemeSwitcher.tsx */
@@ -18,7 +13,11 @@ export const metadata: Metadata = {
   },
   description:
     "馬の学校 東関東馬事専門学院（馬事学院／バジガク）。約118頭の馬と国内最大級4つの教育施設で、未経験からJRA厩務員・牧場・乗馬クラブへの就職を目指せる馬の専門学校です。",
-  icons: { icon: "/images/theme/favicon.jpg" },
+  icons: {
+    icon: "/images/theme/favicon.png",
+    shortcut: "/images/theme/favicon.png",
+    apple: "/images/theme/favicon.png",
+  },
 };
 
 export default function RootLayout({
@@ -40,13 +39,7 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
       </head>
       <body className="antialiased">
-        <Header />
-        <main className="min-h-screen pb-14 md:pb-0">{children}</main>
-        <Footer />
-        <MobileFooterBar />
-        <LiveChatWidget />
-        <ScrollToTop />
-        <ThemeSwitcher />
+        <SiteShell>{children}</SiteShell>
       </body>
     </html>
   );

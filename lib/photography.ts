@@ -9,6 +9,8 @@ export type CuratedPhoto = {
   src: string;
   alt: string;
   caption?: string;
+  /** CSS object-position when cropped (e.g. "70% center") */
+  objectPosition?: string;
 };
 
 /** Cinematic hero — client designed banners from /images/theme/000 */
@@ -61,6 +63,8 @@ export const TRAINING_PHOTOS: CuratedPhoto[] = [
     src: "/images/theme/001/train-02.jpg",
     alt: "屋外コースでの騎乗トレーニング",
     caption: "騎乗トレーニング",
+    // Subject sits far right in the source — strong right bias to center horse & rider
+    objectPosition: "92% 40%",
   },
   {
     src: "/images/theme/001/train-03.jpg",
@@ -81,113 +85,79 @@ export const TRAINING_PHOTOS: CuratedPhoto[] = [
     src: "/images/theme/001/train-06.jpg",
     alt: "馬と向き合い絆を深める学生",
     caption: "馬とのふれあい",
+    // Bias hard left so the horse stays in frame; person shifts right in the crop
+    objectPosition: "0% 38%",
   },
 ];
 
 /**
- * Campus & environment gallery.
- * Captions and order match https://bajigaku.site/kankyo/ (img_002 → img_003 → img_004).
+ * Campus & environment gallery — current facility photos only.
  */
 export const CAMPUS_PHOTOS: CuratedPhoto[] = [
   {
-    src: "/images/theme/img_kankyo_img_002_1.jpg",
-    alt: "練習運動場の様子です",
-    caption: "練習運動場の様子です",
+    src: "/images/facilities/kosha-gaikan.jpg",
+    alt: "校舎外観",
+    caption: "校舎外観",
   },
   {
-    src: "/images/theme/img_kankyo_img_002_2.jpg",
-    alt: "1周150ⅿの走路トラック",
-    caption: "1周150ⅿの走路トラック",
+    src: "/images/facilities/baba.jpg",
+    alt: "馬場",
+    caption: "馬場",
   },
   {
-    src: "/images/theme/img_kankyo_img_002_3.jpg",
-    alt: "ひろ～い運動場（馬場）です",
-    caption: "ひろ～い運動場（馬場）です",
+    src: "/images/facilities/kyusha.jpg",
+    alt: "厩舎",
+    caption: "厩舎",
   },
   {
-    src: "/images/theme/img_kankyo_img_002_4.jpg",
-    alt: "馬たちのお部屋（厩舎風景）",
-    caption: "馬たちのお部屋（厩舎風景）",
+    src: "/images/facilities/shinrindo.jpg",
+    alt: "新林道",
+    caption: "新林道",
   },
   {
-    src: "/images/theme/img_kankyo_img_002_5.jpg",
-    alt: "教室や事務所のクラブハウス",
-    caption: "教室や事務所のクラブハウス",
+    src: "/images/facilities/mori-shisetsu.jpg",
+    alt: "森施設",
+    caption: "森施設",
   },
   {
-    src: "/images/theme/img_kankyo_img_002_6.jpg",
-    alt: "馬たちが快適に過ごします",
-    caption: "馬たちが快適に過ごします",
+    src: "/images/facilities/taiikukan.jpg",
+    alt: "体育館",
+    caption: "体育館",
   },
   {
-    src: "/images/theme/img_kankyo_img_002_7.jpg",
-    alt: "のんびりした環境にあります",
-    caption: "のんびりした環境にあります",
+    src: "/images/facilities/training-room.jpg",
+    alt: "トレーニングルーム",
+    caption: "トレーニングルーム",
   },
   {
-    src: "/images/theme/img_kankyo_img_002_8.jpg",
-    alt: "バジガクの風景の一コマ",
-    caption: "バジガクの風景の一コマ",
+    src: "/images/facilities/kyoshitsu.jpg",
+    alt: "教室",
+    caption: "教室",
   },
   {
-    src: "/images/theme/img_kankyo_img_002_9.jpg",
-    alt: "ミニパドック（放牧場）",
-    caption: "ミニパドック（放牧場）",
+    src: "/images/facilities/kogishitsu.jpg",
+    alt: "講義室",
+    caption: "講義室",
   },
   {
-    src: "/images/theme/img_kankyo_img_002_10.jpg",
-    alt: "馬たちが過ごす厩舎がたくさんあります",
-    caption: "馬たちが過ごす厩舎がたくさんあります",
+    src: "/images/facilities/kyukeishitsu.jpg",
+    alt: "休憩室",
+    caption: "休憩室",
   },
   {
-    src: "/images/theme/img_kankyo_img_002_11.jpg",
-    alt: "円形の丸馬場で馬をトレーニングします",
-    caption: "円形の丸馬場で馬をトレーニングします",
+    src: "/images/facilities/cafeteria.jpg",
+    alt: "食堂",
+    caption: "食堂",
   },
   {
-    src: "/images/theme/img_kankyo_img_002_12.jpg",
-    alt: "馬で坂道での散歩もできます",
-    caption: "馬で坂道での散歩もできます",
+    src: "/images/facilities/kitchen.jpg",
+    alt: "厨房",
+    caption: "厨房",
   },
   {
-    src: "/images/theme/img_kankyo_img_003_1.jpg",
-    alt: "学生寮の外観",
-    caption: "学生寮の外観",
-  },
-  {
-    src: "/images/theme/img_kankyo_img_003_2.jpg",
-    alt: "学生寮の個室",
-    caption: "学生寮の個室",
-  },
-  {
-    src: "/images/theme/img_kankyo_img_004_1.jpg",
-    alt: "毎日、食事が用意されます",
-    caption: "毎日、食事が用意されます",
-  },
-  {
-    src: "/images/theme/img_kankyo_img_004_2.jpg",
-    alt: "洗面所・選択スペース",
-    caption: "洗面所・選択スペース",
-  },
-  {
-    src: "/images/theme/img_kankyo_img_004_3.jpg",
-    alt: "食堂の風景です",
-    caption: "食堂の風景です",
-  },
-  {
-    src: "/images/theme/img_kankyo_img_004_4.jpg",
-    alt: "男子風呂の様子です",
-    caption: "男子風呂の様子です",
-  },
-  {
-    src: "/images/theme/img_kankyo_img_004_5.jpg",
-    alt: "管理室で荷物も受け取り出来ます",
-    caption: "管理室で荷物も受け取り出来ます",
-  },
-  {
-    src: "/images/theme/img_kankyo_img_004_6.jpg",
-    alt: "寮には掲示物がたくさんあります",
-    caption: "寮には掲示物がたくさんあります",
+    src: "/images/facilities/mendanshitsu-sanbu.jpg",
+    alt: "面談室／山武",
+    caption: "面談室／山武",
   },
 ];
 
@@ -224,16 +194,16 @@ export const HORSE_PORTRAITS: CuratedPhoto[] = Array.from({ length: 62 }, (_, i)
   };
 });
 
-/** Documentary gallery strip (3:2) */
+/** Documentary gallery strip — current campus life (uploads f1–f8) */
 export const GALLERY_PHOTOS: CuratedPhoto[] = [
-  { src: "/images/theme/img_tokucho_img_002_4.jpg", alt: "放牧地の馬たち" },
-  { src: "/images/theme/img_taiken_img_002_1.jpg", alt: "体験入学の様子" },
-  { src: "/images/theme/img_taiken_img_002_2.jpg", alt: "馬とのふれあい" },
-  { src: "/images/theme/img_kankyo_img_002_3.jpg", alt: "キャンパス風景" },
-  { src: "/images/theme/img_curriculum_img_002_1.jpg", alt: "授業風景" },
-  { src: "/images/theme/img_kankyo_img_002_5.jpg", alt: "施設での実習" },
-  { src: "/images/theme/img_tokucho_img_002_6.jpg", alt: "馬のケア" },
-  { src: "/images/theme/img_cmn_img_group_b3.jpg", alt: "バジガクの日常" },
+  { src: "/images/uploads/f1.JPG", alt: "木馬トレーニングに取り組む学生たち" },
+  { src: "/images/uploads/f2.JPG", alt: "レースのゼッケンを囲む学生たち" },
+  { src: "/images/uploads/f3.JPG", alt: "授業で学ぶ学生の日常" },
+  { src: "/images/uploads/f4.JPG", alt: "担当馬と向き合う学生" },
+  { src: "/images/uploads/f5.JPG", alt: "笑顔で馬と並ぶ学生" },
+  { src: "/images/uploads/f6.JPG", alt: "馬とともに過ごすバジガクの日常" },
+  { src: "/images/uploads/f7.JPG", alt: "キャンパスで学ぶ学生のひとコマ" },
+  { src: "/images/uploads/f8.JPG", alt: "馬とふれあう学生たち" },
 ];
 
 export const CTA_PHOTO = {

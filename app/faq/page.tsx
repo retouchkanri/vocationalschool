@@ -8,6 +8,7 @@ import AnimatedCounter from "@/components/AnimatedCounter";
 import NumbersBand from "@/components/NumbersBand";
 import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
 import FaqExplorer from "@/components/pages/FaqExplorer";
+import { getPublishedFaqs } from "@/lib/content";
 import { SCHOOL, STATS } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -105,7 +106,8 @@ const CONTACT_CHANNELS = [
   },
 ] as const;
 
-export default function FaqPage() {
+export default async function FaqPage() {
+  const faqs = await getPublishedFaqs();
   return (
     <div>
       <PageHero
@@ -125,7 +127,7 @@ export default function FaqPage() {
             lead="入学検討者の方から実際に多く寄せられるご質問をまとめました。キーワード検索とカテゴリの絞り込みで、答えがその場で見つかります。"
           />
           <Reveal delay={0.1}>
-            <FaqExplorer />
+            <FaqExplorer items={faqs} />
           </Reveal>
         </div>
       </section>

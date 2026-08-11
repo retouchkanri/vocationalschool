@@ -79,23 +79,9 @@ export default function HomeHero() {
           aria-hidden
         />
 
-        {/* Caption + CTAs — desktop / tablet only (hidden on mobile) */}
-        <div className="absolute inset-x-0 bottom-0 z-10 hidden justify-center px-8 pb-6 pt-16 md:flex lg:pb-8">
+        {/* CTAs — desktop / tablet only (hidden on mobile) */}
+        <div className="absolute inset-x-0 bottom-0 z-10 hidden justify-center px-8 pb-[30px] pt-10 md:flex lg:pb-[46px]">
           <div className="w-full max-w-4xl text-center text-white">
-            <motion.h1
-              key={`catch-${mounted ? index : 0}`}
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-              className="font-mincho text-[clamp(0.95rem,3.8vw,2.15rem)] font-black leading-[1.5] tracking-[0.04em] drop-shadow"
-            >
-              <span className="inline-block whitespace-nowrap">
-                いつか一緒に　いつも一緒に
-              </span>
-              <br />
-              馬とともに。学べる学校
-            </motion.h1>
-
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
@@ -104,7 +90,7 @@ export default function HomeHero() {
                 duration: 0.55,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="mt-5 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4"
+              className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4 lg:mt-10"
             >
               <a
                 href={`tel:${SCHOOL.tel}`}
@@ -170,7 +156,11 @@ export default function HomeHero() {
                 aria-label={navLabel(photo.alt)}
                 aria-current={active ? "true" : undefined}
                 onClick={() => setIndex(i)}
-                className="group relative h-[72px] w-[min(30vw,280px)] max-w-[280px] shrink-0 overflow-hidden bg-black lg:h-[100px]"
+                className={`group relative h-[72px] w-[min(30vw,280px)] max-w-[280px] shrink-0 overflow-hidden bg-black transition-shadow duration-300 lg:h-[100px] ${
+                  active
+                    ? "ring-2 ring-accent ring-offset-2 ring-offset-primary-deep"
+                    : ""
+                }`}
               >
                 <Image
                   src={photo.src}
@@ -179,19 +169,20 @@ export default function HomeHero() {
                   sizes="280px"
                   className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                 />
+                {/* Hover only — keep the active thumb as a full photo, not a white panel */}
                 <span
-                  className={`absolute inset-0 z-[2] bg-white transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                  className={`absolute inset-0 z-[2] bg-black/40 transition-opacity duration-300 ${
                     active
-                      ? "translate-x-0"
-                      : "-translate-x-full group-hover:translate-x-0"
+                      ? "opacity-0"
+                      : "opacity-0 group-hover:opacity-100"
                   }`}
                   aria-hidden
                 />
                 <span
-                  className={`absolute inset-y-0 left-0 z-[3] flex w-full items-center px-4 text-left font-mincho text-[11px] font-semibold leading-snug tracking-wide transition-opacity duration-300 lg:px-6 lg:text-sm ${
+                  className={`absolute inset-y-0 left-0 z-[3] flex w-full items-center px-4 text-left font-mincho text-[11px] font-semibold leading-snug tracking-wide text-white drop-shadow transition-opacity duration-300 lg:px-6 lg:text-sm ${
                     active
-                      ? "text-ink opacity-100"
-                      : "text-ink opacity-0 group-hover:opacity-100"
+                      ? "opacity-0"
+                      : "opacity-0 group-hover:opacity-100"
                   }`}
                 >
                   {navLabel(photo.alt)}

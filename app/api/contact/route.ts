@@ -4,24 +4,40 @@ import { SCHOOL } from "@/lib/site";
 
 export const runtime = "nodejs";
 
+type ContactFormType = "document" | "opencampus" | "general";
+
 type ContactBody = {
+  formType?: ContactFormType;
   lastName?: string;
   firstName?: string;
   lastNameKana?: string;
   firstNameKana?: string;
   phone?: string;
   email?: string;
+  // document
+  zip?: string;
+  address?: string;
+  schoolInfo?: string;
+  // opencampus
+  preferredDate?: string;
+  participants?: string;
+  pickupTokyo?: boolean;
+  // general
   subject?: string;
   message?: string;
 };
 
-const REQUIRED_FIELDS: (keyof ContactBody)[] = [
-  "lastName",
-  "firstName",
-  "email",
-  "subject",
-  "message",
-];
+const REQUIRED_FIELDS_BY_TYPE: Record<ContactFormType, (keyof ContactBody)[]> = {
+  document: ["lastName", "firstName", "email", "address"],
+  opencampus: ["lastName", "firstName", "email", "phone", "preferredDate"],
+  general: ["lastName", "firstName", "email", "subject", "message"],
+};
+
+const FORM_LABELS: Record<ContactFormType, string> = {
+  document: "資料請求フォーム",
+  opencampus: "体験入学フォーム",
+  general: "お問い合わせフォーム",
+};
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -43,6 +59,41 @@ function getTransporter() {
   });
 }
 
+function buildEmailBody(formType: ContactFormType, body: ContactBody, nameLine: string, kanaLine: string): string {
+  const lines: string[] = [
+    `${SCHOOL.name} 公式サイトの${FORM_LABELS[formType]}より送信されました。`,
+    "",
+    `お名前：${nameLine}${kanaLine ? `（${kanaLine}）` : ""}`,
+    `電話番号：${body.phone || "（未入力）"}`,
+    `メールアドレス：${body.email}`,
+    "",
+  ];
+
+  if (formType === "document") {
+    lines.push(
+      `郵便番号：${body.zip || "（未入力）"}`,
+      `ご住所：${body.address}`,
+      `ご出身校・学年など：${body.schoolInfo || "（未入力）"}`,
+      "",
+      "ご要望・ご質問：",
+      body.message || "（なし）",
+    );
+  } else if (formType === "opencampus") {
+    lines.push(
+      `ご参加希望日：${body.preferredDate}`,
+      `ご参加人数：${body.participants || "1"}名`,
+      `東京駅からの送迎希望：${body.pickupTokyo ? "希望する" : "希望しない"}`,
+      "",
+      "ご質問・備考：",
+      body.message || "（なし）",
+    );
+  } else {
+    lines.push(`件名：${body.subject}`, "", "お問合せ内容：", body.message || "");
+  }
+
+  return lines.join("\n");
+}
+
 export async function POST(request: Request) {
   let body: ContactBody;
   try {
@@ -51,8 +102,16 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
   }
 
-  for (const field of REQUIRED_FIELDS) {
-    if (!body[field]?.trim()) {
+  const formType: ContactFormType =
+    body.formType === "document" || body.formType === "opencampus"
+      ? body.formType
+      : "general";
+
+  const requiredFields = REQUIRED_FIELDS_BY_TYPE[formType];
+  for (const field of requiredFields) {
+    const value = body[field];
+    if (typeof value === "boolean") continue;
+    if (!value?.toString().trim()) {
       return NextResponse.json(
         { error: "必須項目が未入力です" },
         { status: 400 },
@@ -60,19 +119,9 @@ export async function POST(request: Request) {
     }
   }
 
-  const {
-    lastName,
-    firstName,
-    lastNameKana = "",
-    firstNameKana = "",
-    phone = "",
-    email,
-    subject,
-    message,
-  } = body as Required<Pick<ContactBody, "lastName" | "firstName" | "email" | "subject" | "message">> &
-    ContactBody;
+  const { lastName, firstName, lastNameKana = "", firstNameKana = "", email } = body;
 
-  if (!EMAIL_PATTERN.test(email!)) {
+  if (!email || !EMAIL_PATTERN.test(email)) {
     return NextResponse.json(
       { error: "メールアドレスの形式が正しくありません" },
       { status: 400 },
@@ -83,7 +132,7 @@ export async function POST(request: Request) {
   if (!transporter) {
     console.error("Contact form submitted but SMTP is not configured (SMTP_HOST/SMTP_USER/SMTP_PASS).");
     return NextResponse.json(
-      { error: "現在お問合せフォームをご利用いただけません。お手数ですがお電話にてご連絡ください。" },
+      { error: "現在フォームをご利用いただけません。お手数ですがお電話にてご連絡ください。" },
       { status: 503 },
     );
   }
@@ -92,23 +141,18 @@ export async function POST(request: Request) {
   const nameLine = [lastName, firstName].join(" ");
   const kanaLine = [lastNameKana, firstNameKana].filter(Boolean).join(" ");
 
+  const subjectLine =
+    formType === "general"
+      ? `【サイトお問合せ】${body.subject}`
+      : `【${FORM_LABELS[formType]}】${nameLine} 様`;
+
   try {
     await transporter.sendMail({
-      from: `"${SCHOOL.name} お問合せフォーム" <${process.env.SMTP_USER}>`,
+      from: `"${SCHOOL.name} ${FORM_LABELS[formType]}" <${process.env.SMTP_USER}>`,
       to,
       replyTo: `"${nameLine}" <${email}>`,
-      subject: `【サイトお問合せ】${subject}`,
-      text: [
-        `${SCHOOL.name} 公式サイトのお問合せフォームより送信されました。`,
-        "",
-        `お名前：${nameLine}${kanaLine ? `（${kanaLine}）` : ""}`,
-        `電話番号：${phone || "（未入力）"}`,
-        `メールアドレス：${email}`,
-        `件名：${subject}`,
-        "",
-        "お問合せ内容：",
-        message,
-      ].join("\n"),
+      subject: subjectLine,
+      text: buildEmailBody(formType, body, nameLine, kanaLine),
     });
   } catch (err) {
     const code = (err as { code?: string })?.code;

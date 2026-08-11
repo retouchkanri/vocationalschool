@@ -19,7 +19,7 @@ import {
   LIFESTYLE_PHOTOS,
   TRAINING_PHOTOS,
 } from "@/lib/photography";
-import { NEWS } from "@/lib/news";
+import { getPublishedAnnouncements } from "@/lib/content";
 import { SCHOOL, STATS } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -88,7 +88,8 @@ const FEATURES: FeatureCard[] = [
   },
 ];
 
-export default function Home() {
+export default async function Home() {
+  const news = await getPublishedAnnouncements();
   return (
     <div>
       {/* ===== 1. Hero (soushin.ed.jp-style full-viewport slider) ===== */}
@@ -140,7 +141,7 @@ export default function Home() {
                     </div>
                   </dl>
                   <p className="mt-4 text-sm leading-relaxed text-ink/70">
-                    令和9年4月生には、授業費30％（90万円相当）の納付が免除となる支援制度（入学内定者対象）をご用意しています。
+                    令和9年4月生には、授業費30％（99万円）の納付が免除となる支援制度（入学内定者対象）をご用意しています。
                   </p>
                 </div>
                 <div className="shrink-0 self-center md:self-auto">
@@ -160,7 +161,7 @@ export default function Home() {
         </div>
       </section>
 
-      <NewsSection items={NEWS} blogHref={SCHOOL.sns.blog} />
+      <NewsSection items={news} blogHref={SCHOOL.sns.blog} />
 
       {/* ===== 4a. Stats band (dark) ===== */}
       <NumbersBand>
@@ -378,7 +379,7 @@ export default function Home() {
                 <RevealScale className="absolute left-[6%] top-0 z-10 w-[86%] origin-center rotate-[5deg]">
                   <div className="bg-white p-2.5 pb-4 shadow-[0_12px_28px_rgba(17,17,17,0.22)] ring-1 ring-ink/8 transition-transform duration-500 hover:rotate-[3deg] md:p-3 md:pb-5">
                     <PhotoFrame
-                      src="/images/theme/001/train-05.jpg"
+                      src="/images/uploads/ca1.JPG"
                       alt="オープンキャンパスで乗馬を体験する学生"
                       aspect="card"
                       grade="cinematic"
@@ -394,7 +395,7 @@ export default function Home() {
                 >
                   <div className="bg-white p-2 pb-3.5 shadow-[0_10px_24px_rgba(17,17,17,0.2)] ring-1 ring-ink/8 transition-transform duration-500 hover:rotate-[5deg] md:p-2.5 md:pb-4">
                     <PhotoFrame
-                      src="/images/theme/001/train-02.jpg"
+                      src="/images/uploads/ca2.JPG"
                       alt="オープンキャンパスでの騎乗トレーニング"
                       aspect="card"
                       grade="documentary"
@@ -410,7 +411,7 @@ export default function Home() {
                 >
                   <div className="bg-white p-2 pb-3.5 shadow-[0_10px_24px_rgba(17,17,17,0.2)] ring-1 ring-ink/8 transition-transform duration-500 hover:rotate-[4deg] md:p-2.5 md:pb-4">
                     <PhotoFrame
-                      src="/images/theme/img_taiken_img_002_3.jpg"
+                      src="/images/uploads/ca3.JPG"
                       alt="馬のお手入れ体験・ふれあい"
                       aspect="card"
                       grade="documentary"

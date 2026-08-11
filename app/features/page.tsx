@@ -48,18 +48,30 @@ const entryPoints: EntryPoint[] = [
     tag: "BEGINNER",
     title: "未経験者・初心者でも安心",
     body: "本校では、毎年入学者の約7割が未経験者・初心者です。基礎から実践まで段階的に学べるため、馬に触れたことがない方でも安心してスタートできます。在学中にJRA競馬学校厩務員課程へ合格した学生も多数います。",
+    link: {
+      href: "/contact",
+      label: "今すぐ資料請求へ",
+    },
   },
   {
     no: "02",
     tag: "OPEN CAMPUS",
     title: "オープンキャンパスで未来を確認",
     body: "学校選びは、実際に見て、感じることが大切です。「自分にもできるか」「目指したい環境があるか」を体験し、不安を自信へ変える機会としてご参加ください。",
+    link: {
+      href: "https://vocationalschool.vercel.app/opencampus",
+      label: "学校見学申込へ",
+    },
   },
   {
     no: "03",
     tag: "SUPPORT",
     title: "学費サポートも充実",
     body: "本校では授業費の約3割免除をはじめ、インターンシップによる最大50万円の還付制度や20万円の返戻制度をご用意しています。さらに、学費分割制度も充実し、無理なく学べる環境を整えています。",
+    link: {
+      href: "/admission",
+      label: "募集要項へ",
+    },
   },
   {
     no: "04",
@@ -85,43 +97,43 @@ const entryPoints: EntryPoint[] = [
 const learningCards = [
   {
     tag: "FEATURE 01",
-    title: "担当馬制度で実践的に学べる",
-    body: "約120頭の馬たちの中から担当馬を持ち、毎日実践的に学べる環境です。乗用馬から現役競走馬まで、幅広い経験を積むことができます。",
+    title: "一人ひとりに担当馬。毎日が実践",
+    body: "約120頭の馬たちの中から自分の担当馬を持ち、飼育管理から騎乗、運動まで日々実践。馬と向き合い続ける中で、知識だけでは身につかない「現場力」を養います。",
     image: "/images/theme/img_tokucho_img_002_2.jpg",
     alt: "担当馬の世話をする学生たち",
   },
   {
     tag: "FEATURE 02",
-    title: "本校が管理する馬、約120頭",
-    body: "約120頭の馬たちの中から担当馬を持ち、毎日実践的に学べる環境です。乗用馬から現役競走馬まで、幅広い経験を積むことができます。",
+    title: "約120頭の馬が、生きた教材",
+    body: "乗用馬、競技馬、引退競走馬、現役競走馬など、本校が管理する馬は約120頭。一頭一頭の性格や能力、管理方法の違いを学べる、国内でも屈指の実践環境です。",
     image: "/images/theme/img_tokucho_img_002_5.jpg",
     alt: "学校で管理する多くの馬たち",
   },
   {
     tag: "FEATURE 03",
     title: "現場に直結する実践型教育",
-    body: "馴致や木馬トレーニング、現役競走馬を使った騎乗訓練まで、現場さながらの授業を展開。授業中に競馬中継で担当馬の走りを見守ることもある、馬漬けの毎日です。",
+    body: "馴致や騎乗訓練、競走馬の育成・調教まで、実際の現場を意識した授業を展開。担当馬が競馬場を走ることもあり、馬の成長と仕事をリアルに学べます。",
     image: "/images/theme/img_tokucho_img_002_3.jpg",
     alt: "実践型の授業を受ける学生たち",
   },
   {
     tag: "FEATURE 04",
-    title: "大手育成牧場での報酬型インターン",
-    body: "社台グループ（社台ファーム・追分ファーム）やグリーンウッドパークなど、トップレベルの現場で研修。在学中の取り組みにより最大70万円が戻る報酬型インターン制度が「働きながら学ぶ」を実現します。",
+    title: "大手育成牧場で報酬型インターン",
+    body: "大手の総合牧場をはじめ国内様々な場所で、第一線の現場で研修。在学中の取り組みに応じて最大70万円が戻る制度で、「働きながら学ぶ」を経験できます。",
     image: "/images/theme/img_6_004_img_002_1.jpg",
     alt: "牧場実習で競走馬に騎乗する学生",
   },
   {
     tag: "FEATURE 05",
-    title: "最大6ヶ所の現場研修",
-    body: "全国の競走馬育成牧場・乗馬クラブ等との連携により、在学中に最大6ヶ所の職場で研修が可能。北海道での馬のお産や2歳馬の馴致など、学校の外でしか得られない経験を積みます。",
+    title: "全国最大6ヶ所で現場研修",
+    body: "全国の競走馬育成牧場や乗馬クラブなどで、在学中に最大6ヶ所の研修を経験。北海道での馬のお産や2歳馬の馴致など、学校だけでは学べない仕事を現場で身につけます。",
     image: "/images/theme/img_6_004_img_002_2.jpg",
     alt: "北海道・関西エリアでの実習風景",
   },
   {
     tag: "FEATURE 06",
-    title: "セリでの馬購入・レース出走",
-    body: "競走馬のセリで馬を購入し、学校の馬が競馬場のレースに出走する——競走馬の世界と地続きの環境だからこそ、生産から育成、レースまでの流れを肌で学べます。",
+    title: "セリから競馬場まで、本物を学ぶ",
+    body: "競走馬のセリで馬を購入し、育成・調教を経て、学校の馬が実際のレースへ出走。馬を「買う・育てる・走らせる」という競馬の世界を、学生のうちから実践的に学びます。",
     image: "/images/theme/img_tokucho_img_002_4.jpg",
     alt: "競馬場でレースに向かう学校の馬",
   },
@@ -331,18 +343,26 @@ export default function FeaturesPage() {
                   <p className="mt-4 text-sm leading-loose text-ink/75 md:text-[15px]">
                     {p.body}
                   </p>
-                  {p.link && (
-                    <a
-                      href={p.link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-primary transition-colors hover:text-accent"
-                    >
-                      {p.link.label}
-                      <span aria-hidden>→</span>
-                    </a>
-                  )}
-                </article>
+                  {p.link &&
+                    (p.link.href.startsWith("http") ? (
+                      <a
+                        href={p.link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-primary transition-colors hover:text-accent"
+                      >
+                        {p.link.label}
+                        <span aria-hidden>→</span>
+                      </a>
+                    ) : (
+                      <Link
+                        href={p.link.href}
+                        className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-primary transition-colors hover:text-accent"
+                      >
+                        {p.link.label}
+                        <span aria-hidden>→</span>
+                      </Link>
+                    ))}                </article>
               </RevealItem>
             ))}
           </RevealGroup>

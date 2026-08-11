@@ -1,5 +1,4 @@
 ﻿import type { Metadata } from "next";
-import { Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
@@ -94,11 +93,10 @@ type FeeRow = {
   amount: string;
   note: string;
   highlight?: boolean;
-  /** 直前の行からの減額を示す矢印注記（表内に挿入） */
-  arrowNote?: string;
 };
 
-const FEE_ROWS: FeeRow[] = [
+/** 免除前までの学費（矢印より上） */
+const FEE_ROWS_TOP: FeeRow[] = [
   {
     item: "入学申込金",
     amount: "480,000円",
@@ -108,8 +106,11 @@ const FEE_ROWS: FeeRow[] = [
     item: "通常授業費（2年間）",
     amount: "3,300,000円",
     note: "",
-    arrowNote: "30%免除 −990,000円",
   },
+];
+
+/** 免除・還付後の学費（矢印より下） */
+const FEE_ROWS_BOTTOM: FeeRow[] = [
   {
     item: "納付授業費",
     amount: "2,310,000円",
@@ -127,6 +128,85 @@ const FEE_ROWS: FeeRow[] = [
     highlight: true,
   },
 ];
+
+function FeeTable({
+  rows,
+  showHeader,
+}: {
+  rows: FeeRow[];
+  showHeader?: boolean;
+}) {
+  return (
+    <div className="overflow-hidden rounded-2xl bg-white shadow-card">
+      <div className="overflow-x-auto">
+        <table className="w-full min-w-[560px] table-fixed text-left">
+          <colgroup>
+            <col className="w-[28%]" />
+            <col className="w-[26%]" />
+            <col className="w-[46%]" />
+          </colgroup>
+          {showHeader ? (
+            <thead>
+              <tr className="bg-primary text-white">
+                <th
+                  scope="col"
+                  className="px-6 py-4 text-sm font-bold tracking-wider md:text-base"
+                >
+                  項目
+                </th>
+                <th
+                  scope="col"
+                  className="px-6 py-4 text-right text-sm font-bold tracking-wider md:text-base"
+                >
+                  金額
+                </th>
+                <th
+                  scope="col"
+                  className="px-6 py-4 text-sm font-bold tracking-wider md:text-base"
+                >
+                  備考
+                </th>
+              </tr>
+            </thead>
+          ) : null}
+          <tbody>
+            {rows.map((row, i) => (
+              <tr
+                key={row.item}
+                className={`border-t border-tan/30 ${
+                  row.highlight
+                    ? "bg-meadow/70"
+                    : i % 2 === 0
+                      ? "bg-cream/60"
+                      : "bg-white"
+                }`}
+              >
+                <th
+                  scope="row"
+                  className={`px-6 py-4 text-sm font-bold md:text-[15px] ${
+                    row.highlight ? "text-primary" : "text-ink"
+                  }`}
+                >
+                  {row.item}
+                </th>
+                <td
+                  className={`whitespace-nowrap px-6 py-4 text-right font-display text-base font-semibold tracking-wider tabular-nums md:text-lg ${
+                    row.highlight ? "text-accent" : "text-ink"
+                  }`}
+                >
+                  {row.amount}
+                </td>
+                <td className="px-6 py-4 text-xs leading-relaxed text-ink/60 md:text-sm">
+                  {row.note}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
 
 const SUPPORT_CARDS = [
   {
@@ -355,71 +435,28 @@ export default function AdmissionPage() {
             lead="令和9年4月生を対象とした学費のご案内です。授業費の事前免除と在学中の還付により、実質負担を大きく抑えられます。"
           />
           <Reveal>
-            <div className="overflow-hidden rounded-2xl bg-white shadow-card">
-              <div className="overflow-x-auto">
-                <table className="w-full min-w-[560px] text-left">
-                  <thead>
-                    <tr className="bg-primary text-white">
-                      <th scope="col" className="px-6 py-4 text-sm font-bold tracking-wider md:text-base">
-                        項目
-                      </th>
-                      <th scope="col" className="w-40 px-6 py-4 text-right text-sm font-bold tracking-wider md:w-48 md:text-base">
-                        金額
-                      </th>
-                      <th scope="col" className="px-6 py-4 text-sm font-bold tracking-wider md:text-base">
-                        備考
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {FEE_ROWS.map((row) => (
-                      <Fragment key={row.item}>
-                        <tr
-                          className={`border-t border-tan/30 ${
-                            row.highlight ? "bg-meadow/70" : "odd:bg-cream/60"
-                          }`}
-                        >
-                          <th
-                            scope="row"
-                            className={`px-6 py-4 text-sm font-bold md:text-[15px] ${
-                              row.highlight ? "text-primary" : "text-ink"
-                            }`}
-                          >
-                            {row.item}
-                          </th>
-                          <td
-                            className={`px-6 py-4 text-right font-display text-base font-semibold tracking-wider md:text-lg ${
-                              row.highlight ? "text-accent" : "text-ink"
-                            }`}
-                          >
-                            {row.amount}
-                          </td>
-                          <td className="px-6 py-4 text-xs leading-relaxed text-ink/60 md:text-sm">
-                            {row.note}
-                          </td>
-                        </tr>
-                        {row.arrowNote ? (
-                          <tr className="border-t border-tan/30 bg-accent/5">
-                            <td colSpan={3} className="px-6 py-2">
-                              <div className="flex items-center justify-end gap-2 text-right">
-                                <span
-                                  aria-hidden
-                                  className="font-display text-lg leading-none text-accent"
-                                >
-                                  ↓
-                                </span>
-                                <span className="font-display text-sm font-bold tracking-wide text-accent md:text-base">
-                                  {row.arrowNote}
-                                </span>
-                              </div>
-                            </td>
-                          </tr>
-                        ) : null}
-                      </Fragment>
-                    ))}
-                  </tbody>
-                </table>
+            <div className="relative">
+              <FeeTable rows={FEE_ROWS_TOP} showHeader />
+
+              {/* 金額列の真下・表のあいだにアロー（セルに重ならない） */}
+              <div
+                className="grid min-h-[7.5rem] grid-cols-[28%_26%_46%] items-center md:min-h-[9rem]"
+                aria-hidden={false}
+              >
+                <div />
+                <div className="relative mx-auto h-28 w-16 md:h-36 md:w-20">
+                  <Image
+                    src="/images/theme/down_arrow.png"
+                    alt="30%免除 −990,000円"
+                    fill
+                    sizes="80px"
+                    className="object-contain drop-shadow-md"
+                  />
+                </div>
+                <div />
               </div>
+
+              <FeeTable rows={FEE_ROWS_BOTTOM} />
             </div>
           </Reveal>
 

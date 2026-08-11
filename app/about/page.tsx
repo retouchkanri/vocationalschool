@@ -6,6 +6,7 @@ import CtaSection from "@/components/CtaSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import NumbersBand from "@/components/NumbersBand";
 import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
+import CampusPhotoCarousel from "@/components/pages/CampusPhotoCarousel";
 import { SCHOOL, STATS } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -52,19 +53,19 @@ const PILLARS = [
 
 /** 施設ギャラリー（施設・環境フォルダの写真。キャプションは元ファイル名の日本語） */
 const CAMPUS_PHOTOS = [
-  { src: "/images/facilities/kosha-gaikan.jpg", caption: "校舎外観", aspect: "aspect-[4/3]" },
-  { src: "/images/facilities/baba.jpg", caption: "馬場", aspect: "aspect-[4/3]" },
-  { src: "/images/facilities/kyusha.jpg", caption: "厩舎", aspect: "aspect-[4/3]" },
-  { src: "/images/facilities/shinrindo.jpg", caption: "新林道", aspect: "aspect-[3/4]" },
-  { src: "/images/facilities/mori-shisetsu.jpg", caption: "森施設", aspect: "aspect-[3/4]" },
-  { src: "/images/facilities/taiikukan.jpg", caption: "体育館", aspect: "aspect-[4/3]" },
-  { src: "/images/facilities/training-room.jpg", caption: "トレーニングルーム", aspect: "aspect-[4/3]" },
-  { src: "/images/facilities/kyoshitsu.jpg", caption: "教室", aspect: "aspect-[4/3]" },
-  { src: "/images/facilities/kogishitsu.jpg", caption: "講義室", aspect: "aspect-[4/3]" },
-  { src: "/images/facilities/kyukeishitsu.jpg", caption: "休憩室", aspect: "aspect-[4/3]" },
-  { src: "/images/facilities/cafeteria.jpg", caption: "食堂", aspect: "aspect-[4/3]" },
-  { src: "/images/facilities/kitchen.jpg", caption: "厨房", aspect: "aspect-square" },
-  { src: "/images/facilities/mendanshitsu-sanbu.jpg", caption: "面談室／山武", aspect: "aspect-[4/3]" },
+  { src: "/images/facilities/kosha-gaikan.jpg", caption: "校舎外観" },
+  { src: "/images/facilities/baba.jpg", caption: "馬場" },
+  { src: "/images/facilities/kyusha.jpg", caption: "厩舎" },
+  { src: "/images/facilities/shinrindo.jpg", caption: "新林道" },
+  { src: "/images/facilities/mori-shisetsu.jpg", caption: "森施設" },
+  { src: "/images/facilities/taiikukan.jpg", caption: "体育館" },
+  { src: "/images/facilities/training-room.jpg", caption: "トレーニングルーム" },
+  { src: "/images/facilities/kyoshitsu.jpg", caption: "教室" },
+  { src: "/images/facilities/kogishitsu.jpg", caption: "講義室" },
+  { src: "/images/facilities/kyukeishitsu.jpg", caption: "休憩室" },
+  { src: "/images/facilities/cafeteria.jpg", caption: "食堂" },
+  { src: "/images/facilities/kitchen.jpg", caption: "厨房" },
+  { src: "/images/facilities/mendanshitsu-sanbu.jpg", caption: "面談室／山武" },
 ];
 
 /** 学生寮の設備写真 */
@@ -313,7 +314,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── 施設・環境 ───────────────────────────── */}
-      <section className="bg-paper py-16 md:py-24">
+      <section className="overflow-x-hidden bg-paper py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <SectionTitle
             eyebrow="FACILITIES"
@@ -326,30 +327,13 @@ export default function AboutPage() {
               馬とともに過ごすキャンパス
             </h3>
           </Reveal>
+        </div>
 
-          <RevealGroup className="mt-8 columns-2 gap-3 md:columns-3">
-            {CAMPUS_PHOTOS.map((photo) => (
-              <RevealItem key={photo.src} className="mb-3 break-inside-avoid">
-                <figure className="group relative overflow-hidden rounded-xl shadow-card">
-                  <div className={`img-zoom relative ${photo.aspect}`}>
-                    <Image
-                      src={photo.src}
-                      alt={photo.caption}
-                      fill
-                      sizes="(max-width: 768px) 50vw, 33vw"
-                      className="object-cover"
-                    />
-                  </div>
-                  <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent px-3 pb-2.5 pt-8 text-[11px] font-medium text-white md:text-xs">
-                    {photo.caption}
-                  </figcaption>
-                </figure>
-              </RevealItem>
-            ))}
-          </RevealGroup>
+        <CampusPhotoCarousel photos={CAMPUS_PHOTOS} />
 
+        <div className="mx-auto mt-20 max-w-7xl px-4 md:px-6">
           {/* 学生寮 */}
-          <div className="mt-20">
+          <div>
             <Reveal>
               <p className="font-display text-center text-[13px] font-semibold tracking-[0.35em] text-primary">
                 DORMITORY

@@ -495,7 +495,7 @@ export default function FeaturesPage() {
                 <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                   <Link
                     href="/jra"
-                    className="group inline-flex items-center justify-center gap-3 rounded-full border-2 border-primary bg-white px-8 py-4 text-sm font-bold text-primary transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white md:text-base"
+                    className="group mx-auto inline-flex w-fit items-center justify-center gap-3 rounded-full border-2 border-primary bg-white px-8 py-4 text-sm font-bold text-primary transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white md:mx-0 md:text-base"
                   >
                     JRA厩務員へ
                     <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -504,7 +504,7 @@ export default function FeaturesPage() {
                   </Link>
                   <Link
                     href="/admission"
-                    className="group inline-flex items-center justify-center gap-3 rounded-full border-2 border-white/70 px-8 py-4 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-accent md:text-base"
+                    className="group mx-auto inline-flex w-fit items-center justify-center gap-3 rounded-full border-2 border-white/70 px-8 py-4 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-accent md:mx-0 md:text-base"
                   >
                     募集要項
                     <span className="transition-transform duration-300 group-hover:translate-x-1">

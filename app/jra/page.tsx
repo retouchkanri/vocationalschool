@@ -600,7 +600,7 @@ export default function JraPage() {
             <div className="mt-10 text-center">
               <Link
                 href="/faq"
-                className="group inline-flex items-center justify-center gap-3 rounded-full border-2 border-primary px-8 py-4 text-base font-bold text-primary transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white"
+                className="group mx-auto inline-flex w-fit items-center justify-center gap-3 rounded-full border-2 border-primary px-8 py-4 text-base font-bold text-primary transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white md:mx-0"
               >
                 その他のよくある質問を見る
                 <span className="transition-transform duration-300 group-hover:translate-x-1">

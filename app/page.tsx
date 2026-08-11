@@ -143,10 +143,10 @@ export default function Home() {
                     令和9年4月生には、授業費30％（90万円相当）の納付が免除となる支援制度（入学内定者対象）をご用意しています。
                   </p>
                 </div>
-                <div className="shrink-0">
+                <div className="shrink-0 self-center md:self-auto">
                   <Link
                     href="/admission"
-                    className="group inline-flex items-center justify-center gap-3 rounded-full border-2 border-primary bg-white px-8 py-4 text-base font-bold text-primary transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white"
+                    className="group mx-auto inline-flex w-fit items-center justify-center gap-3 rounded-full border-2 border-primary bg-white px-8 py-4 text-base font-bold text-primary transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white md:mx-0"
                   >
                     募集要項
                     <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -237,7 +237,7 @@ export default function Home() {
             <p className="mt-12 text-center">
               <Link
                 href="/features"
-                className="group inline-flex items-center justify-center gap-3 rounded-full border-2 border-primary px-8 py-4 text-base font-bold text-primary transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white"
+                className="group mx-auto inline-flex w-fit items-center justify-center gap-3 rounded-full border-2 border-primary px-8 py-4 text-base font-bold text-primary transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white md:mx-0"
               >
                 特徴を見る
                 <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -358,7 +358,7 @@ export default function Home() {
                 <div className="mt-9">
                   <Link
                     href="/opencampus"
-                    className="group inline-flex items-center justify-center gap-3 rounded-full border-2 border-primary bg-white px-10 py-4 text-base font-bold text-primary transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white"
+                    className="group mx-auto inline-flex w-fit items-center justify-center gap-3 rounded-full border-2 border-primary bg-white px-10 py-4 text-base font-bold text-primary transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white md:mx-0"
                   >
                     参加申込
                     <span className="transition-transform duration-300 group-hover:translate-x-1">

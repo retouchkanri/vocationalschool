@@ -126,12 +126,12 @@ export default function Footer() {
             </div>
           </div>
 
-          <nav className="grid grid-cols-2 content-start gap-x-6 gap-y-3.5">
+          <nav className="grid grid-cols-2 content-start gap-x-4 gap-y-3.5 sm:gap-x-6">
             {NAV.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="group flex items-center gap-2 text-base text-white transition-colors hover:text-accent md:text-[17px]"
+                className="group flex items-center gap-1.5 whitespace-nowrap text-[15px] text-white transition-colors hover:text-accent sm:gap-2 sm:text-base md:text-[17px]"
               >
                 <span className="h-px w-3 bg-tan/70 transition-all duration-300 group-hover:w-5 group-hover:bg-accent" />
                 {item.label}
@@ -141,7 +141,7 @@ export default function Footer() {
               href={SCHOOL.related.highSchool}
               target="_blank"
               rel="noopener noreferrer"
-              className="group mt-4 flex items-center gap-2 text-base text-white transition-colors hover:text-accent md:text-[17px]"
+              className="group mt-4 flex items-center gap-1.5 whitespace-nowrap text-[15px] text-white transition-colors hover:text-accent sm:gap-2 sm:text-base md:text-[17px]"
             >
               <span className="h-px w-3 bg-tan/70 transition-all duration-300 group-hover:w-5 group-hover:bg-accent" />
               東関東馬事高等学院
@@ -150,7 +150,7 @@ export default function Footer() {
               href={SCHOOL.related.corporate}
               target="_blank"
               rel="noopener noreferrer"
-              className="group mt-4 flex items-center gap-2 text-base text-white transition-colors hover:text-accent md:text-[17px]"
+              className="group mt-4 flex items-center gap-1.5 whitespace-nowrap text-[14px] text-white transition-colors hover:text-accent sm:gap-2 sm:text-base md:text-[17px]"
             >
               <span className="h-px w-3 bg-tan/70 transition-all duration-300 group-hover:w-5 group-hover:bg-accent" />
               馬事学院（運営会社）

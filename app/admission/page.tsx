@@ -651,7 +651,7 @@ export default function AdmissionPage() {
                 <div className="mt-6 flex flex-col gap-3">
                   <a
                     href={`tel:${SCHOOL.tel}`}
-                    className="group inline-flex items-center justify-center gap-3 rounded-full border-2 border-primary bg-white px-8 py-4 text-base font-bold text-primary transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white"
+                    className="group mx-auto inline-flex w-fit items-center justify-center gap-3 rounded-full border-2 border-primary bg-white px-8 py-4 text-base font-bold text-primary transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white md:mx-0"
                   >
                     電話で相談
                     <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -660,7 +660,7 @@ export default function AdmissionPage() {
                   </a>
                   <Link
                     href="/opencampus"
-                    className="group inline-flex items-center justify-center gap-3 rounded-full border-2 border-primary px-8 py-4 text-base font-bold text-primary transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white"
+                    className="group mx-auto inline-flex w-fit items-center justify-center gap-3 rounded-full border-2 border-primary px-8 py-4 text-base font-bold text-primary transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white md:mx-0"
                   >
                     見学・体験へ
                     <span className="transition-transform duration-300 group-hover:translate-x-1">

@@ -185,14 +185,56 @@ export const LIFESTYLE_PHOTOS: CuratedPhoto[] = [
   },
 ];
 
-/** Horse portraits — client photos from /images/theme/004 (uniform 3:4) */
-export const HORSE_PORTRAITS: CuratedPhoto[] = Array.from({ length: 62 }, (_, i) => {
-  const n = String(i + 1).padStart(2, "0");
-  return {
-    src: `/images/theme/004/portrait-${n}.jpg`,
-    alt: `本校で暮らす馬のポートレート ${i + 1}`,
-  };
-});
+/** Horse portraits — named horses from /images/馬画像 */
+export const HORSE_PORTRAITS: CuratedPhoto[] = [
+  "あん＆ハニー",
+  "アイリス",
+  "アユミ",
+  "アルコンシエル",
+  "アンジュ",
+  "イチョウ",
+  "イメル",
+  "イヴ",
+  "エトワール",
+  "エル",
+  "カエデ",
+  "ククナ",
+  "ケン",
+  "ココロ",
+  "サクラ",
+  "サニー",
+  "シャイン",
+  "シロ",
+  "ジュライ",
+  "ダイチ",
+  "チャコ",
+  "ツムギ",
+  "トワ",
+  "ハオ",
+  "ハル",
+  "パヴォーネ",
+  "ヒカル",
+  "ヒナタ",
+  "ピノ",
+  "ピュア",
+  "フォルトゥーナ",
+  "ホープ",
+  "ポニー",
+  "ポニー親子",
+  "マッシュ",
+  "マリア",
+  "ミラクル",
+  "ミラーダ",
+  "メメ",
+  "ユメ",
+  "ラテ",
+  "ラファ",
+  "ルル",
+].map((name) => ({
+  src: `/images/馬画像/${name}.jpg`,
+  alt: `${name}（本校で暮らす馬）`,
+  caption: name,
+}));
 
 /** Documentary gallery strip — current campus life (uploads f1–f8) */
 export const GALLERY_PHOTOS: CuratedPhoto[] = [

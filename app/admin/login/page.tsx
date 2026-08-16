@@ -52,12 +52,12 @@ export default async function AdminLoginPage({
 
       <div className="relative z-10 w-full max-w-md">
         <div className="mb-8 flex flex-col items-center text-center">
-          <span className="relative block h-12 w-56 brightness-0 invert">
+          <span className="relative block h-16 w-[14.5rem]">
             <Image
               src={SCHOOL.logo}
               alt={SCHOOL.name}
               fill
-              sizes="224px"
+              sizes="232px"
               className="object-contain"
               priority
             />

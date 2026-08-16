@@ -6,7 +6,7 @@ export const SCHOOL = {
   zip: "〒289-1213",
   address: "千葉県山武市雨坪10番地",
   tel: "050-6875-3336",
-  logo: "/images/theme/images_logo.png",
+  logo: "/images/theme/logo_1.png",
   sns: {
     youtube: "https://www.youtube.com/user/umastable",
     instagram: "https://www.instagram.com/bajigakuin/",

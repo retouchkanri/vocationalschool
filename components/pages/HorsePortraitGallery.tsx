@@ -8,7 +8,7 @@ type HorsePortraitGalleryProps = {
   photos: CuratedPhoto[];
 };
 
-const PREVIEW_COUNT = 5;
+const PREVIEW_COUNT = 10;
 
 export default function HorsePortraitGallery({
   photos,
@@ -23,15 +23,19 @@ export default function HorsePortraitGallery({
     <>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 md:gap-4">
         {visiblePhotos.map((photo) => (
-          <div key={photo.src}>
+          <div key={photo.src} className="relative overflow-hidden rounded-lg shadow-card">
             <PhotoFrame
               src={photo.src}
               alt={photo.alt}
               aspect="portrait"
               grade="portrait"
               sizes="(min-width: 1024px) 20vw, (min-width: 768px) 25vw, 50vw"
-              className="shadow-card"
             />
+            {photo.caption ? (
+              <p className="pointer-events-none absolute inset-x-0 bottom-0 z-10 truncate bg-gradient-to-t from-black/75 via-black/45 to-transparent px-2 pb-2.5 pt-8 text-center font-mincho text-sm font-bold tracking-wide text-white md:text-[15px]">
+                {photo.caption}
+              </p>
+            ) : null}
           </div>
         ))}
       </div>

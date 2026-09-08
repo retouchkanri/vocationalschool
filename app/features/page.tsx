@@ -10,27 +10,42 @@ import NumbersBand from "@/components/NumbersBand";
 import HomeHero from "@/components/pages/HomeHero";
 import { STATS } from "@/lib/site";
 
+const TITLE = "JRA厩務員を目指せる馬の専門学校の特徴｜東関東馬事専門学院";
+const DESCRIPTION =
+  "JRA厩務員を目指すための実践教育。担当馬制度、毎日の騎乗、競走馬管理、インターンシップなど、馬の現場で必要となる技術と知識を実践的に身につけます。未経験から最短2年でJRA厩務員を合格。在学中にJRA厩務員を合格しています。合格実績多数です";
+const KEYWORDS = [
+  "JRA厩務員",
+  "専門学校",
+  "厩務員 学校",
+  "競走馬 学校",
+  "競馬 専門学校",
+  "馬 専門学校",
+  "厩務員",
+  "競馬学校",
+  "合格",
+  "バジガク",
+  "千葉県",
+];
+
 export const metadata: Metadata = {
-  title: "馬の学校　比較ポイント／JRA厩務員を目指すなら",
-  description:
-    "JRA競馬学校の厩務員合格を目指せる学校。馬の学校を比較（合格率、学費、内容、カリキュラム）毎年7月には定員を満たす馬の学校　東関東馬事専門学院。通称、バジガクでは、未経験から最短1年6ヶ月で厩務員合格を目指せる。在学中に最高2回の受験へ。",
-  keywords: [
-    "バジガク",
-    "馬",
-    "教育",
-    "評判",
-    "口コミ",
-    "Retouch",
-    "リタッチ",
-    "引退馬",
-    "JRA",
-    "競馬会",
-    "社台",
-    "比較",
-    "相談",
-    "募集要項",
-    "学費",
-  ],
+  title: { absolute: TITLE },
+  description: DESCRIPTION,
+  keywords: KEYWORDS,
+  alternates: {
+    canonical: "/features",
+  },
+  openGraph: {
+    url: "/features",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [{ url: "/images/theme/img_tokucho_img_002_2.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/images/theme/img_tokucho_img_002_2.jpg"],
+  },
 };
 
 /** 入口 — 夢への第一歩となる4つのご提案 */

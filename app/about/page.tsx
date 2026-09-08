@@ -9,27 +9,43 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
 import CampusPhotoCarousel from "@/components/pages/CampusPhotoCarousel";
 import { SCHOOL, STATS } from "@/lib/site";
 
+const TITLE = "馬の学校　東関東馬事専門学院｜JRA厩務員・競走馬を学ぶ専門学校";
+const DESCRIPTION =
+  "JRA厩務員になるための東関東馬事専門学院は、JRA厩務員や競走馬業界への就職を目指す馬の専門校です。教育方針、学校施設、アクセスなど学校概要をご紹介します。馬の学校比較　JRA厩務員合格者ランキング。本気でJRA厩務員を目指せる馬の学校なら";
+const KEYWORDS = [
+  "東関東馬事専門学院",
+  "JRA厩務員 学校",
+  "厩務員 専門学校",
+  "競走馬 専門学校",
+  "馬 専門学校",
+  "学費",
+  "試験内容",
+  "受験資格",
+  "試験",
+  "年齢制限",
+  "騎乗経験",
+  "競馬一般",
+];
+
 export const metadata: Metadata = {
-  title: { absolute: "株式会社 馬事学院が運営する東関東馬事専門学院" },
-  description:
-    "学費救済支援、学費の滞納にも柔軟に対応する支払いサポート。株式会社馬事学院では、馬の仕事を目指す若者の育成。千葉県山武市・八街市・大阪府河内長野市を拠点とするバジガクネットワーク。株式会社馬事学院へお問い合わせください。ロケ、取材も受付中。",
-  keywords: [
-    "バジガク",
-    "馬",
-    "教育",
-    "評判",
-    "口コミ",
-    "Retouch",
-    "リタッチ",
-    "引退馬",
-    "JRA",
-    "競馬会",
-    "社台",
-    "比較",
-    "相談",
-    "募集要項",
-    "学費",
-  ],
+  title: { absolute: TITLE },
+  description: DESCRIPTION,
+  keywords: KEYWORDS,
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    url: "/about",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [{ url: "/images/facilities/kosha-gaikan.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/images/facilities/kosha-gaikan.jpg"],
+  },
 };
 
 /** 教育方針の3つの柱 */

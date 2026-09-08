@@ -11,27 +11,37 @@ import FaqExplorer from "@/components/pages/FaqExplorer";
 import { getPublishedFaqs } from "@/lib/content";
 import { SCHOOL, STATS } from "@/lib/site";
 
+const TITLE = "JRA厩務員になるには？よくある質問｜年齢・資格・試験・未経験・学費";
+const DESCRIPTION =
+  "JRA厩務員を目指す方の疑問に回答。未経験でもなれる？年齢や受験資格は？乗馬経験は必要？JRA競馬学校の試験や学費、寮生活、卒業後の進路まで詳しく解説します。初心者、乗馬クラブ、乗馬経験、騎乗試験の内容。合格できるポイント解説、馬の学校。";
+const KEYWORDS = [
+  "JRA厩務員 年齢",
+  "JRA厩務員 資格",
+  "JRA厩務員 未経験",
+  "JRA厩務員 試験",
+  "JRA厩務員 学費",
+  "JRA厩務員 FAQ",
+];
+
 export const metadata: Metadata = {
-  title: "馬の学校　よくある質問｜厩務員になるには？",
-  description:
-    "乗馬未経験者の厩務員を目指すための質問コーナーです。東関東馬事専門学院の評判。合格者輩出。JRA厩務員・牧場就職・乗馬クラブへの就職サポート。馬の専門学校なら東関東馬事専門学院が評判です",
-  keywords: [
-    "バジガク",
-    "馬",
-    "教育",
-    "評判",
-    "口コミ",
-    "Retouch",
-    "リタッチ",
-    "引退馬",
-    "JRA",
-    "競馬会",
-    "社台",
-    "比較",
-    "相談",
-    "募集要項",
-    "学費",
-  ],
+  title: { absolute: TITLE },
+  description: DESCRIPTION,
+  keywords: KEYWORDS,
+  alternates: {
+    canonical: "/faq",
+  },
+  openGraph: {
+    url: "/faq",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [{ url: "/images/theme/img_taiken_img_002_1.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/images/theme/img_taiken_img_002_1.jpg"],
+  },
 };
 
 const CONTACT_CHANNELS = [

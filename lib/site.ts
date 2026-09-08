@@ -3,6 +3,8 @@ export const SCHOOL = {
   nameShort: "バジガク",
   nameEn: "East Kanto Equine Vocational Academy",
   operator: "株式会社 馬事学院（バジガク）",
+  /** Canonical production domain (no trailing slash). Used for metadataBase, canonical URLs, sitemap, robots and JSON-LD. */
+  url: "https://bajigakuin.net",
   zip: "〒289-1213",
   address: "千葉県山武市雨坪10番地",
   tel: "050-6875-3336",

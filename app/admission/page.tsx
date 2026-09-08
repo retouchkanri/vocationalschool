@@ -9,27 +9,40 @@ import AnimatedCounter from "@/components/AnimatedCounter";
 import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
 import { SCHOOL } from "@/lib/site";
 
+const TITLE = "JRA厩務員になるための馬の専門学校｜入学・学費・募集要項";
+const DESCRIPTION =
+  "JRA厩務員・競走馬の仕事を目指す東関東馬事専門学院の募集要項。入学資格、学費、出願方法、寮生活などをご案内。乗馬未経験からでもJRA厩務員を目指せます。高校卒業後にJRA厩務員になるための学校。合格までのプロセスが評判、口コミ、ランキング。";
+const KEYWORDS = [
+  "JRA厩務員 学校 学費",
+  "厩務員 専門学校 学費",
+  "厩務員 学校 入学",
+  "馬 専門学校 学費",
+  "関西",
+  "関東",
+  "評判",
+  "口コミ",
+  "ランキング",
+];
+
 export const metadata: Metadata = {
-  title: { absolute: "馬の学校　学費・募集要項・独自ローン／東関東馬事専門学院" },
-  description:
-    "学費,分割,教育ローン,馬,学校のご相談は、東関東馬事専門学院へ。未経験から初心者から目指せるJRA厩務員なら。徹底した受験指導で一人ひとりの生徒をサポート。乗馬クラブや観光牧場、地方競馬の厩務員への就職を目指せる。馬の学校 比較検証「学費」募集要項等",
-  keywords: [
-    "バジガク",
-    "馬",
-    "教育",
-    "評判",
-    "口コミ",
-    "Retouch",
-    "リタッチ",
-    "引退馬",
-    "JRA",
-    "競馬会",
-    "社台",
-    "比較",
-    "相談",
-    "募集要項",
-    "学費",
-  ],
+  title: { absolute: TITLE },
+  description: DESCRIPTION,
+  keywords: KEYWORDS,
+  alternates: {
+    canonical: "/admission",
+  },
+  openGraph: {
+    url: "/admission",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [{ url: "/images/theme/img_cmn_img_group_b3.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/images/theme/img_cmn_img_group_b3.jpg"],
+  },
 };
 
 const OPEN_CAMPUS_DATES = [

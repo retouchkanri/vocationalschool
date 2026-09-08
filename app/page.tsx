@@ -22,20 +22,41 @@ import {
 import { getPublishedAnnouncements } from "@/lib/content";
 import { SCHOOL, STATS } from "@/lib/site";
 
+const TITLE = "【未経験から最短でJRA厩務員になるには】東関東馬事専門学院";
+const DESCRIPTION =
+  "JRA厩務員になるには東関東馬事専門学院。未経験から騎乗技術・競走馬管理・競馬知識を実践的に学び、2年目にJRA競馬学校厩務員課程の受験・合格を目指します。全国の競走馬育成牧場へのインターンシップや就職もサポート。厩務員になるにはバジガク";
+const KEYWORDS = [
+  "JRA厩務員",
+  "JRA厩務員 学校",
+  "厩務員 学校",
+  "厩務員 専門学校",
+  "厩務員になるには",
+  "競馬 専門学校",
+  "競走馬 専門学校",
+  "バジガク",
+  "合格者",
+  "2年目で合格",
+];
+
 export const metadata: Metadata = {
-  title: { absolute: "未経験からJRA厩務員／東関東馬事専門学院（千葉県）" },
-  description:
-    "JRA厩務員を目指せる馬の専門学校。東関東馬事専門学院が人気の馬の学校。JRA競馬学校の厩務員課程受験合格者多数｜関西・関東で人気のJRA厩務員を目指せる学校",
-  keywords: [
-    "バジガク",
-    "馬",
-    "厩務員になるには",
-    "合格者",
-    "馬の仕事",
-    "厩務員学校",
-    "学費",
-    "比較",
-  ],
+  title: { absolute: TITLE },
+  description: DESCRIPTION,
+  keywords: KEYWORDS,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    url: "/",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [{ url: "/images/theme/img_top_toku_img_001.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/images/theme/img_top_toku_img_001.jpg"],
+  },
 };
 
 const OPENCAMPUS_DATES = [

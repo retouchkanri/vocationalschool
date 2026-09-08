@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "お問合せ・資料請求・体験入学",
   description:
     "東関東馬事専門学院（バジガク）への資料請求・体験入学・お問合せ。入学・学費・オープンキャンパスなど、お電話または3つの専用フォームからご相談ください。クリアーファイル無料プレゼント中。",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {

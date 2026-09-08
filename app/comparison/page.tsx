@@ -9,27 +9,40 @@ import AnimatedCounter from "@/components/AnimatedCounter";
 import NumbersBand from "@/components/NumbersBand";
 import { STATS } from "@/lib/site";
 
+const TITLE = "JRA厩務員を目指す学校の選び方｜専門学校・牧場就職との違い";
+const DESCRIPTION =
+  "JRA厩務員を目指すにはどんな学校を選べばいい？専門学校で学ぶ場合と牧場就職などの違い、騎乗経験、競走馬管理、受験対策など、学校選びのポイントを解説します。JRA厩務員合格に特化した専門の馬の学校　東関東馬事専門学院。厩務員合格者多数の輩出";
+const KEYWORDS = [
+  "JRA厩務員 学校",
+  "JRA厩務員 専門学校",
+  "厩務員 学校 おすすめ",
+  "厩務員 学校 比較",
+  "競馬 専門学校",
+  "一次試験",
+  "二次試験",
+  "関西",
+  "関東",
+];
+
 export const metadata: Metadata = {
-  title: "馬の学校 比較／他校との徹底比較サイト",
-  description:
-    "馬の学校の入学を考える中で、比較検証することはとても大切です。馬の学校選びは、卒業後の進路に直結します。教材頭数、カリキュラム、卒業実績、就職情報、学費サポートなど。東関東馬事専門学院では、自信を持った教育サービスの提供",
-  keywords: [
-    "バジガク",
-    "馬",
-    "教育",
-    "評判",
-    "口コミ",
-    "Retouch",
-    "リタッチ",
-    "引退馬",
-    "JRA",
-    "競馬会",
-    "社台",
-    "比較",
-    "相談",
-    "募集要項",
-    "学費",
-  ],
+  title: { absolute: TITLE },
+  description: DESCRIPTION,
+  keywords: KEYWORDS,
+  alternates: {
+    canonical: "/comparison",
+  },
+  openGraph: {
+    url: "/comparison",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [{ url: "/images/theme/img_tokucho_img_002_5.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/images/theme/img_tokucho_img_002_5.jpg"],
+  },
 };
 
 /** 比較チェックポイント table rows. */

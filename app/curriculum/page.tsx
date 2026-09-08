@@ -7,27 +7,39 @@ import CtaSection from "@/components/CtaSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
 
+const TITLE = "JRA厩務員になるための授業・カリキュラム｜東関東馬事専門学院";
+const DESCRIPTION =
+  "JRA厩務員になるために必要な騎乗、競走馬管理、馬学、競馬知識を基礎から学習。JRA競馬学校厩務員課程の受験を見据えた実践的なカリキュラムをご紹介します。乗馬クラブから馬の学校へ。在学中の2年生で2回のJRA競馬学校厩務員受験に挑む。合格へ";
+const KEYWORDS = [
+  "JRA厩務員 勉強",
+  "JRA厩務員 試験",
+  "厩務員 カリキュラム",
+  "厩務員 騎乗",
+  "競馬学校 厩務員課程",
+  "厩務員になるための学校",
+  "合格者",
+  "試験内容",
+];
+
 export const metadata: Metadata = {
-  title: "高校卒業後馬の世界へ／未経験から安心の馬の学校",
-  description:
-    "馬の仕事を目指すためには、千葉県にあるウマの学校　東関東馬事専門学院がおススメです。卒業生の評判も高く、充実したカリキュラムが準備されています。馬の世界を目指すなら東関東馬事高等学院（株式会社馬事学院）",
-  keywords: [
-    "バジガク",
-    "馬",
-    "教育",
-    "評判",
-    "口コミ",
-    "Retouch",
-    "リタッチ",
-    "引退馬",
-    "JRA",
-    "競馬会",
-    "社台",
-    "比較",
-    "相談",
-    "募集要項",
-    "学費",
-  ],
+  title: { absolute: TITLE },
+  description: DESCRIPTION,
+  keywords: KEYWORDS,
+  alternates: {
+    canonical: "/curriculum",
+  },
+  openGraph: {
+    url: "/curriculum",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [{ url: "/images/theme/img_curriculum_img_002_1.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/images/theme/img_curriculum_img_002_1.jpg"],
+  },
 };
 
 /** 授業内容カード（/images/theme/img_curriculum_img_002_1..6.jpg） */

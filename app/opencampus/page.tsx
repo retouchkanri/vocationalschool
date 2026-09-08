@@ -7,27 +7,35 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
 import CtaSection from "@/components/CtaSection";
 import { SCHOOL } from "@/lib/site";
 
+const TITLE = "JRA厩務員になる専門学校のオープンキャンパス｜東関東馬事専門学院";
+const DESCRIPTION =
+  "日本全国ら20名規模の募集。JR東京駅にお迎え。未経験からのJRA厩務員や競走馬の仕事を目指す方へ。学校説明、施設見学、騎乗体験などを通して、競走馬を学ぶ専門学校の授業や学校生活を体験できます。JRAの厩務員合格までの流れを紹介します";
+const KEYWORDS = [
+  "JRA厩務員 オープンキャンパス",
+  "厩務員 学校 見学",
+  "競馬 専門学校 オープンキャンパス",
+  "馬 専門学校 体験",
+];
+
 export const metadata: Metadata = {
-  title: "JR東京駅お迎え／馬の学校 オープンキャンパス",
-  description:
-    "関東エリアはもちろん、関西エリアから西日本エリアからの入学者も多数。JR東京駅までお迎えにあがります。馬の専門学校　東関東馬事専門学院のオープンキャンパスで乗馬体験・学校体験。募集要項、カリキュラム等はサイトをご覧ください。",
-  keywords: [
-    "バジガク",
-    "馬",
-    "教育",
-    "評判",
-    "口コミ",
-    "Retouch",
-    "リタッチ",
-    "引退馬",
-    "JRA",
-    "競馬会",
-    "社台",
-    "比較",
-    "相談",
-    "募集要項",
-    "学費",
-  ],
+  title: { absolute: TITLE },
+  description: DESCRIPTION,
+  keywords: KEYWORDS,
+  alternates: {
+    canonical: "/opencampus",
+  },
+  openGraph: {
+    url: "/opencampus",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [{ url: "/images/theme/opencampus-hero.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/images/theme/opencampus-hero.jpg"],
+  },
 };
 
 /** 見学・オープンキャンパスでできること */

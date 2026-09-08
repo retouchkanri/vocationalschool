@@ -9,27 +9,37 @@ import FaqAccordion, { type FaqItem } from "@/components/FaqAccordion";
 import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
 import StudentPhotoOrbit from "@/components/pages/StudentPhotoOrbit";
 
+const TITLE = "JRA厩務員になるには？受験資格・試験・仕事内容・合格対策を解説";
+const DESCRIPTION =
+  "JRA厩務員になるには？JRA競馬学校厩務員課程の受験資格、試験、騎乗経験、仕事内容、合格までの流れを解説。JRA厩務員を目指すための実技・筆記・面接対策も紹介します。試験内容。JRA厩務員になるにはJRA競馬学校の厩務員課程受験合格を目指す。";
+const KEYWORDS = [
+  "JRA厩務員",
+  "JRA厩務員になるには",
+  "JRA厩務員 受験資格",
+  "JRA厩務員 試験",
+  "JRA競馬学校 厩務員課程",
+  "厩務員になる方法",
+];
+
 export const metadata: Metadata = {
-  title: "JRA厩務員になるには？／未経験からのJRA受験へ",
-  description:
-    "未経験からのJRA競馬学校の厩務員受験。過去多数の合格者輩出のバジガク。未経験からのJRA競馬学校の厩務員課程受験合格。本気で厩務員受験を目指すなら千葉県にある東関東馬事専門学院へ",
-  keywords: [
-    "バジガク",
-    "馬",
-    "教育",
-    "評判",
-    "口コミ",
-    "Retouch",
-    "リタッチ",
-    "引退馬",
-    "JRA",
-    "競馬会",
-    "社台",
-    "比較",
-    "相談",
-    "募集要項",
-    "学費",
-  ],
+  title: { absolute: TITLE },
+  description: DESCRIPTION,
+  keywords: KEYWORDS,
+  alternates: {
+    canonical: "/jra",
+  },
+  openGraph: {
+    url: "/jra",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [{ url: "/images/theme/img_6_006_img_003_3.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/images/theme/img_6_006_img_003_3.jpg"],
+  },
 };
 
 /** JRA厩務員の主な仕事（旧サイト 6-006 より）。 */
